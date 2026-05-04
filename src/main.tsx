@@ -10,6 +10,7 @@ const router = createRouter({
   defaultPreload: "intent",
   defaultStaleTime: 5000,
   scrollRestoration: true,
+  basepath: "/les-fourmilieres/"
 });
 
 // Register things for typesafety
