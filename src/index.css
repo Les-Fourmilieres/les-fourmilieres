@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Body Grosteque";
+  font-weight: bold;
+  font-style: normal;
+  src: url("./assets/Body-Grotesque-Bold-trial.woff2") format("woff2");
+}
+
+:root {
+  --text: #000000;
+  --text-l: #1b1919;
+  --text-h: #08060d;
+  --bg: #fffdef;
+  --headerBg: #fcf9e5;
+  --surface: #fffbdb;
+  --border: #e5e4e7;
+  --accent: #d62828;
+  --accent-dark: #aa1f1f;
+  --accent-bg: #000000;
+  --accent-bg-light: #3e3e3e;
+  --accent-fg: #fffbdb;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 3px 3px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: "Body Grosteque", system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  --contentWidth: 1080px;
+  --textMaxWidth: 75ch;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --accent: #a31e1e;
+    --surface: #898773;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+  font-size: 32px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 20px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 40px 0 16px;
+  text-align: left;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+}
+h3 {
+  font-size: 18px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 32px 0 16px;
+  text-align: left;
+}
+p {
+  margin: 0 auto 16px;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
