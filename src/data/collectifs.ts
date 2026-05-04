@@ -96,7 +96,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "le-quartier-genereux",
     name: "Le Quartier Généreux",
-    icon: "/collectifs/quartier-genereux.svg",
+    icon: "collectifs/quartier-genereux.svg",
     position: {
       lat: 43.61594775505337,
       lng: 3.874829074309236,
