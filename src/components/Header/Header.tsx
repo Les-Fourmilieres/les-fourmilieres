@@ -2,13 +2,15 @@ import { styled } from "styled-components";
 import { Logo } from "../Logo/Logo";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "../Link/Link";
+import { ToggleMenu } from "../ToggleMenu";
 
 const HeaderContainer = styled(motion.header)`
   background-color: var(--headerBg);
   height: 60px;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 100vw;
   z-index: 2000;
   padding: 8px 16px;
   box-sizing: border-box;
@@ -16,11 +18,12 @@ const HeaderContainer = styled(motion.header)`
 `;
 
 const Content = styled.div(() => ({
-  flex: 1,
   display: "flex",
-  justifyContent: "flex-start",
+  justifyContent: "space-between",
   alignItems: "center",
   maxWidth: "var(--contentWidth)",
+  boxSizing: "border-box",
+  padding: "0 16px",
   width: "100%",
   height: "100%",
   margin: "0 auto",
@@ -32,10 +35,13 @@ const LogoContainer = styled(Link)(() => ({
   flex: "0 0 250px",
 }));
 
-const Navigation = styled.nav(() => ({
-  flex: "1 1 auto",
-  display: "flex",
-}));
+const Navigation = styled.nav`
+  flex: 1 1 auto;
+  display: flex;
+  @media (max-width: 800px) {
+    display: none;
+  },
+`;
 
 const NavMenu = styled.ul(() => ({
   listStyleType: "none",
@@ -43,6 +49,7 @@ const NavMenu = styled.ul(() => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "flex-end",
+  overflow: "hidden",
   margin: 0,
   padding: 0,
   gap: 16,
@@ -89,6 +96,7 @@ export function Header() {
               </NavMenuItem>
             </NavMenu>
           </Navigation>
+          <ToggleMenu />
         </Content>
       </HeaderContainer>
       <motion.div style={{ height: "140px" }} />
