@@ -51,6 +51,11 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.826338, lng: 3.774748 },
   },
   {
+    slug: "bar-du-midi",
+    name: "Bar du Midi",
+    position: { lat: 43.84052468551134, lng: 4.362547726172306 },
+  },
+  {
     slug: "barnabu",
     name: "Barnabu",
     position: { lat: 43.329798, lng: 3.213329 },
@@ -59,6 +64,11 @@ export const collectifs: CollectifI[] = [
     slug: "beziers-anti-cra",
     name: "Béziers ANTI-CRA",
     position: { lat: 43.34091, lng: 3.197622 },
+  },
+  {
+    slug: "bololipsum",
+    name: "Bololipsum",
+    position: { lat: 43.96217265327163, lng: 3.855153297257745 },
   },
   {
     slug: "bouillon-cube",
@@ -77,6 +87,11 @@ export const collectifs: CollectifI[] = [
       lat: 44.35,
       lng: 3.949327,
     },
+  },
+  {
+    slug: "collectif-gilets-jaunes-de-gignac-et-alentours",
+    name: "Collectif Gilets jaunes de Gignac et alentours",
+    position: { lat: 43.65025148001632, lng: 3.546333160764182 },
   },
   {
     slug: "collectif-lodevois",
@@ -129,6 +144,11 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.909644, lng: 3.998429 },
   },
   {
+    slug: "greenpeace-montpellier",
+    name: "Greenpeace Montpellier",
+    position: { lat: 43.605528666477845, lng: 3.870980340825212 },
+  },
+  {
     slug: "inter-syndic-collectif",
     name: "InterSyndicCollectif",
     position: { lat: 43.989109, lng: 3.602829 },
@@ -149,6 +169,11 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.601838, lng: 3.873196 },
   },
   {
+    slug: "la-battante",
+    name: "La Battante",
+    position: { lat: 43.61144, lng: 3.881264 },
+  },
+  {
     slug: "la-bestiole",
     name: "La BestiOle",
     position: { lat: 43.743493, lng: 3.704322 },
@@ -159,9 +184,19 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.60735, lng: 3.868065 },
   },
   {
+    slug: "la-chaloupe",
+    name: "La Chaloupe",
+    position: { lat: 44.47473, lng: 2.461218 },
+  },
+  {
     slug: "la-cimade",
     name: "La Cimade",
     position: { lat: 43.335261, lng: 3.226333 },
+  },
+  {
+    slug: "la-combine",
+    name: "La Combine",
+    position: { lat: 44.20943817160611, lng: 4.037457683315754 },
   },
   {
     slug: "la-deter",
