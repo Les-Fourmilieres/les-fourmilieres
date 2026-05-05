@@ -28,6 +28,7 @@ export function Map({ collectifs }: Props) {
       <TileLayer
         attribution="&copy; OpenStreetMap contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        className="map-tiles"
       />
 
       {collectifs.map((c) => {

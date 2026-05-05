@@ -33,6 +33,7 @@ const HeroLogo = styled.div`
   max-width: 500px;
   width: 100%;
   flex: 0 1 243px;
+  padding: 12px 0;
   display: flex;
   align-items: center;
   justify-content: center;

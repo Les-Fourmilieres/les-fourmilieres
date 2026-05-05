@@ -53,7 +53,7 @@ const LinkButton = styled(Link)`
   display: inline-block;
   padding: 8px 24px;
   background-color: var(--accent);
-  color: var(--surface);
+  color: var(--accent-contrast);
   border: none;
   outline: none;
   text-decoration: none;

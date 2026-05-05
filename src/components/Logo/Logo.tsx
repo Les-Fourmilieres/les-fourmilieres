@@ -7,9 +7,10 @@ import {
 
 interface Props {
   progress?: MotionValue<number>;
+  backgroundColor?: string;
 }
 
-export function Logo({ progress }: Props) {
+export function Logo({ progress, backgroundColor = "var(--surface)" }: Props) {
   const defaultProgress = useMotionValue(0);
   const safeProgress = progress ?? defaultProgress;
 
@@ -54,7 +55,7 @@ export function Logo({ progress }: Props) {
           <motion.g
             id="fourmi-noire-bas"
             fill="#000000"
-            stroke="var(--surface)"
+            stroke={backgroundColor}
             strokeOpacity={1}
             strokeWidth={22}
             paintOrder="stroke fill markers"
@@ -76,7 +77,7 @@ export function Logo({ progress }: Props) {
           <motion.g
             id="fourmi-rouge"
             fill="var(--accent)"
-            stroke="var(--surface)"
+            stroke={backgroundColor}
             strokeOpacity={1}
             strokeWidth={22}
             paintOrder="stroke fill markers"
@@ -105,7 +106,7 @@ export function Logo({ progress }: Props) {
           <motion.g
             id="fourmi-noire-haut"
             fill="#000000"
-            stroke="var(--surface)"
+            stroke={backgroundColor}
             strokeOpacity={1}
             strokeWidth={22}
             paintOrder="stroke fill markers"
@@ -133,7 +134,7 @@ export function Logo({ progress }: Props) {
           <path
             id="polygon1"
             d="m 1028.111,412.36079 -5.75,52 -19.79,-87.32 -331.40999,75.1 -29.37,-129.56 -283.01,64.13 12.48,55.11 -147.78,-16.35 -35.09,317.28 508.9,56.29 8.95,-80.85 295.44999,-66.95 -8.66999,78.4 654.81999,72.43 35.1,-317.27 z"
-            stroke="var(--surface)"
+            stroke={backgroundColor}
             strokeOpacity={1}
             strokeWidth={22}
             paintOrder="stroke fill markers"

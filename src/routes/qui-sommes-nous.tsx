@@ -36,7 +36,7 @@ function RouteComponent() {
       <p>
         Les Fourmilières est un festival solidaire et antifasciste. Le festival
         est décentralisé, c'est-à-dire que de nombreux évènements auront lieux
-        dans différents lieux de l'Aveyron, du Gard et de l'Hérault.{" "}
+        dans différents endroits de l'Aveyron, du Gard et de l'Hérault.{" "}
       </p>
       <p>
         Les Fourmilières reposent sur une organisation horizontale : chaque

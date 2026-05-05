@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import { Button } from "react-aria-components";
 import styled from "styled-components";
 
@@ -9,10 +10,22 @@ const borderRadius = 3;
 const StyledButton = styled(Button)`
   border: none;
   background: none;
-  height: 32px;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+  cursor: pointer;
+  border-radius: 100%;
+  &:hover {
+    background-color: var(--hover);
+  }
+  z-index: 5000;
+
+  @media (max-width: 800px) {
+    display: inline-block;
+  },
 `;
 
 const Icon = styled.i`
@@ -20,7 +33,8 @@ const Icon = styled.i`
   display: inline-block;
   width: ${width}px;
   height: ${height}px;
-  background: var(--text);
+  margin-bottom: ${height}px;
+  background: var(--headerColor);
   border-radius: ${borderRadius}px;
 
   &:before {
@@ -30,7 +44,7 @@ const Icon = styled.i`
     width: ${width}px;
     height: ${height}px;
     top: -${height + space}px;
-    background: var(--text);
+    background: var(--headerColor);
     border-radius: ${borderRadius}px;
   }
 
@@ -41,14 +55,14 @@ const Icon = styled.i`
     width: ${width}px;
     height: ${height}px;
     top: ${height + space}px;
-    background: var(--text);
+    background: var(--headerColor);
     border-radius: ${borderRadius}px;
   }
 `;
 
-export function ToggleMenu() {
+export function ToggleMenu(props: ComponentProps<typeof StyledButton>) {
   return (
-    <StyledButton>
+    <StyledButton {...props}>
       <Icon />
     </StyledButton>
   );

@@ -11,21 +11,26 @@
   --text-h: #08060d;
   --bg: #fffdef;
   --headerBg: #fcf9e5;
+  --headerColor: #000000;
   --surface: #fffbdb;
   --border: #e5e4e7;
   --accent: #d62828;
+  --accent-contrast: #fffbdb;
   --accent-dark: #aa1f1f;
   --accent-bg: #000000;
   --accent-bg-light: #3e3e3e;
   --accent-fg: #fffbdb;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 3px 3px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --hover: rgba(0, 0, 0, 0.1);
 
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: "Body Grosteque", system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
   --contentWidth: 1080px;
   --textMaxWidth: 75ch;
+  --map-tiles-filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg)
+    saturate(0.3) brightness(0.7);
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -44,15 +49,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
+    --text: #fffbdb;
+    --text-l: #bfbb9d;
+    --text-h: #fffbdb;
     --bg: #16171d;
+    --headerBg: #bfbb9d;
+    --headerColor: #000000;
     --border: #2e303a;
     --accent: #a31e1e;
-    --surface: #898773;
-    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-contrast: #fffbdb;
+    --surface: #611111;
+    --accent-bg: #000000;
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  .map-tiles {
+    filter: var(--map-tiles-filter, none);
   }
 
   #social .button-icon {

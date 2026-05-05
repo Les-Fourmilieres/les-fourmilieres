@@ -21,6 +21,17 @@ const Container = styled.article`
   padding: 40px 0;
 `;
 
+const StyledLink = styled(Link)`
+  color: var(--accent);
+  text-decoration: none;
+  &:visited {
+    color: var(--accent);
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
   return (
@@ -213,9 +224,9 @@ function RouteComponent() {
       </p>
 
       <p>
-        <Link href="https://quartiergenereux.fr">
+        <StyledLink href="https://quartiergenereux.fr">
           <strong>Le Quartier Généreux</strong>
-        </Link>
+        </StyledLink>
         , association à l’origine du Festival Les Fourmilières, s’engage à
         assurer la coordination générale du festival, son identité visuelle et à
         élaborer un kit de communication (nom, logo, visuels) qui pourra être

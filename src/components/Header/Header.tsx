@@ -3,9 +3,13 @@ import { Logo } from "../Logo/Logo";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "../Link/Link";
 import { ToggleMenu } from "../ToggleMenu";
+import { useState } from "react";
+import { Sidebar } from "./Sidebar";
+import type { MenuItem } from "./Menu";
 
 const HeaderContainer = styled(motion.header)`
   background-color: var(--headerBg);
+  color: var(--headerColor);
   height: 60px;
   position: fixed;
   top: 0;
@@ -60,16 +64,37 @@ const NavMenuItem = styled.li(() => ({}));
 const NavLink = styled(Link)`
   display: inline-block;
   padding: 8px 4px;
-  color: inherit;
+  color: var(--headerColor);
   text-decoration: none;
   font-weight: 500;
+  &:visited {
+    color: var(--headerColor);
+  }
   &:hover {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
   }
 `;
 
+const menu: MenuItem[] = [
+  {
+    label: "Qui sommes-nous ?",
+    to: "/qui-sommes-nous",
+  },
+  {
+    label: "Le programme",
+    to: "/le-programme",
+  },
+  {
+    label: "La charte",
+    to: "/la-charte",
+  },
+];
+
 export function Header() {
+  const [menuOpened, setMenuOpened] = useState(false);
   const { scrollY } = useScroll();
+
+  const toggleMenu = () => setMenuOpened(!menuOpened);
 
   const progress = useTransform(scrollY, [0, 80], [0, 1], {
     clamp: true,
@@ -81,22 +106,19 @@ export function Header() {
       <HeaderContainer style={{ height }}>
         <Content>
           <LogoContainer to="/">
-            <Logo progress={progress} />
+            <Logo progress={progress} backgroundColor="var(--headerBg)" />
           </LogoContainer>
           <Navigation>
             <NavMenu>
-              <NavMenuItem>
-                <NavLink to="/qui-sommes-nous">Qui sommes-nous ?</NavLink>
-              </NavMenuItem>
-              <NavMenuItem>
-                <NavLink to="/le-programme">Le programme</NavLink>
-              </NavMenuItem>
-              <NavMenuItem>
-                <NavLink to="/la-charte">La charte</NavLink>
-              </NavMenuItem>
+              {menu.map((item) => (
+                <NavMenuItem key={item.to}>
+                  <NavLink to={item.to}>{item.label}</NavLink>
+                </NavMenuItem>
+              ))}
             </NavMenu>
           </Navigation>
-          <ToggleMenu />
+          <ToggleMenu onClick={toggleMenu} />
+          <Sidebar open={menuOpened} close={toggleMenu} menu={menu} />
         </Content>
       </HeaderContainer>
       <motion.div style={{ height: "140px" }} />
