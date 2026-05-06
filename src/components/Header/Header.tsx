@@ -59,6 +59,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   order: 1;
+
+  @media (max-width: 800px) {
+    flex: 1 1 100%;
+  }
 `;
 
 const Navigation = styled.nav`
@@ -138,7 +142,7 @@ export function Header() {
           </LogoContainer>
           <Container>
             <motion.div style={{ height: campaignHeight }}>
-              <CagnotteHeader progress={progress} />
+              <CagnotteHeader progress={progress} isMobile={isMobile} />
             </motion.div>
             <Navigation>
               <NavMenu>

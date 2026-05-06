@@ -15,6 +15,7 @@ export const LinkButton = styled(RACLink)`
   padding: 8px 24px;
   background-color: var(--accent);
   color: var(--accent-contrast);
+  cursor: pointer;
   border: none;
   outline: none;
   text-decoration: none;

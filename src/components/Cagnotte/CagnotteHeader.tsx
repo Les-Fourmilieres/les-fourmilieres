@@ -6,41 +6,47 @@ import styled from "styled-components";
 import { formatCurrency } from "./formatCurrency";
 import { LinkButton } from "../Link/Link";
 import { useEffect, useRef } from "react";
+import { CagnotteSummary } from "./CagnotteSummary";
 
 const Container = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 `;
 
 const GaugeContainer = styled(motion.div)`
   flex: 1 1 auto;
   display: flex;
-  align-self: stretch;
+  align-self: center;
   box-sizing: border-box;
-`;
 
-const SummaryContainer = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  line-height: 1em;
-  font-variant: small-caps;
-  font-weight: 500;
-  white-space: nowrap;
+  @media (max-width: 800px) {
+    order: 3;
+    flex: 1 1 100%;
+    margin: -16px 0 0;
+  }
 `;
 
 const CallToAction = styled(motion.div)`
   flex: 0 1 auto;
+
+  @media (max-width: 800px) {
+    order: 2;
+  }
 `;
 
 interface Props {
   progress: MotionValue<number>;
+  isMobile: boolean;
 }
 
-export function CagnotteHeader({ progress }: Props) {
+export function CagnotteHeader({ progress, isMobile }: Props) {
   const { data } = useDonoorCagnotte();
   const currentAmountRef = useRef<HTMLDivElement>(null);
   const previousValue = useRef(data?.current_amount ?? 0);
@@ -61,36 +67,35 @@ export function CagnotteHeader({ progress }: Props) {
   }, [data?.current_amount, data?.currency]);
   const campaignHeight = useTransform(progress, [0, 1], [80, 0]);
   const scale = useTransform(progress, [0, 1], [1, 0]);
-  const padding = useTransform(progress, [0, 1], [19, 0]);
+  const gaugeHeight = useTransform(progress, [0, 1], [isMobile ? 20 : 42, 0]);
+  const margin = useTransform(progress, [0, 1], [0, isMobile ? -32 : 0]);
   return (
     <Container style={{ height: campaignHeight }}>
-      <SummaryContainer style={{ scale, originX: "100%" }}>
-        <div ref={currentAmountRef}>
-          {formatCurrency(0, data?.currency ?? "EUR")}
-        </div>
-        <div>récoltés</div>
-        <div>
-          sur{" "}
-          {formatCurrency(data?.goal_amount ?? 5000, data?.currency ?? "EUR")}
-        </div>
-      </SummaryContainer>
+      <CagnotteSummary
+        data={data}
+        margin={margin}
+        scale={scale}
+        isMobile={isMobile}
+      />
+
       <GaugeContainer
         style={{
-          paddingTop: padding,
-          paddingBottom: padding,
+          height: gaugeHeight,
         }}
       >
         <CagnotteGauge data={data} />
       </GaugeContainer>
-      <CallToAction>
+      <CallToAction style={{ marginBottom: margin }}>
         <motion.div
           style={{
             scale,
-            originX: "50%",
-            originY: "50%",
+            originX: isMobile ? "100%" : "50%",
+            originY: isMobile ? "0%" : "50%",
           }}
         >
-          <LinkButton href="#">Je fais un don</LinkButton>
+          <LinkButton href="https://donoor.org/c/festival-les-fourmilieres ">
+            Je fais un don
+          </LinkButton>
         </motion.div>
       </CallToAction>
     </Container>
