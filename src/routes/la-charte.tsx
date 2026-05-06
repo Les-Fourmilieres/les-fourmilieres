@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Link } from "react-aria-components";
+import { Link, TooltipTrigger } from "react-aria-components";
 import styled from "styled-components";
+import { Tooltip } from "../components/Tooltip";
 
 export const Route = createFileRoute("/la-charte")({
   component: RouteComponent,
@@ -204,7 +205,24 @@ function RouteComponent() {
       </p>
 
       <p>
-        Le festival s'engage à <strong>ne pas utiliser d'IA génératives</strong>{" "}
+        Le festival s'engage à{" "}
+        <strong>
+          ne pas utiliser{" "}
+          <TooltipTrigger delay={0}>
+            <Link
+              href="https://fr.wikipedia.org/wiki/Intelligence_artificielle_g%C3%A9n%C3%A9rative"
+              target="_blank"
+            >
+              d'IA génératives
+            </Link>
+            <Tooltip>
+              L'intelligence artificielle générative est un type de système
+              d'intelligence artificielle (IA) capable de générer du texte, des
+              images, des vidéos ou d'autres médias en réponse à des
+              requêtes{" "}
+            </Tooltip>
+          </TooltipTrigger>
+        </strong>{" "}
         pour l'ensemble de ses productions. De l'écriture à la création de
         visuels et de vidéos, l'ensemble du travail est réalisé par des êtres
         humains consentants.{" "}
