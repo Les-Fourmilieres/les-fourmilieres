@@ -90,7 +90,7 @@ function Home() {
         </Section>
       </HeroSection>
 
-      <Section>
+      <Section style={{ padding: 0 }}>
         <iframe
           width="100%"
           height="550"
