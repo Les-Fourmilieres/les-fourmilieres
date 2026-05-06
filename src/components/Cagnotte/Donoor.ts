@@ -20,3 +20,5 @@ export async function fetchCampaign() {
   );
   return DonoorResponseSchema.parse(data).data;
 }
+
+export type DonoorResponseData = z.infer<typeof DonoorResponseDataSchema>;

@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
 import { Logo } from "../Logo/Logo";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { Link } from "../Link/Link";
 import { ToggleMenu } from "../ToggleMenu";
 import { useState } from "react";
 import { Sidebar } from "./Sidebar";
 import type { MenuItem } from "./Menu";
+import { CagnotteHeader } from "../Cagnotte/CagnotteHeader";
+import { useMediaQuery } from "react-responsive";
 
 const HeaderContainer = styled(motion.header)`
   background-color: var(--headerBg);
@@ -32,12 +34,32 @@ const Content = styled.div(() => ({
   height: "100%",
   margin: "0 auto",
   letterSpacing: "-0.5px",
+
+  ["@media (max-width: 800px)"]: {
+    flexWrap: "wrap",
+    alignItems: "flex-start",
+  },
 }));
 
 const LogoContainer = styled(Link)(() => ({
   height: "calc(100% + 16px)",
   flex: "0 0 250px",
+
+  ["@media (max-width: 800px)"]: {
+    marginTop: "-8px",
+    maxHeight: "60px",
+    minWidth: "250px",
+    order: 2,
+    display: "flex",
+  },
 }));
+
+const Container = styled.div`
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+`;
 
 const Navigation = styled.nav`
   flex: 1 1 auto;
@@ -96,27 +118,38 @@ export function Header() {
 
   const toggleMenu = () => setMenuOpened(!menuOpened);
 
+  const isMobile = useMediaQuery({ maxWidth: 800 });
+
   const progress = useTransform(scrollY, [0, 80], [0, 1], {
     clamp: true,
   });
 
-  const height = useTransform(progress, [0, 1], [140, 60]);
+  const endProgressValue = useMotionValue(1);
+  const logoProgress = isMobile ? endProgressValue : progress;
+
+  const height = useTransform(progress, [0, 1], [160, 60]);
+  const campaignHeight = useTransform(progress, [0, 1], [80, 0]);
   return (
     <>
       <HeaderContainer style={{ height }}>
         <Content>
           <LogoContainer to="/">
-            <Logo progress={progress} backgroundColor="var(--headerBg)" />
+            <Logo progress={logoProgress} backgroundColor="var(--headerBg)" />
           </LogoContainer>
-          <Navigation>
-            <NavMenu>
-              {menu.map((item) => (
-                <NavMenuItem key={item.to}>
-                  <NavLink to={item.to}>{item.label}</NavLink>
-                </NavMenuItem>
-              ))}
-            </NavMenu>
-          </Navigation>
+          <Container>
+            <motion.div style={{ height: campaignHeight }}>
+              <CagnotteHeader progress={progress} />
+            </motion.div>
+            <Navigation>
+              <NavMenu>
+                {menu.map((item) => (
+                  <NavMenuItem key={item.to}>
+                    <NavLink to={item.to}>{item.label}</NavLink>
+                  </NavMenuItem>
+                ))}
+              </NavMenu>
+            </Navigation>
+          </Container>
           <ToggleMenu onClick={toggleMenu} />
           <Sidebar open={menuOpened} close={toggleMenu} menu={menu} />
         </Content>

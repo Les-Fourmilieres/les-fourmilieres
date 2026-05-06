@@ -204,6 +204,19 @@ function RouteComponent() {
       </p>
 
       <p>
+        Le festival s'engage à <strong>ne pas utiliser d'IA génératives</strong>{" "}
+        pour l'ensemble de ses productions. De l'écriture à la création de
+        visuels et de vidéos, l'ensemble du travail est réalisé par des êtres
+        humains consentants.{" "}
+        <Link
+          href="https://s3.fr-par.scw.cloud/strapi-uploads/Data_For_Good_Livre_Blanc_IA_Generative_v1_0_1_345b2a7454.pdf"
+          download
+        >
+          En savoir plus
+        </Link>
+      </p>
+
+      <p>
         Le festival est{" "}
         <strong>
           indépendant des partis ou mouvements politiques électoralistes

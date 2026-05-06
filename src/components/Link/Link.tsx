@@ -9,3 +9,19 @@ export const Link = styled(createLink(RACLink))`
   }
 `;
 export const MenuItemLink = createLink(MenuItem);
+
+export const LinkButton = styled(RACLink)`
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  transition: background-color 200ms ease-in-out;
+  &:hover {
+    background-color: var(--accent-dark);
+  }
+`;
