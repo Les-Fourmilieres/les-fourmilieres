@@ -44,11 +44,14 @@ export async function fetchWithProxy(url: string) {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 8000); // 8s timeout
 
-      const response = await fetch(proxy.getUrl(url), {
-        method: "GET",
-        cache: "no-store",
-        signal: controller.signal,
-      });
+      const response = await fetch(
+        proxy.getUrl(`${url}?t=${new Date().getTime()}`),
+        {
+          method: "GET",
+          cache: "no-store",
+          signal: controller.signal,
+        },
+      );
 
       clearTimeout(timeoutId);
 
