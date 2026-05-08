@@ -9,11 +9,12 @@
   --text: #000000;
   --text-l: #1b1919;
   --text-h: #08060d;
+  --title-color: #000000;
   --bg: #fffdef;
+  --border: #d5d0be;
   --headerBg: #fcf9e5;
   --headerColor: #000000;
   --surface: #fffbdb;
-  --border: #e5e4e7;
   --accent: #d62828;
   --accent-contrast: #fffbdb;
   --accent-dark: #aa1f1f;
@@ -52,6 +53,7 @@
     --text: #fffbdb;
     --text-l: #bfbb9d;
     --text-h: #fffbdb;
+    --title-color: rgb(247, 245, 233);
     --bg: #16171d;
     --headerBg: #bebca9;
     --headerColor: #000000;

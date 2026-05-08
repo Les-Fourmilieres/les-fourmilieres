@@ -4,6 +4,8 @@ import { Link } from "../components/Link/Link";
 import { collectifs, type CollectifI } from "../data/collectifs";
 import { useMemo } from "react";
 import { Map } from "../components/Map/Map";
+import { Collectif } from "../components/Collectif/Collectif";
+import { useMediaQuery } from "react-responsive";
 
 export const Route = createFileRoute("/qui-sommes-nous")({
   component: RouteComponent,
@@ -29,6 +31,7 @@ function shuffle(array: CollectifI[]) {
 
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
+  const isMobile = useMediaQuery({ maxWidth: 800 });
   const randomizedCollectifs = useMemo(() => shuffle([...collectifs]), []);
   return (
     <Section>
@@ -47,17 +50,22 @@ function RouteComponent() {
       <p>
         Aujourd'hui, plus de 60 collectifs ont déjà rejoint Les Foumilières :
       </p>
-      <div style={{ display: "flex", alignSelf: "stretch", flexWrap: "wrap" }}>
-        <div style={{ flex: "1 1 400px" }}>
-          {randomizedCollectifs.map((collectif) => (
-            <div>
-              <h3>{collectif.name}</h3>
-            </div>
-          ))}
-        </div>
-        <div style={{ flex: "1 1 400px" }}>
+      <div
+        style={{
+          /*columnCount: isMobile ? "1" : "2",
+          columnGap: "16px",
+          columnFill: "balance",*/
+          display: "grid",
+          gridTemplateColumns: isMobile ? "repeat(1, 1fr)" : "repeat(3, 1fr)",
+          gap: "16px",
+        }}
+      >
+        <div style={{ gridColumn: isMobile ? "span 1" : "span 3" }}>
           <Map collectifs={collectifs} />
         </div>
+        {randomizedCollectifs.map((collectif) => (
+          <Collectif key={collectif.slug} collectif={collectif} />
+        ))}
       </div>
     </Section>
   );
