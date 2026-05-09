@@ -116,7 +116,7 @@ export function Collectif({ collectif }: Props) {
         )}
         <Metadata>
           <CollectifName>{collectif.name}</CollectifName>
-          {(collectif.url || collectif.instagram) && (
+          {(collectif.url || collectif.instagram || collectif.facebook) && (
             <SocialNetworks>
               {collectif.url && (
                 <StyledLink href={collectif.url}>

@@ -97,15 +97,26 @@ export const collectifs: CollectifI[] = [
   },
   {
     slug: "bouillon-cube",
-    name: "Bouillon Cube",
+    name: "Bouillon Cube / La Grange",
     departement: "Herault",
-    position: { lat: 43.813856, lng: 3.660372 },
+    description:
+      "Tiers lieu en milieu rural, avec programmation culturelle, accueil d'artiste en résidence, projet sociaux et éducatif... faire ensemble, en ruralité, est le socle de notre démarche.",
+    position: { lat: 43.81539731257116, lng: 3.661956639277761 },
+    url: "https://www.bouilloncube.fr",
+    instagram: "https://www.instagram.com/bouilloncube.lagrange/",
+    facebook: "https://www.facebook.com/bouillon.cube",
+    logo: "collectifs/bouillon-cube.webp",
+    icon: "collectifs/bouillon-cube.webp",
   },
   {
     slug: "brasserie-la-frenetik",
     name: "Brasserie la Frénétik",
     departement: "Gard",
+    description: "Fabrique de bières bio disposant d'un lieu permettant d'accueillir des projets artistiques, culturelles et engagés.",
     position: { lat: 44.207081, lng: 4.040238 },
+    facebook: "https://www.facebook.com/brasseriefrenetik/",
+    logo: "collectifs/la-frenetik.webp",
+    icon: "collectifs/la-frenetik.webp",
   },
   {
     slug: "cevennes-terre-d-accueil",
