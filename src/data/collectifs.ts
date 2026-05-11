@@ -31,8 +31,13 @@ export const collectifs: CollectifI[] = [
   },
   {
     slug: "association-boucan",
-    name: "Association Boucan",
+    name: "BOUCAN",
+    description:
+      "Association de lutte contre les violences sexistes et sexuelles, l'inceste et les inégalités de genre.",
     departement: "Gard",
+    url: "https://boucan.info/",
+    instagram: "https://www.instagram.com/boucan_asso",
+    logo: "collectifs/boucan-logo.png",
     position: { lat: 44.124071, lng: 4.083481 },
   },
   {
@@ -112,7 +117,8 @@ export const collectifs: CollectifI[] = [
     slug: "brasserie-la-frenetik",
     name: "Brasserie la Frénétik",
     departement: "Gard",
-    description: "Fabrique de bières bio disposant d'un lieu permettant d'accueillir des projets artistiques, culturelles et engagés.",
+    description:
+      "Fabrique de bières bio disposant d'un lieu permettant d'accueillir des projets artistiques, culturelles et engagés.",
     position: { lat: 44.207081, lng: 4.040238 },
     facebook: "https://www.facebook.com/brasseriefrenetik/",
     logo: "collectifs/la-frenetik.webp",
@@ -184,10 +190,14 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.614267, lng: 3.868561 },
   },
   {
-    slug: "en-vie-de-beziers",
-    name: "En Vie de Béziers",
+    slug: "en-vie-a-beziers",
+    name: "En Vie à Béziers (EVAB)",
     departement: "Herault",
+    description:
+      "Journal numérique hebdomadaire paru suite à l'élection de R. Ménard à la municipalité en 2014",
     position: { lat: 43.350429, lng: 3.217535 },
+    url: "https://www.envieabeziers.info/",
+    logo: "collectifs/logo-evab.webp",
   },
   {
     slug: "etoile-bio",
@@ -295,6 +305,8 @@ export const collectifs: CollectifI[] = [
     name: "LDH",
     departement: "Herault",
     position: { lat: 43.610352, lng: 3.892164 },
+    logo: "collectifs/LDH.png",
+    url: "https://www.ldh-france.org/",
   },
   {
     slug: "le-clap",
@@ -334,6 +346,20 @@ export const collectifs: CollectifI[] = [
     url: "https://quartiergenereux.fr/",
     instagram: "https://www.instagram.com/qg.montpellier/",
     facebook: "https://www.facebook.com/qg.montpellier/",
+  },
+  {
+    slug: "les-aragantes",
+    name: "Les aragantes",
+    departement: "Herault",
+    position: { lat: 43.6143, lng: 3.8717 },
+    logo: "collectifs/les-aragantes.webp",
+  },
+  {
+    slug: "les-siestes-mutines",
+    name: "Les siestes mutines",
+    departement: "Herault",
+    description: "Siestes en open air",
+    position: { lat: 43.6143, lng: 3.8717 },
   },
   {
     slug: "nouvelle-librairie-setoise",
