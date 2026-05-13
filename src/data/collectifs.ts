@@ -223,12 +223,12 @@ export const collectifs: CollectifI[] = [
     departement: "Herault",
     position: { lat: 43.401903, lng: 3.695522 },
   },
-  {
+  /*{
     slug: "ilot-vert-de-la-soulondres",
     name: "L'Ilot Vert de la Soulondres",
     departement: "Herault",
     position: { lat: 43.730197, lng: 3.313011 },
-  },
+  },*/
   {
     slug: "ultra-violette",
     name: "L'Ultra Violette",
