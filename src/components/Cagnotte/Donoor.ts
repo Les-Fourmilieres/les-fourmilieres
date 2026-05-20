@@ -1,5 +1,4 @@
 import z from "zod";
-import { fetchWithProxy } from "../../utils/fetchWithProxy";
 
 const DonoorResponseDataSchema = z.object({
   current_amount: z.coerce.number(),
@@ -15,10 +14,10 @@ const DonoorResponseSchema = z.object({
 });
 
 export async function fetchCampaign() {
-  const data = await fetchWithProxy(
+  const data = await fetch(
     `https://api.donoor.org/api/campaigns/public/slug/festival-les-fourmilieres`,
   );
-  return DonoorResponseSchema.parse(data).data;
+  return DonoorResponseSchema.parse(await data.json()).data;
 }
 
 export type DonoorResponseData = z.infer<typeof DonoorResponseDataSchema>;
