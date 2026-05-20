@@ -118,6 +118,10 @@ const menu: MenuItem[] = [
     label: "La charte",
     to: "/la-charte",
   },
+  {
+    label: "Pourquoi ce nom ?",
+    to: "/les-fourmilieres",
+  },
 ];
 
 export function Header() {

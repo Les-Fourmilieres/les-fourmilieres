@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
+import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const QuiSommesNousRoute = QuiSommesNousRouteImport.update({
   id: '/qui-sommes-nous',
   path: '/qui-sommes-nous',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LesFourmilieresRoute = LesFourmilieresRouteImport.update({
+  id: '/les-fourmilieres',
+  path: '/les-fourmilieres',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LeProgrammeRoute = LeProgrammeRouteImport.update({
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
+  '/les-fourmilieres': typeof LesFourmilieresRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
+  '/les-fourmilieres': typeof LesFourmilieresRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,38 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
+  '/les-fourmilieres': typeof LesFourmilieresRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/la-charte' | '/le-programme' | '/qui-sommes-nous'
+  fullPaths:
+    | '/'
+    | '/la-charte'
+    | '/le-programme'
+    | '/les-fourmilieres'
+    | '/qui-sommes-nous'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/la-charte' | '/le-programme' | '/qui-sommes-nous'
-  id: '__root__' | '/' | '/la-charte' | '/le-programme' | '/qui-sommes-nous'
+  to:
+    | '/'
+    | '/la-charte'
+    | '/le-programme'
+    | '/les-fourmilieres'
+    | '/qui-sommes-nous'
+  id:
+    | '__root__'
+    | '/'
+    | '/la-charte'
+    | '/le-programme'
+    | '/les-fourmilieres'
+    | '/qui-sommes-nous'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LaCharteRoute: typeof LaCharteRoute
   LeProgrammeRoute: typeof LeProgrammeRoute
+  LesFourmilieresRoute: typeof LesFourmilieresRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
 }
 
@@ -76,6 +102,13 @@ declare module '@tanstack/react-router' {
       path: '/qui-sommes-nous'
       fullPath: '/qui-sommes-nous'
       preLoaderRoute: typeof QuiSommesNousRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/les-fourmilieres': {
+      id: '/les-fourmilieres'
+      path: '/les-fourmilieres'
+      fullPath: '/les-fourmilieres'
+      preLoaderRoute: typeof LesFourmilieresRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/le-programme': {
@@ -106,6 +139,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LaCharteRoute: LaCharteRoute,
   LeProgrammeRoute: LeProgrammeRoute,
+  LesFourmilieresRoute: LesFourmilieresRoute,
   QuiSommesNousRoute: QuiSommesNousRoute,
 }
 export const routeTree = rootRouteImport

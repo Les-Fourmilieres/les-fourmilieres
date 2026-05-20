@@ -4,5 +4,6 @@ export function formatPercent(amount: number) {
     maximumFractionDigits: 1,
     minimumFractionDigits: 0,
     minimumSignificantDigits: 1,
+    maximumSignificantDigits: 3,
   }).format(amount);
 }
