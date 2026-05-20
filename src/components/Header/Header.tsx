@@ -45,6 +45,10 @@ const LogoContainer = styled(Link)(() => ({
   height: "calc(100% + 16px)",
   flex: "0 0 250px",
 
+  ["&, &:visited"]: {
+    color: "var(--headerColor)",
+  },
+
   ["@media (max-width: 800px)"]: {
     marginTop: "-8px",
     maxHeight: "60px",

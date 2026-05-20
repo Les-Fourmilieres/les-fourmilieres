@@ -44,7 +44,7 @@ export function Logo({ progress, backgroundColor = "var(--surface)" }: Props) {
       </desc>
       <motion.g style={{ x: marginLeft }}>
         <motion.circle
-          stroke="#000000"
+          stroke="currentColor"
           fill="none"
           strokeWidth={circleStrokeWidth}
           cx="920.49335"
@@ -54,7 +54,7 @@ export function Logo({ progress, backgroundColor = "var(--surface)" }: Props) {
         <g id="fourmis">
           <motion.g
             id="fourmi-noire-bas"
-            fill="#000000"
+            fill="currentColor"
             stroke={backgroundColor}
             strokeOpacity={1}
             strokeWidth={22}
@@ -105,7 +105,7 @@ export function Logo({ progress, backgroundColor = "var(--surface)" }: Props) {
           </motion.g>
           <motion.g
             id="fourmi-noire-haut"
-            fill="#000000"
+            fill="currentColor"
             stroke={backgroundColor}
             strokeOpacity={1}
             strokeWidth={22}
@@ -137,12 +137,13 @@ export function Logo({ progress, backgroundColor = "var(--surface)" }: Props) {
             stroke={backgroundColor}
             strokeOpacity={1}
             strokeWidth={22}
+            fill="currentColor"
             paintOrder="stroke fill markers"
           />
           <g
             id="g28"
             transform="translate(-7.0589873,12.760791)"
-            fill="#fffbdb"
+            fill={backgroundColor}
           >
             <path
               className="cls-1"

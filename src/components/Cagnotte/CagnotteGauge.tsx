@@ -19,7 +19,7 @@ const MeterGauge = styled.div`
 const MeterBar = styled.div`
   height: 100%;
   background-color: var(--accent);
-  color: var(--surface);
+  color: var(--accent-contrast);
   text-align: right;
   font-weight: 500;
   transition: width 2s ease-in-out;
