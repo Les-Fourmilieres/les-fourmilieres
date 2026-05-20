@@ -5,7 +5,7 @@ import babel from '@rolldown/plugin-babel'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/les-fourmilieres/",
+  base: "/",
   plugins: [
     tanstackRouter({
       target: 'react',

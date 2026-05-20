@@ -38,7 +38,7 @@ jobs:
         # Si le site est hébergé dans un sous-dossier (ex: https://user.github.io/repo/),
         # décommentez la ligne ci-dessous et ajustez le nom du repo :
         env:
-          VITE_BASE_URL: /les-fourmilieres/
+          VITE_BASE_URL: /
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
