@@ -14,6 +14,8 @@ import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProgrammeIndexRouteImport } from './routes/programme/index'
+import { Route as ProgrammeUuidRouteImport } from './routes/programme/$uuid'
 
 const QuiSommesNousRoute = QuiSommesNousRouteImport.update({
   id: '/qui-sommes-nous',
@@ -40,6 +42,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProgrammeIndexRoute = ProgrammeIndexRouteImport.update({
+  id: '/programme/',
+  path: '/programme/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammeUuidRoute = ProgrammeUuidRouteImport.update({
+  id: '/programme/$uuid',
+  path: '/programme/$uuid',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +59,8 @@ export interface FileRoutesByFullPath {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/programme/$uuid': typeof ProgrammeUuidRoute
+  '/programme/': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByTo {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/programme/$uuid': typeof ProgrammeUuidRoute
+  '/programme': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,6 +78,8 @@ export interface FileRoutesById {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/programme/$uuid': typeof ProgrammeUuidRoute
+  '/programme/': typeof ProgrammeIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -71,6 +89,8 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/qui-sommes-nous'
+    | '/programme/$uuid'
+    | '/programme/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -78,6 +98,8 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/qui-sommes-nous'
+    | '/programme/$uuid'
+    | '/programme'
   id:
     | '__root__'
     | '/'
@@ -85,6 +107,8 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/qui-sommes-nous'
+    | '/programme/$uuid'
+    | '/programme/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -93,6 +117,8 @@ export interface RootRouteChildren {
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
+  ProgrammeUuidRoute: typeof ProgrammeUuidRoute
+  ProgrammeIndexRoute: typeof ProgrammeIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -132,6 +158,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programme/': {
+      id: '/programme/'
+      path: '/programme'
+      fullPath: '/programme/'
+      preLoaderRoute: typeof ProgrammeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programme/$uuid': {
+      id: '/programme/$uuid'
+      path: '/programme/$uuid'
+      fullPath: '/programme/$uuid'
+      preLoaderRoute: typeof ProgrammeUuidRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -141,6 +181,8 @@ const rootRouteChildren: RootRouteChildren = {
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,
   QuiSommesNousRoute: QuiSommesNousRoute,
+  ProgrammeUuidRoute: ProgrammeUuidRoute,
+  ProgrammeIndexRoute: ProgrammeIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

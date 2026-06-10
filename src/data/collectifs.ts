@@ -16,6 +16,7 @@ export interface CollectifI {
   position: { lat: number; lng: number };
   instagram?: string;
   facebook?: string;
+  bluesky?: string;
   departement: Departements;
 }
 
@@ -178,8 +179,14 @@ export const collectifs: CollectifI[] = [
   {
     slug: "dcclm-club-de-roller-derby",
     name: "DCCLM, club de roller derby",
+    description: "Club de roller derby à Montpellier",
     departement: "Herault",
     position: { lat: 43.597798, lng: 3.877659 },
+    logo: "collectifs/dcclm.png",
+    icon: "collectifs/dcclm.png",
+    url: "https://dcclm-roller-derby.fr/",
+    instagram: "https://www.instagram.com/dcclm34/",
+    facebook: "https://www.facebook.com/dcclm.rollerderby",
   },
   {
     slug: "dear-valid-people",
@@ -209,7 +216,16 @@ export const collectifs: CollectifI[] = [
     slug: "greenpeace-montpellier",
     name: "Greenpeace Montpellier",
     departement: "Herault",
+    description:
+      "Le groupe local de Greenpeace Montpellier œuvre selon les principes de non-violence pour protéger l'environnement, la biodiversité et promouvoir la paix.",
     position: { lat: 43.605528666477845, lng: 3.870980340825212 },
+    url: "https://www.greenpeace.fr/",
+    logo: "collectifs/greenpeace-logo.webp",
+    icon: "collectifs/greenpeace-icon.webp",
+    instagram: "https://www.instagram.com/greenpeace.montpellier/",
+    facebook:
+      "https://www.facebook.com/GreenpeaceFranceMontpellier/?locale=fr_FR",
+    bluesky: "https://bsky.app/profile/greenpeace-mtpl.bsky.social",
   },
   {
     slug: "inter-syndic-collectif",
@@ -223,12 +239,15 @@ export const collectifs: CollectifI[] = [
     departement: "Herault",
     position: { lat: 43.401903, lng: 3.695522 },
   },
-  /*{
+  {
     slug: "ilot-vert-de-la-soulondres",
     name: "L'Ilot Vert de la Soulondres",
+    description:
+      "Eco-lieu. Coopérative d'habitants de 22 logements dont un logement d'accueil solidaire",
     departement: "Herault",
-    position: { lat: 43.730197, lng: 3.313011 },
-  },*/
+    position: { lat: 43.731969753153166, lng: 3.309223902200748 },
+    url: "https://ilotvertdelasoulondres.org/",
+  },
   {
     slug: "ultra-violette",
     name: "L'Ultra Violette",
@@ -255,8 +274,14 @@ export const collectifs: CollectifI[] = [
   {
     slug: "la-carmagnole",
     name: "La Carmagnole",
+    description: `La Carmagnole  est un espace coopératif, culturel et politique installé au cœur du quartier Figuerolles à Montpellier, mêlant éducation populaire, débats, concerts, projections et initiatives solidaires. Fonctionnant sur un mode participatif, le lieu se veut à la fois un point d’appui pour les luttes sociales, écologiques et démocratiques, et un espace convivial ouvert sur le quartier, dans la ville.`,
     departement: "Herault",
     position: { lat: 43.60735, lng: 3.868065 },
+    url: "https://lacarmagnole.fr/",
+    instagram: "https://www.instagram.com/la_carmagnole.mtp/",
+    facebook: "https://www.facebook.com/lacarmagnole",
+    logo: "collectifs/carmagnole.webp",
+    icon: "collectifs/carmagnole.webp",
   },
   {
     slug: "la-chaloupe",
@@ -355,6 +380,14 @@ export const collectifs: CollectifI[] = [
     logo: "collectifs/les-aragantes.webp",
   },
   {
+    slug: "fourmiliere-lodevois-larzac",
+    name: "La Fourmilière Lodévois-Larzac",
+    departement: "Herault",
+    description:
+      "Collectifs des associations et des militant.es du Lodévois et Larzac mobilisé.es pour créer un événement long à cheval sur la dernière. Des associations des communes de Celles, Lodève, Octon, Saint-Étienne-de-Gourgas",
+    position: { lat: 43.716671, lng: 3.31667 },
+  },
+  {
     slug: "les-siestes-mutines",
     name: "Les siestes mutines",
     departement: "Herault",
@@ -372,6 +405,15 @@ export const collectifs: CollectifI[] = [
     name: "Oustalité",
     departement: "Herault",
     position: { lat: 43.736189, lng: 3.317013 },
+  },
+  {
+    slug: "poles-en-pomme",
+    name: "Pôles en pomme 🍎",
+    departement: "Herault",
+    position: { lat: 43.651023, lng: 3.509992 },
+    description:
+      "Redonner à chacun la capacité de comprendre, choisir et agir sur le monde dans lequel il vit.",
+    url: "https://polesenpomme.xyz",
   },
   {
     slug: "pride-ales-2026",
