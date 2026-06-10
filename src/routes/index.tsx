@@ -4,7 +4,6 @@ import { Logo } from "../components/Logo/Logo";
 import { Cagnotte } from "../components/Cagnotte/Cagnotte";
 import { Section } from "../components/Section";
 import { Teaser } from "../views/Teaser";
-import { Agenda } from "../components/Agenda/Agenda";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -90,8 +89,6 @@ function Home() {
           </HeroTitleSection>
         </Section>
       </HeroSection>
-
-      <Agenda />
 
       <Section style={{ padding: 0 }}>
         <iframe
