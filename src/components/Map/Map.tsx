@@ -7,6 +7,7 @@ import markerShadowUrl from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 import type { CollectifI } from "../../data/collectifs";
 import styled from "styled-components";
+import { useEffect, useRef } from "react";
 
 L.Icon.Default.prototype.options.iconUrl = markerIconUrl;
 L.Icon.Default.prototype.options.iconRetinaUrl = markerIconRetinaUrl;
@@ -22,9 +23,30 @@ interface Props {
   collectifs: CollectifI[];
 }
 
+function zoomToCollectifs(map: L.Map, collectifs: CollectifI[]) {
+  if (collectifs.length === 0) {
+    return;
+  }
+
+  const bounds = L.latLngBounds(
+    collectifs.map((c) => [c.position.lat, c.position.lng]),
+  );
+  map.fitBounds(bounds, {
+    padding: [50, 50],
+    maxZoom: 12,
+    animate: true,
+  });
+}
+
 export function Map({ collectifs }: Props) {
+  const mapRef = useRef<L.Map>(null);
+  useEffect(() => {
+    if (mapRef.current) {
+      zoomToCollectifs(mapRef.current, collectifs);
+    }
+  }, [collectifs]);
   return (
-    <StyledMapContainer center={[43.6, 3.9]} zoom={8}>
+    <StyledMapContainer center={[43.6, 3.9]} zoom={8} ref={mapRef}>
       <TileLayer
         attribution="&copy; OpenStreetMap contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
