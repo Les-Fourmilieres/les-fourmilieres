@@ -11,7 +11,9 @@ function RootComponent() {
   return (
     <React.Fragment>
       <Header />
-      <Outlet />
+      <main role="main">
+        <Outlet />
+      </main>
     </React.Fragment>
   );
 }

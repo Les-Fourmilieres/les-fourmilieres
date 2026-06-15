@@ -9,7 +9,8 @@ const Container = styled.article`
   max-width: var(--textMaxWidth);
   width: 100%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 24px;
+  box-sizing: border-box;
 `;
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -25,8 +26,8 @@ function RouteComponent() {
       </p>
       <p>
         Contrairement à l'idée reçue du fait que la fourmi spécialisée dans la
-        reproduction soit appelée « la reine », il n'y pas de hiérarchie au sein
-        d'une fourmilière. Une fourmilière est{" "}
+        reproduction soit appelée « la reine », il n'y a pas de hiérarchie au
+        sein d'une fourmilière. Une fourmilière est{" "}
         <strong>une organisation autogérée horizontale</strong> où chaque fourmi
         fait sa part de manière volontaire. Il y a d'ailleurs une part
         significative de fourmis oisives au sein de chaque fourmilière.
@@ -36,7 +37,7 @@ function RouteComponent() {
         couleurs de l'antifascisme.
       </p>
       <p>
-        Les fourmilières reposes sur le travail des « ouvrières » qui évoquent
+        Les fourmilières reposent sur le travail des « ouvrières » qui évoquent
         un <strong>imaginaire féministe et ouvrier</strong>.
       </p>
       <p>

@@ -19,7 +19,8 @@ const Container = styled.article`
   max-width: var(--textMaxWidth);
   width: 100%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 24px;
+  box-sizing: border-box;
 `;
 
 const StyledLink = styled(Link)`
