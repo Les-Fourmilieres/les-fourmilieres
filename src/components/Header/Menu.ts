@@ -4,4 +4,5 @@ import type { ReactNode } from "react";
 export interface MenuItem {
   to: ToPathOption;
   label: ReactNode;
+  isIcon?: boolean;
 }

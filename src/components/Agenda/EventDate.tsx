@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import type { MobilizonEventI } from "./Event";
-import { getDayLabel, getShortMonthLabel } from "../../utils/days";
+import { getDayLabel, getShortMonthLabel } from "../../../utils/days";
 
 interface Props {
   event: MobilizonEventI;

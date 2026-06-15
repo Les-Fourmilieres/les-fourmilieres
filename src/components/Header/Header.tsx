@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { FaInstagram } from "react-icons/fa";
 import { Logo } from "../Logo/Logo";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { Link } from "../Link/Link";
@@ -83,6 +84,7 @@ const NavMenu = styled.ul(() => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "flex-end",
+  alignItems: "center",
   overflow: "hidden",
   margin: 0,
   padding: 0,
@@ -105,6 +107,19 @@ const NavLink = styled(Link)`
   }
 `;
 
+const IconNavLink = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  background-color: var(--headerColor);
+  border-radius: 16px;
+  &, &:visited {
+    color: var(--headerBg);
+  }
+`;
+
 const menu: MenuItem[] = [
   {
     label: "Qui sommes-nous ?",
@@ -121,6 +136,11 @@ const menu: MenuItem[] = [
   {
     label: "Pourquoi ce nom ?",
     to: "/les-fourmilieres",
+  },
+  {
+    label: <FaInstagram />,
+    to: "https://www.instagram.com/lesfourmilieres/",
+    isIcon: true,
   },
 ];
 
@@ -156,7 +176,11 @@ export function Header() {
               <NavMenu>
                 {menu.map((item) => (
                   <NavMenuItem key={item.to}>
-                    <NavLink to={item.to}>{item.label}</NavLink>
+                    {item.isIcon ? (
+                      <IconNavLink to={item.to}>{item.label}</IconNavLink>
+                    ) : (
+                      <NavLink to={item.to}>{item.label}</NavLink>
+                    )}
                   </NavMenuItem>
                 ))}
               </NavMenu>

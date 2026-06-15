@@ -7,6 +7,24 @@ import { Teaser } from "../views/Teaser";
 
 export const Route = createFileRoute("/")({
   component: Home,
+  head: () => ({
+    meta: [
+      { title: `🐜 Les Fourmilières · Festival antifasciste et solidaire` },
+      {
+        name: "description",
+        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une soixantaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l’Aveyron, le Gard et l’Hérault.`,
+      },
+      {
+        property: "og:title",
+        content: `🐜 Les Fourmilières · Festival antifasciste et solidaire`,
+      },
+      {
+        property: "og:description",
+        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une soixantaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l’Aveyron, le Gard et l’Hérault.`,
+      },
+      { property: "og:type", content: "website" },
+    ],
+  }),
 });
 
 const HeroSection = styled.div`

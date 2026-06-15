@@ -110,6 +110,21 @@ const NavLink = styled(Link)`
   }
 `;
 
+const IconNavLink = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  margin: 8px 16px;
+  background-color: var(--headerColor);
+  border-radius: 16px;
+  &,
+  &:visited {
+    color: var(--headerBg);
+  }
+`;
+
 const stopPropagation = (e: MouseEvent) => e.stopPropagation();
 
 interface Props {
@@ -131,9 +146,15 @@ export function Sidebar({ open, close, menu }: Props) {
             </NavMenuItem>
             {menu.map((item) => (
               <NavMenuItem key={item.to}>
-                <NavLink to={item.to} onClick={close}>
-                  {item.label}
-                </NavLink>
+                {item.isIcon ? (
+                  <IconNavLink to={item.to} onClick={close}>
+                    {item.label}
+                  </IconNavLink>
+                ) : (
+                  <NavLink to={item.to} onClick={close}>
+                    {item.label}
+                  </NavLink>
+                )}
               </NavMenuItem>
             ))}
           </NavMenu>

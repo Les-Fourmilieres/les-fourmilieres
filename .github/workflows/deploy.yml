@@ -33,6 +33,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build Sitemap
+        run: pnpm build:sitemap
+        env:
+          VITE_BASE_URL: /
+
       - name: Build Static
         run: pnpm run build
         # Si le site est hébergé dans un sous-dossier (ex: https://user.github.io/repo/),
