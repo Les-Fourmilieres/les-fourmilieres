@@ -262,7 +262,7 @@ export const collectifs: CollectifI[] = [
       Depuis 2010, nous sommes dans la rue pour soutenir les luttes en musique ! `,
     url: "https://batucada-la-battante.org/",
     logo: "collectifs/la-battante.svg",
-    icon: "collectifs/la-battante-icone.png",
+    icon: "collectifs/la-battante-icone.webp",
     position: { lat: 43.608354983899, lng: 3.87930815226476 },
   },
   {
@@ -429,7 +429,7 @@ export const collectifs: CollectifI[] = [
       "Collectif universitaire de Résistance et Solidarité face aux idées d'extrême droite",
     position: { lat: 43.6313618030923, lng: 3.861349533261347 },
     logo: "collectifs/reso-logo.png",
-    icon: "collectifs/reso-icone.png",
+    icon: "collectifs/reso-icone.webp",
   },
   {
     slug: "rusf-34",

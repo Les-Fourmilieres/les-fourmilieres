@@ -63,7 +63,7 @@ const Icon = styled.i`
 
 export function ToggleMenu(props: ComponentProps<typeof StyledButton>) {
   return (
-    <StyledButton {...props}>
+    <StyledButton {...props} aria-label="Menu principal">
       <Icon />
     </StyledButton>
   );

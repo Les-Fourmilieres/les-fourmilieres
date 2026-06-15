@@ -115,6 +115,7 @@ function Home() {
           src="https://831d7d2b.sibforms.com/serve/MUIFAGRLxcnC6V1RZbJo8HRFs16TSK5o7YcHGuBQFXk9UDZOHZxjnGTi6DcChRJlbQ-TM_todKH3Sm7SGYWsRm3bnHYgrDldw3YrTy1OmoLqJVGcX8uXMXQbyv1l71ADn25xNdJHH7iHDApLfM8TkSoA1wyOLI0wpEQcdt9S_RKKeEAHep6xsJhsyFzE4MQEWzwKPFmhQ4id_3mx"
           allowFullScreen
           allowTransparency={true}
+          title="Formulaire d'inscription à la newsletter"
           style={{
             display: "block",
             margin: "0 auto",
