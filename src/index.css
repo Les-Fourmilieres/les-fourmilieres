@@ -11,6 +11,7 @@
   --text-h: #08060d;
   --title-color: #000000;
   --bg: #fffdef;
+  --bgTransparent: #fffdef7a;
   --border: #d5d0be;
   --headerBg: #fcf9e5;
   --headerColor: #000000;
@@ -56,6 +57,7 @@
     --text-h: #fffbdb;
     --title-color: rgb(247, 245, 233);
     --bg: #16171d;
+    --bgTransparent: #16171d7a;
     --headerBg: #000000;
     --headerColor: #fcf9e5;
     --border: #2e303a;

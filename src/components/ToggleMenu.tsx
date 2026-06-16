@@ -26,7 +26,7 @@ const StyledButton = styled(Button)`
   @media (max-width: 800px) {
     display: inline-block;
     order: 3;
-  },
+  }
 `;
 
 const Icon = styled.i`
