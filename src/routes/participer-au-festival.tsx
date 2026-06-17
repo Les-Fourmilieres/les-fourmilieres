@@ -49,7 +49,7 @@ function RouteComponent() {
         </li>
         <li>
           vous êtes en accord avec l'ensemble de{" "}
-          <Link href="/la-chartre">la chartre du festival</Link>.
+          <Link href="/la-charte">la charte du festival</Link>.
         </li>
         <li>
           vous souhaitez organiser un ou plusieurs évènements durant le festival
@@ -59,8 +59,8 @@ function RouteComponent() {
       <p>
         <strong>
           Contactez-nous via l'e-mail{" "}
-          <Link href="mailto:ripostegenereuse@protonmail.com">
-            ripostegenereuse@protonmail.com
+          <Link href="mailto:lesfourmilieres@proton.me">
+            lesfourmilieres@proton.me
           </Link>
         </strong>
       </p>
@@ -73,8 +73,8 @@ function RouteComponent() {
       <p>
         <strong>
           Contactez-nous via l'e-mail{" "}
-          <Link href="mailto:ripostegenereuse@protonmail.com">
-            ripostegenereuse@protonmail.com
+          <Link href="mailto:lesfourmilieres@proton.me">
+            lesfourmilieres@proton.me
           </Link>
         </strong>
       </p>
