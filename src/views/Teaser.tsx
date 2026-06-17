@@ -47,7 +47,7 @@ export function Teaser() {
 
         <p>
           Le Festival est donc{" "}
-          <strong>dencentralisé et fonctionne de façon horizontale</strong>,
+          <strong>décentralisé et fonctionne de façon horizontale</strong>,
           sans association centralisant son organisation.
         </p>
         <Map collectifs={collectifs} />
