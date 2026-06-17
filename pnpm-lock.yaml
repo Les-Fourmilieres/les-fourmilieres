@@ -47,6 +47,9 @@ importers:
       react-responsive:
         specifier: ^10.0.1
         version: 10.0.1(react@19.2.5)
+      simplex-noise:
+        specifier: ^4.0.3
+        version: 4.0.3
       styled-components:
         specifier: ^6.4.1
         version: 6.4.1(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -2482,6 +2485,9 @@ packages:
 
   simple-get@4.0.1:
     resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
+
+  simplex-noise@4.0.3:
+    resolution: {integrity: sha512-qSE2I4AngLQG7BXqoZj51jokT4WUXe8mOBrvfOXpci8+6Yu44+/dD5zqDpOx3Ux792eamTd2lLcI8jqFntk/lg==}
 
   simplify-js@1.2.4:
     resolution: {integrity: sha512-vITfSlwt7h/oyrU42R83mtzFpwYk3+mkH9bOHqq/Qw6n8rtR7aE3NZQ5fbcyCUVVmuMJR6ynsAhOfK2qoah8Jg==}
@@ -6016,6 +6022,8 @@ snapshots:
       once: 1.4.0
       simple-concat: 1.0.1
     optional: true
+
+  simplex-noise@4.0.3: {}
 
   simplify-js@1.2.4: {}
 

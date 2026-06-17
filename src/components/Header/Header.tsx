@@ -126,6 +126,10 @@ const menu: MenuItem[] = [
     to: "/qui-sommes-nous",
   },
   {
+    label: "Participer",
+    to: "/participer-au-festival",
+  },
+  {
     label: "Le programme",
     to: "/le-programme",
   },

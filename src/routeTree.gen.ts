@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
+import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au-festival'
 import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
@@ -20,6 +21,11 @@ import { Route as ProgrammeUuidRouteImport } from './routes/programme/$uuid'
 const QuiSommesNousRoute = QuiSommesNousRouteImport.update({
   id: '/qui-sommes-nous',
   path: '/qui-sommes-nous',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParticiperAuFestivalRoute = ParticiperAuFestivalRouteImport.update({
+  id: '/participer-au-festival',
+  path: '/participer-au-festival',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LesFourmilieresRoute = LesFourmilieresRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
+  '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme/': typeof ProgrammeIndexRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
+  '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme': typeof ProgrammeIndexRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
+  '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme/': typeof ProgrammeIndexRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
+    | '/participer-au-festival'
     | '/qui-sommes-nous'
     | '/programme/$uuid'
     | '/programme/'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
+    | '/participer-au-festival'
     | '/qui-sommes-nous'
     | '/programme/$uuid'
     | '/programme'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
+    | '/participer-au-festival'
     | '/qui-sommes-nous'
     | '/programme/$uuid'
     | '/programme/'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   LaCharteRoute: typeof LaCharteRoute
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
+  ParticiperAuFestivalRoute: typeof ParticiperAuFestivalRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
   ProgrammeUuidRoute: typeof ProgrammeUuidRoute
   ProgrammeIndexRoute: typeof ProgrammeIndexRoute
@@ -128,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/qui-sommes-nous'
       fullPath: '/qui-sommes-nous'
       preLoaderRoute: typeof QuiSommesNousRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/participer-au-festival': {
+      id: '/participer-au-festival'
+      path: '/participer-au-festival'
+      fullPath: '/participer-au-festival'
+      preLoaderRoute: typeof ParticiperAuFestivalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/les-fourmilieres': {
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   LaCharteRoute: LaCharteRoute,
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,
+  ParticiperAuFestivalRoute: ParticiperAuFestivalRoute,
   QuiSommesNousRoute: QuiSommesNousRoute,
   ProgrammeUuidRoute: ProgrammeUuidRoute,
   ProgrammeIndexRoute: ProgrammeIndexRoute,
