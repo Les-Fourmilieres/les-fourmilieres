@@ -4,6 +4,7 @@ import { Logo } from "../components/Logo/Logo";
 import { Cagnotte } from "../components/Cagnotte/Cagnotte";
 import { Section } from "../components/Section";
 import { Teaser } from "../views/Teaser";
+import { Newsletter } from "../components/Newsletter/Newsletter";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -107,24 +108,10 @@ function Home() {
           </HeroTitleSection>
         </Section>
       </HeroSection>
-
-      <Section style={{ padding: 0 }}>
-        <iframe
-          width="100%"
-          height="550"
-          src="https://831d7d2b.sibforms.com/serve/MUIFAGRLxcnC6V1RZbJo8HRFs16TSK5o7YcHGuBQFXk9UDZOHZxjnGTi6DcChRJlbQ-TM_todKH3Sm7SGYWsRm3bnHYgrDldw3YrTy1OmoLqJVGcX8uXMXQbyv1l71ADn25xNdJHH7iHDApLfM8TkSoA1wyOLI0wpEQcdt9S_RKKeEAHep6xsJhsyFzE4MQEWzwKPFmhQ4id_3mx"
-          allowFullScreen
-          allowTransparency={true}
-          title="Formulaire d'inscription à la newsletter"
-          style={{
-            display: "block",
-            margin: "0 auto",
-            maxWidth: "100%",
-            border: "none",
-            backgroundColor: "transparent",
-          }}
-        ></iframe>
+      <Section>
+        <Newsletter />
       </Section>
+
       <Teaser />
       <Cagnotte />
     </>

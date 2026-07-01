@@ -6,6 +6,7 @@ import { RotatingText } from "../components/RotatingText";
 import { CagnotteHeader } from "../components/Cagnotte/CagnotteHeader";
 import { useMotionValue } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
+import { Newsletter } from "../components/Newsletter/Newsletter";
 
 export const Route = createFileRoute("/participer-au-festival")({
   component: RouteComponent,
@@ -106,7 +107,10 @@ function RouteComponent() {
               margin: "16px 0 0",
             }}
           >
-            <LinkButton href="https://www.instagram.com/lesfourmilieres/">
+            <LinkButton
+              href="https://www.instagram.com/lesfourmilieres/"
+              style={{ display: "flex", alignItems: "center", gap: 8 }}
+            >
               <FaInstagram /> Instagram
             </LinkButton>
           </div>
@@ -114,21 +118,7 @@ function RouteComponent() {
 
         <ActionItem>
           Abonnez-vous à l’infolettre des Fourmilières :
-          <iframe
-            width="100%"
-            height="550"
-            src="https://831d7d2b.sibforms.com/serve/MUIFAGRLxcnC6V1RZbJo8HRFs16TSK5o7YcHGuBQFXk9UDZOHZxjnGTi6DcChRJlbQ-TM_todKH3Sm7SGYWsRm3bnHYgrDldw3YrTy1OmoLqJVGcX8uXMXQbyv1l71ADn25xNdJHH7iHDApLfM8TkSoA1wyOLI0wpEQcdt9S_RKKeEAHep6xsJhsyFzE4MQEWzwKPFmhQ4id_3mx"
-            allowFullScreen
-            allowTransparency={true}
-            title="Formulaire d'inscription à la newsletter"
-            style={{
-              display: "block",
-              margin: "0 auto",
-              maxWidth: "100%",
-              border: "none",
-              backgroundColor: "transparent",
-            }}
-          ></iframe>
+          <Newsletter disableTitle />
         </ActionItem>
 
         <ActionItem>

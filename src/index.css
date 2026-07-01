@@ -9,6 +9,7 @@
   --text: #000000;
   --text-l: #1b1919;
   --text-h: #08060d;
+  --placeholder: #766e6e;
   --title-color: #000000;
   --bg: #fffdef;
   --bgTransparent: #fffdef7a;
@@ -104,6 +105,20 @@ h1 {
   }
 }
 h2 {
+  text-align: center;
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+  font-size: 28px;
+  letter-spacing: -1.68px;
+  margin: 28px 0;
+  text-wrap: balance;
+  @media (max-width: 1024px) {
+    font-size: 26px;
+    margin: 20px 0;
+  }
+}
+h3 {
   font-size: 20px;
   line-height: 118%;
   letter-spacing: -0.24px;
@@ -114,7 +129,7 @@ h2 {
     font-size: 18px;
   }
 }
-h3 {
+h4 {
   font-size: 18px;
   line-height: 118%;
   letter-spacing: -0.24px;
@@ -125,19 +140,4 @@ h3 {
 p {
   margin: 0 auto 16px;
   text-wrap: pretty;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
 }
