@@ -1,4 +1,5 @@
 import z from "zod";
+import type { LivingAreaI } from "../../core/LivingArea";
 
 const MobilizonMediaSchema = z.object({
   url: z.string().optional().nullable(),
@@ -67,3 +68,7 @@ export const MobilizonSingleEventSchema = z.object({
 
 export type MobilizonResponseI = z.infer<typeof MobilizonResponseSchema>;
 export type MobilizonEventI = z.infer<typeof MobilizonEventSchema>;
+export type MobilizonEventWithLivingAreaI = MobilizonEventI & {
+  livingArea: LivingAreaI | undefined;
+};
+export type MobilizonEventSchema = z.infer<typeof MobilizonSearchEventsSchema>;

@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Container = styled.div`
-  flex: 1 0 240px;
+  flex: 1 0 320px;
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,9 @@ const Figure = styled.figure`
   flex: 0 0 200px;
   padding: 0;
   margin: 0;
-  background-size: cover;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 `;
 
 const Content = styled.div`
@@ -100,6 +102,7 @@ export function CalendarEvent({ event }: Props) {
               }
             : {
                 backgroundImage: `url(https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp)`,
+                backgroundSize: "cover",
               }
         }
       ></Figure>
