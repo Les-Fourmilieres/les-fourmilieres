@@ -1,9 +1,10 @@
-export type Departements = "Aude" | "Aveyron" | "Gard" | "Herault";
+export type Departements = "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère";
 export const departements: Departements[] = [
   "Aude",
   "Aveyron",
   "Gard",
-  "Herault",
+  "Hérault",
+  "Lozère",
 ];
 
 export interface CollectifI {
@@ -44,37 +45,37 @@ export const collectifs: CollectifI[] = [
   {
     slug: "association-folia",
     name: "Association Folia",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.603889, lng: 3.859463 },
   },
   {
     slug: "association-home-cinema",
     name: "Association Home Cinema",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.597798, lng: 3.865557 },
   },
   {
     slug: "association-justice-climat-montpellier",
     name: "Association Justice Climat Montpellier",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.609793, lng: 3.858004 },
   },
   {
     slug: "la-cimade-montpellier",
     name: "La Cimade Montpellier",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.617682, lng: 3.874231 },
   },
   {
     slug: "association-lafi-bala",
     name: "Association Lafi Bala",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.630907, lng: 3.898033 },
   },
   {
     slug: "association-refuge-pour-animaux-hakuna-matata",
     name: "Association refuge pour animaux Hakuna Matata",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.826338, lng: 3.774748 },
   },
   {
@@ -86,13 +87,13 @@ export const collectifs: CollectifI[] = [
   {
     slug: "barnabu",
     name: "Barnabu",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.329798, lng: 3.213329 },
   },
   {
     slug: "beziers-anti-cra",
     name: "Béziers ANTI-CRA",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.34091, lng: 3.197622 },
   },
   {
@@ -104,7 +105,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "bouillon-cube",
     name: "Bouillon Cube / La Grange",
-    departement: "Herault",
+    departement: "Hérault",
     description:
       "Tiers lieu en milieu rural, avec programmation culturelle, accueil d'artiste en résidence, projet sociaux et éducatif... faire ensemble, en ruralité, est le socle de notre démarche.",
     position: { lat: 43.81539731257116, lng: 3.661956639277761 },
@@ -137,31 +138,31 @@ export const collectifs: CollectifI[] = [
   {
     slug: "collectif-gilets-jaunes-de-gignac-et-alentours",
     name: "Collectif Gilets jaunes de Gignac et alentours",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.65025148001632, lng: 3.546333160764182 },
   },
   {
     slug: "collectif-lodevois",
     name: "Collectif Lodévois",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.73312, lng: 3.320832 },
   },
   {
     slug: "collectif-montpellier-contre-l-extreme-droite",
     name: "Collectif Montpellier contre l'Extrême Droite",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.618369, lng: 3.885212 },
   },
   {
     slug: "collectif-sete-contre-l-extreme-droite",
     name: "Collectif Sète lutte contre l'Extrême Droite",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.409007, lng: 3.698123 },
   },
   {
     slug: "combas-rojas",
     name: "Combas Rojas",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.661632, lng: 3.342419 },
   },
   {
@@ -173,14 +174,14 @@ export const collectifs: CollectifI[] = [
   {
     slug: "cosmopolitheque",
     name: "Cosmopolithèque",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.339978, lng: 3.216266 },
   },
   {
     slug: "dcclm-club-de-roller-derby",
     name: "DCCLM, club de roller derby",
     description: "Club de roller derby à Montpellier",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.597798, lng: 3.877659 },
     logo: "collectifs/dcclm.webp",
     icon: "collectifs/dcclm.webp",
@@ -191,7 +192,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "dear-valid-people",
     name: "Dear Valid People",
-    departement: "Herault",
+    departement: "Hérault",
     description:
       "Dear Valid People est une association issue de la loi 1901 ayant pour objet la déconstruction du handicap, du validisme.",
     position: { lat: 43.614267, lng: 3.868561 },
@@ -199,7 +200,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "en-vie-a-beziers",
     name: "En Vie à Béziers (EVAB)",
-    departement: "Herault",
+    departement: "Hérault",
     description:
       "Journal numérique hebdomadaire paru suite à l'élection de R. Ménard à la municipalité en 2014",
     position: { lat: 43.350429, lng: 3.217535 },
@@ -215,7 +216,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "greenpeace-montpellier",
     name: "Greenpeace Montpellier",
-    departement: "Herault",
+    departement: "Hérault",
     description:
       "Le groupe local de Greenpeace Montpellier œuvre selon les principes de non-violence pour protéger l'environnement, la biodiversité et promouvoir la paix.",
     position: { lat: 43.605528666477845, lng: 3.870980340825212 },
@@ -236,7 +237,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "echapppee-belle",
     name: "L'Échappée Belle",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.401903, lng: 3.695522 },
   },
   {
@@ -244,20 +245,20 @@ export const collectifs: CollectifI[] = [
     name: "L'Ilot Vert de la Soulondres",
     description:
       "Eco-lieu. Coopérative d'habitants de 22 logements dont un logement d'accueil solidaire",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.731969753153166, lng: 3.309223902200748 },
     url: "https://ilotvertdelasoulondres.org/",
   },
   {
     slug: "ultra-violette",
     name: "L'Ultra Violette",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.601838, lng: 3.873196 },
   },
   {
     slug: "la-battante",
     name: "La Battante",
-    departement: "Herault",
+    departement: "Hérault",
     description: `La Battante est une batucada militante engagée pour les luttes sociales, environnementales, féministes et LGBTQIA+. 
       Depuis 2010, nous sommes dans la rue pour soutenir les luttes en musique ! `,
     url: "https://batucada-la-battante.org/",
@@ -268,14 +269,14 @@ export const collectifs: CollectifI[] = [
   {
     slug: "la-bestiole",
     name: "La BestiOle",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.743493, lng: 3.704322 },
   },
   {
     slug: "la-carmagnole",
     name: "La Carmagnole",
     description: `La Carmagnole  est un espace coopératif, culturel et politique installé au cœur du quartier Figuerolles à Montpellier, mêlant éducation populaire, débats, concerts, projections et initiatives solidaires. Fonctionnant sur un mode participatif, le lieu se veut à la fois un point d’appui pour les luttes sociales, écologiques et démocratiques, et un espace convivial ouvert sur le quartier, dans la ville.`,
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.60735, lng: 3.868065 },
     url: "https://lacarmagnole.fr/",
     instagram: "https://www.instagram.com/la_carmagnole.mtp/",
@@ -292,7 +293,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "la-cimade-beziers",
     name: "La Cimade Beziers",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.335261, lng: 3.226333 },
   },
   {
@@ -310,7 +311,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "la-mauvaise-reputation",
     name: "La Mauvaise Réputation",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.609652, lng: 3.873119 },
   },
   {
@@ -322,13 +323,13 @@ export const collectifs: CollectifI[] = [
   {
     slug: "la-symbolique-du-poulet",
     name: "La symbolique du poulet",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.607377, lng: 3.871099 },
   },
   {
     slug: "ldh",
     name: "LDH",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.610352, lng: 3.892164 },
     logo: "collectifs/LDH.png",
     url: "https://www.ldh-france.org/",
@@ -336,31 +337,31 @@ export const collectifs: CollectifI[] = [
   {
     slug: "le-clap",
     name: "Le Clap",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.730138, lng: 3.323997 },
   },
   {
     slug: "le-grain-des-mots",
     name: "Le Grain des Mots",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.607925, lng: 3.873901 },
   },
   {
     slug: "le-maquis",
     name: "Le Maquis",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.730639, lng: 3.318751 },
   },
   {
     slug: "le-poing",
     name: "Le Poing",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.616505, lng: 3.862295 },
   },
   {
     slug: "le-quartier-genereux",
     name: "Le Quartier Généreux",
-    departement: "Herault",
+    departement: "Hérault",
     logo: "collectifs/quartier-genereux-logo.svg",
     icon: "collectifs/quartier-genereux.svg",
     position: {
@@ -375,14 +376,14 @@ export const collectifs: CollectifI[] = [
   {
     slug: "les-aragantes",
     name: "Les aragantes",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.6143, lng: 3.8717 },
     logo: "collectifs/les-aragantes.webp",
   },
   {
     slug: "fourmiliere-lodevois-larzac",
     name: "La Fourmilière Lodévois-Larzac",
-    departement: "Herault",
+    departement: "Hérault",
     description:
       "Collectifs des associations et des militant.es du Lodévois et Larzac mobilisé.es pour créer un événement long à cheval sur la dernière. Des associations des communes de Celles, Lodève, Octon, Saint-Étienne-de-Gourgas",
     position: { lat: 43.716671, lng: 3.31667 },
@@ -390,26 +391,26 @@ export const collectifs: CollectifI[] = [
   {
     slug: "les-siestes-mutines",
     name: "Les siestes mutines",
-    departement: "Herault",
+    departement: "Hérault",
     description: "Siestes en open air",
     position: { lat: 43.6143, lng: 3.8717 },
   },
   {
     slug: "nouvelle-librairie-setoise",
     name: "Nouvelle Librairie Sétoise",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.402978, lng: 3.69478 },
   },
   {
     slug: "oustalite",
     name: "Oustalité",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.736189, lng: 3.317013 },
   },
   {
     slug: "poles-en-pomme",
     name: "Pôles en pomme 🍎",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.651023, lng: 3.509992 },
     description:
       "Redonner à chacun la capacité de comprendre, choisir et agir sur le monde dans lequel il vit.",
@@ -424,7 +425,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "reso-resistances-solidaires",
     name: "Réso Résistances Solidaires",
-    departement: "Herault",
+    departement: "Hérault",
     description:
       "Collectif universitaire de Résistance et Solidarité face aux idées d'extrême droite",
     position: { lat: 43.6313618030923, lng: 3.861349533261347 },
@@ -434,13 +435,13 @@ export const collectifs: CollectifI[] = [
   {
     slug: "rusf-34",
     name: "RUSF34",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.603392, lng: 3.885727 },
   },
   {
     slug: "societe-du-cafe-du-siecle",
     name: "Société du Café du siècle",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.934128, lng: 3.707733 },
   },
   {
@@ -452,19 +453,19 @@ export const collectifs: CollectifI[] = [
   {
     slug: "theatre-de-la-plume",
     name: "Théâtre de la Plume",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.608605, lng: 3.866927 },
   },
   {
     slug: "tisseur-d-espoir",
     name: "Tisseur d'espoir",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.700272, lng: 3.551846 },
   },
   {
     slug: "union-communiste-libertaire",
     name: "Union Communiste Libertaire (UCL)",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.609651, lng: 3.873127 },
     description:
       "Nous somme une organisation politique libertaire non-électoraliste. Nous tenons également une librairie anarchiste : la Mauvaise Réputation.",
@@ -476,19 +477,19 @@ export const collectifs: CollectifI[] = [
   {
     slug: "union-syndicale-solidaire-34",
     name: "Union syndicale Solidaires 34",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.616695, lng: 3.878214 },
   },
   {
     slug: "utopia-montpellier",
     name: "Utopia Montpellier",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.629019, lng: 3.869085 },
   },
   {
     slug: "vivons-celles",
     name: "Vivons Celles",
-    departement: "Herault",
+    departement: "Hérault",
     position: { lat: 43.661942, lng: 3.339329 },
   },
 ];

@@ -91,7 +91,8 @@ function Home() {
               au <strong>11&nbsp;octobre 2026</strong>
             </DatesSection>
             <DatesSection>
-              dans l'<strong>Hérault</strong>,<br /> le <strong>Gard</strong> et{" "}
+              dans l'<strong>Aude</strong>, l'<strong>Hérault</strong>,<br /> le{" "}
+              <strong>Gard</strong>, la <strong>Lozère</strong> et{" "}
               <strong>l'Aveyron</strong>
             </DatesSection>
           </PlaceAndDateSection>

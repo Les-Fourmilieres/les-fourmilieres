@@ -21,16 +21,16 @@ export function Teaser() {
           collectifs, associations, librairies, brasseries, syndicats, lieux
           culturels, troupes de théâtre, associations sportives, tiers lieux,
           cinémas. Nous sommes actuellement une soixantaine de collectifs
-          répartis du Larzac aux Cévennes et jusqu’au littoral, sur l’Aveyron,
-          le Gard et l’Hérault.
+          répartis du Larzac aux Cévennes et jusqu’au littoral, sur l’Aude,
+          l’Aveyron, le Gard, l’Hérault et la Lozère.
         </p>
 
         <p>
           L’objectif du festival est d’affirmer la lutte contre l’extrême droite
           dans nos territoires, de montrer que nous sommes nombreux et
           nombreuses à vouloir réagir et de{" "}
-          <strong>proposer un autre projet de société</strong>{" "}
-          face à la menace fasciste.
+          <strong>proposer un autre projet de société</strong> face à la menace
+          fasciste.
         </p>
 
         <p>
@@ -47,8 +47,8 @@ export function Teaser() {
 
         <p>
           Le Festival est donc{" "}
-          <strong>décentralisé et fonctionne de façon horizontale</strong>,
-          sans association centralisant son organisation.
+          <strong>décentralisé et fonctionne de façon horizontale</strong>, sans
+          association centralisant son organisation.
         </p>
         <Map collectifs={collectifs} />
       </Section>
