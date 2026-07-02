@@ -357,7 +357,7 @@ export const collectifs: CollectifI[] = [
 		name:"Extinction Rebellion Montpellier",
 		position:{lat:43.60537155400486, lng:3.8711312035552408},
 		departement:"Hérault",
-		logo:"collectifs/extinction-rebellion-logo.svg",
+		logo:"collectifs/extinction-rebellion-icon.png",
 		icon:"collectifs/extinction-rebellion-icon.png",
 		instagram:"https://www.instagram.com/xr.montpellier/",
 		url:"https://extinctionrebellion.fr/branches/montpellier/",
