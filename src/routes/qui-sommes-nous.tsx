@@ -150,7 +150,7 @@ function RouteComponent() {
         collectifs afin de proposer des évènements de son choix.
       </p>
       <p>
-        Aujourd'hui, plus de 60 collectifs ont déjà rejoint Les Foumilières :
+        Aujourd'hui, plus de 100 collectifs ont déjà rejoint Les Foumilières :
       </p>
       <StyledToggleButtonGroup>
         {postalCodeFacets.map((postalCode) => (
