@@ -9,15 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SafiaDahaniLesExtremesDroitesContemporainesRouteImport } from './routes/safia-dahani-les-extremes-droites-contemporaines'
 import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
 import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au-festival'
 import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
+import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendemains-meilleurs'
+import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgrammeIndexRouteImport } from './routes/programme/index'
 import { Route as ProgrammeUuidRouteImport } from './routes/programme/$uuid'
 
+const SafiaDahaniLesExtremesDroitesContemporainesRoute =
+  SafiaDahaniLesExtremesDroitesContemporainesRouteImport.update({
+    id: '/safia-dahani-les-extremes-droites-contemporaines',
+    path: '/safia-dahani-les-extremes-droites-contemporaines',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const QuiSommesNousRoute = QuiSommesNousRouteImport.update({
   id: '/qui-sommes-nous',
   path: '/qui-sommes-nous',
@@ -43,6 +52,17 @@ const LaCharteRoute = LaCharteRouteImport.update({
   path: '/la-charte',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DesLendemainsMeilleursRoute = DesLendemainsMeilleursRouteImport.update({
+  id: '/des-lendemains-meilleurs',
+  path: '/des-lendemains-meilleurs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BatailleCulturelleHistoireDu14JuilletRoute =
+  BatailleCulturelleHistoireDu14JuilletRouteImport.update({
+    id: '/bataille-culturelle-histoire-du-14-juillet',
+    path: '/bataille-culturelle-histoire-du-14-juillet',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -61,32 +81,41 @@ const ProgrammeUuidRoute = ProgrammeUuidRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
+  '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
+  '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
+  '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
@@ -94,48 +123,67 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/bataille-culturelle-histoire-du-14-juillet'
+    | '/des-lendemains-meilleurs'
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
     | '/participer-au-festival'
     | '/qui-sommes-nous'
+    | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
     | '/programme/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/bataille-culturelle-histoire-du-14-juillet'
+    | '/des-lendemains-meilleurs'
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
     | '/participer-au-festival'
     | '/qui-sommes-nous'
+    | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
     | '/programme'
   id:
     | '__root__'
     | '/'
+    | '/bataille-culturelle-histoire-du-14-juillet'
+    | '/des-lendemains-meilleurs'
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
     | '/participer-au-festival'
     | '/qui-sommes-nous'
+    | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
     | '/programme/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
+  DesLendemainsMeilleursRoute: typeof DesLendemainsMeilleursRoute
   LaCharteRoute: typeof LaCharteRoute
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
   ParticiperAuFestivalRoute: typeof ParticiperAuFestivalRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
+  SafiaDahaniLesExtremesDroitesContemporainesRoute: typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   ProgrammeUuidRoute: typeof ProgrammeUuidRoute
   ProgrammeIndexRoute: typeof ProgrammeIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/safia-dahani-les-extremes-droites-contemporaines': {
+      id: '/safia-dahani-les-extremes-droites-contemporaines'
+      path: '/safia-dahani-les-extremes-droites-contemporaines'
+      fullPath: '/safia-dahani-les-extremes-droites-contemporaines'
+      preLoaderRoute: typeof SafiaDahaniLesExtremesDroitesContemporainesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/qui-sommes-nous': {
       id: '/qui-sommes-nous'
       path: '/qui-sommes-nous'
@@ -171,6 +219,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LaCharteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/des-lendemains-meilleurs': {
+      id: '/des-lendemains-meilleurs'
+      path: '/des-lendemains-meilleurs'
+      fullPath: '/des-lendemains-meilleurs'
+      preLoaderRoute: typeof DesLendemainsMeilleursRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bataille-culturelle-histoire-du-14-juillet': {
+      id: '/bataille-culturelle-histoire-du-14-juillet'
+      path: '/bataille-culturelle-histoire-du-14-juillet'
+      fullPath: '/bataille-culturelle-histoire-du-14-juillet'
+      preLoaderRoute: typeof BatailleCulturelleHistoireDu14JuilletRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -197,11 +259,16 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BatailleCulturelleHistoireDu14JuilletRoute:
+    BatailleCulturelleHistoireDu14JuilletRoute,
+  DesLendemainsMeilleursRoute: DesLendemainsMeilleursRoute,
   LaCharteRoute: LaCharteRoute,
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,
   ParticiperAuFestivalRoute: ParticiperAuFestivalRoute,
   QuiSommesNousRoute: QuiSommesNousRoute,
+  SafiaDahaniLesExtremesDroitesContemporainesRoute:
+    SafiaDahaniLesExtremesDroitesContemporainesRoute,
   ProgrammeUuidRoute: ProgrammeUuidRoute,
   ProgrammeIndexRoute: ProgrammeIndexRoute,
 }
