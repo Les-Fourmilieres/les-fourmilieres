@@ -85,9 +85,9 @@ function RouteComponent() {
       <ul>
         <ActionItem>
           Soutenez-nous via la cagnotte afin de défrayer les intervenant·es,
-          rémunérer les artistes et technicien·nes, nous donner les moyens de
-          communiquer le plus largement possible et permettre un accès gratuit
-          pour tous·tes à l'ensemble des évènements.{" "}
+					rémunérer les artistes et technicien·nes, nous donner les moyens de
+					communiquer le plus largement possible et faciliter l'accès au festival
+					pour tous·tes, vous pouvez faire un don au festival.{" "}
           <CagnotteHeader progress={defaultProgress} isMobile={false} />
         </ActionItem>
 

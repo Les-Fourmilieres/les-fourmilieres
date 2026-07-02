@@ -16,8 +16,8 @@ export function Cagnotte() {
       <p>
         Afin de défrayer les intervenant·es, rémunérer les artistes et
         technicien·nes, nous donner les moyens de communiquer le plus largement
-        possible et permettre un accès gratuit pour tous·tes à l'ensemble des
-        évènements, vous pouvez faire un don au festival.
+        possible et faciliter l'accès au festival pour tous·tes, vous pouvez
+				faire un don au festival.
       </p>
       <CagnotteContent />
     </Section>
