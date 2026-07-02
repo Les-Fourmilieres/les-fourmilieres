@@ -22,7 +22,30 @@ export interface CollectifI {
 }
 
 export const collectifs: CollectifI[] = [
-  {
+	{
+		slug:"ajcm",
+		name:"Action Justice Climat Montpellier",
+		position:{lat:43.60534898256834, lng:3.8708916243391833},
+		departement:"Hérault",
+		url:"https://ajcmontpellier.fr/",
+		description:"Nous sommes Action Justice Climat et nous luttons depuis 2014 pour un monde juste et soutenable.",
+		facebook:"https://www.facebook.com/actionjusticeclimatmontpellier/",
+		instagram:"https://www.instagram.com/actionjusticeclimat_mtp",
+		logo:"collectifs/ajc-montpellier-logo.png",
+		icon:"collectifs/ajc-montpellier-logo.png"
+	},
+	{
+		slug:"alternatiba-montpellier",
+		name:"Alternatiba Montpellier",
+		position:{lat:43.60548235008898, lng:3.8707762020397642},
+		departement:"Hérault",
+		facebook:"https://www.facebook.com/p/Alternatiba-Montpellier-61559079741040/",
+		url:"https://alternatiba.eu/",
+		logo:"collectifs/alternatiba-logo.png",
+		icon:"collectifs/alternatiba-icon.png",
+		description:"Alternatiba est un mouvement citoyen pour le climat et la justice sociale."
+	},
+	/*{
     slug: "alternative-de-gauche-millau",
     name: "Alternative de gauche Millau",
     departement: "Aveyron",
@@ -30,7 +53,7 @@ export const collectifs: CollectifI[] = [
       lat: 44.092024,
       lng: 3.077545,
     },
-  },
+  },*/
   {
     slug: "association-boucan",
     name: "BOUCAN",
@@ -46,31 +69,61 @@ export const collectifs: CollectifI[] = [
     slug: "association-folia",
     name: "Association Folia",
     departement: "Hérault",
-    position: { lat: 43.603889, lng: 3.859463 },
+    position: { lat: 43.607314809317636, lng: 3.869126672009106 },
+		url:"https://www.foliaevenement.com/",
+		facebook:"https://www.facebook.com/p/Folia-%C3%89v%C3%A9nement-61577107390964/",
+		instagram:"https://www.instagram.com/folia.evenement/",
+		description:"Folia Événement est une association dédiée à l'art du spectacle et à la création d'événements uniques.",
+		logo:"collectifs/folia-logo.png"
   },
   {
     slug: "association-home-cinema",
     name: "Association Home Cinema",
     departement: "Hérault",
     position: { lat: 43.597798, lng: 3.865557 },
+		url:"https://assohomecinema.fr/",
+		instagram:"https://www.instagram.com/assohomecinema/",
+		facebook:"https://www.facebook.com/profile.php?id=61573989620227",
+		description:"Collectif à l'origine de l'occupation citoyenne du cinéma La Clef, mais non de son rachat - 🎞️ Ciné-club itinérant - ✏️ Revue Contrebande.",
+		logo:"collectifs/home-cinema-logo.png"
   },
-  {
-    slug: "association-justice-climat-montpellier",
-    name: "Association Justice Climat Montpellier",
-    departement: "Hérault",
-    position: { lat: 43.609793, lng: 3.858004 },
-  },
+	{
+		slug: "association-sous-les-etoiles",
+		name: "Association Sous les Étoiles",
+		departement: "Gard",
+		position:{lat: 43.9927991702679, lng: 3.6061338266957472},
+		url: "https://souslesetoiles.art",
+		logo: "collectifs/logo-sous-les-etoiles.png"
+	},
+	{
+		slug: "attac-aveyron",
+		name: "ATTAC Aveyron",
+		departement: "Aveyron",
+		position: {lat: 44.35656963048264, lng: 2.5786055541026065},
+		logo : "collectifs/attac-logo.jpg",
+		icon: "collectifs/attac-ico.png",
+		facebook:"https://www.facebook.com/attac12/"
+	},
   {
     slug: "la-cimade-montpellier",
     name: "La Cimade Montpellier",
     departement: "Hérault",
     position: { lat: 43.617682, lng: 3.874231 },
+		facebook:"https://www.facebook.com/CimadeMontpellier/",
+		url:"https://www.lacimade.org/regions/languedoc-roussillon/",
+		description:"La Cimade a pour but de manifester une solidarité active avec les personnes opprimées et exploitées.",
+		logo:"collectifs/cimade-logo.svg"
   },
   {
     slug: "association-lafi-bala",
     name: "Association Lafi Bala",
     departement: "Hérault",
     position: { lat: 43.630907, lng: 3.898033 },
+		url:"https://www.lafibala.org/",
+		instagram:"https://www.instagram.com/associationlafibala/",
+		facebook:"https://fr-fr.facebook.com/lafibala34",
+		description:"Association d'éducation à la citoyenneté mondiale",
+		logo:"collectifs/lafibala-logo.png"
   },
   {
     slug: "association-refuge-pour-animaux-hakuna-matata",
@@ -83,25 +136,34 @@ export const collectifs: CollectifI[] = [
     name: "Bar du Midi",
     departement: "Gard",
     position: { lat: 43.84052468551134, lng: 4.362547726172306 },
+		instagram:"https://www.instagram.com/le_bar_du_midi/",
+		facebook:"https://www.facebook.com/p/Le-Bar-du-Midi-100088602878744/",
+		logo:"collectifs/bar-du-midi-logo.jpg",
+		description:"Le Bar du Midi, c’est un Bar-PMU et lieu culturel revisité. Dans un esprit rétro et chaleureux."
   },
   {
     slug: "barnabu",
-    name: "Barnabu",
+    name: "Barnabu - Collectif Nabuchodonosor",
     departement: "Hérault",
     position: { lat: 43.329798, lng: 3.213329 },
+		facebook:"https://www.facebook.com/collectif.nabucho/?locale=fr_FR",
+		description:"Collectif Nabuchodonosor, Venez nous retrouver au Café associatif Barnabu, place St Cyr à Béziers",
+		logo:"collectifs/barnabu-logo.jpg"
   },
   {
     slug: "beziers-anti-cra",
     name: "Béziers ANTI-CRA",
     departement: "Hérault",
     position: { lat: 43.34091, lng: 3.197622 },
+		url:"https://anticra.com/"
   },
-  {
-    slug: "bololipsum",
-    name: "Bololipsum",
-    departement: "Gard",
-    position: { lat: 43.96217265327163, lng: 3.855153297257745 },
-  },
+	{
+		slug: "bienvenue-a-mandagout",
+		name: "Bienvenu à Mandagout - BAM",
+		departement:"Gard",
+		position: {lat: 44.02035067734695, lng: 3.6257197344016316},
+		description:"BAM est une association créée pour gérer l’accueil et l’accompagnement de familles de réfugiés."
+	},
   {
     slug: "bouillon-cube",
     name: "Bouillon Cube / La Grange",
@@ -126,6 +188,39 @@ export const collectifs: CollectifI[] = [
     logo: "collectifs/la-frenetik.webp",
     icon: "collectifs/la-frenetik.webp",
   },
+	{
+		slug: "brasserie-lodeva",
+		name: "Brasserie Lodeva",
+		position:{lat:43.7302547901774, lng:3.324012238492436},
+		departement:"Hérault",
+		facebook:"https://www.facebook.com/brasserielodeva/?locale=fr_FR",
+		instagram:"https://www.instagram.com/brasserielodeva",
+		logo:"collectifs/brasserie-lodeva-logo.jpg",
+		icon:"collectifs/brasserie-lodeva-icon.png",
+		description:"Brasserie artisanale, 🍲 Cuisine bistrot, 🎸 Événements culturels, concerts"
+	},
+	{
+		slug:"ccfd-herault",
+		name:"CCFD-Terre Solidaire Hérault",
+		position:{lat:43.623233767371836, lng:3.888137511144614},
+		departement:"Hérault",
+		facebook:"https://www.facebook.com/people/CCFD-Terre-Solidaire-H%C3%A9rault/100064861953900/?locale=fr_FR",
+		url:"https://ccfd-terresolidaire.org/regions/languedoc-roussillon-vaucluse/",
+		instagram:"https://www.instagram.com/ccfdts_lrv/",
+		logo:"collectifs/ccfd-terre-solidaire.png",
+		icon:"collectifs/ccfd-terre-solidaire.png",
+		description:"Le CCFD-Terre Solidaire agit aux côtés des populations les plus vulnérables contre toutes les formes d’injustices, et en premier lieu, celle de souffrir de la faim."
+	},
+	{
+		slug:"coord-eau-34",
+		name:"Coord'eau 34",
+		position:{lat:43.61354427304223, lng:3.895045113387284},
+		departement:"Hérault",
+		logo:"collectifs/coordeau34.jpg",
+		facebook:"https://www.facebook.com/p/Coordeau-34-100094200818050/",
+		instagram:"https://www.instagram.com/coordeau34/",
+		description:"Coordination départementale « EAU » à l’échelle de l’Hérault. La gestion de l'eau, notre bien commun, impose des choix collectifs et partagés."
+	},
   {
     slug: "cevennes-terre-d-accueil",
     name: "Cévennes Terre d'Accueil",
@@ -134,7 +229,21 @@ export const collectifs: CollectifI[] = [
       lat: 44.35,
       lng: 3.949327,
     },
+		logo:"collectifs/logo-cevennes-terre-accueil.webp",
+		url:"https://www.helloasso.com/associations/cevennes-terre-d-accueil",
+		description:"Association de soutien à l'accueil de réfugiés sur le territoire des Cévennes : Ardèche, Gard et Lozère"
   },
+	{
+		slug:"collectif-enfantiste-34",
+		name:"Collectif Enfantiste 34",
+		position:{lat:43.60936561856381, lng:3.8811744681101414},
+		departement:"Hérault",
+		instagram:"https://www.instagram.com/collectifenfantiste34/",
+		description:"Collectif d’activistes contre les violences faites aux enfants et adolescents",
+		url:"https://collectifenfantiste.fr/",
+		icon:"collectifs/collectif-enfantiste-logo.webp",
+		logo:"collectifs/collectif-enfantiste-logo.webp"
+	},
   {
     slug: "collectif-gilets-jaunes-de-gignac-et-alentours",
     name: "Collectif Gilets jaunes de Gignac et alentours",
@@ -152,6 +261,9 @@ export const collectifs: CollectifI[] = [
     name: "Collectif Montpellier contre l'Extrême Droite",
     departement: "Hérault",
     position: { lat: 43.618369, lng: 3.885212 },
+		logo:"collectifs/montpellier-contre-extreme-droite-logo.jpg",
+		instagram: "https://www.instagram.com/mtpcontrelexd/",
+		description: "Collectif d’individu-e-s, assos, orgas, syndicats. Contre les idées d’extrême droite, organise-toi 💥"
   },
   {
     slug: "collectif-sete-contre-l-extreme-droite",
@@ -164,18 +276,28 @@ export const collectifs: CollectifI[] = [
     name: "Combas Rojas",
     departement: "Hérault",
     position: { lat: 43.661632, lng: 3.342419 },
+		url:"https://www.cambasrojas.org/",
+		description:"Le Fonds de dotation Cambas Rojas agit pour que le village de Celles redevienne un lieu habité, vivant et partagé.",
+		logo:"collectifs/combas-rojas-celles-logo.png"
   },
   {
     slug: "compagnie-le-plus-petit-espace-possible",
     name: "Compagnie Le Plus Petit Espace Possible",
     departement: "Aveyron",
     position: { lat: 44.102749, lng: 3.063812 },
+		url : "https://lepluspetitespacepossible.com/",
+		logo: "collectifs/logo-plus-petit-espace-possible.png",
+		facebook: "https://www.facebook.com/compagnielarzac",
+		instagram: "https://www.instagram.com/lepluspetitespacepossible"
   },
   {
     slug: "cosmopolitheque",
     name: "Cosmopolithèque",
     departement: "Hérault",
     position: { lat: 43.339978, lng: 3.216266 },
+		description:"Lieu associatif, culturel et citoyen",
+		url:"https://www.cosmopolitheque.fr/",
+		facebook:"https://www.facebook.com/cosmopolitheque"
   },
   {
     slug: "dcclm-club-de-roller-derby",
@@ -189,6 +311,17 @@ export const collectifs: CollectifI[] = [
     instagram: "https://www.instagram.com/dcclm34/",
     facebook: "https://www.facebook.com/dcclm.rollerderby",
   },
+	{
+		slug:"de-l-autre-cote",
+		name: "De l’Autre Côté",
+		position: {lat:43.934328020447076, lng:3.7078137288933743},
+		departement:"Hérault",
+		url:"https://delautrecote-ganges.weebly.com/",
+		description:"Espace culturel, citoyen & solidaire",
+		facebook:"https://www.facebook.com/delautrecoteganges/",
+		logo:"collectifs/de-lautre-cote-logo.png",
+		icon:"collectifs/de-lautre-cote-logo.png"
+	},
   {
     slug: "dear-valid-people",
     name: "Dear Valid People",
@@ -196,6 +329,9 @@ export const collectifs: CollectifI[] = [
     description:
       "Dear Valid People est une association issue de la loi 1901 ayant pour objet la déconstruction du handicap, du validisme.",
     position: { lat: 43.614267, lng: 3.868561 },
+		instagram:"https://www.instagram.com/dear.valid.people/",
+		facebook:"https://www.facebook.com/dearvalidpeople/",
+		logo:"collectifs/dear-valid-people-logo.webp"
   },
   {
     slug: "en-vie-a-beziers",
@@ -212,7 +348,22 @@ export const collectifs: CollectifI[] = [
     name: "Étoile bio",
     departement: "Gard",
     position: { lat: 43.909644, lng: 3.998429 },
+		facebook: "https://www.facebook.com/etoilebioquissac/",
+		instagram: "https://www.instagram.com/letoile.bio/",
+		logo: "collectifs/etoile-bio-logo.jpg"
   },
+	{
+		slug: "extinction-rebellion-montpellier",
+		name:"Extinction Rebellion Montpellier",
+		position:{lat:43.60537155400486, lng:3.8711312035552408},
+		departement:"Hérault",
+		logo:"collectifs/extinction-rebellion-logo.svg",
+		icon:"collectifs/extinction-rebellion-icon.png",
+		instagram:"https://www.instagram.com/xr.montpellier/",
+		url:"https://extinctionrebellion.fr/branches/montpellier/",
+		facebook:"https://www.facebook.com/xrmontpellier/",
+		description:"Extinction Rebellion est un mouvement mondial de désobéissance civile en lutte contre l’effondrement écologique et le réchauffement climatique"
+	},
   {
     slug: "greenpeace-montpellier",
     name: "Greenpeace Montpellier",
@@ -228,6 +379,29 @@ export const collectifs: CollectifI[] = [
       "https://www.facebook.com/GreenpeaceFranceMontpellier/?locale=fr_FR",
     bluesky: "https://bsky.app/profile/greenpeace-mtpl.bsky.social",
   },
+	{
+		slug: "greenpeace-narbonne",
+		name: "Greenpeace Narbonne",
+		departement: "Aude",
+		position: { lat: 43.184264449880324, lng: 3.0028803327703963 },
+		url: "https://www.greenpeace.fr/",
+		logo: "collectifs/greenpeace-vert-logo.svg",
+		icon: "collectifs/greenpeace-icon.webp",
+		instagram: "https://www.instagram.com/greenpeacenarbonne/",
+		facebook:
+			"https://www.facebook.com/GreenpeaceNarbonne/",
+		bluesky: "https://bsky.app/profile/gp-narbonne.bsky.social",
+	},
+	{
+		slug:"groove-your-ass-festival",
+		name:"Groove Your Ass Festival",
+		position:{lat:43.59738719604566, lng:3.8593058064980093},
+		departement:"Hérault",
+		instagram:"https://www.instagram.com/groove.your.ass/",
+		description:"Groove Your Ass : Un festival anticapitaliste, écologiste et culturel",
+		url:"https://shotgun.live/fr/venues/groove-your-ass",
+		logo:"collectifs/groove-your-ass-logo.png",
+	},
   {
     slug: "inter-syndic-collectif",
     name: "InterSyndicCollectif",
@@ -236,10 +410,33 @@ export const collectifs: CollectifI[] = [
   },
   {
     slug: "echapppee-belle",
-    name: "L'Échappée Belle",
+    name: "Librairie l'Échappée Belle",
     departement: "Hérault",
     position: { lat: 43.401903, lng: 3.695522 },
+		url:"https://www.lechappeebelle.fr/",
+		logo:"collectifs/echapee-belle-logo.png",
+		facebook:"https://www.facebook.com/libechappeebelle/",
+		instagram:"https://www.instagram.com/librairie.lechappee.belle/"
   },
+	{
+		slug:"fsu-34",
+		name:"Fédération Syndicale Unitaire - FSU 34",
+		position:{lat:43.60951340566071, lng:3.888753916038166},
+		departement:"Hérault",
+		url:"https://fsu34.fsu.fr/",
+		facebook:"https://www.facebook.com/FederationSyndicaleUnitaire/",
+		instagram:"https://www.instagram.com/federationsyndicaleunitaire/?hl=fr",
+		logo:"collectifs/fsu-logo.png"
+	},
+	{
+		slug:"fsu-territoriale-34",
+		name:"FSU Territoriale de l'Hérault",
+		position:{lat:43.60952455442817, lng:3.8886228070287983},
+		departement:"Hérault",
+		logo:"collectifs/snuter-herault-logo.png",
+		url:"https://www.snuter34fsu.fr/",
+		description: "Syndicat National Untaire des Territoriaux de l'Hérault."
+	},
   {
     slug: "ilot-vert-de-la-soulondres",
     name: "L'Ilot Vert de la Soulondres",
@@ -254,7 +451,34 @@ export const collectifs: CollectifI[] = [
     name: "L'Ultra Violette",
     departement: "Hérault",
     position: { lat: 43.601838, lng: 3.873196 },
+		facebook:"https://www.facebook.com/lultraviolette/?locale=fr_FR",
+		instagram:"https://www.instagram.com/l.ultraviolette/",
+		description:"Bar associatif queer et féministe itinérant 🏳️‍🌈",
+		logo:"collectifs/ultraviolette-logo.jpg"
   },
+	{
+		slug:"l'ancre",
+		name:"L'ancre",
+		position:{lat:43.4055113765286, lng:3.691182797054215},
+		departement:"Hérault",
+		description:"L’Ancre, journal sympathique. Cette Ancre sétoise est écologiste, de gauche, féministe, citoyenne et culturelle.",
+		logo:"collectifs/logo-ancre.png",
+		url:"https://lancredesete.fr/",
+		facebook:"https://www.facebook.com/Lancredesete/?locale=fr_FR",
+		icon:"collectifs/ancre-icon.png"
+	},
+	{
+		slug:"la-base",
+		name:"La Base",
+		position:{lat:43.605409688178625, lng:3.871013688279682},
+		departement:"Hérault",
+		description:"La Base (Base d’Action Sociale et Écologique) de Montpellier est un lieu d’engagement citoyen en faveur de la justice sociale, du climat et du vivant, convivial et ouvert à toutes et tous.",
+		instagram:"https://www.instagram.com/labase.montpellier/",
+		facebook:"https://www.facebook.com/LaBase.montpellier",
+		url:"https://labasemontpellier.org/",
+		logo:"collectifs/la-base-logo.webp",
+		icon:"collectifs/la-base-logo.webp",
+	},
   {
     slug: "la-battante",
     name: "La Battante",
@@ -268,9 +492,11 @@ export const collectifs: CollectifI[] = [
   },
   {
     slug: "la-bestiole",
-    name: "La BestiOle",
+    name: "Librairie la BestiOle",
     departement: "Hérault",
     position: { lat: 43.743493, lng: 3.704322 },
+		logo:"collectifs/logo-la-bestiole.jpg",
+		facebook:"https://www.facebook.com/violslefort34/?locale=fr_FR"
   },
   {
     slug: "la-carmagnole",
@@ -289,42 +515,91 @@ export const collectifs: CollectifI[] = [
     name: "La Chaloupe",
     departement: "Aveyron",
     position: { lat: 44.47473, lng: 2.461218 },
+		url:"https://www.lachaloupe.org/",
+		logo:"collectifs/logo-chaloupe.png"
   },
   {
     slug: "la-cimade-beziers",
     name: "La Cimade Beziers",
     departement: "Hérault",
     position: { lat: 43.335261, lng: 3.226333 },
+		facebook:"https://www.facebook.com/laCimadebeziers/",
+		url:"https://www.lacimade.org/nos-actions/hebergement-langue-francaise/le-centre-dhebergement-de-beziers/",
+		description:"La Cimade a pour but de manifester une solidarité active avec les personnes opprimées et exploitées.",
+		logo:"collectifs/cimade-logo.svg"
   },
   {
     slug: "la-combine",
     name: "La Combine",
     departement: "Gard",
     position: { lat: 44.20943817160611, lng: 4.037457683315754 },
+		description: "Tiers-lieu convivial et dynamique à La Grand'Combe",
+		url: "https://www.lacombine30110.com/",
+		logo: "collectifs/logo-la-combine.png"
   },
   {
     slug: "la-deter",
     name: "LA DÉTER",
     departement: "Gard",
     position: { lat: 44.209442, lng: 4.029818 },
+		url: "https://ladeter.org/",
+		description:"LA DÉTER est un lieu bienveillant et inclusif, pour toutes et tous, qui invite à l’expression et à l’échange au travers de la création artistique.",
+		logo:"collectifs/la-deter-logo.jpg",
+		facebook:"https://www.facebook.com/ladeterlagrandcombe/",
+		instagram:"https://www.instagram.com/ladeter_lagrandcombe/"
   },
+	{
+		slug: "la-freep",
+		name: "La Freep",
+		departement: "Hérault",
+		facebook: "https://www.facebook.com/p/La-Freep-100041047963764/",
+		position: {lat: 43.93382806238156, lng: 3.7037814723691067}
+	},
+	{
+		slug:"la-fresque-du-sexisme",
+		name:"La Fresque du sexisme",
+		position:{lat:43.60587512905618, lng:3.862748843013884},
+		logo:"collectifs/fresque-sexime-montpellier.png",
+		url:"https://www.fresque-du-sexisme.org/",
+		departement:"Hérault",
+		instagram:"https://www.instagram.com/fresque_du_sexisme/",
+		description:"Un atelier d'intelligence collective pour détricoter la mécanique sexiste et se projeter dans une société égalitaire."
+	},
   {
     slug: "la-mauvaise-reputation",
-    name: "La Mauvaise Réputation",
+    name: "Librairie la Mauvaise Réputation",
     departement: "Hérault",
     position: { lat: 43.609652, lng: 3.873119 },
+		facebook:"https://www.facebook.com/p/Librairie-La-Mauvaise-R%C3%A9putation-100076049269508/",
+		description:"Nous sommes une librairie indépendante et bénévole montpelliéraine. Nous avons pour but la propagation de la pensée libertaire."
   },
+	{
+		slug: "la-muse-broc",
+		name: "Bar - La Muse'Broc",
+		departement: "Hérault",
+		position: {lat: 43.73147838822666, lng: 3.319580632744901},
+		url: "https://lamusebroc.com/",
+		facebook: "https://www.facebook.com/lamusebroc/",
+		instagram: "https://www.instagram.com/lamusebroc/",
+		logo: "collectifs/amuse-broc-logo.webp"
+	},
   {
     slug: "la-retive",
     name: "La rétive",
     departement: "Gard",
     position: { lat: 44.129717, lng: 4.080132 },
+		url:"https://laretive.info/",
+		description: "La Rétive est une bibliothèque/médiathèque et un lieu de rencontres et d’échanges. Située à Alès au 42 faubourg d’Auvergne, elle est gratuite et accessible à toutes et tous."
   },
   {
     slug: "la-symbolique-du-poulet",
-    name: "La symbolique du poulet",
+    name: "Librairie la symbolique du poulet",
     departement: "Hérault",
     position: { lat: 43.607377, lng: 3.871099 },
+		url:"https://symboliquedupoulet.org/",
+		logo:"collectifs/LaSDP_logo.png",
+		icon:"collectifs/LaSDP_icon.png"
+
   },
   {
     slug: "ldh",
@@ -340,11 +615,22 @@ export const collectifs: CollectifI[] = [
     departement: "Hérault",
     position: { lat: 43.730138, lng: 3.323997 },
   },
+	{
+		slug:"le-cri-du-choeur",
+		name:"Le Cri du Choeur",
+		departement:"Hérault",
+		position:{lat:43.611466285579944, lng:3.881652577067518},
+		url:"https://criduchoeur.jimdofree.com/",
+		description:"Le Cri du Chœur, chorale militante, c'est une volonté commune : retrouver une voix confisquée par un système inhumain en partageant des chants de lutte."
+	},
   {
     slug: "le-grain-des-mots",
-    name: "Le Grain des Mots",
+    name: "Librairie le Grain des Mots",
     departement: "Hérault",
     position: { lat: 43.607925, lng: 3.873901 },
+		url:"https://legraindesmots.com/",
+		facebook: "https://www.facebook.com/LibrairieLeGraindesMots/?locale=fr_FR",
+		logo:"collectifs/logo-le-grain-des-mots.jpg"
   },
   {
     slug: "le-maquis",
@@ -352,12 +638,38 @@ export const collectifs: CollectifI[] = [
     departement: "Hérault",
     position: { lat: 43.730639, lng: 3.318751 },
   },
+	{
+		slug: "le-nouveau-cafe",
+		name: "Le nouveau Café",
+		position: {lat: 43.3115006093407, lng: 3.4702906698387856},
+		description: "Café associatif. Programmation d’évènements et ateliers participatifs. Restauration.",
+		logo: "collectifs/nouveau-cafe-logo.jpg",
+		departement: "Hérault",
+		facebook: "https://www.facebook.com/Digotorn/",
+
+	},
   {
     slug: "le-poing",
     name: "Le Poing",
     departement: "Hérault",
     position: { lat: 43.616505, lng: 3.862295 },
+		facebook:"https://www.facebook.com/lepoinginfo/",
+		logo:"collectifs/le-poing-logo.png",
+		icon:"collectifs/lepoing-icon.png",
+		instagram:"https://www.instagram.com/montpellierpoinginfo/",
+		bluesky: "https://bsky.app/profile/lepoinginfo.bsky.social",
+		description:"Le Poing est un média web et papier (bimestriel) d’information politique et de critique sociale. Aux côtés de celles et ceux qui luttent, notre journal participatif s’attache à être un contre-pouvoir à Montpellier et alentours.",
+		url:"https://lepoing.net/"
   },
+	{
+		slug:"le-pont",
+		name:"Le Pont - Café Associatif",
+		position:{lat:43.770398778777405, lng:3.374704671164288},
+		facebook:"https://www.facebook.com/lepont34700/?locale=fr_FR",
+		departement:"Hérault",
+		logo:"collectifs/le-pont-logo.jpg",
+		description:"Le Pont, c’est un Espace de Vie Sociale ouvert à tous où chacun peut proposer et faire vivre des projets collectifs"
+	},
   {
     slug: "le-quartier-genereux",
     name: "Le Quartier Généreux",
@@ -373,6 +685,23 @@ export const collectifs: CollectifI[] = [
     instagram: "https://www.instagram.com/qg.montpellier/",
     facebook: "https://www.facebook.com/qg.montpellier/",
   },
+	{
+		slug:"les-ateliers-de-l-espoir",
+		name:"Les ateliers de l'espoir",
+		position:{lat:43.616069984395224, lng:3.8749604255900065},
+		url:"https://ateliersdelespoir.fr/",
+		departement:"Hérault",
+		description:"Les Ateliers de l’espoir est une association d’organisation collective d’animateurs et d’animatrices qui luttent contre le fascime et pour le renouveau démocratique",
+		logo:"collectifs/atelier-espoir-logo.png"
+	},
+	{
+		slug: "les-amis-de-la-terre-le-vigan",
+		name: "Les amis de la terre Le Vigan",
+		departement: "Gard",
+		position: { lat: 43.9928660524861, lng: 3.6063399835858654 },
+		logo: "collectifs/amis-terre-france-logo.png",
+		icon: "collectifs/amis-de-la-terre-icon.png",
+	},
   {
     slug: "les-aragantes",
     name: "Les aragantes",
@@ -395,18 +724,113 @@ export const collectifs: CollectifI[] = [
     description: "Siestes en open air",
     position: { lat: 43.6143, lng: 3.8717 },
   },
+	{
+		slug: "librairie-arbre-sans-fin",
+		name: "Librairie L'Arbre sans fin",
+		position: {lat: 43.93418991870921, lng: 3.7073513832428167},
+		facebook: "https://www.facebook.com/librairielarbresansfin",
+		instagram: "https://www.instagram.com/librairielarbresansfin/",
+		departement: "Hérault",
+		logo:"collectifs/larbre-sans-fin-logo.png",
+		icon:"collectifs/larbre-sans-fin-logo.png",
+	},
+	{
+		slug:"librairie-la-cavale",
+		name:"Librairie La Cavale",
+		position:{lat:43.61661157197688, lng:3.8809897076458557},
+		url:"https://librairielacavale.coop/",
+		departement:"Hérault",
+		logo:"collectifs/la-cavale-logo.png",
+		icon:"collectifs/la-cavale-icon.png",
+		description:"Librairie généraliste, indépendante, coopérative",
+		instagram:"https://www.instagram.com/librairielacavale/",
+		facebook:"https://www.facebook.com/librairielacavale/?locale=fr_FR"
+	},
+	{
+		slug: "librairie-un-point-un-trait",
+		name: "Librairie Un point un trait",
+		departement: "Hérault",
+		position: {lat: 43.73166074687373, lng: 3.321491511270203},
+		url:"https://www.unpointuntrait.fr/",
+		icon:"collectifs/icon-un-point-un-trait.png"
+	},
+	{
+		slug: "librairie-alterlivres",
+		name: "Librairies Alterlivres",
+		departement: "Gard",
+		position: {lat: 43.94315880721006, lng: 3.9491152693583063},
+		logo: "collectifs/logo-librairie-alterlive.jpg",
+		url: "http://www.alterlivres.com/"
+	},
+	{
+		slug:"mtmsi",
+		name:"Maison des Territoires du Monde et de la Solidarité Internationale",
+		position:{lat:43.61465092197385, lng:3.8803502576714233},
+		departement:"Hérault",
+		description:"Collectif de 40 associations qui manifestent leur engagement pour le développement durable et solidaire des pays du Sud, depuis 30 ans",
+		facebook:"https://www.facebook.com/MTMSI/?locale=fr_FR",
+		url:"https://mtmsi.fr/",
+		logo:"collectifs/mtmsi-logo.png"
+	},
+	{
+		slug:"mrap-montpellier",
+		name:"MRAP - Montpellier",
+		position:{lat:43.61456618517023, lng:3.8802294933338235},
+		departement:"Hérault",
+		facebook:"https://www.facebook.com/p/MRAP-de-Montpellier-100079927142334/",
+		logo:"collectifs/mrap-logo.png",
+		description:"Mouvement contre le Racisme et pour l’Amitié entre les Peuples - Comité local de Montpellier",
+		url:"https://mrap.fr/"
+	},
+	{
+		slug: "nous-carcassone",
+		name: "Nous Carcassone",
+		url: "https://nouscarcassonne.fr/",
+		departement: "Aude",
+		position: { lat: 43.216289, lng: 2.353972 },
+		description : "Né d'un sursaut citoyen porté par l'énergie de la jeunesse locale, Nous Carcassonne rassemble les jeunes, lycéen·ne·s et étudiant·e·s, habitant·e·s et forces vives de Carcassonne et ses alentours. Nous formons un rempart pacifique, politique et culturel contre les idées d'exclusion, de division et de repli portées notamment par l'extrême droite que nous combattons. Notre force réside dans notre unité. Résistance ? Nous n'hésitons pas à utiliser le terme.",
+		logo: "collectifs/nous-carcassone.png",
+		icon: "collectifs/nous-carcassone.png",
+		instagram : "https://www.instagram.com/nouscarcassonne"
+	},
   {
     slug: "nouvelle-librairie-setoise",
     name: "Nouvelle Librairie Sétoise",
     departement: "Hérault",
     position: { lat: 43.402978, lng: 3.69478 },
+		logo:"collectifs/nouvelle-librairie-setoise.png",
+		facebook:"https://www.facebook.com/nouvellelibrairiesetoise/?locale=fr_FR",
+		instagram:"https://www.instagram.com/nouvellelibrairiesetoise/",
+		url:"https://www.nouvellelibrairiesetoise.fr/"
   },
+	{
+		slug:"oned",
+		name:"Observatoire Départementale de l’Extrême Droite de l’Hérault",
+		position:{lat:43.618107530449706, lng:3.894658031097642},
+		departement:"Hérault",
+		url:"https://oned-fr.org/herault-creation-dun-observatoire-departemental-de-lextreme-droite/",
+		logo:"collectifs/obs-ed-logo.webp"
+	},
   {
     slug: "oustalite",
     name: "Oustalité",
     departement: "Hérault",
     position: { lat: 43.736189, lng: 3.317013 },
+		facebook:"https://www.facebook.com/people/LOustalit%C3%A9-Lod%C3%A8ve/pfbid0qPBaumns8hJcSnxMSxHL33aKqjYe81tDE96XBWA5dUSBK59Zn7x28mnNwVwJVfGEl/",
+		logo:"collectifs/oustalite-logo.jpg"
   },
+	{
+		slug: "planning-familial-sud-cevennes",
+		name: "Planning familial Sud Cévennes",
+		departement: "Gard",
+		position: {lat: 43.99269466517533, lng: 3.606314781478429},
+		facebook: "https://www.facebook.com/people/Planning-familial-Sud-C%C3%A9vennes/61582758747377/",
+		instagram: "https://www.instagram.com/planningfamilial_sudcevennes/",
+		logo: "collectifs/plannnig-familial-sud-cevennes.png",
+		url: "https://www.planning-familial.org/",
+		icon: "collectifs/planning-famillial.png"
+
+	},
   {
     slug: "poles-en-pomme",
     name: "Pôles en pomme 🍎",
@@ -421,6 +845,7 @@ export const collectifs: CollectifI[] = [
     name: "Pride Alès 2026",
     departement: "Gard",
     position: { lat: 44.121853, lng: 4.102278 },
+		instagram: "https://www.instagram.com/pridedales/"
   },
   {
     slug: "reso-resistances-solidaires",
@@ -432,12 +857,48 @@ export const collectifs: CollectifI[] = [
     logo: "collectifs/reso-logo.png",
     icon: "collectifs/reso-icone.webp",
   },
+	{
+		slug:"resf-34",
+		name:"Réseau Éducation Sans Frontières 34 (RESF)",
+		position:{lat:43.617649720505405, lng:3.8742467689078874},
+		departement:"Hérault",
+		url:"https://resf34.org/",
+		logo:"collectifs/resf-logo.png",
+		icon:"collectifs/resf-logo.png"
+	},
   {
     slug: "rusf-34",
-    name: "RUSF34",
+    name: "Réseau Université Sans Frontières 34 (RUSF)",
     departement: "Hérault",
     position: { lat: 43.603392, lng: 3.885727 },
+		description:"Association pour l'accompagnement et de soutient administratif, judiciaire, et moral les étudiant-es étranger-es avec ou sans papiers.",
+		url:"https://rusf34.fr/",
+		instagram:"https://www.instagram.com/rusf_34/",
+		facebook:"https://www.facebook.com/RUSF34/",
+		logo:"collectifs/rusf-logo.png"
   },
+	{
+		slug:"solidaires-etudiants-34",
+		name:"Solidaires étudiant-e-s Montpellier",
+		description:"Syndicat étudiant de luttes, de classe et autogestionnaire sur Montpellier ! Antifasciste, féministe, internationaliste.",
+		url:"https://solidairesetudiants34.wordpress.com/",
+		instagram:"https://instagram.com/solidairesetumtp",
+		bluesky:"https://bsky.app/profile/solidairesetumtp.bsky.social",
+		position:{lat:43.63439415847738, lng:3.8703542910335234},
+		departement:"Hérault",
+		logo:"collectifs/solidaires-etudiant-montpellier.jpg"
+	},
+	{
+		slug:"sud-education-34",
+		name:"Sud éducation Hérault",
+		position:{lat:43.616627127376795, lng:3.878247311848792},
+		departement:"Hérault",
+		url:"https://sudeducation34.org/",
+		logo:"collectifs/sud-34-logo.png",
+		facebook:"https://www.facebook.com/sudeducation34/",
+		instagram:"https://www.instagram.com/sudeducationherault/",
+		bluesky:"https://bsky.app/profile/sudeducation34.bsky.social"
+	},
   {
     slug: "societe-du-cafe-du-siecle",
     name: "Société du Café du siècle",
@@ -446,21 +907,51 @@ export const collectifs: CollectifI[] = [
   },
   {
     slug: "terres-de-luttes",
-    name: "Terres de luttes",
+    name: "Terres de luttes - Aveyron",
     departement: "Aveyron",
     position: { lat: 43.919845, lng: 3.26479 },
+		logo:"collectifs/terres-de-lutte-aveyron.png",
+		description:"Terres de Luttes s’oppose à la bétonisation de nos terres, bradées au profit d’extension d’aéroports, d’entrepôts Amazon ou autres centres commerciaux par centaines.",
+		facebook:"https://www.facebook.com/TerresdeLuttes",
+		instagram:"https://www.instagram.com/terresdeluttes/"
   },
+	{
+		slug:"theatre-beaux-arts-tabards",
+		name:"Théâtre Beaux Arts Tabards",
+		position:{lat:43.61693709334822, lng:3.8782535113901693},
+		departement:"Hérault",
+		url:"https://beauxartstabard.fr/",
+		facebook:"https://www.facebook.com/beauxartstabard/?locale=fr_FR",
+		instagram:"https://www.instagram.com/theatre_beaux_arts_tabard/",
+		logo:"collectifs/theatre-beaux-arts-tabard-logo.svg"
+	},
+	{
+		slug:"theatre-la-bicyclette",
+		name:"Théâtre La Bicyclette",
+		url:"https://theatre-la-bicyclette.fr/",
+		logo:"collectifs/theatre-la-bicyclette-logo.webp",
+		facebook:"https://www.facebook.com/p/Th%C3%A9%C3%A2tre-de-la-Bicyclette-100086652006023/",
+		position: {lat:43.73130759652439, lng:3.320308635405843},
+		departement:"Hérault"
+	},
   {
     slug: "theatre-de-la-plume",
     name: "Théâtre de la Plume",
     departement: "Hérault",
     position: { lat: 43.608605, lng: 3.866927 },
+		logo:"collectifs/theatre-de-la-plume-logo.png",
+		url:"https://www.theatredelaplume.com/",
+		facebook:"https://www.facebook.com/TheatreDeLaPlume/?locale=fr_FR",
+		instagram:"https://www.instagram.com/theatredelaplume/",
+		description:"🎭 Théâtre Associatif 🎭 - Programmation jeune public et adulte !"
   },
   {
     slug: "tisseur-d-espoir",
-    name: "Tisseur d'espoir",
+    name: "Tisseurs et tisseuses d'espoir",
     departement: "Hérault",
-    position: { lat: 43.700272, lng: 3.551846 },
+    position: { lat: 43.701115350116154, lng:3.552542229646186 },
+		url:"https://tisseurs-tisseuses-despoir.jimdofree.com/",
+		logo:"collectifs/tisseurs-espoirs-logo.png",
   },
   {
     slug: "union-communiste-libertaire",
@@ -479,17 +970,28 @@ export const collectifs: CollectifI[] = [
     name: "Union syndicale Solidaires 34",
     departement: "Hérault",
     position: { lat: 43.616695, lng: 3.878214 },
+		logo:"collectifs/solidaires-34.png",
+		url:"https://solidaires34.org/",
+		instagram:"https://www.instagram.com/solidaires_34/",
+		facebook:"https://www.facebook.com/solidaires34/",
+		bluesky:"https://bsky.app/profile/did:plc:dcgtszcxbbly3ggq64l4jj3r"
   },
   {
     slug: "utopia-montpellier",
-    name: "Utopia Montpellier",
+    name: "Cinéma Utopia Montpellier",
     departement: "Hérault",
     position: { lat: 43.629019, lng: 3.869085 },
+		facebook:"https://www.facebook.com/utopia34/",
+		description:"Cinéma indépendant \"art et essai\"",
+		url:"https://montpellier.cinemas-utopia.org/"
   },
   {
     slug: "vivons-celles",
     name: "Vivons Celles",
     departement: "Hérault",
     position: { lat: 43.661942, lng: 3.339329 },
+		logo:"collectifs/vivnos-celles-logo.jpg",
+		facebook:"https://www.facebook.com/vivonscelles",
+		description:"Association pour la réhabilitation du village de Celles."
   },
 ];
