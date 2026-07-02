@@ -106,7 +106,6 @@ h1 {
 }
 h2 {
   text-align: center;
-  font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
   font-size: 28px;
