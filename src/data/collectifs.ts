@@ -1,6 +1,6 @@
 export type Departements = "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère";
 export type Types = "Café associatif" | "Tiers-lieu" | "Festival" | "Librairie" |
-	"Théâtre" | "Syndicat" | "Bar-Brasserie-Commerce" | "Média" | "Cinéma" |
+	"Théâtre" | "Syndicat" | "Bar - Brasserie - Commerce" | "Média" | /*"Cinéma" |*/
 	"Collectif artistique" | "Collectif événementiel" | "Collectif militant" | "Collectif pour mieux habiter" |
 	"Collectif pour l'accueil de réfugiés" | "Groupement de collectifs" | "Collectif d'éducation populaire"
 export const departements: Departements[] = [
@@ -95,7 +95,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/profile.php?id=61573989620227",
 		description:"Collectif à l'origine de l'occupation citoyenne du cinéma La Clef, mais non de son rachat - 🎞️ Ciné-club itinérant - ✏️ Revue Contrebande.",
 		logo:"collectifs/home-cinema-logo.png",
-		type:["Collectif militant", "Cinéma"]
+		type:["Collectif militant"/*, "Cinéma"*/]
   },
 	{
 		slug: "association-sous-les-etoiles",
@@ -156,7 +156,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/p/Le-Bar-du-Midi-100088602878744/",
 		logo:"collectifs/bar-du-midi-logo.jpg",
 		description:"Le Bar du Midi, c’est un Bar-PMU et lieu culturel revisité. Dans un esprit rétro et chaleureux.",
-		type:["Bar-Brasserie-Commerce"]
+		type:["Bar - Brasserie - Commerce"]
   },
   {
     slug: "barnabu",
@@ -208,7 +208,7 @@ export const collectifs: CollectifI[] = [
     facebook: "https://www.facebook.com/brasseriefrenetik/",
     logo: "collectifs/la-frenetik.webp",
     icon: "collectifs/la-frenetik.webp",
-		type:["Bar-Brasserie-Commerce"]
+		type:["Bar - Brasserie - Commerce"]
   },
 	{
 		slug: "brasserie-lodeva",
@@ -220,7 +220,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/brasserie-lodeva-logo.jpg",
 		icon:"collectifs/brasserie-lodeva-icon.png",
 		description:"Brasserie artisanale, 🍲 Cuisine bistrot, 🎸 Événements culturels, concerts",
-		type:["Bar-Brasserie-Commerce"]
+		type:["Bar - Brasserie - Commerce"]
 	},
 	{
 		slug:"ccfd-herault",
@@ -380,7 +380,7 @@ export const collectifs: CollectifI[] = [
     logo: "collectifs/logo-evab.webp",
 		type:["Collectif militant"]
   },
-  {
+  /*{
     slug: "etoile-bio",
     name: "Étoile bio",
     departement: "Gard",
@@ -388,8 +388,8 @@ export const collectifs: CollectifI[] = [
 		facebook: "https://www.facebook.com/etoilebioquissac/",
 		instagram: "https://www.instagram.com/letoile.bio/",
 		logo: "collectifs/etoile-bio-logo.jpg",
-		type:["Bar-Brasserie-Commerce"]
-  },
+		type:["Bar - Brasserie - Commerce"]
+  },*/
 	{
 		slug: "extinction-rebellion-montpellier",
 		name:"Extinction Rebellion Montpellier",
@@ -473,7 +473,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/fsu-logo.png",
 		type:["Syndicat"]
 	},
-	{
+	/*{
 		slug:"fsu-territoriale-34",
 		name:"FSU Territoriale de l'Hérault",
 		position:{lat:43.60952455442817, lng:3.8886228070287983},
@@ -482,7 +482,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://www.snuter34fsu.fr/",
 		description: "Syndicat National Untaire des Territoriaux de l'Hérault.",
 		type:["Syndicat"]
-	},
+	},*/
   {
     slug: "ilot-vert-de-la-soulondres",
     name: "L'Ilot Vert de la Soulondres",
@@ -611,7 +611,7 @@ export const collectifs: CollectifI[] = [
 		departement: "Hérault",
 		facebook: "https://www.facebook.com/p/La-Freep-100041047963764/",
 		position: {lat: 43.93382806238156, lng: 3.7037814723691067},
-		type:["Bar-Brasserie-Commerce"]
+		type:["Bar - Brasserie - Commerce"]
 	},
 	/*{
 		slug:"la-fresque-du-sexisme",
@@ -771,7 +771,7 @@ export const collectifs: CollectifI[] = [
 		icon: "collectifs/amis-de-la-terre-icon.png",
 		type:["Collectif militant"]
 	},
-  {
+  /*{
     slug: "les-aragantes",
     name: "Les aragantes",
     departement: "Hérault",
@@ -780,7 +780,7 @@ export const collectifs: CollectifI[] = [
 		instagram:"https://www.instagram.com/lesaragantes/",
 		description:"Les Aragantes est une collective de designer.euse.s pluridisciplinaires réunies autour d’une volonté commune : faire du design un outil critique, engagé et au service des luttes écoféministes.",
 		type:["Collectif militant"]
-  },
+  },*/
   {
     slug: "fourmiliere-lodevois-larzac",
     name: "La Fourmilière Lodévois-Larzac",
@@ -874,7 +874,7 @@ export const collectifs: CollectifI[] = [
 		instagram : "https://www.instagram.com/nouscarcassonne",
 		type:["Collectif militant"]
 	},
-  {
+  /*{
     slug: "nouvelle-librairie-setoise",
     name: "Nouvelle Librairie Sétoise",
     departement: "Hérault",
@@ -884,7 +884,7 @@ export const collectifs: CollectifI[] = [
 		instagram:"https://www.instagram.com/nouvellelibrairiesetoise/",
 		url:"https://www.nouvellelibrairiesetoise.fr/",
 		type:["Librairie"]
-  },
+  },*/
 	{
 		slug:"oned",
 		name:"Observatoire Départementale de l’Extrême Droite de l’Hérault",
@@ -995,7 +995,7 @@ export const collectifs: CollectifI[] = [
     name: "Société du Café du siècle",
     departement: "Hérault",
     position: { lat: 43.934128, lng: 3.707733 },
-		type:["Bar-Brasserie-Commerce"]
+		type:["Bar - Brasserie - Commerce"]
   },
   {
     slug: "terres-de-luttes",
@@ -1075,7 +1075,7 @@ export const collectifs: CollectifI[] = [
 		bluesky:"https://bsky.app/profile/did:plc:dcgtszcxbbly3ggq64l4jj3r",
 		type:["Syndicat"]
   },
-  {
+  /*{
     slug: "utopia-montpellier",
     name: "Cinéma Utopia Montpellier",
     departement: "Hérault",
@@ -1084,7 +1084,7 @@ export const collectifs: CollectifI[] = [
 		description:"Cinéma indépendant \"art et essai\"",
 		url:"https://montpellier.cinemas-utopia.org/",
 		type:["Cinéma"]
-  },
+  },*/
   {
     slug: "vivons-celles",
     name: "Vivons Celles",
