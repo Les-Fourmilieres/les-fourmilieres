@@ -1,6 +1,8 @@
 export type Departements = "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère";
-export type Types = "Café associatif" | "Tiers-lieu" | "Festival" | "Librairie" | "Théâtre" | "Syndicat" | "Bar-Brasserie-Commerce" | "Média" | "Cinéma" |
-	"Collectif artistique" | "Collectif événementiel" | "Collectif militant" | "Collectif pour mieux habiter" | "Collectif pour l'accueil de réfugiés" | "Groupement de collectifs"
+export type Types = "Café associatif" | "Tiers-lieu" | "Festival" | "Librairie" |
+	"Théâtre" | "Syndicat" | "Bar-Brasserie-Commerce" | "Média" | "Cinéma" |
+	"Collectif artistique" | "Collectif événementiel" | "Collectif militant" | "Collectif pour mieux habiter" |
+	"Collectif pour l'accueil de réfugiés" | "Groupement de collectifs" | "Collectif d'éducation populaire"
 export const departements: Departements[] = [
   "Aude",
   "Aveyron",
@@ -69,7 +71,7 @@ export const collectifs: CollectifI[] = [
     instagram: "https://www.instagram.com/boucan_asso",
     logo: "collectifs/boucan-logo.png",
     position: { lat: 44.124071, lng: 4.083481 },
-		type:["Collectif militant"]
+		type:["Collectif militant", "Collectif d'éducation populaire"]
   },
   {
     slug: "association-folia",
@@ -93,7 +95,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/profile.php?id=61573989620227",
 		description:"Collectif à l'origine de l'occupation citoyenne du cinéma La Clef, mais non de son rachat - 🎞️ Ciné-club itinérant - ✏️ Revue Contrebande.",
 		logo:"collectifs/home-cinema-logo.png",
-		type:["Collectif artistique", "Collectif militant"]
+		type:["Collectif militant", "Cinéma"]
   },
 	{
 		slug: "association-sous-les-etoiles",
@@ -114,7 +116,7 @@ export const collectifs: CollectifI[] = [
 		logo : "collectifs/attac-logo.jpg",
 		icon: "collectifs/attac-ico.png",
 		facebook:"https://www.facebook.com/attac12/",
-		type:["Collectif militant"]
+		type:["Collectif militant", "Collectif d'éducation populaire"]
 	},
   {
     slug: "la-cimade-montpellier",
@@ -137,7 +139,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://fr-fr.facebook.com/lafibala34",
 		description:"Association d'éducation à la citoyenneté mondiale",
 		logo:"collectifs/lafibala-logo.png",
-		type:["Collectif militant"]
+		type:["Collectif militant", "Collectif d'éducation populaire"]
   },
   /*{
     slug: "association-refuge-pour-animaux-hakuna-matata",
@@ -194,7 +196,7 @@ export const collectifs: CollectifI[] = [
     facebook: "https://www.facebook.com/bouillon.cube",
     logo: "collectifs/bouillon-cube.webp",
     icon: "collectifs/bouillon-cube.webp",
-		type:["Tiers-lieu"]
+		type:["Tiers-lieu", "Collectif événementiel"]
   },
   {
     slug: "brasserie-la-frenetik",
@@ -758,7 +760,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Hérault",
 		description:"Les Ateliers de l’espoir est une association d’organisation collective d’animateurs et d’animatrices qui luttent contre le fascime et pour le renouveau démocratique",
 		logo:"collectifs/atelier-espoir-logo.png",
-		type:["Collectif militant"]
+		type:["Collectif militant", "Collectif d'éducation populaire"]
 	},
 	{
 		slug: "les-amis-de-la-terre-le-vigan",
@@ -911,7 +913,7 @@ export const collectifs: CollectifI[] = [
 		logo: "collectifs/plannnig-familial-sud-cevennes.png",
 		url: "https://www.planning-familial.org/",
 		icon: "collectifs/planning-famillial.png",
-		type:["Collectif militant"]
+		type:["Collectif militant", "Collectif d'éducation populaire"]
 	},
   {
     slug: "poles-en-pomme",
@@ -921,7 +923,7 @@ export const collectifs: CollectifI[] = [
     description:
       "Redonner à chacun la capacité de comprendre, choisir et agir sur le monde dans lequel il vit.",
     url: "https://polesenpomme.xyz",
-		type:["Collectif militant"]
+		type:["Collectif militant", "Collectif d'éducation populaire"]
   },
   {
     slug: "pride-ales-2026",
