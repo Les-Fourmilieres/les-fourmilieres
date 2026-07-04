@@ -54,6 +54,10 @@ const CollectifName = styled.h3`
   color: var(--title-color);
 `;
 
+const CollectifType = styled.div`
+  text-align: left;
+`;
+
 const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
@@ -109,6 +113,7 @@ export function CollectifContent({ collectif, forceOpen }: Props) {
         )}
         <Metadata>
           <CollectifName>{collectif.name}</CollectifName>
+          <CollectifType>{collectif.type}</CollectifType>
           {(collectif.url || collectif.instagram || collectif.facebook) && (
             <SocialNetworks>
               {collectif.url && (

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
 import { Link } from "../components/Link/Link";
 import { point } from "@turf/turf";
-import { collectifs, type CollectifI } from "../data/collectifs";
+import { collectifs, type CollectifI, type Types } from "../data/collectifs";
 import { useMemo, useState } from "react";
 import { Map } from "../components/Map/Map";
 import { Collectif } from "../components/Collectif/Collectif";
@@ -12,6 +12,7 @@ import { DepartementsByCode } from "../core/Departements";
 import { ToggleButtonGroup } from "react-aria-components";
 import { ToggleButton } from "../components/ToggleButton/ToggleButton";
 import styled from "styled-components";
+import { Select, SelectItem } from "../components/Select";
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)`
   display: flex;
@@ -47,9 +48,28 @@ type CollectifWithLivingArea = CollectifI & {
   livingArea: LivingAreaI | null;
 };
 
+const CollectifTypes: Types[] = [
+  "Café associatif",
+  "Tiers-lieu",
+  "Festival",
+  "Librairie",
+  "Théâtre",
+  "Syndicat",
+  "Bar - Brasserie - Commerce",
+  "Média" /*"Cinéma", */,
+  "Collectif artistique",
+  "Collectif événementiel",
+  "Collectif militant",
+  "Collectif pour mieux habiter",
+  "Collectif pour l'accueil de réfugiés",
+  "Groupement de collectifs",
+  "Collectif d'éducation populaire",
+];
+
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
   const isMobile = useMediaQuery({ maxWidth: 800 });
+  const [collectifType, setCollectifType] = useState<Types | null>(null);
   const [selectedDepartment, setSelectedDepartment] = useState<string | null>(
     null,
   );
@@ -76,18 +96,26 @@ function RouteComponent() {
   );
 
   const filteredCollectifs = useMemo(() => {
+    const fColl = collectifType
+      ? randomizedCollectifs.filter((c) => c.type.includes(collectifType))
+      : randomizedCollectifs;
     if (selectedLivingArea) {
-      return randomizedCollectifs.filter(
+      return fColl.filter(
         (collectif) => collectif.livingArea?.code === selectedLivingArea,
       );
     }
     if (selectedDepartment) {
-      return randomizedCollectifs.filter((collectif) =>
+      return fColl.filter((collectif) =>
         collectif.livingArea?.code?.startsWith(selectedDepartment),
       );
     }
-    return randomizedCollectifs;
-  }, [randomizedCollectifs, selectedDepartment, selectedLivingArea]);
+    return fColl;
+  }, [
+    randomizedCollectifs,
+    selectedDepartment,
+    selectedLivingArea,
+    collectifType,
+  ]);
 
   const livingAreaByCode = useMemo(() => {
     const livingAreas = getLivingAreas();
@@ -152,6 +180,21 @@ function RouteComponent() {
       <p>
         Aujourd'hui, plus de 100 collectifs ont déjà rejoint Les Foumilières :
       </p>
+      <div>
+        <Select
+          label="Type de collectif…"
+          value={collectifType}
+          onChange={(v) => {
+            setCollectifType(v as Types);
+          }}
+        >
+          {CollectifTypes.map((t) => (
+            <SelectItem key={t} id={t}>
+              {t}
+            </SelectItem>
+          ))}
+        </Select>
+      </div>
       <StyledToggleButtonGroup>
         {postalCodeFacets.map((postalCode) => (
           <ToggleButton
