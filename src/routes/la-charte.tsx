@@ -23,17 +23,6 @@ const Container = styled.article`
   box-sizing: border-box;
 `;
 
-const StyledLink = styled(Link)`
-  color: var(--accent);
-  text-decoration: none;
-  &:visited {
-    color: var(--accent);
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
   return (
@@ -256,16 +245,6 @@ function RouteComponent() {
       </p>
 
       <p>
-        <StyledLink href="https://quartiergenereux.fr">
-          <strong>Le Quartier Généreux</strong>
-        </StyledLink>
-        , association à l’origine du Festival Les Fourmilières, s’engage à
-        assurer la coordination générale du festival, son identité visuelle et à
-        élaborer un kit de communication (nom, logo, visuels) qui pourra être
-        adaptée si besoin.
-      </p>
-
-      <p>
         <strong>Les différents collectifs parties prenantes</strong> s’engagent
         à organiser, accueillir ou soutenir des évènements au cours des 15 jours
         du festival, à communiquer localement sur leurs évènements et sur le
@@ -278,9 +257,7 @@ function RouteComponent() {
       <p>
         Chaque collectif accueillant et/ou organisant un évènement{" "}
         <strong>est responsable de l’accueil du public</strong>, doit veiller
-        aux conditions de sécurité et au respect du cadre légal. Le Quartier
-        Généreux ne peut être tenu responsable de ces aspects, en dehors des
-        évènements qu’il organise ou accueille lui-même.
+        aux conditions de sécurité et au respect du cadre légal.
       </p>
 
       <p>
