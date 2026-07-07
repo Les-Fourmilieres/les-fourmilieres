@@ -120,7 +120,7 @@ function RouteComponent() {
         suivants, de nombreuses manifestations, tantôt d’extrême droite, tantôt
         des gauches, ont lieu partout en France, et mènent la Gauche à s’unir
         une première fois. autour d’un pacte antifasciste. Ainsi, le 27 juillet
-        1935, le Parti Communiste (PC) et la Section Française de
+        1934, le Parti Communiste (PC) et la Section Française de
         l’Internationale Ouvrière (SFIO) signent le pacte d’unité antifasciste,
         qui met l'accent sur la lutte contre le fascisme et prévoit
         l'organisation de campagnes et de réunions communes. C’est la genèse du
