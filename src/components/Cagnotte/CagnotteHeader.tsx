@@ -49,11 +49,11 @@ interface Props {
 export function CagnotteHeader({ progress, isMobile }: Props) {
   const { data } = useDonoorCagnotte();
   const currentAmountRef = useRef<HTMLDivElement>(null);
-  const previousValue = useRef(data?.current_amount ?? 0);
+  const previousValue = useRef(data?.raised ?? 0);
 
   useEffect(() => {
     const node = currentAmountRef.current;
-    const newValue = data?.current_amount;
+    const newValue = data?.raised;
     if (newValue && node) {
       const controls = animate(previousValue.current, newValue, {
         duration: 2,
@@ -64,7 +64,7 @@ export function CagnotteHeader({ progress, isMobile }: Props) {
       });
       return () => controls.stop();
     }
-  }, [data?.current_amount, data?.currency]);
+  }, [data?.raised, data?.currency]);
   const campaignHeight = useTransform(progress, [0, 1], [80, 0]);
   const scale = useTransform(progress, [0, 1], [1, 0]);
   const gaugeHeight = useTransform(progress, [0, 1], [isMobile ? 20 : 42, 0]);
