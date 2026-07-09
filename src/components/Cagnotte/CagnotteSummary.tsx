@@ -30,12 +30,12 @@ interface Props {
 
 export function CagnotteSummary({ scale, data, isMobile, margin }: Props) {
   const currentAmountRef = useRef<HTMLDivElement>(null);
-  const previousValue = useRef(data?.current_amount ?? 0);
+  const previousValue = useRef(data?.raised ?? 0);
   const isInView = useInView(currentAmountRef, { once: false });
 
   useEffect(() => {
     const node = currentAmountRef.current;
-    const newValue = data?.current_amount;
+    const newValue = data?.raised;
     if (newValue && node && isInView) {
       const controls = animate(previousValue.current, newValue, {
         duration: 2,
@@ -46,7 +46,7 @@ export function CagnotteSummary({ scale, data, isMobile, margin }: Props) {
       });
       return () => controls.stop();
     }
-  }, [isInView, data?.current_amount, data?.currency]);
+  }, [isInView, data?.raised, data?.currency]);
   return (
     <SummaryContainer
       style={{

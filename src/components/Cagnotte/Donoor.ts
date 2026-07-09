@@ -1,7 +1,8 @@
 import z from "zod";
 
 const DonoorResponseDataSchema = z.object({
-  current_amount: z.coerce.number(),
+  //current_amount: z.coerce.number(),
+	raised: z.coerce.number(),
   currency: z.string(),
   donors_count: z.number(),
   goal_amount: z.coerce.number(),

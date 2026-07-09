@@ -38,7 +38,7 @@ interface Props {
 
 export function CagnotteGauge({ data }: Props) {
   const maxValue = data?.goal_amount ?? 5000;
-  const value = data ? data.current_amount + 3000 : 0;
+  const value = data ? data.raised + 3000 : 0;
   const { meterProps } = useMeter({
     minValue: 0,
     maxValue,
