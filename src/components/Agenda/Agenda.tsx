@@ -32,7 +32,7 @@ const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
 export function Agenda() {
   const { data } = useQuery({
     queryKey: ["calendar"],
-    queryFn: fetchEvents,
+    queryFn: () => fetchEvents({ showUnConfirmed: false }),
   });
 
   const [filter, setFilter] = useState<LivingAreaSelectValue>({

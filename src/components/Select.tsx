@@ -12,6 +12,7 @@ import { DropdownItem, DropdownListBox } from "./ListBox";
 import { ChevronDown } from "lucide-react";
 import { Popover } from "./Popover";
 import { Description } from "./Description";
+import styled from "styled-components";
 
 export interface SelectProps<
   T extends object,
@@ -23,6 +24,13 @@ export interface SelectProps<
   items?: Iterable<T>;
   children: React.ReactNode | ((item: T) => React.ReactNode);
 }
+
+const SelectButton = styled(Button)`
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 export function Select<
   T extends object,
@@ -37,10 +45,10 @@ export function Select<
 }: SelectProps<T, M>) {
   return (
     <AriaSelect {...props} placeholder={label}>
-      <Button size="small" variant="default">
+      <SelectButton size="small" variant="default">
         <SelectValue />
         <ChevronDown />
-      </Button>
+      </SelectButton>
       {description && <Description>{description}</Description>}
       <FieldError>{errorMessage}</FieldError>
       <Popover hideArrow>

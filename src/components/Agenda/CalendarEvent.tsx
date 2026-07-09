@@ -3,9 +3,9 @@ import type { MobilizonEventI } from "./Event";
 import { EventDate } from "./EventDate";
 import { useClockIcon } from "./useClockIcon";
 import { Link } from "../Link/Link";
-import { Button } from "react-aria-components";
 import { EventTime } from "./EventTime";
 import { EventAddress } from "./EventAddress";
+import { ParticipateButton } from "./ParticipateButton";
 
 interface Props {
   event: MobilizonEventI;
@@ -13,9 +13,10 @@ interface Props {
 
 const Container = styled.div`
   flex: 1 0 320px;
-  max-width: 500px;
+  max-width: 490px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: var(--surface);
   box-shadow: var(--shadow);
 `;
@@ -45,6 +46,7 @@ const Infos = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: flex-start;
   gap: 4px;
 `;
 
@@ -55,7 +57,8 @@ const Metadata = styled.div`
   justify-content: flex-start;
   gap: 4px;
 
-  span {
+  span,
+  a {
     flex: 1 1 auto;
     white-space: nowrap;
     overflow: hidden;
@@ -70,24 +73,6 @@ const Actions = styled.div`
   gap: 16px;
   align-items: center;
   justify-content: space-between;
-`;
-
-const StyledButton = styled(Button)`
-  border: none;
-  background: var(--accent);
-  color: var(--accent-contrast);
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 3px;
-  font-size: 18px;
-  padding: 8px 16px;
-  font-weight: 500;
-  &:hover {
-    background-color: var(--accent-dark);
-  }
 `;
 
 export function CalendarEvent({ event }: Props) {
@@ -127,7 +112,7 @@ export function CalendarEvent({ event }: Props) {
       </Content>
       <Actions>
         <Link to={`/programme/${event.uuid}`}>Plus d'infos</Link>
-        <StyledButton>Je participe</StyledButton>
+        <ParticipateButton event={event} />
       </Actions>
     </Container>
   );

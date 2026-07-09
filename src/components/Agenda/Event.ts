@@ -72,3 +72,29 @@ export type MobilizonEventWithLivingAreaI = MobilizonEventI & {
   livingArea: LivingAreaI | undefined;
 };
 export type MobilizonEventSchema = z.infer<typeof MobilizonSearchEventsSchema>;
+
+const MobilizonEventParticipantsSchema = z.object({
+  __typename: z.literal("Event"),
+  externalParticipationUrl: z.url().nullable().optional(),
+  id: z.string(),
+  uuid: z.string(),
+  joinOptions: z.string(),
+  participantStats: z.object({
+    __typename: z.literal("ParticipantStats"),
+    notApproved: z.number(),
+    notConfirmed: z.number(),
+    participant: z.number(),
+  }),
+});
+
+export const MobilizonEventParticipantsDataSchema = z.object({
+  data: z.object({
+    event: MobilizonEventParticipantsSchema,
+  }),
+});
+export type MobilizonEventParticipantsData = z.infer<
+  typeof MobilizonEventParticipantsDataSchema
+>;
+export type MobilizonEventParticipants = z.infer<
+  typeof MobilizonEventParticipantsSchema
+>;

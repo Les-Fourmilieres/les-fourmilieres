@@ -20,7 +20,16 @@ export function ListBox<T extends object>({
 }
 
 const StyledListBoxItem = styled(AriaListBoxItem)`
-  background-color: var(--bg);
+  background-color: var(--headerBg);
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-start;
+  &:hover {
+    background-color: var(--accent-dark);
+    color: var(--accent-contrast);
+  }
 `;
 
 export function ListBoxItem(props: ListBoxItemProps) {
@@ -47,7 +56,7 @@ export function ListBoxSection<T extends object>(
 }
 
 export function DropdownListBox<T extends object>(props: ListBoxProps<T>) {
-  return <AriaListBox {...props} className="dropdown-listbox" />;
+  return <AriaListBox {...props} />;
 }
 
 export function DropdownItem(props: ListBoxItemProps) {
@@ -55,7 +64,7 @@ export function DropdownItem(props: ListBoxItemProps) {
     props.textValue ||
     (typeof props.children === "string" ? props.children : undefined);
   return (
-    <ListBoxItem {...props} textValue={textValue} className="dropdown-item">
+    <ListBoxItem {...props} textValue={textValue}>
       {composeRenderProps(props.children, (children, { isSelected }) => (
         <>
           {isSelected && <Check />}

@@ -54,8 +54,21 @@ const CollectifName = styled.h3`
   color: var(--title-color);
 `;
 
+const CollectifTypes = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px 8px;
+  flex-wrap: wrap;
+`;
+
 const CollectifType = styled.div`
-  text-align: left;
+  background-color: var(--accent-dark);
+  color: var(--accent-contrast);
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 2px;
+  white-space: nowrap;
 `;
 
 const StyledLink = styled(Link)`
@@ -113,7 +126,11 @@ export function CollectifContent({ collectif, forceOpen }: Props) {
         )}
         <Metadata>
           <CollectifName>{collectif.name}</CollectifName>
-          <CollectifType>{collectif.type}</CollectifType>
+          <CollectifTypes>
+            {collectif.type.map((type) => (
+              <CollectifType>{type}</CollectifType>
+            ))}
+          </CollectifTypes>
           {(collectif.url || collectif.instagram || collectif.facebook) && (
             <SocialNetworks>
               {collectif.url && (

@@ -180,21 +180,6 @@ function RouteComponent() {
       <p>
         Aujourd'hui, plus de 100 collectifs ont déjà rejoint Les Foumilières :
       </p>
-      <div>
-        <Select
-          label="Type de collectif…"
-          value={collectifType}
-          onChange={(v) => {
-            setCollectifType(v as Types);
-          }}
-        >
-          {CollectifTypes.map((t) => (
-            <SelectItem key={t} id={t}>
-              {t}
-            </SelectItem>
-          ))}
-        </Select>
-      </div>
       <StyledToggleButtonGroup>
         {postalCodeFacets.map((postalCode) => (
           <ToggleButton
@@ -241,6 +226,29 @@ function RouteComponent() {
       >
         <div style={{ gridColumn: isMobile ? "span 1" : "span 3" }}>
           <Map collectifs={filteredCollectifs} />
+        </div>
+
+        <div style={{ gridColumn: "span 3" }}>
+          <Select
+            label="Type de collectif…"
+            value={collectifType}
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "stretch",
+            }}
+            onChange={(v) => {
+              if (v === "null") return setCollectifType(null);
+              setCollectifType(v as Types);
+            }}
+          >
+            <SelectItem id={"null"}>Voir tous</SelectItem>
+            {CollectifTypes.map((t) => (
+              <SelectItem key={t} id={t}>
+                {t}
+              </SelectItem>
+            ))}
+          </Select>
         </div>
         {filteredCollectifs.map((collectif) => (
           <Collectif key={collectif.slug} collectif={collectif} />
