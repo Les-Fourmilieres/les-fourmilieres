@@ -445,8 +445,8 @@ export const collectifs: CollectifI[] = [
 		type:["Festival", "Collectif événementiel"]
 	},
   {
-    slug: "inter-syndic-collectif",
-    name: "InterSyndicCollectif",
+    slug: "faites-des-solidarites",
+    name: "Faites des solidarités",
     departement: "Gard",
     position: { lat: 43.989109, lng: 3.602829 },
 		type:["Groupement de collectifs"]
@@ -726,7 +726,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://lepoing.net/",
 		type:["Média"]
   },
-	{
+	/*{
 		slug:"le-pont",
 		name:"Le Pont - Café Associatif",
 		position:{lat:43.770398778777405, lng:3.374704671164288},
@@ -735,7 +735,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/le-pont-logo.jpg",
 		description:"Le Pont, c’est un Espace de Vie Sociale ouvert à tous où chacun peut proposer et faire vivre des projets collectifs",
 		type:["Café associatif"]
-	},
+	},*/
   {
     slug: "le-quartier-genereux",
     name: "Le Quartier Généreux",
