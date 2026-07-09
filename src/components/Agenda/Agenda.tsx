@@ -18,9 +18,10 @@ const EventsContainer = styled.div`
   justify-content: center;
   max-width: var(--contentWidth);
   box-sizing: border-box;
-  padding: 16px;
+  padding: 0;
   margin: 32px auto;
   gap: 32px;
+  width: 100%;
 `;
 
 const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {

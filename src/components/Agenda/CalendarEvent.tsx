@@ -13,7 +13,8 @@ interface Props {
 
 const Container = styled.div`
   flex: 1 0 320px;
-  max-width: 490px;
+  max-width: min(490px, 100%);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
