@@ -9,6 +9,7 @@ import { getLivingAreas, type LivingAreaI } from "../../core/LivingArea";
 import type { LivingAreaSelectValue } from "../LivingAreaFilter/LivingAreaFilter.types";
 import { LivingAreaFilter } from "../LivingAreaFilter/LivingAreaFilter";
 import { Section } from "../Section";
+import { EventsMap } from "./EventsMap";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -132,6 +133,7 @@ export function Agenda() {
         postalCodeFacets={postalCodeFacets}
         livingAreaFacets={sortedLivingAreasFacet}
       />
+      <EventsMap events={filtersEvents} />
       <EventsContainer>
         {filtersEvents.map((event) => (
           <CalendarEvent key={event.id} event={event} />
