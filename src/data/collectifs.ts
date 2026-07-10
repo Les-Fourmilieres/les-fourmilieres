@@ -323,7 +323,7 @@ export const collectifs: CollectifI[] = [
 		instagram: "https://www.instagram.com/lepluspetitespacepossible",
 		type:["Collectif artistique"]
   },
-  {
+  /*{
     slug: "cosmopolitheque",
     name: "Cosmopolithèque",
     departement: "Hérault",
@@ -332,7 +332,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://www.cosmopolitheque.fr/",
 		facebook:"https://www.facebook.com/cosmopolitheque",
 		type:["Tiers-lieu"]
-  },
+  },*/
   /*{
     slug: "dcclm-club-de-roller-derby",
     name: "DCCLM, club de roller derby",
@@ -925,14 +925,14 @@ export const collectifs: CollectifI[] = [
     url: "https://polesenpomme.xyz",
 		type:["Collectif militant", "Collectif d'éducation populaire"]
   },
-  {
+  /*{
     slug: "pride-ales-2026",
     name: "Pride Alès 2026",
     departement: "Gard",
     position: { lat: 44.121853, lng: 4.102278 },
 		instagram: "https://www.instagram.com/pridedales/",
 		type:["Collectif militant"]
-  },
+  },*/
   {
     slug: "reso-resistances-solidaires",
     name: "Réso Résistances Solidaires",
@@ -1041,7 +1041,7 @@ export const collectifs: CollectifI[] = [
 		description:"🎭 Théâtre Associatif 🎭 - Programmation jeune public et adulte !",
 		type:["Théâtre"]
   },
-  {
+  /*{
     slug: "tisseur-d-espoir",
     name: "Tisseurs et tisseuses d'espoir",
     departement: "Hérault",
@@ -1049,7 +1049,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://tisseurs-tisseuses-despoir.jimdofree.com/",
 		logo:"collectifs/tisseurs-espoirs-logo.png",
 		type:["Groupement de collectifs", "Festival"]
-  },
+  },*/
   {
     slug: "union-communiste-libertaire",
     name: "Union Communiste Libertaire (UCL)",
