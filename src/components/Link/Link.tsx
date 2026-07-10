@@ -26,3 +26,31 @@ export const LinkButton = styled(RACLink)`
     background-color: var(--accent-dark);
   }
 `;
+
+export const NavLink = styled(Link)`
+  display: inline-block;
+  padding: 8px 4px;
+  color: var(--headerColor);
+  text-decoration: none;
+  font-weight: 500;
+  &:visited {
+    color: var(--headerColor);
+  }
+  &:hover {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+  }
+`;
+
+export const IconNavLink = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  background-color: var(--headerColor);
+  border-radius: 16px;
+  &,
+  &:visited {
+    color: var(--headerBg);
+  }
+`;

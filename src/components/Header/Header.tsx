@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { FaInstagram } from "react-icons/fa";
 import { Logo } from "../Logo/Logo";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
-import { Link } from "../Link/Link";
+import { IconNavLink, Link, NavLink } from "../Link/Link";
 import { ToggleMenu } from "../ToggleMenu";
 import { useState } from "react";
 import { Sidebar } from "./Sidebar";
@@ -92,33 +92,6 @@ const NavMenu = styled.ul(() => ({
 }));
 
 const NavMenuItem = styled.li(() => ({}));
-
-const NavLink = styled(Link)`
-  display: inline-block;
-  padding: 8px 4px;
-  color: var(--headerColor);
-  text-decoration: none;
-  font-weight: 500;
-  &:visited {
-    color: var(--headerColor);
-  }
-  &:hover {
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
-  }
-`;
-
-const IconNavLink = styled(Link)`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  background-color: var(--headerColor);
-  border-radius: 16px;
-  &, &:visited {
-    color: var(--headerBg);
-  }
-`;
 
 const menu: MenuItem[] = [
   {

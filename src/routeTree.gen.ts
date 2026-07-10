@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SafiaDahaniLesExtremesDroitesContemporainesRouteImport } from './routes/safia-dahani-les-extremes-droites-contemporaines'
 import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
+import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
 import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au-festival'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
@@ -32,9 +34,20 @@ const QuiSommesNousRoute = QuiSommesNousRouteImport.update({
   path: '/qui-sommes-nous',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PolitiqueDeConfidentialiteRoute =
+  PolitiqueDeConfidentialiteRouteImport.update({
+    id: '/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ParticiperAuFestivalRoute = ParticiperAuFestivalRouteImport.update({
   id: '/participer-au-festival',
   path: '/participer-au-festival',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LesFourmilieresRoute = LesFourmilieresRouteImport.update({
@@ -86,7 +99,9 @@ export interface FileRoutesByFullPath {
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
@@ -99,7 +114,9 @@ export interface FileRoutesByTo {
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
@@ -113,7 +130,9 @@ export interface FileRoutesById {
   '/la-charte': typeof LaCharteRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
@@ -128,7 +147,9 @@ export interface FileRouteTypes {
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
+    | '/mentions-legales'
     | '/participer-au-festival'
+    | '/politique-de-confidentialite'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
@@ -141,7 +162,9 @@ export interface FileRouteTypes {
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
+    | '/mentions-legales'
     | '/participer-au-festival'
+    | '/politique-de-confidentialite'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
@@ -154,7 +177,9 @@ export interface FileRouteTypes {
     | '/la-charte'
     | '/le-programme'
     | '/les-fourmilieres'
+    | '/mentions-legales'
     | '/participer-au-festival'
+    | '/politique-de-confidentialite'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
@@ -168,7 +193,9 @@ export interface RootRouteChildren {
   LaCharteRoute: typeof LaCharteRoute
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
   ParticiperAuFestivalRoute: typeof ParticiperAuFestivalRoute
+  PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
   SafiaDahaniLesExtremesDroitesContemporainesRoute: typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   ProgrammeUuidRoute: typeof ProgrammeUuidRoute
@@ -191,11 +218,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuiSommesNousRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politique-de-confidentialite': {
+      id: '/politique-de-confidentialite'
+      path: '/politique-de-confidentialite'
+      fullPath: '/politique-de-confidentialite'
+      preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/participer-au-festival': {
       id: '/participer-au-festival'
       path: '/participer-au-festival'
       fullPath: '/participer-au-festival'
       preLoaderRoute: typeof ParticiperAuFestivalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/les-fourmilieres': {
@@ -265,7 +306,9 @@ const rootRouteChildren: RootRouteChildren = {
   LaCharteRoute: LaCharteRoute,
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
   ParticiperAuFestivalRoute: ParticiperAuFestivalRoute,
+  PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
   QuiSommesNousRoute: QuiSommesNousRoute,
   SafiaDahaniLesExtremesDroitesContemporainesRoute:
     SafiaDahaniLesExtremesDroitesContemporainesRoute,
