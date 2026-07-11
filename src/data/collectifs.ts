@@ -52,6 +52,17 @@ export const collectifs: CollectifI[] = [
 		description:"Alternatiba est un mouvement citoyen pour le climat et la justice sociale.",
 		type:["Collectif militant"]
 	},
+	{
+		slug:"arret-nucleaire-34",
+		name:"Arrêt du nucléaire 34",
+		logo:"collectifs/arret-nucleaire-34.jpg",
+		url: "https://www.arretdunucleaire34.org/",
+		position:{lat:43.610078, lng:3.880731},
+		type:["Collectif militant"],
+		departement:"Hérault",
+		description:"Arrêt du nucléaire 34 a pour but d’agir pour un arrêt définitif du nucléaire civil et militaire.",
+		facebook:"https://www.facebook.com/ADNherault/"
+	},
 	/*{
     slug: "alternative-de-gauche-millau",
     name: "Alternative de gauche Millau",
@@ -451,6 +462,15 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.989109, lng: 3.602829 },
 		type:["Groupement de collectifs"]
   },
+	{
+		slug:"festival-des-luttes-populaires",
+		name:"Festival des luttes populaires",
+		departement:"Aude",
+		position:{lat:43.185814, lng:3.064775},
+		type:["Festival"],
+		url:"https://olivettedelangel.fr/festival/",
+		description:"Le festival des luttes populaires accueilli à Langel est organisé par le collectif Mutvitz11 qui distribue du café zapatiste en provenance directe de coopératives du Chiapas au Mexique."
+	},
   {
     slug: "echapppee-belle",
     name: "Librairie l'Échappée Belle",
@@ -515,6 +535,18 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/Lancredesete/?locale=fr_FR",
 		icon:"collectifs/ancre-icon.png",
 		type:["Média"]
+	},
+	{
+		slug:"la-basse-cour",
+		name:"La Basse cour",
+		position:{lat:43.78305457988729, lng:4.354770150498398},
+		departement: "Hérault",
+		type:["Collectif artistique"],
+		logo:"collectifs/logo-bassecour.svg",
+		description:"La Basse Cour est un collectif circassien basé à Nîmes, qui regroupe 10 compagnies, 20 spectacles, 50 artistes, des techniciens, 1 bureau de production, des bénévoles et autour duquel gravitent de nombreux autres acteurs du paysage culturel régional.",
+		url:"https://labassecour.com/",
+		facebook:"https://www.facebook.com/CollectifLaBasseCour/",
+		instagram:"https://www.instagram.com/collectif.lbc/?hl=fr"
 	},
 	{
 		slug:"la-base",
@@ -662,6 +694,15 @@ export const collectifs: CollectifI[] = [
 		icon:"collectifs/LaSDP_icon.png",
 		type:["Librairie"]
   },
+	{
+		slug:"ldh-beziers",
+		name: "Ligue des droits de l'Homme - Beziers",
+		position: {lat:43.341765, lng:3.217704},
+		departement: "Hérault",
+		type:["Collectif militant"],
+		url:"https://ldhbeziers.fr/",
+		logo: "collectifs/LDH.png"
+	},
   {
     slug: "ldh",
     name: "LDH",
