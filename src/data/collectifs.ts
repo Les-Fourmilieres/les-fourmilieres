@@ -738,7 +738,7 @@ export const collectifs: CollectifI[] = [
 		icon:"collectifs/LaSDP_icon.png",
 		type:["Librairie"]
   },
-	{
+	/*{
 		slug:"ldh-beziers",
 		name: "Ligue des droits de l'Homme - Beziers",
 		position: {lat:43.341765, lng:3.217704},
@@ -746,7 +746,7 @@ export const collectifs: CollectifI[] = [
 		type:["Collectif militant"],
 		url:"https://ldhbeziers.fr/",
 		logo: "collectifs/LDH.png"
-	},
+	},*/
   {
     slug: "ldh-mondpellier",
     name: "LDH Montpellier",
