@@ -72,6 +72,17 @@ export const collectifs: CollectifI[] = [
       lng: 3.077545,
     },
   },*/
+	{
+		slug:"asso-solidaires-34",
+		name:"ASSO Solidaires 34",
+		description:"Travailleurs et travailleuses du secteur associatif dans l’Herault, défendons nos droits ! ASSO est membre de l’Union syndicale Solidaires 34",
+		departement:"Hérault",
+		type:["Syndicat"],
+		position:{lat:43.616778098861886, lng:3.8780380544021984},
+		logo:"collectifs/asso-solidaires-34.jpg",
+		url:"https://syndicat-asso.fr/",
+		instagram:"https://www.instagram.com/asso.solidaires.34/"
+	},
   {
     slug: "association-boucan",
     name: "BOUCAN",
@@ -483,6 +494,17 @@ export const collectifs: CollectifI[] = [
 		type:["Librairie"]
   },
 	{
+		slug:"faucheur-euses-d-ogm",
+		name:"Faucheur.euses d’OGM",
+		type:["Collectif militant"],
+		departement:"Aveyron",
+		position:{lat:44.35159496692586, lng:2.568232162650412},
+		description:"Les faucheurs volontaires est un mouvement essentiellement français (mais des actions similaires ont eu lieu en 2007 en Allemagne, au Portugal et en Grande-Bretagne), proche des courants anti-industriels, dont les 6 700 militants revendiqués se sont engagés par écrit à détruire les parcelles d'essai transgéniques et de cultures d'OGM en plein champ.",
+		facebook:"https://www.facebook.com/groups/faucheursvolontaires/?locale=fr_FR",
+		url:"https://www.faucheurs-volontaires.fr/",
+		logo:"collectifs/faucheureuses-ogm.png"
+	},
+	{
 		slug:"fsu-34",
 		name:"Fédération Syndicale Unitaire - FSU 34",
 		position:{lat:43.60951340566071, lng:3.888753916038166},
@@ -513,6 +535,17 @@ export const collectifs: CollectifI[] = [
     url: "https://ilotvertdelasoulondres.org/",
 		type:["Collectif pour mieux habiter"]
   },
+	{
+		slug:"ul-solidaires-sud-cevennes",
+		name:"UL Solidaires Sud Cévennes",
+		type:["Syndicat"],
+		departement:"Hérault",
+		position:{lat:43.935509, lng:3.708808},
+		url:"https://solidaires34.org/author/ul_sudcevennes/",
+		facebook:"https://www.facebook.com/people/UL-Solidaires-SUD-C%C3%A9vennes/100092669360092/",
+		description:"Union locale interprofessionnelle des syndicats SUD autour de Ganges et Le Vigan",
+		logo:"collectifs/logo-ul-solidaires-cevennes.png"
+	},
   {
     slug: "ultra-violette",
     name: "L'Ultra Violette",
@@ -582,6 +615,17 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/violslefort34/?locale=fr_FR",
 		type:["Librairie"]
   },
+	{
+		slug:"la-caminade",
+		name:"La Caminade",
+		departement:"Hérault",
+		position:{lat:43.73250572349244, lng:3.3253180682321335},
+		type:["Collectif pour mieux habiter"],
+		logo:"collectifs/caminade-logo.png",
+		facebook:"https://www.facebook.com/people/La-Caminade-Lod%C3%A8ve/100089633520518/",
+		description:"Coopérative d'habitants écologique, sociale et intergénérationnelle issue de l'asso. Maisons Ecoé.",
+		url:"https://maisons-ecoe.org/la-caminade-lodeve/"
+	},
   {
     slug: "la-carmagnole",
     name: "La Carmagnole",
@@ -704,12 +748,14 @@ export const collectifs: CollectifI[] = [
 		logo: "collectifs/LDH.png"
 	},
   {
-    slug: "ldh",
-    name: "LDH",
+    slug: "ldh-mondpellier",
+    name: "LDH Montpellier",
     departement: "Hérault",
     position: { lat: 43.610352, lng: 3.892164 },
     logo: "collectifs/LDH.png",
     url: "https://www.ldh-france.org/",
+		facebook:"https://www.facebook.com/ldhmontpellier/?locale=fr_FR",
+		instagram:"https://www.instagram.com/ldh_montpellier/",
 		type:["Collectif militant"]
   },
   /*{
@@ -880,6 +926,18 @@ export const collectifs: CollectifI[] = [
 		logo: "collectifs/logo-librairie-alterlive.jpg",
 		url: "http://www.alterlivres.com/",
 		type:["Librairie"]
+	},
+	{
+		slug:"mets-ta-peau",
+		name:"Mets ta peau",
+		position:{lat:43.61058841077423, lng:3.8704047116330846},
+		departement:"Hérault",
+		type:["Collectif artistique", "Collectif d'éducation populaire"],
+		url:"https://www.helloasso.com/associations/mets-ta-peau",
+		facebook:"https://www.facebook.com/p/Mets-ta-peau-100091004104653/",
+		description:"Mets ta peau s'engage à rendre la création littéraire écopoétique accessible à toutes et tous à travers des ateliers d'écriture, des enquêtes sensibles, des publications originales, des évènements conviviaux ainsi qu'un atlas montpelliérain des altérations écologiques.",
+		logo:"collectifs/mets-ta-peau.png"
+
 	},
 	{
 		slug:"mtmsi",
