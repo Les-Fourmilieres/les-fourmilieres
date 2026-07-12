@@ -764,7 +764,7 @@ export const collectifs: CollectifI[] = [
     departement: "Hérault",
     position: { lat: 43.730138, lng: 3.323997 },
   },*/
-	{
+	/*{
 		slug:"le-cri-du-choeur",
 		name:"Le Cri du Choeur",
 		departement:"Hérault",
@@ -772,7 +772,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://criduchoeur.jimdofree.com/",
 		description:"Le Cri du Chœur, chorale militante, c'est une volonté commune : retrouver une voix confisquée par un système inhumain en partageant des chants de lutte.",
 		type:["Collectif artistique", "Collectif militant"]
-	},
+	},*/
   {
     slug: "le-grain-des-mots",
     name: "Librairie le Grain des Mots",
