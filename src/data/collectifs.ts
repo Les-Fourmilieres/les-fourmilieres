@@ -135,7 +135,7 @@ export const collectifs: CollectifI[] = [
 		name: "ATTAC Aveyron",
 		departement: "Aveyron",
 		position: {lat: 44.35656963048264, lng: 2.5786055541026065},
-		logo : "collectifs/attac-logo.jpg",
+		logo : "collectifs/attac-logo.png",
 		icon: "collectifs/attac-ico.png",
 		facebook:"https://www.facebook.com/attac12/",
 		type:["Collectif militant", "Collectif d'éducation populaire"]
@@ -239,7 +239,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Hérault",
 		facebook:"https://www.facebook.com/brasserielodeva/?locale=fr_FR",
 		instagram:"https://www.instagram.com/brasserielodeva",
-		logo:"collectifs/brasserie-lodeva-logo.jpg",
+		logo:"collectifs/brasserie-lodeva-logo.png",
 		icon:"collectifs/brasserie-lodeva-icon.png",
 		description:"Brasserie artisanale, 🍲 Cuisine bistrot, 🎸 Événements culturels, concerts",
 		type:["Bar - Brasserie - Commerce"]
@@ -262,7 +262,7 @@ export const collectifs: CollectifI[] = [
 		name:"Coord'eau 34",
 		position:{lat:43.61354427304223, lng:3.895045113387284},
 		departement:"Hérault",
-		logo:"collectifs/coordeau34.jpg",
+		logo:"collectifs/coordeau34.png",
 		facebook:"https://www.facebook.com/p/Coordeau-34-100094200818050/",
 		instagram:"https://www.instagram.com/coordeau34/",
 		description:"Coordination départementale « EAU » à l’échelle de l’Hérault. La gestion de l'eau, notre bien commun, impose des choix collectifs et partagés.",
@@ -276,7 +276,7 @@ export const collectifs: CollectifI[] = [
       lat: 44.35,
       lng: 3.949327,
     },
-		logo:"collectifs/logo-cevennes-terre-accueil.webp",
+		logo:"collectifs/logo-cevennes-terre-accueil.png",
 		url:"https://www.helloasso.com/associations/cevennes-terre-d-accueil",
 		description:"Association de soutien à l'accueil de réfugiés sur le territoire des Cévennes : Ardèche, Gard et Lozère",
 		type:["Collectif pour l'accueil de réfugiés"]
@@ -780,7 +780,7 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.607925, lng: 3.873901 },
 		url:"https://legraindesmots.com/",
 		facebook: "https://www.facebook.com/LibrairieLeGraindesMots/?locale=fr_FR",
-		logo:"collectifs/logo-le-grain-des-mots.jpg",
+		logo:"collectifs/logo-le-grain-des-mots.png",
 		type:["Librairie"]
   },
   /*{
@@ -794,7 +794,7 @@ export const collectifs: CollectifI[] = [
 		name: "Le nouveau Café",
 		position: {lat: 43.3115006093407, lng: 3.4702906698387856},
 		description: "Café associatif. Programmation d’évènements et ateliers participatifs. Restauration.",
-		logo: "collectifs/nouveau-cafe-logo.jpg",
+		logo: "collectifs/nouveau-cafe-logo.png",
 		departement: "Hérault",
 		facebook: "https://www.facebook.com/Digotorn/",
 		type:["Café associatif"]
@@ -999,7 +999,7 @@ export const collectifs: CollectifI[] = [
     departement: "Hérault",
     position: { lat: 43.736189, lng: 3.317013 },
 		facebook:"https://www.facebook.com/people/LOustalit%C3%A9-Lod%C3%A8ve/pfbid0qPBaumns8hJcSnxMSxHL33aKqjYe81tDE96XBWA5dUSBK59Zn7x28mnNwVwJVfGEl/",
-		logo:"collectifs/oustalite-logo.jpg",
+		logo:"collectifs/oustalite-logo.png",
 		type:["Collectif pour l'accueil de réfugiés"]
   },
 	{
@@ -1009,7 +1009,7 @@ export const collectifs: CollectifI[] = [
 		position: {lat: 43.99269466517533, lng: 3.606314781478429},
 		facebook: "https://www.facebook.com/people/Planning-familial-Sud-C%C3%A9vennes/61582758747377/",
 		instagram: "https://www.instagram.com/planningfamilial_sudcevennes/",
-		logo: "collectifs/plannnig-familial-sud-cevennes.png",
+		logo: "collectifs/planning-familial-sud-cevennes.png",
 		url: "https://www.planning-familial.org/",
 		icon: "collectifs/planning-famillial.png",
 		type:["Collectif militant", "Collectif d'éducation populaire"]
@@ -1189,7 +1189,7 @@ export const collectifs: CollectifI[] = [
     name: "Vivons Celles",
     departement: "Hérault",
     position: { lat: 43.661942, lng: 3.339329 },
-		logo:"collectifs/vivnos-celles-logo.jpg",
+		logo:"collectifs/vivons-celles-logo.png",
 		facebook:"https://www.facebook.com/vivonscelles",
 		description:"Association pour la réhabilitation du village de Celles.",
 		type:["Collectif pour mieux habiter"]
