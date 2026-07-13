@@ -3,7 +3,7 @@ import type { CollectifI } from "../../data/collectifs";
 import { CollectifContent } from "./CollectifContent";
 
 const Container = styled.div`
-  flex: 1 1 180px;
+  flex: 1 1 220px;
   background-color: var(--bg);
   padding: 16px;
   border-radius: 8px;

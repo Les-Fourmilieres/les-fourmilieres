@@ -72,7 +72,7 @@ export function LegalNotice() {
         <strong>les-fourmilieres.org</strong> permettant le suivi et l'analyse
         de la navigation des visiteurs du site. <strong>Aucune données</strong>{" "}
         (ni cookie, ni fingerprint, ni rien) n'est donc stocké afin d'analyser
-        le comportement les visiteurs sur le site.
+        le comportement des visiteurs sur le site.
       </p>
 
       <h3>Rectification des informations nominatives collectées</h3>

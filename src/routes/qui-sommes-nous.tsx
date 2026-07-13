@@ -22,6 +22,17 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)`
   gap: 4px 0px;
 `;
 
+const MainContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+`;
+
+const FullWidth = styled.div`
+  flex: 1 1 100%;
+`;
+
 export const Route = createFileRoute("/qui-sommes-nous")({
   component: RouteComponent,
 });
@@ -69,6 +80,7 @@ const CollectifTypes: Types[] = [
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
   const isMobile = useMediaQuery({ maxWidth: 800 });
+  console.log("isMobile", isMobile);
   const [collectifType, setCollectifType] = useState<Types | null>(null);
   const [selectedDepartment, setSelectedDepartment] = useState<string | null>(
     null,
@@ -213,22 +225,12 @@ function RouteComponent() {
             ))}
         </StyledToggleButtonGroup>
       )}
-      <div
-        style={{
-          /*columnCount: isMobile ? "1" : "2",
-          columnGap: "16px",
-          columnFill: "balance",*/
-          display: "grid",
-          gridTemplateColumns: isMobile ? "repeat(1, 1fr)" : "repeat(3, 1fr)",
-          gap: "16px",
-          width: "100%",
-        }}
-      >
-        <div style={{ gridColumn: isMobile ? "span 1" : "span 3" }}>
+      <MainContainer>
+        <FullWidth>
           <Map collectifs={filteredCollectifs} />
-        </div>
+        </FullWidth>
 
-        <div style={{ gridColumn: "span 3" }}>
+        <FullWidth>
           <Select
             label="Type de collectif…"
             value={collectifType}
@@ -249,11 +251,11 @@ function RouteComponent() {
               </SelectItem>
             ))}
           </Select>
-        </div>
+        </FullWidth>
         {filteredCollectifs.map((collectif) => (
           <Collectif key={collectif.slug} collectif={collectif} />
         ))}
-      </div>
+      </MainContainer>
     </Section>
   );
 }
