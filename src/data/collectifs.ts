@@ -1096,7 +1096,7 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.934128, lng: 3.707733 },
 		type:["Bar - Brasserie - Commerce"]
   },
-  {
+  /*{
     slug: "terres-de-luttes",
     name: "Terres de luttes - Aveyron",
     departement: "Aveyron",
@@ -1106,7 +1106,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/TerresdeLuttes",
 		instagram:"https://www.instagram.com/terresdeluttes/",
 		type:["Collectif militant"]
-  },
+  },*/
 	{
 		slug:"theatre-beaux-arts-tabards",
 		name:"Théâtre Beaux Arts Tabards",
