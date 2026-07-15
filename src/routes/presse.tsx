@@ -11,12 +11,23 @@ export const Route = createFileRoute("/presse")({
 function RouteComponent() {
   return (
     <Section>
+			<style>
+				{`
+          a {
+            color:var(--accent);
+          }
+          a:visited{
+          	color:var(--accent);
+          }
+        `}
+			</style>
       <h1>Espace presse</h1>
       <Section>
+
         <h2>Communiqués de presse</h2>
         <p>
           Télécharger le{" "}
-          <a href={cp26} download="CP_Les_Fourmilieres_26.pdf">
+          <a href={cp26} target="_blank">
             communiqué de presse du 15 juillet
           </a>
           .
