@@ -110,6 +110,10 @@ const menu: MenuItem[] = [
     label: "La charte",
     to: "/la-charte",
   },
+	{
+		label: "Presse",
+		to :"/presse"
+	},
   {
     label: "Pourquoi ce nom ?",
     to: "/les-fourmilieres",

@@ -60,8 +60,8 @@ function RouteComponent() {
       <p>
         <strong>
           Contactez-nous via l'e-mail{" "}
-          <Link href="mailto:lesfourmilieres@proton.me">
-            lesfourmilieres@proton.me
+          <Link href="mailto:contact@les-fourmilieres.org">
+						contact@les-fourmilieres.org
           </Link>
         </strong>
       </p>
@@ -74,8 +74,8 @@ function RouteComponent() {
       <p>
         <strong>
           Contactez-nous via l'e-mail{" "}
-          <Link href="mailto:lesfourmilieres@proton.me">
-            lesfourmilieres@proton.me
+          <Link href="mailto:contact@les-fourmilieres.org">
+						contact@les-fourmilieres.org
           </Link>
         </strong>
       </p>

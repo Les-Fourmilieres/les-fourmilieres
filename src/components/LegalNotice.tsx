@@ -34,9 +34,9 @@ export function LegalNotice() {
         vous pouvez nous contacter à l’adresse suivante :
       </p>
       <p>
-        <Link href="mailto:lesfourmilieres@proton.me">
-          lesfourmilieres@proton.me{" "}
-        </Link>
+        <Link href="mailto:contact@les-fourmilieres.org">
+					contact@les-fourmilieres.org{" "}
+        </Link> (ou l'adresse : lesfourmilieres@proton.me également gérée par l'équipe du festival).
       </p>
 
       <h2>Hébergement</h2>

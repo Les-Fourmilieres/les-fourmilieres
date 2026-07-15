@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SafiaDahaniLesExtremesDroitesContemporainesRouteImport } from './routes/safia-dahani-les-extremes-droites-contemporaines'
 import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
+import { Route as PresseRouteImport } from './routes/presse'
 import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
 import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au-festival'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
@@ -32,6 +33,11 @@ const SafiaDahaniLesExtremesDroitesContemporainesRoute =
 const QuiSommesNousRoute = QuiSommesNousRouteImport.update({
   id: '/qui-sommes-nous',
   path: '/qui-sommes-nous',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PresseRoute = PresseRouteImport.update({
+  id: '/presse',
+  path: '/presse',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PolitiqueDeConfidentialiteRoute =
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/mentions-legales': typeof MentionsLegalesRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/mentions-legales': typeof MentionsLegalesRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/mentions-legales': typeof MentionsLegalesRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/mentions-legales'
     | '/participer-au-festival'
     | '/politique-de-confidentialite'
+    | '/presse'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
@@ -165,6 +175,7 @@ export interface FileRouteTypes {
     | '/mentions-legales'
     | '/participer-au-festival'
     | '/politique-de-confidentialite'
+    | '/presse'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
@@ -180,6 +191,7 @@ export interface FileRouteTypes {
     | '/mentions-legales'
     | '/participer-au-festival'
     | '/politique-de-confidentialite'
+    | '/presse'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
@@ -196,6 +208,7 @@ export interface RootRouteChildren {
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   ParticiperAuFestivalRoute: typeof ParticiperAuFestivalRoute
   PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
+  PresseRoute: typeof PresseRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
   SafiaDahaniLesExtremesDroitesContemporainesRoute: typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   ProgrammeUuidRoute: typeof ProgrammeUuidRoute
@@ -216,6 +229,13 @@ declare module '@tanstack/react-router' {
       path: '/qui-sommes-nous'
       fullPath: '/qui-sommes-nous'
       preLoaderRoute: typeof QuiSommesNousRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/presse': {
+      id: '/presse'
+      path: '/presse'
+      fullPath: '/presse'
+      preLoaderRoute: typeof PresseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politique-de-confidentialite': {
@@ -309,6 +329,7 @@ const rootRouteChildren: RootRouteChildren = {
   MentionsLegalesRoute: MentionsLegalesRoute,
   ParticiperAuFestivalRoute: ParticiperAuFestivalRoute,
   PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
+  PresseRoute: PresseRoute,
   QuiSommesNousRoute: QuiSommesNousRoute,
   SafiaDahaniLesExtremesDroitesContemporainesRoute:
     SafiaDahaniLesExtremesDroitesContemporainesRoute,
