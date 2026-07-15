@@ -16,9 +16,9 @@ function RouteComponent() {
         <h2>Communiqués de presse</h2>
         <p>
           Télécharger le{" "}
-          <Link href={cp26} download="CP_Les_Fourmilieres_26.pdf">
+          <a href={cp26} download="CP_Les_Fourmilieres_26.pdf">
             communiqué de presse du 15 juillet
-          </Link>
+          </a>
           .
         </p>
       </Section>
