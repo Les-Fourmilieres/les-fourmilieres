@@ -13,10 +13,10 @@ function RouteComponent() {
     <Section>
 			<style>
 				{`
-          a {
+          a.cp {
             color:var(--accent);
           }
-          a:visited{
+          a.cp:visited{
           	color:var(--accent);
           }
         `}
@@ -27,7 +27,7 @@ function RouteComponent() {
         <h2>Communiqués de presse</h2>
         <p>
           Télécharger le{" "}
-          <a href={cp26} target="_blank">
+          <a className="cp" href={cp26} target="_blank">
             communiqué de presse du 15 juillet
           </a>
           .
