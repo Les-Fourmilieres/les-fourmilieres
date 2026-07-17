@@ -640,7 +640,7 @@ export const collectifs: CollectifI[] = [
   {
     slug: "la-carmagnole",
     name: "La Carmagnole",
-    description: `La Carmagnole  est un espace coopératif, culturel et politique installé au cœur du quartier Figuerolles à Montpellier, mêlant éducation populaire, débats, concerts, projections et initiatives solidaires. Fonctionnant sur un mode participatif, le lieu se veut à la fois un point d’appui pour les luttes sociales, écologiques et démocratiques, et un espace convivial ouvert sur le quartier, dans la ville.`,
+    description: `La Carmagnole est une coopérative d’émancipation politique, de solidarités et de cultures indépendant et pluraliste. Un point d’appui pour les luttes sociales, écologistes, féministes, antiracistes et démocratiques, un lieu de diffusion et de création culturelle.`,
     departement: "Hérault",
     position: { lat: 43.60735, lng: 3.868065 },
     url: "https://lacarmagnole.fr/",
