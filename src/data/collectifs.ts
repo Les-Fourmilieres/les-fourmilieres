@@ -138,7 +138,19 @@ export const collectifs: CollectifI[] = [
 		logo : "collectifs/attac-logo.png",
 		icon: "collectifs/attac-ico.png",
 		facebook:"https://www.facebook.com/attac12/",
-		type:["Collectif militant", "Collectif d'éducation populaire"]
+		type:["Collectif militant", "Collectif d'éducation populaire"],
+		description:"Attac promeut et mène des actions de tous ordres en vue de la reconquête, par les citoyens, du pouvoir que la sphère financière exerce sur tous les aspects de la vie politique, économique, sociale, environnementale et culturelle et ce, au niveau local comme à l’échelle de la planète."
+	},
+	{
+		slug: "attac-montpellier",
+		name: "ATTAC Montpellier",
+		departement: "Hérault",
+		position: {lat: 43.61453796543621, lng: 3.8260602506409764},
+		logo : "collectifs/attac-logo.png",
+		icon: "collectifs/attac-ico.png",
+		url:"https://attac-montpellier.ouvaton.org/",
+		type:["Collectif militant", "Collectif d'éducation populaire"],
+		description:"Attac promeut et mène des actions de tous ordres en vue de la reconquête, par les citoyens, du pouvoir que la sphère financière exerce sur tous les aspects de la vie politique, économique, sociale, environnementale et culturelle et ce, au niveau local comme à l’échelle de la planète."
 	},
   {
     slug: "la-cimade-montpellier",
