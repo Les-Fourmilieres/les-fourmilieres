@@ -2,7 +2,7 @@ export type Departements = "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère";
 export type Types = "Café associatif" | "Tiers-lieu" | "Festival" | "Librairie" |
 	"Théâtre" | "Syndicat" | "Bar - Brasserie - Commerce" | "Média" | /*"Cinéma" |*/
 	"Collectif artistique" | "Collectif événementiel" | "Collectif militant" | "Collectif pour mieux habiter" |
-	"Collectif pour l'accueil de réfugiés" | "Groupement de collectifs" | "Collectif d'éducation populaire"
+	"Collectif d'accueil de réfugiés" | "Groupement de collectifs" | "Collectif d'éducation populaire"
 export const departements: Departements[] = [
   "Aude",
   "Aveyron",
@@ -217,7 +217,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Gard",
 		position: {lat: 44.02035067734695, lng: 3.6257197344016316},
 		description:"BAM est une association créée pour gérer l’accueil et l’accompagnement de familles de réfugiés.",
-		type:["Collectif pour l'accueil de réfugiés"]
+		type:["Collectif d'accueil de réfugiés"]
 	},
   {
     slug: "bouillon-cube",
@@ -292,14 +292,14 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/logo-cevennes-terre-accueil.png",
 		url:"https://www.helloasso.com/associations/cevennes-terre-d-accueil",
 		description:"Association de soutien à l'accueil de réfugiés sur le territoire des Cévennes : Ardèche, Gard et Lozère",
-		type:["Collectif pour l'accueil de réfugiés"]
+		type:["Collectif d'accueil de réfugiés"]
   },
 	{
 		slug:"collectif-ganges-solidarite",
 		name:"Collectif Ganges Solidarité",
 		departement:"Hérault",
 		position:{lat:43.934290, lng:3.707644},
-		type:["Collectif pour l'accueil de réfugiés","Collectif militant"],
+		type:["Collectif d'accueil de réfugiés","Collectif militant"],
 		logo:"collectifs/collectif-ganges-solidarite.png",
 		url:"https://collectifgangessolidarites.wordpress.com",
 		description:"L'association Collectif Ganges Solidarités a pour objet la solidarité avec les personnes migrantes et plus largement avec toutes les personnes confrontées à des difficultés portant atteinte à leur dignité, en leur apportant aide et accompagnement pour une vie décente."
@@ -1025,7 +1025,7 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.736189, lng: 3.317013 },
 		facebook:"https://www.facebook.com/people/LOustalit%C3%A9-Lod%C3%A8ve/pfbid0qPBaumns8hJcSnxMSxHL33aKqjYe81tDE96XBWA5dUSBK59Zn7x28mnNwVwJVfGEl/",
 		logo:"collectifs/oustalite-logo.png",
-		type:["Collectif pour l'accueil de réfugiés"]
+		type:["Collectif d'accueil de réfugiés"]
   },
 	{
 		slug: "planning-familial-sud-cevennes",

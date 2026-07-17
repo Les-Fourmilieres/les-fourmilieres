@@ -72,7 +72,7 @@ const CollectifTypes: Types[] = [
   "Collectif événementiel",
   "Collectif militant",
   "Collectif pour mieux habiter",
-  "Collectif pour l'accueil de réfugiés",
+  "Collectif d'accueil de réfugiés",
   "Groupement de collectifs",
   "Collectif d'éducation populaire",
 ];
