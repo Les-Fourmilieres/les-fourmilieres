@@ -97,7 +97,7 @@ function zoomToCollectifs(map: L.Map, collectifs: CollectifI[]) {
   }
 
   const bounds = L.latLngBounds(
-    collectifs.map((c) => [c.position.lat, c.position.lng]),
+    collectifs.filter(c=>c.position).map((c) => [c.position!.lat, c.position!.lng]),
   );
   map.fitBounds(bounds, {
     padding: [50, 50],
@@ -135,7 +135,7 @@ export function Map({ collectifs }: Props) {
                 }),
               }
             : {};
-          return (
+          return c.position ? (
             <Marker
               key={c.slug}
               position={[c.position.lat, c.position.lng]}
@@ -151,7 +151,7 @@ export function Map({ collectifs }: Props) {
             >
               <Popup>{c.name}</Popup>
             </Marker>
-          );
+          ) : null;
         })}
       </StyledMapContainer>
       {selectedCollectif && (

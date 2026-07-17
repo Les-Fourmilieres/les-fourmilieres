@@ -91,10 +91,10 @@ function RouteComponent() {
 
   const collectifsWithLivingAreas = useMemo((): CollectifWithLivingArea[] => {
     const livingAreas = getLivingAreas();
-    return collectifs.map((collectif) => {
-      const pt = point([collectif.position.lng, collectif.position.lat]);
-      const livingArea = livingAreas.find((livingArea) =>
-        livingArea.pointIsWithing(pt),
+    return collectifs.filter(c=>c.position || c.bdv).map((collectif) => {
+      const pt = collectif.position ? point([collectif.position!.lng, collectif.position!.lat]) : undefined;
+			const livingArea = livingAreas.find((livingArea) =>
+        livingArea.pointIsWithing(pt, collectif.bdv),
       );
       return {
         ...collectif,

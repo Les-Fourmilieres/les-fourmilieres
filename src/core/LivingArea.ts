@@ -15,7 +15,7 @@ interface LivingAreaProperties {
 }
 
 export interface LivingAreaI {
-  pointIsWithing(point: Coord): boolean;
+  pointIsWithing(point?: Coord, code?:string): boolean;
   readonly name: string;
   readonly code: string;
 }
@@ -35,8 +35,8 @@ class MultiPolygonLivingArea implements LivingAreaI {
     });
   }
 
-  pointIsWithing(point: Coord) {
-    return this.polygons.some((poly) => booleanPointInPolygon(point, poly));
+  pointIsWithing(point: Coord, code:string) {
+    return code == this.code || point && this.polygons.some((poly) => booleanPointInPolygon(point, poly));
   }
 }
 
@@ -50,8 +50,8 @@ class PolygonLivingArea implements LivingAreaI {
     this.polygon = polygon(poly.coordinates);
   }
 
-  pointIsWithing(point: Coord) {
-    return booleanPointInPolygon(point, this.polygon);
+  pointIsWithing(point: Coord, code:string) {
+    return code == this.code || point && booleanPointInPolygon(point, this.polygon);
   }
 }
 

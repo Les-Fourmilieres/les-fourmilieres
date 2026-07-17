@@ -18,7 +18,8 @@ export interface CollectifI {
   url?: string;
   logo?: string;
   icon?: string;
-  position: { lat: number; lng: number };
+  position?: { lat: number; lng: number };
+	bdv?: string; // Position alternative. See values in src/data/bdv.geojson/features[*].properties.bv2022
   instagram?: string;
   facebook?: string;
   bluesky?: string;
@@ -307,7 +308,8 @@ export const collectifs: CollectifI[] = [
 	{
 		slug:"collectif-enfantiste-34",
 		name:"Collectif Enfantiste 34",
-		position:{lat:43.60936561856381, lng:3.8811744681101414},
+		bdv:"34172",
+		//position:{lat:43.60936561856381, lng:3.8811744681101414},
 		departement:"Hérault",
 		instagram:"https://www.instagram.com/collectifenfantiste34/",
 		description:"Collectif d’activistes contre les violences faites aux enfants et adolescents",
