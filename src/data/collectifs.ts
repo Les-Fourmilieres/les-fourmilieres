@@ -282,6 +282,17 @@ export const collectifs: CollectifI[] = [
 		type:["Collectif pour l'accueil de réfugiés"]
   },
 	{
+		slug:"collectif-ganges-solidarite",
+		name:"Collectif Ganges Solidarité",
+		departement:"Hérault",
+		position:{lat:43.934290, lng:3.707644},
+		type:["Collectif pour l'accueil de réfugiés","Collectif militant"],
+		logo:"collectifs/collectif-ganges-solidarite.png",
+		url:"https://collectifgangessolidarites.wordpress.com",
+		description:"L'association Collectif Ganges Solidarités a pour objet la solidarité avec les personnes migrantes et plus largement avec toutes les personnes confrontées à des difficultés portant atteinte à leur dignité, en leur apportant aide et accompagnement pour une vie décente."
+
+	},
+	{
 		slug:"collectif-enfantiste-34",
 		name:"Collectif Enfantiste 34",
 		position:{lat:43.60936561856381, lng:3.8811744681101414},
@@ -904,7 +915,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Hérault",
 		logo:"collectifs/la-cavale-logo.png",
 		icon:"collectifs/la-cavale-icon.png",
-		description:"Librairie généraliste, indépendante, coopérative",
+		description:"Librairie généraliste et coopérative de Montpellier",
 		instagram:"https://www.instagram.com/librairielacavale/",
 		facebook:"https://www.facebook.com/librairielacavale/?locale=fr_FR",
 		type:["Librairie"]
