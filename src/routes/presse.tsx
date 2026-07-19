@@ -19,16 +19,6 @@ export const Route = createFileRoute("/presse")({
 function RouteComponent() {
   return (
     <Section>
-      <style>
-        {`
-          a.cp {
-            color:var(--accent);
-          }
-          a.cp:visited{
-          	color:var(--accent);
-          }
-        `}
-      </style>
       <h1>Espace presse</h1>
       <Section>
         <h2>Communiqués de presse</h2>
