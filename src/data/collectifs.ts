@@ -596,12 +596,12 @@ export const collectifs: CollectifI[] = [
 	},
 	{
 		slug:"la-basse-cour",
-		name:"La Basse cour",
-		position:{lat:43.78305457988729, lng:4.354770150498398},
-		departement: "Hérault",
-		type:["Collectif artistique"],
-		logo:"collectifs/logo-bassecour.svg",
-		description:"La Basse Cour est un collectif circassien basé à Nîmes, qui regroupe 10 compagnies, 20 spectacles, 50 artistes, des techniciens, 1 bureau de production, des bénévoles et autour duquel gravitent de nombreux autres acteurs du paysage culturel régional.",
+		name:"Collectif la Basse Cour",
+		position:{lat:43.841643, lng:4.362973},
+		departement: "Gard",
+		type:["Festival", "Collectif artistique"],
+		logo:"collectifs/basse-cour.png",
+		description:"Collectif de compagnie qui mutualise des moyens humains, financiers et techniques. Celui-ci organise le festival Nuits Occupées qui propose une programmation spectaculaire en espace public et a pour objet la réappropriation de l'espace public par les corps sexisés.",
 		url:"https://labassecour.com/",
 		facebook:"https://www.facebook.com/CollectifLaBasseCour/",
 		instagram:"https://www.instagram.com/collectif.lbc/?hl=fr"
