@@ -1,5 +1,9 @@
 import z from "zod";
 import type { LivingAreaI } from "../../core/LivingArea";
+import cinema_cover from "../../assets/events/cinema.png?url";
+import concert_cover from "../../assets/events/concert.png?url";
+import conf_cover from "../../assets/events/conf.png?url";
+import picnic_cover from "../../assets/events/picnic.png?url"
 
 export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
@@ -31,6 +35,7 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 	"ebc70aab-95b0-4454-ba5a-cd93e783f3c7":["DJ Set", "Open Air"],
 	"ad529e6c-de28-499e-a505-7fa3c5732bb4":["Concert"],
 	"e921cbdc-8b76-48c4-a485-5036e248c16d":["DJ Set", "Open Air"],
+	"e24446de-b4da-4bbb-bcf3-efceb2a9ea7c":["Atelier d'expression"],
 	"bd975802-c6d3-410c-a857-f95591cf6efe":["Rencontre Littéraire"],
 	"d75e045c-d447-47c5-b18f-7d438817a5fc":["Conférence"],
 	"365f47d9-93f7-43e7-a5ef-4e2011fb0491":["AG"],
@@ -41,6 +46,31 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 
 export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
 	return uiidTypesMap[event.uuid] || ["Autre"]
+}
+
+export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
+	switch (type){
+	case "Cinéma":
+	case "Ciné-débat":
+		return cinema_cover
+	case "Concert":
+	case "DJ Set":
+	case "Open Air":
+	case "Bal populaire":
+		return concert_cover
+	case "Table-Ronde":
+	case "Conférence":
+	case "AG":
+	case "Rencontre Littéraire":
+		return conf_cover
+	case "Picnic":
+	case "Apéro":
+	case "Repas partagé":
+		return picnic_cover
+
+	default:
+		return "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp"
+	}
 }
 
 const MobilizonMediaSchema = z.object({
