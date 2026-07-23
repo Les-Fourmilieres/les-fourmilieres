@@ -1083,7 +1083,7 @@ export const collectifs: CollectifI[] = [
     name: "Réseau Université Sans Frontières 34 (RUSF)",
     departement: "Hérault",
     position: { lat: 43.632275745550565, lng: 3.868407683345444 },
-		description: "Collectif de d'accompagnement de soutient et de luttes avec les étudiant-es étranger-es avec ou sans papiers !",
+		description: "Collectif d'accompagnement, de soutient et de luttes avec les étudiant-es étranger-es avec ou sans papiers !",
 		url:"https://rusf34.fr/",
 		instagram:"https://www.instagram.com/rusf_34/",
 		facebook:"https://www.facebook.com/RUSF34/",
