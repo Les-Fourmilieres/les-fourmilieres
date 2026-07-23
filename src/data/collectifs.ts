@@ -160,7 +160,7 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.617682, lng: 3.874231 },
 		facebook:"https://www.facebook.com/CimadeMontpellier/",
 		url:"https://www.lacimade.org/regions/languedoc-roussillon/",
-		description:"La Cimade a pour but de manifester une solidarité active avec les personnes opprimées et exploitées.",
+		description:"La Cimade est une association de solidarité qui défend la dignité et les droits des personnes réfugiées, migrantes et sans-papiers. Elle propose un accompagnement juridique, intervient dans les centres de rétention, les bidonvilles et mène des actions de plaidoyer pour faire évoluer les politiques d'immigration et d'asile.",
 		logo:"collectifs/cimade-logo.svg",
 		type:["Collectif militant"]
   },
@@ -680,7 +680,7 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.335261, lng: 3.226333 },
 		facebook:"https://www.facebook.com/laCimadebeziers/",
 		url:"https://www.lacimade.org/nos-actions/hebergement-langue-francaise/le-centre-dhebergement-de-beziers/",
-		description:"La Cimade a pour but de manifester une solidarité active avec les personnes opprimées et exploitées.",
+		description:"La Cimade est une association de solidarité qui défend la dignité et les droits des personnes réfugiées, migrantes et sans-papiers. Elle propose un accompagnement juridique, intervient dans les centres de rétention, les bidonvilles et mène des actions de plaidoyer pour faire évoluer les politiques d'immigration et d'asile.",
 		logo:"collectifs/cimade-logo.svg",
 		type:["Collectif militant"]
   },
