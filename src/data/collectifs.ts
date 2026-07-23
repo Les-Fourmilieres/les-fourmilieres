@@ -332,6 +332,18 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.73312, lng: 3.320832 },
 		type:["Collectif militant"]
   },
+	{
+		slug: "collectif-nimois-antifasciste-queer",
+		name: "Collectif Nimois Antifasciste et Queer (CNAQ)",
+		departement: "Gard",
+		bdv:"30189",
+		type:["Collectif militant"],
+		logo:"collectifs/cnaq-logo.png",
+		url:"https://sites.google.com/view/collectif-cnaq/cnaqnimes",
+		instagram:"https://www.instagram.com/cnaq_nimes/",
+		facebook:"https://www.facebook.com/people/CNAQ-N%C3%AEmes/61577679513715/",
+		description:"Nous menons une lutte qui croise les combats trans et queer, antifascistes, antiracistes et anti-impérialistes dans le Sud de la France, en lien avec d’autres organisations et collectifs du territoire."
+	},
   {
     slug: "collectif-montpellier-contre-l-extreme-droite",
     name: "Collectif Montpellier contre l'Extrême Droite",
