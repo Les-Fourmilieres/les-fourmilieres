@@ -5,10 +5,10 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
 	"Kermesse" | "Village Associatif" |
 	"Manifestation" | "Pride" | "Parade" |
-	"Atelier cuisine" | "Atelier d'expression" |
-	"Théâtre" |
+	"Atelier cuisine" | "Atelier d'expression" | "Fresque" |
+	"Théâtre" | "Spectacle vivant" |
 	"Cinéma" | "Ciné-débat" |
-	"Picnic" |
+	"Picnic" | "Apéro" | "Repas partagé" |
 	"Autre"
 
 const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
