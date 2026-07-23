@@ -3,13 +3,14 @@ import { point } from "@turf/turf";
 import { CalendarEvent } from "./CalendarEvent";
 import styled from "styled-components";
 import { fetchEvents } from "./api";
-import type { MobilizonEventI, MobilizonEventWithLivingAreaI } from "./Event";
+import {eventType, type EventTypes, type MobilizonEventI, type MobilizonEventWithLivingAreaI} from "./Event";
 import { useMemo, useState } from "react";
 import { getLivingAreas, type LivingAreaI } from "../../core/LivingArea";
 import type { LivingAreaSelectValue } from "../LivingAreaFilter/LivingAreaFilter.types";
 import { LivingAreaFilter } from "../LivingAreaFilter/LivingAreaFilter";
 import { Section } from "../Section";
 import { EventsMap } from "./EventsMap";
+import {Select, SelectItem} from "../Select.js";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -23,6 +24,22 @@ const EventsContainer = styled.div`
   gap: 32px;
   width: 100%;
 `;
+
+const FullWidth = styled.div`
+  flex: 1 1 100%;
+`;
+
+const SelectEventTypes: {[key: string] : EventTypes[]} = {
+	"Concerts, DJ Set, Open Air, …": ["Concert", "DJ Set", "Open Air", "Bal populaire"],
+	"Conférences, Tables rondes, Rencontres littéraires, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
+	"Kermesses, Villages associatifs, …": ["Kermesse",  "Village Associatif"],
+	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
+	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression"],
+	"Théâtre, Spectacles vivants, …": [ "Théâtre"],
+	"Cinéma, Ciné-débat, …": [ "Cinéma", "Ciné-débat"],
+	"Picnic, apéro, repas partagé, …": ["Picnic"],
+	"Autre":["Autre"]
+};
 
 const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
   if (!e1.beginsOn || !e2.beginsOn) return 0;
@@ -41,6 +58,7 @@ export function Agenda() {
     department: null,
     livingArea: null,
   });
+	const [eventTypes, setEventTypes] = useState<string | null>(null);
 
   const events = useMemo(() => {
     if (!data) return [];
@@ -68,13 +86,20 @@ export function Agenda() {
     () =>
       events
         .filter((event) => {
+					if(eventTypes != null){
+						const curEventType = eventType(event)
+						let found = false;
+						SelectEventTypes[eventTypes].forEach(type=> found = found || curEventType.includes(type))
+						console.log(SelectEventTypes[eventTypes] + "- " + curEventType)
+						if(!found) return false
+					}
           if (!filter.department) return true;
           if (filter.livingArea)
             return event.livingArea?.code === filter.livingArea;
           return event.livingArea?.code.startsWith(filter.department);
         })
         .sort(sortEventByDate),
-    [events, filter],
+    [events, filter, eventTypes],
   );
 
   const livingAreasFacets = useMemo(() => {
@@ -124,6 +149,18 @@ export function Agenda() {
       });
   }, [livingAreasFacets, livingAreaByCode]);
 
+	const eventTypesFacets = useMemo(() => {
+		const eventTypesSet = new Set<string>()
+		events.forEach(event=> {
+			eventType(event).forEach(eventType => {
+				Object.keys(SelectEventTypes).forEach(selectKey => {
+					if (SelectEventTypes[selectKey].includes(eventType)) eventTypesSet.add(selectKey)
+				})
+			})
+		})
+		return Array.from(eventTypesSet.values())
+	}, [events]);
+
   if (!data) return null;
 
   return (
@@ -136,6 +173,28 @@ export function Agenda() {
       />
       <EventsMap events={filtersEvents} />
       <EventsContainer>
+				<FullWidth>
+					<Select
+						label="Type d'événement…"
+			      value={eventTypes}
+			      style={{
+							width: "100%",
+							display: "flex",
+							justifyContent: "stretch",
+						}}
+			      onChange={(v) => {
+							if (v === "null") return setEventTypes(null);
+							setEventTypes(v as string);
+						}}
+					>
+						<SelectItem id={"null"}>Voir tous</SelectItem>
+						{Object.keys(SelectEventTypes).filter((key) => eventTypesFacets.includes(key)).map((t) => (
+							<SelectItem key={t} id={t}>
+								{t}
+							</SelectItem>
+						))}
+					</Select>
+				</FullWidth>
         {filtersEvents.map((event) => (
           <CalendarEvent key={event.id} event={event} />
         ))}

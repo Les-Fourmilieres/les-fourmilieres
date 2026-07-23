@@ -1,6 +1,48 @@
 import z from "zod";
 import type { LivingAreaI } from "../../core/LivingArea";
 
+export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
+	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
+	"Kermesse" | "Village Associatif" |
+	"Manifestation" | "Pride" | "Parade" |
+	"Atelier cuisine" | "Atelier d'expression" |
+	"Théâtre" |
+	"Cinéma" | "Ciné-débat" |
+	"Picnic" |
+	"Autre"
+
+const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
+	"538f4ebe-8c97-43fe-b2c6-9040993b6bb0":["Conférence"],
+	"d380683f-d451-45ee-8818-9bd9c2f414ff":["Conférence"],
+	"c3fd4ad3-8e73-40f3-861c-52427ea8352b":["Picnic"],
+	"180b67c8-8d4a-4748-93b8-0ba4c1e04a4f":["Table-Ronde"],
+	"192db528-e67b-4e67-92f7-a8d603e35625":["Concert"],
+	"0cbe6c40-c320-4d64-9189-d5cb264a0ffe":["Table-Ronde"],
+	"4efd8fed-36f6-40aa-9f36-5f2d8dea255d":["Open Air"],
+	"3c9bd105-3fb8-4dee-8ac5-c229300d1463":["Conférence"],
+	"a28a1a79-9595-4cc7-a4f6-bce7ac6a84a3":["Atelier cuisine", "Atelier d'expression", "Concert", "Kermesse"],
+	"5e505d63-e827-4cd5-83a3-699d85554caa":["Cinéma"],
+	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":["Concert", "DJ Set", "Table-Ronde", "Kermesse"],
+	"c13b5c14-9a64-4746-98ce-cc570f3461f9":["DJ Set"],
+	"c8241147-0707-45f0-973c-ed7efc2ad533":["Ciné-débat"],
+	"25ae5f0e-6eb1-4dae-9487-6c9bbc7bc30d":["Rencontre Littéraire"],
+	"11d1a8f8-5c08-46b6-9e91-25f4ca01a7f9":["Conférence"],
+	"b3ad3faf-22f3-4690-90a9-c7f2e7691ccb":["DJ Set", "Open Air"],
+	"ebc70aab-95b0-4454-ba5a-cd93e783f3c7":["DJ Set", "Open Air"],
+	"ad529e6c-de28-499e-a505-7fa3c5732bb4":["Concert"],
+	"e921cbdc-8b76-48c4-a485-5036e248c16d":["DJ Set", "Open Air"],
+	"bd975802-c6d3-410c-a857-f95591cf6efe":["Rencontre Littéraire"],
+	"d75e045c-d447-47c5-b18f-7d438817a5fc":["Conférence"],
+	"365f47d9-93f7-43e7-a5ef-4e2011fb0491":["AG"],
+	"7355d219-6c45-4100-811d-d70a435b72ef":["DJ Set"],
+	"a706c612-268e-4775-8204-98b11e74f2cc":["Bal populaire"],
+	"b79d6b21-528c-4539-b68c-25bcb7af3ff8":["Théâtre"]
+}
+
+export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
+	return uiidTypesMap[event.uuid] || ["Autre"]
+}
+
 const MobilizonMediaSchema = z.object({
   url: z.string().optional().nullable(),
   alt: z.string().optional().nullable(),
@@ -24,7 +66,7 @@ const MobilizonAddressSchema = z.object({
   street: z.string().optional().nullable(),
 });
 
-const MobilizonTagSchema = z.object({
+const MobilizonTAGSchema = z.object({
   __typename: z.string(),
   id: z.string(),
   slug: z.string(),
@@ -41,7 +83,7 @@ const MobilizonEventSchema = z.object({
   onlineAddress: z.string().optional().nullable(),
   physicalAddress: MobilizonAddressSchema.nullable().optional(),
   picture: MobilizonMediaSchema.nullable().optional(),
-  tags: z.array(MobilizonTagSchema).nullable().optional(),
+  tAGs: z.array(MobilizonTAGSchema).nullable().optional(),
   title: z.string().nullable().optional(),
   url: z.string().nullable().optional(),
   uuid: z.string(),

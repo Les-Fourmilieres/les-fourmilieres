@@ -1,11 +1,29 @@
 import styled from "styled-components";
-import type { MobilizonEventI } from "./Event";
+import {eventType, type MobilizonEventI} from "./Event";
 import { EventDate } from "./EventDate";
 import { EventAddress } from "./EventAddress";
 import { useClockIcon } from "./useClockIcon";
 import { EventTime } from "./EventTime";
 import { Link } from "../Link/Link";
 import { ParticipateButton } from "./ParticipateButton";
+
+const EventTypes = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px 8px;
+  flex-wrap: wrap;
+`;
+
+const EventType = styled.span`
+	background-color: var(--accent-dark);
+	color: var(--accent-contrast);
+	//font-weight: 200;
+	padding: 0px 4px;
+	border-radius: 4px;
+	white-space: nowrap;
+	font-size: 14px;
+`
 
 const Content = styled.div`
   padding: 24px 16px;
@@ -79,6 +97,11 @@ export function EventPreview({ event }: Props) {
             </Metadata>
           )}
         </Infos>
+				<EventTypes>
+					{eventType(event).map((type) => (
+						<EventType>{type}</EventType>
+					))}
+				</EventTypes>
       </Content>
       <Actions>
         <Link to={`/programme/${event.uuid}`}>Plus d'infos</Link>

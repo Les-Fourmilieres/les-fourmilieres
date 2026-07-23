@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import type { MobilizonEventI } from "./Event";
+import {eventType, type MobilizonEventI} from "./Event";
 import { EventDate } from "./EventDate";
 import { useClockIcon } from "./useClockIcon";
 import { Link } from "../Link/Link";
@@ -67,6 +67,25 @@ const Metadata = styled.div`
   }
 `;
 
+const EventTypes = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px 8px;
+  flex-wrap: wrap;
+`;
+
+const EventType = styled.span`
+	background-color: var(--accent-dark);
+	color: var(--accent-contrast);
+	//font-weight: 200;
+	padding: 0px 4px;
+	border-radius: 4px;
+	white-space: nowrap;
+	font-size: 14px;
+		
+`
+
 const Actions = styled.div`
   padding: 16px;
   margin: -16px 0 0;
@@ -80,6 +99,11 @@ export function CalendarEvent({ event }: Props) {
   const ClockIcon = useClockIcon(event.beginsOn, 20);
   return (
     <Container>
+			<EventTypes>
+				{eventType(event).map((type) => (
+					<EventType>{type}</EventType>
+				))}
+			</EventTypes>
       <Figure
         style={
           event.picture?.url

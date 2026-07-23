@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Section } from "../Section";
-import type { MobilizonEventI } from "./Event";
+import {eventType, type MobilizonEventI} from "./Event";
 import { EventDate } from "./EventDate";
 import { EventTime } from "./EventTime";
 import { ParticipateButton } from "./ParticipateButton";
@@ -67,6 +67,25 @@ const TimeAndAddress = styled.div`
   flex: 1 1 auto;
 `;
 
+const EventTypes = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px 8px;
+  flex-wrap: wrap;
+	width: 100%;
+`;
+
+const EventType = styled.span`
+	background-color: var(--accent-dark);
+	color: var(--accent-contrast);
+	//font-weight: 200;
+	padding: 0px 4px;
+	border-radius: 4px;
+	white-space: nowrap;
+	font-size: 14px;
+`
+
 interface Props {
   event: MobilizonEventI;
 }
@@ -81,6 +100,11 @@ export function EventPage({ event }: Props) {
         }}
       ></EventCover>
       <StyledSection>
+				<EventTypes>
+					{eventType(event).map((type) => (
+						<EventType>{type}</EventType>
+					))}
+				</EventTypes>
         {isMobile ? (
           <EventHeader>
             <Title>{event.title}</Title>
