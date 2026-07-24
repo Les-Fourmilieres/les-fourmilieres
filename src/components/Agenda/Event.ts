@@ -4,6 +4,12 @@ import cinema_cover from "../../assets/events/cinema.png?url";
 import concert_cover from "../../assets/events/concert.png?url";
 import conf_cover from "../../assets/events/conf.png?url";
 import picnic_cover from "../../assets/events/picnic.png?url"
+import table_ronde_cover from "../../assets/events/table-ronde.png?url"
+import rencontre_litteraire_cover from "../../assets/events/rencontre-litteraire.png?url"
+import djset_cover from "../../assets/events/djset.png?url"
+import openair_cover from "../../assets/events/openair.png?url"
+import balpop_cover from "../../assets/events/balpop.png?url"
+import ag_cover from "../../assets/events/ag.png?url"
 
 export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
@@ -53,16 +59,22 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	case "Cinéma":
 	case "Ciné-débat":
 		return cinema_cover
-	case "Concert":
 	case "DJ Set":
+		return djset_cover
 	case "Open Air":
+		return openair_cover
 	case "Bal populaire":
+		return balpop_cover
+	case "Concert":
 		return concert_cover
-	case "Table-Ronde":
 	case "Conférence":
-	case "AG":
-	case "Rencontre Littéraire":
 		return conf_cover
+	case "AG":
+		return ag_cover
+	case "Rencontre Littéraire":
+		return rencontre_litteraire_cover
+	case "Table-Ronde":
+		return table_ronde_cover
 	case "Picnic":
 	case "Apéro":
 	case "Repas partagé":

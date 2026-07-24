@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {eventType, type MobilizonEventI} from "./Event";
+import {eventDefaultCover, eventType, type MobilizonEventI} from "./Event";
 import { EventDate } from "./EventDate";
 import { useClockIcon } from "./useClockIcon";
 import { Link } from "../Link/Link";
@@ -106,13 +106,14 @@ export function CalendarEvent({ event }: Props) {
 			</EventTypes>
       <Figure
         style={
-          event.picture?.url
+          event.picture?.url &&
+					event.picture.url != "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp?name=les-fourmilieres-preview.webp"
             ? {
                 backgroundImage: `url(${event.picture?.url})`,
               }
             : {
-                backgroundImage: `url(https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp)`,
-                backgroundSize: "cover",
+                backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
+								backgroundSize: "cover",
               }
         }
       ></Figure>

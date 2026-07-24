@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Section } from "../Section";
-import {eventType, type MobilizonEventI} from "./Event";
+import {eventDefaultCover, eventType, type MobilizonEventI} from "./Event";
 import { EventDate } from "./EventDate";
 import { EventTime } from "./EventTime";
 import { ParticipateButton } from "./ParticipateButton";
@@ -95,9 +95,16 @@ export function EventPage({ event }: Props) {
   return (
     <>
       <EventCover
-        style={{
-          backgroundImage: `url(${event.picture?.url ?? "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp"})`,
-        }}
+        style={
+					event.picture?.url &&
+					event.picture.url != "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp?name=les-fourmilieres-preview.webp"
+						? {
+							backgroundImage: `url(${event.picture?.url})`,
+						}
+						: {
+							backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
+						}
+				}
       ></EventCover>
       <StyledSection>
 				<EventTypes>
