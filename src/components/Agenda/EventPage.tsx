@@ -44,6 +44,7 @@ const Content = styled.main`
 `;
 
 const EventCover = styled.aside`
+	margin-top: 50px;
   height: 400px;
   background-size: contain;
   background-position: center center;
