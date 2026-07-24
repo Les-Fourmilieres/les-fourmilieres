@@ -31,6 +31,7 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 	"4efd8fed-36f6-40aa-9f36-5f2d8dea255d":["Open Air"],
 	"3c9bd105-3fb8-4dee-8ac5-c229300d1463":["Conférence"],
 	"a28a1a79-9595-4cc7-a4f6-bce7ac6a84a3":["Atelier cuisine", "Atelier d'expression", "Concert", "Kermesse"],
+	"76f7c610-663c-4792-b0c2-41cfd3df2fd7":["Fresque"],
 	"5e505d63-e827-4cd5-83a3-699d85554caa":["Cinéma"],
 	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":["Concert", "DJ Set", "Table-Ronde", "Kermesse"],
 	"c13b5c14-9a64-4746-98ce-cc570f3461f9":["DJ Set"],
