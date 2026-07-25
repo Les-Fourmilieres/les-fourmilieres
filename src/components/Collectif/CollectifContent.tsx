@@ -4,6 +4,21 @@ import { Button, Link } from "react-aria-components";
 import { ChevronDown, Globe } from "lucide-react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { useState } from "react";
+import picto_media from "../../assets/pictos/media_B.png?url"
+import picto_cafe from "../../assets/pictos/bar_B.png?url"
+import picto_tierslieu from "../../assets/pictos/tierslieu_B.png?url"
+import picto_festival from "../../assets/pictos/festival_B.png?url"
+import picto_librairie from "../../assets/pictos/librairie_B.png?url"
+import picto_theatre from "../../assets/pictos/theatre_B.png?url"
+import picto_syndicat from "../../assets/pictos/syndicat_B.png?url"
+import picto_artistique from "../../assets/pictos/artistique_B.png?url"
+import picto_evenementiel from "../../assets/pictos/evenementiel_B.png?url"
+import picto_militant from "../../assets/pictos/militant_B.png?url"
+import picto_habiter from "../../assets/pictos/habiter_B.png?url"
+import picto_refugie from "../../assets/pictos/refugies_B.png?url"
+import picto_collectifs from "../../assets/pictos/collectifs_B.png?url"
+import picto_educpop from "../../assets/pictos/education_B.png"
+
 
 const Content = styled(Button)`
   padding: 0;
@@ -66,9 +81,65 @@ const CollectifType = styled.div`
   background-color: var(--accent-dark);
   color: var(--accent-contrast);
   font-weight: 500;
-  padding: 2px 4px;
-  border-radius: 2px;
+  padding: 0px 4px;
+  border-radius: 5px;
   white-space: nowrap;
+	&::before{
+		content:"";
+	  display:inline-block;
+	  height:30px;
+	  width:36px;
+		transform: scale(.7);
+		margin-right: 3px;
+		margin-top:-2px;
+	  margin-bottom:-2px;
+	  vertical-align:middle;
+  }
+	&[data-cat="Café associatif"]::before {
+		background: url("${picto_cafe}") no-repeat 0 center;
+	}
+	&[data-cat="Tiers-lieu"]::before {
+		background: url("${picto_tierslieu}") no-repeat 0 center;
+	}
+	&[data-cat="Festival"]::before {
+		background: url("${picto_festival}") no-repeat 0 center;
+	}
+	&[data-cat="Librairie"]::before {
+		background: url("${picto_librairie}") no-repeat 0 center;
+	}
+	&[data-cat="Théâtre"]::before {
+		background: url("${picto_theatre}") no-repeat 0 center;
+	}
+	&[data-cat="Syndicat"]::before {
+		background: url("${picto_syndicat}") no-repeat 0 center;
+	}
+	&[data-cat="Bar - Brasserie - Commerce"]::before {
+		background: url("${picto_cafe}") no-repeat 0 center;
+	}
+	&[data-cat="Média"]::before {
+		background: url("${picto_media}") no-repeat 0 center;
+	}
+	&[data-cat="Collectif artistique"]::before {
+		background: url("${picto_artistique}") no-repeat 0 center;
+	}
+	&[data-cat="Collectif événementiel"]::before {
+		background: url("${picto_evenementiel}") no-repeat 0 center;
+	}
+	&[data-cat="Collectif militant"]::before {
+		background: url("${picto_militant}") no-repeat 0 center;
+	}
+	&[data-cat="Collectif pour mieux habiter"]::before {
+		background: url("${picto_habiter}") no-repeat 0 center;
+	}
+	&[data-cat="Collectif d'accueil de réfugiés"]::before {
+		background: url("${picto_refugie}") no-repeat 0 center;
+	}
+	&[data-cat="Groupement de collectifs"]::before {
+		background: url("${picto_collectifs}") no-repeat 0 center;
+	}
+	&[data-cat="Collectif d'éducation populaire"]::before {
+		background: url("${picto_educpop}") no-repeat 0 center;
+	}
 `;
 
 const StyledLink = styled(Link)`
@@ -128,7 +199,7 @@ export function CollectifContent({ collectif, forceOpen }: Props) {
           <CollectifName>{collectif.name}</CollectifName>
           <CollectifTypes>
             {collectif.type.map((type) => (
-              <CollectifType>{type}</CollectifType>
+              <CollectifType data-cat={type}>{type}</CollectifType>
             ))}
           </CollectifTypes>
           {(collectif.url || collectif.instagram || collectif.facebook) && (

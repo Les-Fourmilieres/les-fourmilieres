@@ -38,7 +38,6 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/actionjusticeclimatmontpellier/",
 		instagram:"https://www.instagram.com/actionjusticeclimat_mtp",
 		logo:"collectifs/ajc-montpellier-logo.png",
-		icon:"collectifs/ajc-montpellier-logo.png",
 		type:["Collectif militant"]
 	},
 	{
@@ -49,7 +48,6 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/p/Alternatiba-Montpellier-61559079741040/",
 		url:"https://alternatiba.eu/",
 		logo:"collectifs/alternatiba-logo.png",
-		icon:"collectifs/alternatiba-icon.png",
 		description:"Alternatiba est un mouvement citoyen pour le climat et la justice sociale.",
 		type:["Collectif militant"]
 	},
@@ -82,7 +80,7 @@ export const collectifs: CollectifI[] = [
 		position:{lat:43.616778098861886, lng:3.8780380544021984},
 		logo:"collectifs/asso-solidaires-34.jpg",
 		url:"https://syndicat-asso.fr/",
-		instagram:"https://www.instagram.com/asso.solidaires.34/"
+		instagram:"https://www.instagram.com/asso.solidaires.34/",
 	},
   {
     slug: "association-boucan",
@@ -94,7 +92,7 @@ export const collectifs: CollectifI[] = [
     instagram: "https://www.instagram.com/boucan_asso",
     logo: "collectifs/boucan-logo.png",
     position: { lat: 44.124071, lng: 4.083481 },
-		type:["Collectif militant", "Collectif d'éducation populaire"]
+		type:["Collectif d'éducation populaire", "Collectif militant"],
   },
   {
     slug: "association-folia",
@@ -106,7 +104,7 @@ export const collectifs: CollectifI[] = [
 		instagram:"https://www.instagram.com/folia.evenement/",
 		description:"Folia Événement est une association dédiée à l'art du spectacle et à la création d'événements uniques.",
 		logo:"collectifs/folia-logo.png",
-		type:["Théâtre", "Collectif artistique"]
+		type:["Théâtre", "Collectif artistique"],
   },
   {
     slug: "association-home-cinema",
@@ -118,7 +116,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/profile.php?id=61573989620227",
 		description:"Collectif à l'origine de l'occupation citoyenne du cinéma La Clef, mais non de son rachat - 🎞️ Ciné-club itinérant - ✏️ Revue Contrebande.",
 		logo:"collectifs/home-cinema-logo.png",
-		type:["Collectif militant"/*, "Cinéma"*/]
+		type:["Collectif militant"/*, "Cinéma"*/],
   },
 	{
 		slug: "association-sous-les-etoiles",
@@ -129,7 +127,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/asso.souslesetoiles/",
 		logo: "collectifs/logo-sous-les-etoiles.png",
 		description:"Réaliser ensemble des petits films sur le territoire du Pays Viganais.",
-		type:["Collectif artistique"]
+		type:["Collectif artistique"],
 	},
 	{
 		slug: "attac-aveyron",
@@ -137,7 +135,6 @@ export const collectifs: CollectifI[] = [
 		departement: "Aveyron",
 		position: {lat: 44.35656963048264, lng: 2.5786055541026065},
 		logo : "collectifs/attac-logo.png",
-		icon: "collectifs/attac-ico.png",
 		facebook:"https://www.facebook.com/attac12/",
 		type:["Collectif militant", "Collectif d'éducation populaire"],
 		description:"Attac promeut et mène des actions de tous ordres en vue de la reconquête, par les citoyens, du pouvoir que la sphère financière exerce sur tous les aspects de la vie politique, économique, sociale, environnementale et culturelle et ce, au niveau local comme à l’échelle de la planète."
@@ -148,7 +145,6 @@ export const collectifs: CollectifI[] = [
 		departement: "Hérault",
 		position: {lat: 43.61453796543621, lng: 3.8260602506409764},
 		logo : "collectifs/attac-logo.png",
-		icon: "collectifs/attac-ico.png",
 		url:"https://attac-montpellier.ouvaton.org/",
 		type:["Collectif militant", "Collectif d'éducation populaire"],
 		description:"Attac promeut et mène des actions de tous ordres en vue de la reconquête, par les citoyens, du pouvoir que la sphère financière exerce sur tous les aspects de la vie politique, économique, sociale, environnementale et culturelle et ce, au niveau local comme à l’échelle de la planète."
@@ -162,7 +158,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://www.lacimade.org/regions/languedoc-roussillon/",
 		description:"La Cimade est une association de solidarité qui défend la dignité et les droits des personnes réfugiées, migrantes et sans-papiers. Elle propose un accompagnement juridique, intervient dans les centres de rétention, les bidonvilles et mène des actions de plaidoyer pour faire évoluer les politiques d'immigration et d'asile.",
 		logo:"collectifs/cimade-logo.svg",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   {
     slug: "association-lafi-bala",
@@ -174,7 +170,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://fr-fr.facebook.com/lafibala34",
 		description:"Association d'éducation à la citoyenneté mondiale",
 		logo:"collectifs/lafibala-logo.png",
-		type:["Collectif militant", "Collectif d'éducation populaire"]
+		type:["Collectif d'éducation populaire", "Collectif militant"],
   },
   /*{
     slug: "association-refuge-pour-animaux-hakuna-matata",
@@ -191,7 +187,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/p/Le-Bar-du-Midi-100088602878744/",
 		logo:"collectifs/bar-du-midi-logo.jpg",
 		description:"Le Bar du Midi, c’est un Bar-PMU et lieu culturel revisité. Dans un esprit rétro et chaleureux.",
-		type:["Bar - Brasserie - Commerce"]
+		type:["Bar - Brasserie - Commerce"],
   },
   {
     slug: "barnabu",
@@ -201,7 +197,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/collectif.nabucho/?locale=fr_FR",
 		description:"Collectif Nabuchodonosor, Venez nous retrouver au Café associatif Barnabu, place St Cyr à Béziers",
 		logo:"collectifs/barnabu-logo.jpg",
-		type:["Café associatif"]
+		type:["Café associatif"],
   },
   {
     slug: "beziers-anti-cra",
@@ -209,7 +205,7 @@ export const collectifs: CollectifI[] = [
     departement: "Hérault",
     position: { lat: 43.34091, lng: 3.197622 },
 		url:"https://anticra.com/",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
 	{
 		slug: "bienvenue-a-mandagout",
@@ -217,7 +213,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Gard",
 		position: {lat: 44.02035067734695, lng: 3.6257197344016316},
 		description:"BAM est une association créée pour gérer l’accueil et l’accompagnement de familles de réfugiés.",
-		type:["Collectif d'accueil de réfugiés"]
+		type:["Collectif d'accueil de réfugiés"],
 	},
   {
     slug: "bouillon-cube",
@@ -230,8 +226,7 @@ export const collectifs: CollectifI[] = [
     instagram: "https://www.instagram.com/bouilloncube.lagrange/",
     facebook: "https://www.facebook.com/bouillon.cube",
     logo: "collectifs/bouillon-cube.webp",
-    icon: "collectifs/bouillon-cube.webp",
-		type:["Tiers-lieu", "Collectif événementiel"]
+		type:["Tiers-lieu", "Collectif événementiel"],
   },
   {
     slug: "brasserie-la-frenetik",
@@ -242,8 +237,7 @@ export const collectifs: CollectifI[] = [
     position: { lat: 44.207081, lng: 4.040238 },
     facebook: "https://www.facebook.com/brasseriefrenetik/",
     logo: "collectifs/la-frenetik.webp",
-    icon: "collectifs/la-frenetik.webp",
-		type:["Bar - Brasserie - Commerce"]
+		type:["Bar - Brasserie - Commerce"],
   },
 	{
 		slug: "brasserie-lodeva",
@@ -253,9 +247,8 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/brasserielodeva/?locale=fr_FR",
 		instagram:"https://www.instagram.com/brasserielodeva",
 		logo:"collectifs/brasserie-lodeva-logo.png",
-		icon:"collectifs/brasserie-lodeva-icon.png",
 		description:"Brasserie artisanale, 🍲 Cuisine bistrot, 🎸 Événements culturels, concerts",
-		type:["Bar - Brasserie - Commerce"]
+		type:["Bar - Brasserie - Commerce"],
 	},
 	{
 		slug:"ccfd-herault",
@@ -266,7 +259,6 @@ export const collectifs: CollectifI[] = [
 		url:"https://ccfd-terresolidaire.org/regions/languedoc-roussillon-vaucluse/",
 		instagram:"https://www.instagram.com/ccfdts_lrv/",
 		logo:"collectifs/ccfd-terre-solidaire.png",
-		icon:"collectifs/ccfd-terre-solidaire.png",
 		description:"Le CCFD-Terre Solidaire agit aux côtés des populations les plus vulnérables contre toutes les formes d’injustices, et en premier lieu, celle de souffrir de la faim.",
 		type:["Collectif militant"]
 	},
@@ -279,7 +271,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/p/Coordeau-34-100094200818050/",
 		instagram:"https://www.instagram.com/coordeau34/",
 		description:"Coordination départementale « EAU » à l’échelle de l’Hérault. La gestion de l'eau, notre bien commun, impose des choix collectifs et partagés.",
-		type:["Groupement de collectifs", "Collectif militant"]
+		type:["Groupement de collectifs", "Collectif militant"],
 	},
   {
     slug: "cevennes-terre-d-accueil",
@@ -292,7 +284,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/logo-cevennes-terre-accueil.png",
 		url:"https://www.helloasso.com/associations/cevennes-terre-d-accueil",
 		description:"Association de soutien à l'accueil de réfugiés sur le territoire des Cévennes : Ardèche, Gard et Lozère",
-		type:["Collectif d'accueil de réfugiés"]
+		type:["Collectif d'accueil de réfugiés"],
   },
 	{
 		slug:"collectif-ganges-solidarite",
@@ -302,8 +294,7 @@ export const collectifs: CollectifI[] = [
 		type:["Collectif d'accueil de réfugiés","Collectif militant"],
 		logo:"collectifs/collectif-ganges-solidarite.png",
 		url:"https://collectifgangessolidarites.wordpress.com",
-		description:"L'association Collectif Ganges Solidarités a pour objet la solidarité avec les personnes migrantes et plus largement avec toutes les personnes confrontées à des difficultés portant atteinte à leur dignité, en leur apportant aide et accompagnement pour une vie décente."
-
+		description:"L'association Collectif Ganges Solidarités a pour objet la solidarité avec les personnes migrantes et plus largement avec toutes les personnes confrontées à des difficultés portant atteinte à leur dignité, en leur apportant aide et accompagnement pour une vie décente.",
 	},
 	{
 		slug:"collectif-enfantiste-34",
@@ -314,7 +305,6 @@ export const collectifs: CollectifI[] = [
 		instagram:"https://www.instagram.com/collectifenfantiste34/",
 		description:"Collectif d’activistes contre les violences faites aux enfants et adolescents",
 		url:"https://collectifenfantiste.fr/",
-		icon:"collectifs/collectif-enfantiste-logo.webp",
 		logo:"collectifs/collectif-enfantiste-logo.webp",
 		type:["Collectif militant"]
 	},
@@ -323,14 +313,14 @@ export const collectifs: CollectifI[] = [
     name: "Collectif Gilets jaunes de Gignac et alentours",
     departement: "Hérault",
     position: { lat: 43.65025148001632, lng: 3.546333160764182 },
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   {
     slug: "collectif-lodevois",
     name: "Collectif Lodévois",
     departement: "Hérault",
     position: { lat: 43.73312, lng: 3.320832 },
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
 	{
 		slug: "collectif-nimois-antifasciste-queer",
@@ -352,14 +342,14 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/montpellier-contre-extreme-droite-logo.jpg",
 		instagram: "https://www.instagram.com/mtpcontrelexd/",
 		description: "Collectif d’individu-e-s, assos, orgas, syndicats. Contre les idées d’extrême droite, organise-toi 💥",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   {
     slug: "collectif-sete-contre-l-extreme-droite",
     name: "Collectif Sète lutte contre l'Extrême Droite",
     departement: "Hérault",
     position: { lat: 43.409007, lng: 3.698123 },
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   {
     slug: "combas-rojas",
@@ -369,7 +359,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://www.cambasrojas.org/",
 		description:"Le Fonds de dotation Cambas Rojas agit pour que le village de Celles redevienne un lieu habité, vivant et partagé.",
 		logo:"collectifs/combas-rojas-celles-logo.png",
-		type:["Collectif pour mieux habiter"]
+		type:["Collectif pour mieux habiter"],
   },
   {
     slug: "compagnie-le-plus-petit-espace-possible",
@@ -380,7 +370,7 @@ export const collectifs: CollectifI[] = [
 		logo: "collectifs/logo-plus-petit-espace-possible.png",
 		facebook: "https://www.facebook.com/compagnielarzac",
 		instagram: "https://www.instagram.com/lepluspetitespacepossible",
-		type:["Collectif artistique"]
+		type:["Collectif artistique"],
   },
   /*{
     slug: "cosmopolitheque",
@@ -399,7 +389,6 @@ export const collectifs: CollectifI[] = [
     departement: "Hérault",
     position: { lat: 43.597798, lng: 3.877659 },
     logo: "collectifs/dcclm.webp",
-    icon: "collectifs/dcclm.webp",
     url: "https://dcclm-roller-derby.fr/",
     instagram: "https://www.instagram.com/dcclm34/",
     facebook: "https://www.facebook.com/dcclm.rollerderby",
@@ -413,8 +402,7 @@ export const collectifs: CollectifI[] = [
 		description:"Espace culturel, citoyen & solidaire",
 		facebook:"https://www.facebook.com/delautrecoteganges/",
 		logo:"collectifs/de-lautre-cote-logo.png",
-		icon:"collectifs/de-lautre-cote-logo.png",
-		type:["Tiers-lieu"]
+		type:["Tiers-lieu"],
 	},
   {
     slug: "dear-valid-people",
@@ -426,7 +414,7 @@ export const collectifs: CollectifI[] = [
 		instagram:"https://www.instagram.com/dear.valid.people/",
 		facebook:"https://www.facebook.com/dearvalidpeople/",
 		logo:"collectifs/dear-valid-people-logo.webp",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   {
     slug: "en-vie-a-beziers",
@@ -437,7 +425,7 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.350429, lng: 3.217535 },
     url: "https://www.envieabeziers.info/",
     logo: "collectifs/logo-evab.webp",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   /*{
     slug: "etoile-bio",
@@ -455,12 +443,11 @@ export const collectifs: CollectifI[] = [
 		position:{lat:43.60537155400486, lng:3.8711312035552408},
 		departement:"Hérault",
 		logo:"collectifs/extinction-rebellion-icon.png",
-		icon:"collectifs/extinction-rebellion-icon.png",
 		instagram:"https://www.instagram.com/xr.montpellier/",
 		url:"https://extinctionrebellion.fr/branches/montpellier/",
 		facebook:"https://www.facebook.com/xrmontpellier/",
 		description:"Extinction Rebellion est un mouvement mondial de désobéissance civile en lutte contre l’effondrement écologique et le réchauffement climatique",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
 	},
   {
     slug: "greenpeace-montpellier",
@@ -471,7 +458,6 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.605528666477845, lng: 3.870980340825212 },
     url: "https://www.greenpeace.fr/",
     logo: "collectifs/greenpeace-logo.webp",
-    icon: "collectifs/greenpeace-icon.webp",
     instagram: "https://www.instagram.com/greenpeace.montpellier/",
     facebook:
       "https://www.facebook.com/GreenpeaceFranceMontpellier/?locale=fr_FR",
@@ -485,7 +471,6 @@ export const collectifs: CollectifI[] = [
 		position: { lat: 43.184264449880324, lng: 3.0028803327703963 },
 		url: "https://www.greenpeace.fr/",
 		logo: "collectifs/greenpeace-vert-logo.svg",
-		icon: "collectifs/greenpeace-icon.webp",
 		instagram: "https://www.instagram.com/greenpeacenarbonne/",
 		facebook:
 			"https://www.facebook.com/GreenpeaceNarbonne/",
@@ -501,7 +486,7 @@ export const collectifs: CollectifI[] = [
 		description:"Groove Your Ass : Un festival anticapitaliste, écologiste et culturel",
 		url:"https://shotgun.live/fr/venues/groove-your-ass",
 		logo:"collectifs/groove-your-ass-logo.png",
-		type:["Festival", "Collectif événementiel"]
+		type:["Festival", "Collectif événementiel"],
 	},
   {
     slug: "faites-des-solidarites",
@@ -539,7 +524,7 @@ export const collectifs: CollectifI[] = [
 		description:"Les faucheurs volontaires est un mouvement essentiellement français (mais des actions similaires ont eu lieu en 2007 en Allemagne, au Portugal et en Grande-Bretagne), proche des courants anti-industriels, dont les 6 700 militants revendiqués se sont engagés par écrit à détruire les parcelles d'essai transgéniques et de cultures d'OGM en plein champ.",
 		facebook:"https://www.facebook.com/groups/faucheursvolontaires/?locale=fr_FR",
 		url:"https://www.faucheurs-volontaires.fr/",
-		logo:"collectifs/faucheureuses-ogm.png"
+		logo:"collectifs/faucheureuses-ogm.png",
 	},
 	{
 		slug:"fsu-34",
@@ -550,7 +535,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/FederationSyndicaleUnitaire/",
 		instagram:"https://www.instagram.com/federationsyndicaleunitaire/?hl=fr",
 		logo:"collectifs/fsu-logo.png",
-		type:["Syndicat"]
+		type:["Syndicat"],
 	},
 	/*{
 		slug:"fsu-territoriale-34",
@@ -560,7 +545,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/snuter-herault-logo.png",
 		url:"https://www.snuter34fsu.fr/",
 		description: "Syndicat National Untaire des Territoriaux de l'Hérault.",
-		type:["Syndicat"]
+		type:["Syndicat"],
 	},*/
   {
     slug: "ilot-vert-de-la-soulondres",
@@ -581,7 +566,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://solidaires34.org/author/ul_sudcevennes/",
 		facebook:"https://www.facebook.com/people/UL-Solidaires-SUD-C%C3%A9vennes/100092669360092/",
 		description:"Union locale interprofessionnelle des syndicats SUD autour de Ganges et Le Vigan",
-		logo:"collectifs/logo-ul-solidaires-cevennes.png"
+		logo:"collectifs/logo-ul-solidaires-cevennes.png",
 	},
   {
     slug: "ultra-violette",
@@ -603,7 +588,6 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/logo-ancre.png",
 		url:"https://lancredesete.fr/",
 		facebook:"https://www.facebook.com/Lancredesete/?locale=fr_FR",
-		icon:"collectifs/ancre-icon.png",
 		type:["Média"]
 	},
 	{
@@ -628,7 +612,6 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/LaBase.montpellier",
 		url:"https://labasemontpellier.org/",
 		logo:"collectifs/la-base-logo.webp",
-		icon:"collectifs/la-base-logo.webp",
 		type:["Café associatif"]
 	},
   {
@@ -639,7 +622,6 @@ export const collectifs: CollectifI[] = [
       Depuis 2010, nous sommes dans la rue pour soutenir les luttes en musique ! `,
     url: "https://batucada-la-battante.org/",
     logo: "collectifs/la-battante.svg",
-    icon: "collectifs/la-battante-icone.webp",
     position: { lat: 43.608354983899, lng: 3.87930815226476 },
 		type:["Collectif artistique", "Collectif militant"]
   },
@@ -673,7 +655,6 @@ export const collectifs: CollectifI[] = [
     instagram: "https://www.instagram.com/la_carmagnole.mtp/",
     facebook: "https://www.facebook.com/lacarmagnole",
     logo: "collectifs/carmagnole.webp",
-    icon: "collectifs/carmagnole.webp",
 		type:["Tiers-lieu"]
   },
   {
@@ -694,7 +675,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://www.lacimade.org/nos-actions/hebergement-langue-francaise/le-centre-dhebergement-de-beziers/",
 		description:"La Cimade est une association de solidarité qui défend la dignité et les droits des personnes réfugiées, migrantes et sans-papiers. Elle propose un accompagnement juridique, intervient dans les centres de rétention, les bidonvilles et mène des actions de plaidoyer pour faire évoluer les politiques d'immigration et d'asile.",
 		logo:"collectifs/cimade-logo.svg",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   {
     slug: "la-combine",
@@ -772,7 +753,6 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.607377, lng: 3.871099 },
 		url:"https://symboliquedupoulet.org/",
 		logo:"collectifs/LaSDP_logo.png",
-		icon:"collectifs/LaSDP_icon.png",
 		type:["Librairie"]
   },
 	/*{
@@ -793,7 +773,7 @@ export const collectifs: CollectifI[] = [
     url: "https://www.ldh-france.org/",
 		facebook:"https://www.facebook.com/ldhmontpellier/?locale=fr_FR",
 		instagram:"https://www.instagram.com/ldh_montpellier/",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
   /*{
     slug: "le-clap",
@@ -843,7 +823,6 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.616505, lng: 3.862295 },
 		facebook:"https://www.facebook.com/lepoinginfo/",
 		logo:"collectifs/le-poing-logo.png",
-		icon:"collectifs/lepoing-icon.png",
 		instagram:"https://www.instagram.com/montpellierpoinginfo/",
 		bluesky: "https://bsky.app/profile/lepoinginfo.bsky.social",
 		description:"Le Poing est un média web et papier (bimestriel) d’information politique et de critique sociale. Aux côtés de celles et ceux qui luttent, notre journal participatif s’attache à être un contre-pouvoir à Montpellier et alentours.",
@@ -865,7 +844,6 @@ export const collectifs: CollectifI[] = [
     name: "Le Quartier Généreux",
     departement: "Hérault",
     logo: "collectifs/quartier-genereux-logo.svg",
-    icon: "collectifs/quartier-genereux.svg",
     position: {
       lat: 43.61594775505337,
       lng: 3.874829074309236,
@@ -884,7 +862,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Hérault",
 		description:"Les Ateliers de l’espoir est une association d’organisation collective d’animateurs et d’animatrices qui luttent contre le fascime et pour le renouveau démocratique",
 		logo:"collectifs/atelier-espoir-logo.png",
-		type:["Collectif militant", "Collectif d'éducation populaire"]
+		type:["Collectif militant", "Collectif d'éducation populaire"],
 	},
 	{
 		slug: "les-amis-de-la-terre-le-vigan",
@@ -892,8 +870,7 @@ export const collectifs: CollectifI[] = [
 		departement: "Gard",
 		position: { lat: 43.9928660524861, lng: 3.6063399835858654 },
 		logo: "collectifs/amis-terre-france-logo.png",
-		icon: "collectifs/amis-de-la-terre-icon.png",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
 	},
   /*{
     slug: "les-aragantes",
@@ -903,7 +880,7 @@ export const collectifs: CollectifI[] = [
     logo: "collectifs/les-aragantes.webp",
 		instagram:"https://www.instagram.com/lesaragantes/",
 		description:"Les Aragantes est une collective de designer.euse.s pluridisciplinaires réunies autour d’une volonté commune : faire du design un outil critique, engagé et au service des luttes écoféministes.",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },*/
   {
     slug: "fourmiliere-lodevois-larzac",
@@ -930,7 +907,6 @@ export const collectifs: CollectifI[] = [
 		instagram: "https://www.instagram.com/librairielarbresansfin/",
 		departement: "Hérault",
 		logo:"collectifs/larbre-sans-fin-logo.png",
-		icon:"collectifs/larbre-sans-fin-logo.png",
 		type:["Librairie"]
 	},
 	{
@@ -940,7 +916,6 @@ export const collectifs: CollectifI[] = [
 		url:"https://librairielacavale.coop/",
 		departement:"Hérault",
 		logo:"collectifs/la-cavale-logo.png",
-		icon:"collectifs/la-cavale-icon.png",
 		description:"Librairie généraliste et coopérative de Montpellier",
 		instagram:"https://www.instagram.com/librairielacavale/",
 		facebook:"https://www.facebook.com/librairielacavale/?locale=fr_FR",
@@ -952,7 +927,6 @@ export const collectifs: CollectifI[] = [
 		departement: "Hérault",
 		position: {lat: 43.73166074687373, lng: 3.321491511270203},
 		url:"https://www.unpointuntrait.fr/",
-		icon:"collectifs/icon-un-point-un-trait.png",
 		type:["Librairie"]
 	},
 	{
@@ -996,7 +970,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/mrap-logo.png",
 		description:"Mouvement contre le Racisme et pour l’Amitié entre les Peuples - Comité local de Montpellier",
 		url:"https://mrap.fr/",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
 	},
 	{
 		slug: "nous-carcassone",
@@ -1006,9 +980,8 @@ export const collectifs: CollectifI[] = [
 		position: { lat: 43.216289, lng: 2.353972 },
 		description : "Né d'un sursaut citoyen porté par l'énergie de la jeunesse locale, Nous Carcassonne rassemble les jeunes, lycéen·ne·s et étudiant·e·s, habitant·e·s et forces vives de Carcassonne et ses alentours. Nous formons un rempart pacifique, politique et culturel contre les idées d'exclusion, de division et de repli portées notamment par l'extrême droite que nous combattons. Notre force réside dans notre unité. Résistance ? Nous n'hésitons pas à utiliser le terme.",
 		logo: "collectifs/nous-carcassone.png",
-		icon: "collectifs/nous-carcassone.png",
 		instagram : "https://www.instagram.com/nouscarcassonne",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
 	},
   /*{
     slug: "nouvelle-librairie-setoise",
@@ -1028,7 +1001,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Hérault",
 		url:"https://oned-fr.org/herault-creation-dun-observatoire-departemental-de-lextreme-droite/",
 		logo:"collectifs/obs-ed-logo.webp",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
 	},
   {
     slug: "oustalite",
@@ -1048,8 +1021,7 @@ export const collectifs: CollectifI[] = [
 		instagram: "https://www.instagram.com/planningfamilial_sudcevennes/",
 		logo: "collectifs/planning-familial-sud-cevennes.png",
 		url: "https://www.planning-familial.org/",
-		icon: "collectifs/planning-famillial.png",
-		type:["Collectif militant", "Collectif d'éducation populaire"]
+		type:["Collectif militant", "Collectif d'éducation populaire"],
 	},
   {
     slug: "poles-en-pomme",
@@ -1059,7 +1031,7 @@ export const collectifs: CollectifI[] = [
     description:
       "Redonner à chacun la capacité de comprendre, choisir et agir sur le monde dans lequel il vit.",
     url: "https://polesenpomme.xyz",
-		type:["Collectif militant", "Collectif d'éducation populaire"]
+		type:["Collectif militant", "Collectif d'éducation populaire"],
   },
   /*{
     slug: "pride-ales-2026",
@@ -1067,7 +1039,7 @@ export const collectifs: CollectifI[] = [
     departement: "Gard",
     position: { lat: 44.121853, lng: 4.102278 },
 		instagram: "https://www.instagram.com/pridedales/",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },*/
   {
     slug: "reso-resistances-solidaires",
@@ -1077,8 +1049,7 @@ export const collectifs: CollectifI[] = [
       "Collectif universitaire de Résistance et Solidarité face aux idées d'extrême droite",
     position: { lat: 43.6313618030923, lng: 3.861349533261347 },
     logo: "collectifs/reso-logo.png",
-    icon: "collectifs/reso-icone.webp",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
 	{
 		slug:"resf-34",
@@ -1087,8 +1058,7 @@ export const collectifs: CollectifI[] = [
 		departement:"Hérault",
 		url:"https://resf34.org/",
 		logo:"collectifs/resf-logo.png",
-		icon:"collectifs/resf-logo.png",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
 	},
   {
     slug: "rusf-34",
@@ -1100,7 +1070,7 @@ export const collectifs: CollectifI[] = [
 		instagram:"https://www.instagram.com/rusf_34/",
 		facebook:"https://www.facebook.com/RUSF34/",
 		logo:"collectifs/rusf-logo.png",
-		type:["Collectif militant"]
+		type:["Collectif militant"],
   },
 	{
 		slug:"solidaires-etudiants-34",
@@ -1112,7 +1082,7 @@ export const collectifs: CollectifI[] = [
 		position:{lat:43.63439415847738, lng:3.8703542910335234},
 		departement:"Hérault",
 		logo:"collectifs/solidaires-etudiant-montpellier.jpg",
-		type:["Syndicat"]
+		type:["Syndicat"],
 	},
 	{
 		slug:"sud-education-34",
@@ -1124,7 +1094,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/sudeducation34/",
 		instagram:"https://www.instagram.com/sudeducationherault/",
 		bluesky:"https://bsky.app/profile/sudeducation34.bsky.social",
-		type:["Syndicat"]
+		type:["Syndicat"],
 	},
   {
     slug: "societe-du-cafe-du-siecle",
@@ -1194,7 +1164,6 @@ export const collectifs: CollectifI[] = [
     description:
       "Nous somme une organisation politique libertaire non-électoraliste. Nous tenons également une librairie anarchiste : la Mauvaise Réputation.",
     logo: "collectifs/ucl-logo.webp",
-    icon: "collectifs/ucl-logo.webp",
     url: "https://montpellier.unioncommunistelibertaire.org/",
     instagram: "https://www.instagram.com/ucl_montpellier",
 		type:["Collectif militant"]
@@ -1209,7 +1178,7 @@ export const collectifs: CollectifI[] = [
 		instagram:"https://www.instagram.com/solidaires_34/",
 		facebook:"https://www.facebook.com/solidaires34/",
 		bluesky:"https://bsky.app/profile/did:plc:dcgtszcxbbly3ggq64l4jj3r",
-		type:["Syndicat"]
+		type:["Syndicat"],
   },
   /*{
     slug: "utopia-montpellier",

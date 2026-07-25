@@ -3,6 +3,20 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import markerIconUrl from "leaflet/dist/images/marker-icon.png";
 import markerIconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadowUrl from "leaflet/dist/images/marker-shadow.png";
+import pointer_media from "../../assets/pictos/media_pointer.png?url"
+import pointer_cafe from "../../assets/pictos/cafe_pointer.png?url"
+import pointer_tierslieu from "../../assets/pictos/tierslieu_pointer.png?url"
+import pointer_festival from "../../assets/pictos/festival_pointer.png?url"
+import pointer_librairie from "../../assets/pictos/librairie_pointer.png?url"
+import pointer_theatre from "../../assets/pictos/theatre_pointer.png?url"
+import pointer_syndicat from "../../assets/pictos/syndicat_pointer.png?url"
+import pointer_artistique from "../../assets/pictos/artistique_pointer.png?url"
+import pointer_evenementiel from "../../assets/pictos/evenementiel_pointer.png?url"
+import pointer_militant from "../../assets/pictos/militant_pointer.png?url"
+import pointer_habiter from "../../assets/pictos/habiter_pointer.png?url"
+import pointer_refugie from "../../assets/pictos/refugie_pointer.png?url"
+import pointer_collectifs from "../../assets/pictos/groupement_pointer.png?url"
+import pointer_educpop from "../../assets/pictos/educpop_pointer.png"
 
 import "leaflet/dist/leaflet.css";
 import type { CollectifI } from "../../data/collectifs";
@@ -126,15 +140,56 @@ export function Map({ collectifs }: Props) {
         />
 
         {collectifs.map((c) => {
-          const args = c.icon
-            ? {
-                icon: L.icon({
-                  iconUrl: c.icon,
-                  iconSize: [32, 32],
-                  iconAnchor: [16, 16],
-                }),
-              }
-            : {};
+					let icon_url = pointer_militant
+					switch (c.type[0]){
+					case "Bar - Brasserie - Commerce":
+					case "Café associatif":
+						icon_url = pointer_cafe
+						break
+					case "Collectif artistique":
+						icon_url = pointer_artistique
+						break
+					case "Collectif d'accueil de réfugiés":
+						icon_url = pointer_refugie
+						break
+					case "Média":
+						icon_url = pointer_media
+						break
+					case "Collectif pour mieux habiter":
+						icon_url = pointer_habiter
+						break
+					case "Collectif d'éducation populaire":
+						icon_url = pointer_educpop
+						break
+					case "Collectif événementiel":
+						icon_url = pointer_evenementiel
+						break
+					case "Festival":
+						icon_url = pointer_festival
+						break
+					case "Groupement de collectifs":
+						icon_url = pointer_collectifs
+						break
+					case "Librairie":
+						icon_url = pointer_librairie
+						break
+					case "Syndicat":
+						icon_url = pointer_syndicat
+						break
+					case "Théâtre":
+						icon_url = pointer_theatre
+						break
+					case "Tiers-lieu":
+						icon_url = pointer_tierslieu
+						break
+					}
+          const args = {
+						icon: L.icon({
+							iconUrl: icon_url,
+							iconSize: [46, 54],
+							iconAnchor: [23, 54],
+						}),
+					}
           return c.position ? (
             <Marker
               key={c.slug}
