@@ -315,13 +315,13 @@ export const collectifs: CollectifI[] = [
     position: { lat: 43.65025148001632, lng: 3.546333160764182 },
 		type:["Collectif militant"],
   },
-  {
+  /*{
     slug: "collectif-lodevois",
     name: "Collectif Lodévois",
     departement: "Hérault",
     position: { lat: 43.73312, lng: 3.320832 },
 		type:["Collectif militant"],
-  },
+  },*/
 	{
 		slug: "collectif-nimois-antifasciste-queer",
 		name: "Collectif Nimois Antifasciste et Queer (CNAQ)",
