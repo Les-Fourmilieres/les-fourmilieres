@@ -1041,6 +1041,15 @@ export const collectifs: CollectifI[] = [
 		instagram: "https://www.instagram.com/pridedales/",
 		type:["Collectif militant"],
   },*/
+	{
+		slug:"raices-flamencas",
+		name:"Raices Flamencas",
+		departement:"Hérault",
+		instagram:"https://www.instagram.com/raices_flamencas_/",
+		facebook:"https://www.facebook.com/Elduenderaicesflamencas",
+		type:["Collectif artistique"],
+		bdv:"34172"
+	},
   {
     slug: "reso-resistances-solidaires",
     name: "Réso Résistances Solidaires",
