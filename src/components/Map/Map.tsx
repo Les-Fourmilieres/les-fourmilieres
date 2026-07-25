@@ -132,7 +132,7 @@ export function Map({ collectifs }: Props) {
   }, [collectifs]);
   return (
     <Container>
-      <StyledMapContainer center={[43.6, 3.9]} zoom={8} ref={mapRef}>
+      <StyledMapContainer center={[43.9, 3.7]} zoom={8} ref={mapRef}>
         <TileLayer
           attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
