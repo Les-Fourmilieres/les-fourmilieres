@@ -49,7 +49,7 @@ export function ParticipateButton({ event }: Props) {
       />
       {event.externalParticipationUrl ? (
         <StyledLinkButton href={event.externalParticipationUrl} target="_blank">
-          Je participe
+          Billetterie
         </StyledLinkButton>
       ) : (
         <StyledButton onClick={onEventJoin}>Je participe</StyledButton>
