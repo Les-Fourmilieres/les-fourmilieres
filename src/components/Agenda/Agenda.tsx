@@ -29,7 +29,7 @@ const FullWidth = styled.div`
   flex: 1 1 100%;
 `;
 
-const SelectEventTypes: {[key: string] : EventTypes[]} = {
+export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Concerts, DJ Set, Open Air, …": ["Concert", "DJ Set", "Open Air", "Bal populaire"],
 	"Conférences, Tables rondes, Rencontres littéraires, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
 	"Kermesses, Villages associatifs, …": ["Kermesse",  "Village Associatif"],

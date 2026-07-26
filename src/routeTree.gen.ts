@@ -22,6 +22,7 @@ import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendema
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgrammeIndexRouteImport } from './routes/programme/index'
+import { Route as Programme30SeptembreHallesTropismeRouteImport } from './routes/programme/30-septembre-halles-tropisme'
 import { Route as ProgrammeUuidRouteImport } from './routes/programme/$uuid'
 
 const SafiaDahaniLesExtremesDroitesContemporainesRoute =
@@ -92,6 +93,12 @@ const ProgrammeIndexRoute = ProgrammeIndexRouteImport.update({
   path: '/programme/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Programme30SeptembreHallesTropismeRoute =
+  Programme30SeptembreHallesTropismeRouteImport.update({
+    id: '/programme/30-septembre-halles-tropisme',
+    path: '/programme/30-septembre-halles-tropisme',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProgrammeUuidRoute = ProgrammeUuidRouteImport.update({
   id: '/programme/$uuid',
   path: '/programme/$uuid',
@@ -112,6 +119,7 @@ export interface FileRoutesByFullPath {
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
+  '/programme/30-septembre-halles-tropisme': typeof Programme30SeptembreHallesTropismeRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesByTo {
@@ -128,6 +136,7 @@ export interface FileRoutesByTo {
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
+  '/programme/30-septembre-halles-tropisme': typeof Programme30SeptembreHallesTropismeRoute
   '/programme': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesById {
@@ -145,6 +154,7 @@ export interface FileRoutesById {
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
+  '/programme/30-septembre-halles-tropisme': typeof Programme30SeptembreHallesTropismeRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
 export interface FileRouteTypes {
@@ -163,6 +173,7 @@ export interface FileRouteTypes {
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
+    | '/programme/30-septembre-halles-tropisme'
     | '/programme/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
+    | '/programme/30-septembre-halles-tropisme'
     | '/programme'
   id:
     | '__root__'
@@ -195,6 +207,7 @@ export interface FileRouteTypes {
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
+    | '/programme/30-septembre-halles-tropisme'
     | '/programme/'
   fileRoutesById: FileRoutesById
 }
@@ -212,6 +225,7 @@ export interface RootRouteChildren {
   QuiSommesNousRoute: typeof QuiSommesNousRoute
   SafiaDahaniLesExtremesDroitesContemporainesRoute: typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   ProgrammeUuidRoute: typeof ProgrammeUuidRoute
+  Programme30SeptembreHallesTropismeRoute: typeof Programme30SeptembreHallesTropismeRoute
   ProgrammeIndexRoute: typeof ProgrammeIndexRoute
 }
 
@@ -308,6 +322,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgrammeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programme/30-septembre-halles-tropisme': {
+      id: '/programme/30-septembre-halles-tropisme'
+      path: '/programme/30-septembre-halles-tropisme'
+      fullPath: '/programme/30-septembre-halles-tropisme'
+      preLoaderRoute: typeof Programme30SeptembreHallesTropismeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/programme/$uuid': {
       id: '/programme/$uuid'
       path: '/programme/$uuid'
@@ -334,6 +355,8 @@ const rootRouteChildren: RootRouteChildren = {
   SafiaDahaniLesExtremesDroitesContemporainesRoute:
     SafiaDahaniLesExtremesDroitesContemporainesRoute,
   ProgrammeUuidRoute: ProgrammeUuidRoute,
+  Programme30SeptembreHallesTropismeRoute:
+    Programme30SeptembreHallesTropismeRoute,
   ProgrammeIndexRoute: ProgrammeIndexRoute,
 }
 export const routeTree = rootRouteImport

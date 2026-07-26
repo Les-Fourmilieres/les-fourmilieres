@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Section } from "../Section";
-import {eventDefaultCover, eventType, type MobilizonEventI} from "./Event";
+import {eventDefaultCover, eventType, type MobilizonEventI, reverseProgramMap} from "./Event";
 import { EventDate } from "./EventDate";
 import { EventTime } from "./EventTime";
 import { ParticipateButton } from "./ParticipateButton";
 import { EventAddress } from "./EventAddress";
 import { useMediaQuery } from "react-responsive";
+import {Link} from "../Link/Link.js";
 
 const StyledSection = styled(Section)`
   padding-top: 24px;
@@ -139,6 +140,12 @@ export function EventPage({ event }: Props) {
         {event.description && (
           <Content dangerouslySetInnerHTML={{ __html: event.description }} />
         )}
+				{reverseProgramMap[event.uuid]?.map(eventsPage=>
+						<Section>
+							<Link to={eventsPage.to}>{eventsPage.label}</Link>
+						</Section>
+				)}
+
       </StyledSection>
     </>
   );

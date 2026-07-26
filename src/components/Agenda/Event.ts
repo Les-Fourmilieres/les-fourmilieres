@@ -10,6 +10,7 @@ import djset_cover from "../../assets/events/djset.png?url"
 import openair_cover from "../../assets/events/openair.png?url"
 import balpop_cover from "../../assets/events/balpop.png?url"
 import ag_cover from "../../assets/events/ag.png?url"
+import type {MenuItem} from "../Header/Menu.js";
 
 export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
@@ -33,7 +34,8 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 	"a28a1a79-9595-4cc7-a4f6-bce7ac6a84a3":["Atelier cuisine", "Atelier d'expression", "Concert", "Kermesse"],
 	"76f7c610-663c-4792-b0c2-41cfd3df2fd7":["Fresque"],
 	"5e505d63-e827-4cd5-83a3-699d85554caa":["Cinéma"],
-	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":["Concert", "DJ Set", "Table-Ronde", "Kermesse"],
+	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":["Concert"],
+	"ffea1971-298d-4bda-bdf8-73c567b1069e":["DJ Set"],
 	"c13b5c14-9a64-4746-98ce-cc570f3461f9":["DJ Set"],
 	"c8241147-0707-45f0-973c-ed7efc2ad533":["Ciné-débat"],
 	"25ae5f0e-6eb1-4dae-9487-6c9bbc7bc30d":["Rencontre Littéraire"],
@@ -50,6 +52,16 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 	"7355d219-6c45-4100-811d-d70a435b72ef":["DJ Set"],
 	"a706c612-268e-4775-8204-98b11e74f2cc":["Bal populaire"],
 	"b79d6b21-528c-4539-b68c-25bcb7af3ff8":["Théâtre"]
+}
+
+const halleTropisme:MenuItem = {
+	to:"/programme/30-septembre-halles-tropisme",
+	label:"Voir toute la programmtion du 30 septembre aux Halles Tropisme"
+}
+
+export const reverseProgramMap :{ [key: string] :  MenuItem[];} = {
+	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":[halleTropisme],
+	"ffea1971-298d-4bda-bdf8-73c567b1069e":[halleTropisme]
 }
 
 export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
