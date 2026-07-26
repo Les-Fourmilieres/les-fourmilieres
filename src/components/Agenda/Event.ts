@@ -42,6 +42,7 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 	"ebc70aab-95b0-4454-ba5a-cd93e783f3c7":["DJ Set", "Open Air"],
 	"ad529e6c-de28-499e-a505-7fa3c5732bb4":["Concert"],
 	"e921cbdc-8b76-48c4-a485-5036e248c16d":["DJ Set", "Open Air"],
+	"5e0dc165-747b-44dd-b2bc-b674f0aeb4c2":["Cinéma"],
 	"e24446de-b4da-4bbb-bcf3-efceb2a9ea7c":["Atelier d'expression"],
 	"bd975802-c6d3-410c-a857-f95591cf6efe":["Rencontre Littéraire"],
 	"d75e045c-d447-47c5-b18f-7d438817a5fc":["Conférence"],
