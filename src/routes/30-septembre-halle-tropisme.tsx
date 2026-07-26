@@ -3,7 +3,7 @@ import { Section } from "../components/Section";
 import {RestrictedAgenda} from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
 
-export const Route = createFileRoute("/30-septembre-halles-tropisme")({
+export const Route = createFileRoute("/30-septembre-halle-tropisme")({
 	component: RouteComponent,
 });
 
@@ -15,7 +15,7 @@ const Numbers = styled.span`
 function RouteComponent() {
 	return (
 		<Section>
-			<h1>Programme du <Numbers>30</Numbers> septembre aux Halles Tropisme</h1>
+			<h1>Programme du <Numbers>30</Numbers> septembre à la Halle Tropisme</h1>
 			<p>Le Quartier Généreux organise avec la Halle tropisme une après-midi et soirée antifa.
 				Le DJ set d'Habibitch cloturera cette après midi. Au programme :</p>
 

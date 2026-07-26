@@ -56,7 +56,7 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 
 const halleTropisme:MenuItem = {
 	to:"/programme/30-septembre-halles-tropisme",
-	label:"Voir toute la programmtion du 30 septembre aux Halles Tropisme"
+	label:"Voir toute la programmation du 30 septembre à la Halle Tropisme"
 }
 
 export const reverseProgramMap :{ [key: string] :  MenuItem[];} = {
