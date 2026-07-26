@@ -55,7 +55,7 @@ const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
 }
 
 const halleTropisme:MenuItem = {
-	to:"/programme/30-septembre-halles-tropisme",
+	to:"/30-septembre-halle-tropisme",
 	label:"Voir toute la programmation du 30 septembre à la Halle Tropisme"
 }
 
