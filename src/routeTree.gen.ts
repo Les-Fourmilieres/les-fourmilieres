@@ -17,6 +17,7 @@ import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
+import { Route as LaFourmiliereDeLodeveRouteImport } from './routes/la-fourmiliere-de-lodeve'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendemains-meilleurs'
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
@@ -67,6 +68,11 @@ const LeProgrammeRoute = LeProgrammeRouteImport.update({
   path: '/le-programme',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LaFourmiliereDeLodeveRoute = LaFourmiliereDeLodeveRouteImport.update({
+  id: '/la-fourmiliere-de-lodeve',
+  path: '/la-fourmiliere-de-lodeve',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LaCharteRoute = LaCharteRouteImport.update({
   id: '/la-charte',
   path: '/la-charte',
@@ -111,6 +117,7 @@ export interface FileRoutesByFullPath {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
+  '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
@@ -128,6 +135,7 @@ export interface FileRoutesByTo {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
+  '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
@@ -146,6 +154,7 @@ export interface FileRoutesById {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
+  '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
@@ -165,6 +174,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/la-charte'
+    | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
@@ -182,6 +192,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/la-charte'
+    | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
@@ -199,6 +210,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/la-charte'
+    | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
@@ -217,6 +229,7 @@ export interface RootRouteChildren {
   BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
   DesLendemainsMeilleursRoute: typeof DesLendemainsMeilleursRoute
   LaCharteRoute: typeof LaCharteRoute
+  LaFourmiliereDeLodeveRoute: typeof LaFourmiliereDeLodeveRoute
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
@@ -287,6 +300,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeProgrammeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/la-fourmiliere-de-lodeve': {
+      id: '/la-fourmiliere-de-lodeve'
+      path: '/la-fourmiliere-de-lodeve'
+      fullPath: '/la-fourmiliere-de-lodeve'
+      preLoaderRoute: typeof LaFourmiliereDeLodeveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/la-charte': {
       id: '/la-charte'
       path: '/la-charte'
@@ -346,6 +366,7 @@ const rootRouteChildren: RootRouteChildren = {
     BatailleCulturelleHistoireDu14JuilletRoute,
   DesLendemainsMeilleursRoute: DesLendemainsMeilleursRoute,
   LaCharteRoute: LaCharteRoute,
+  LaFourmiliereDeLodeveRoute: LaFourmiliereDeLodeveRoute,
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
