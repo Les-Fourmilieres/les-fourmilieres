@@ -20,9 +20,9 @@ import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendemains-meilleurs'
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
+import { Route as R30SeptembreHallesTropismeRouteImport } from './routes/30-septembre-halles-tropisme'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgrammeIndexRouteImport } from './routes/programme/index'
-import { Route as Programme30SeptembreHallesTropismeRouteImport } from './routes/programme/30-septembre-halles-tropisme'
 import { Route as ProgrammeUuidRouteImport } from './routes/programme/$uuid'
 
 const SafiaDahaniLesExtremesDroitesContemporainesRoute =
@@ -83,6 +83,12 @@ const BatailleCulturelleHistoireDu14JuilletRoute =
     path: '/bataille-culturelle-histoire-du-14-juillet',
     getParentRoute: () => rootRouteImport,
   } as any)
+const R30SeptembreHallesTropismeRoute =
+  R30SeptembreHallesTropismeRouteImport.update({
+    id: '/30-septembre-halles-tropisme',
+    path: '/30-septembre-halles-tropisme',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -93,12 +99,6 @@ const ProgrammeIndexRoute = ProgrammeIndexRouteImport.update({
   path: '/programme/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Programme30SeptembreHallesTropismeRoute =
-  Programme30SeptembreHallesTropismeRouteImport.update({
-    id: '/programme/30-septembre-halles-tropisme',
-    path: '/programme/30-septembre-halles-tropisme',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ProgrammeUuidRoute = ProgrammeUuidRouteImport.update({
   id: '/programme/$uuid',
   path: '/programme/$uuid',
@@ -107,6 +107,7 @@ const ProgrammeUuidRoute = ProgrammeUuidRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/30-septembre-halles-tropisme': typeof R30SeptembreHallesTropismeRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
@@ -119,11 +120,11 @@ export interface FileRoutesByFullPath {
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
-  '/programme/30-septembre-halles-tropisme': typeof Programme30SeptembreHallesTropismeRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/30-septembre-halles-tropisme': typeof R30SeptembreHallesTropismeRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
@@ -136,12 +137,12 @@ export interface FileRoutesByTo {
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
-  '/programme/30-septembre-halles-tropisme': typeof Programme30SeptembreHallesTropismeRoute
   '/programme': typeof ProgrammeIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/30-septembre-halles-tropisme': typeof R30SeptembreHallesTropismeRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/la-charte': typeof LaCharteRoute
@@ -154,13 +155,13 @@ export interface FileRoutesById {
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
-  '/programme/30-septembre-halles-tropisme': typeof Programme30SeptembreHallesTropismeRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/30-septembre-halles-tropisme'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/la-charte'
@@ -173,11 +174,11 @@ export interface FileRouteTypes {
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
-    | '/programme/30-septembre-halles-tropisme'
     | '/programme/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/30-septembre-halles-tropisme'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/la-charte'
@@ -190,11 +191,11 @@ export interface FileRouteTypes {
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
-    | '/programme/30-septembre-halles-tropisme'
     | '/programme'
   id:
     | '__root__'
     | '/'
+    | '/30-septembre-halles-tropisme'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/la-charte'
@@ -207,12 +208,12 @@ export interface FileRouteTypes {
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
     | '/programme/$uuid'
-    | '/programme/30-septembre-halles-tropisme'
     | '/programme/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R30SeptembreHallesTropismeRoute: typeof R30SeptembreHallesTropismeRoute
   BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
   DesLendemainsMeilleursRoute: typeof DesLendemainsMeilleursRoute
   LaCharteRoute: typeof LaCharteRoute
@@ -225,7 +226,6 @@ export interface RootRouteChildren {
   QuiSommesNousRoute: typeof QuiSommesNousRoute
   SafiaDahaniLesExtremesDroitesContemporainesRoute: typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
   ProgrammeUuidRoute: typeof ProgrammeUuidRoute
-  Programme30SeptembreHallesTropismeRoute: typeof Programme30SeptembreHallesTropismeRoute
   ProgrammeIndexRoute: typeof ProgrammeIndexRoute
 }
 
@@ -308,6 +308,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BatailleCulturelleHistoireDu14JuilletRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/30-septembre-halles-tropisme': {
+      id: '/30-septembre-halles-tropisme'
+      path: '/30-septembre-halles-tropisme'
+      fullPath: '/30-septembre-halles-tropisme'
+      preLoaderRoute: typeof R30SeptembreHallesTropismeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -322,13 +329,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgrammeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programme/30-septembre-halles-tropisme': {
-      id: '/programme/30-septembre-halles-tropisme'
-      path: '/programme/30-septembre-halles-tropisme'
-      fullPath: '/programme/30-septembre-halles-tropisme'
-      preLoaderRoute: typeof Programme30SeptembreHallesTropismeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/programme/$uuid': {
       id: '/programme/$uuid'
       path: '/programme/$uuid'
@@ -341,6 +341,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R30SeptembreHallesTropismeRoute: R30SeptembreHallesTropismeRoute,
   BatailleCulturelleHistoireDu14JuilletRoute:
     BatailleCulturelleHistoireDu14JuilletRoute,
   DesLendemainsMeilleursRoute: DesLendemainsMeilleursRoute,
@@ -355,8 +356,6 @@ const rootRouteChildren: RootRouteChildren = {
   SafiaDahaniLesExtremesDroitesContemporainesRoute:
     SafiaDahaniLesExtremesDroitesContemporainesRoute,
   ProgrammeUuidRoute: ProgrammeUuidRoute,
-  Programme30SeptembreHallesTropismeRoute:
-    Programme30SeptembreHallesTropismeRoute,
   ProgrammeIndexRoute: ProgrammeIndexRoute,
 }
 export const routeTree = rootRouteImport

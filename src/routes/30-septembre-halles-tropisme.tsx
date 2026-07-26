@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section } from "../../components/Section";
-import {RestrictedAgenda} from "../../components/Agenda/RestrictedAgenda.js";
+import { Section } from "../components/Section";
+import {RestrictedAgenda} from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
 
-export const Route = createFileRoute("/programme/30-septembre-halles-tropisme")({
+export const Route = createFileRoute("/30-septembre-halles-tropisme")({
 	component: RouteComponent,
 });
 
