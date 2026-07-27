@@ -25,10 +25,7 @@ function RouteComponent() {
 					<li><p>Concerts à partir de 19h (Planète Boum Boum, battucada et dj set d'Habibitch)</p></li>
 				</ul>
 
-			<RestrictedAgenda uiids={[
-				"ee734fc5-b151-45ab-94a7-6109aaf7cf78",
-				"ffea1971-298d-4bda-bdf8-73c567b1069e"
-			]} />
+			<RestrictedAgenda path={Route.to} />
 		</Section>
 	);
 }

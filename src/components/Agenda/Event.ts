@@ -11,74 +11,20 @@ import openair_cover from "../../assets/events/openair.png?url"
 import balpop_cover from "../../assets/events/balpop.png?url"
 import ag_cover from "../../assets/events/ag.png?url"
 import type {MenuItem} from "../Header/Menu.js";
-
-export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
-	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
-	"Kermesse" | "Village Associatif" |
-	"Manifestation" | "Pride" | "Parade" |
-	"Atelier cuisine" | "Atelier d'expression" | "Fresque" |
-	"Théâtre" | "Spectacle vivant" |
-	"Cinéma" | "Ciné-débat" |
-	"Picnic" | "Apéro" | "Repas partagé" |
-	"Autre"
-
-const uiidTypesMap:{ [key: string] : EventTypes[]; } = {
-	"538f4ebe-8c97-43fe-b2c6-9040993b6bb0":["Conférence"],
-	"d380683f-d451-45ee-8818-9bd9c2f414ff":["Conférence"],
-	"c3fd4ad3-8e73-40f3-861c-52427ea8352b":["Picnic"],
-	"180b67c8-8d4a-4748-93b8-0ba4c1e04a4f":["Table-Ronde"],
-	"192db528-e67b-4e67-92f7-a8d603e35625":["Concert"],
-	"0cbe6c40-c320-4d64-9189-d5cb264a0ffe":["Table-Ronde"],
-	"4efd8fed-36f6-40aa-9f36-5f2d8dea255d":["Open Air"],
-	"3c9bd105-3fb8-4dee-8ac5-c229300d1463":["Conférence"],
-	"a28a1a79-9595-4cc7-a4f6-bce7ac6a84a3":["Atelier cuisine", "Atelier d'expression", "Concert", "Kermesse"],
-	"76f7c610-663c-4792-b0c2-41cfd3df2fd7":["Fresque"],
-	"5e505d63-e827-4cd5-83a3-699d85554caa":["Cinéma"],
-	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":["Concert"],
-	"ffea1971-298d-4bda-bdf8-73c567b1069e":["DJ Set"],
-	"c13b5c14-9a64-4746-98ce-cc570f3461f9":["DJ Set"],
-	"c8241147-0707-45f0-973c-ed7efc2ad533":["Ciné-débat"],
-	"25ae5f0e-6eb1-4dae-9487-6c9bbc7bc30d":["Rencontre Littéraire"],
-	"11d1a8f8-5c08-46b6-9e91-25f4ca01a7f9":["Conférence"],
-	"b3ad3faf-22f3-4690-90a9-c7f2e7691ccb":["DJ Set", "Open Air"],
-	"ebc70aab-95b0-4454-ba5a-cd93e783f3c7":["DJ Set", "Open Air"],
-	"ad529e6c-de28-499e-a505-7fa3c5732bb4":["Concert"],
-	"e921cbdc-8b76-48c4-a485-5036e248c16d":["DJ Set", "Open Air"],
-	"5e0dc165-747b-44dd-b2bc-b674f0aeb4c2":["Cinéma"],
-	"e24446de-b4da-4bbb-bcf3-efceb2a9ea7c":["Atelier d'expression"],
-	"bd975802-c6d3-410c-a857-f95591cf6efe":["Rencontre Littéraire"],
-	"d75e045c-d447-47c5-b18f-7d438817a5fc":["Conférence"],
-	"365f47d9-93f7-43e7-a5ef-4e2011fb0491":["AG"],
-	"7355d219-6c45-4100-811d-d70a435b72ef":["DJ Set"],
-	"a706c612-268e-4775-8204-98b11e74f2cc":["Bal populaire"],
-	"b79d6b21-528c-4539-b68c-25bcb7af3ff8":["Théâtre"]
-}
-
-const halleTropisme:MenuItem = {
-	to:"/30-septembre-halle-tropisme",
-	label:"Voir toute la programmation du 30 septembre à la Halle Tropisme"
-}
-
-const lodeve:MenuItem = {
-	to:"/la-fourmiliere-de-lodeve",
-	label:"Consulter toute la programmation de La Fourmilière de Lodève"
-}
-
-export const reverseProgramMap :{ [key: string] :  MenuItem[];} = {
-	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":[halleTropisme],
-	"ffea1971-298d-4bda-bdf8-73c567b1069e":[halleTropisme],
-	"1b0bb799-bc15-440f-90cf-c51d0e2fa9be":[lodeve],
-	"47fd12d7-b2ca-4be3-a981-fde01ec0422b":[lodeve],
-	"bc7705b0-2c3b-49d8-b415-6d182c6ecc69":[lodeve],
-	"f8230be7-7806-4b12-8357-0072a12ab3e3":[lodeve],
-	"c06f60b1-0b98-4995-9862-389a6aba80e8":[lodeve],
-	"ad529e6c-de28-499e-a505-7fa3c5732bb4":[lodeve],
-	"ccee2219-c040-47f2-a103-765b7b4809e2":[lodeve],
-	"c0045865-03dc-4fb8-8ff1-60fc06a3ed64":[lodeve]
-}
+import {eventExtraData, type EventTypes} from "../../data/EventExtraData.js";
 
 export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
-	return uiidTypesMap[event.uuid] || ["Autre"]
+	return eventExtraData[event.uuid].eventTypes || ["Autre"]
+}
+export const eventLinks:(event:MobilizonEventI) => MenuItem[]|undefined = (event)=> {
+	return eventExtraData[event.uuid].programLinks
+}
+export const eventsForLink:(path:string) => string[] = (path)=> {
+	const events:string[] = []
+	Object.entries(eventExtraData).forEach((entry)=>entry[1].programLinks?.forEach(link=>{
+		if(link.to == path) events.push(entry[0])
+	}))
+	return events
 }
 
 export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{

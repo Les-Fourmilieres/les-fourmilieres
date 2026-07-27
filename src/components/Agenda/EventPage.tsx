@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Section } from "../Section";
-import {eventDefaultCover, eventType, type MobilizonEventI, reverseProgramMap} from "./Event";
+import {eventDefaultCover, eventLinks, eventType, type MobilizonEventI} from "./Event";
 import { EventDate } from "./EventDate";
 import { EventTime } from "./EventTime";
 import { ParticipateButton } from "./ParticipateButton";
@@ -140,7 +140,7 @@ export function EventPage({ event }: Props) {
         {event.description && (
           <Content dangerouslySetInnerHTML={{ __html: event.description }} />
         )}
-				{reverseProgramMap[event.uuid]?.map(eventsPage=>
+				{eventLinks(event)?.map(eventsPage=>
 						<Section>
 							<Link to={eventsPage.to}>{eventsPage.label}</Link>
 						</Section>

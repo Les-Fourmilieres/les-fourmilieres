@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { CalendarEvent } from "./CalendarEvent";
 import styled from "styled-components";
 import { fetchEvents } from "./api";
-import {eventType, type MobilizonEventI} from "./Event";
+import {eventsForLink, eventType, type MobilizonEventI} from "./Event";
 import { useMemo, useState } from "react";
 import { Section } from "../Section";
 import {Select, SelectItem} from "../Select.js";
@@ -32,7 +32,7 @@ const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
   return 0;
 };
 
-export function RestrictedAgenda({ uiids }:{uiids:string[]}) {
+export function RestrictedAgenda({ path }:{path:string}) {
   const { data } = useQuery({
     queryKey: ["calendar"],
     queryFn: () => fetchEvents({ showUnConfirmed: false }),
@@ -42,8 +42,10 @@ export function RestrictedAgenda({ uiids }:{uiids:string[]}) {
 
   const events = useMemo(() => {
     if (!data) return [];
-    return data.data.searchEvents.elements.filter(el=>uiids.includes(el.uuid));
-  }, [data, uiids]);
+		const uuids = eventsForLink(path)
+		if(uuids.length == 0) return []
+    return data.data.searchEvents.elements.filter(el=>uuids.includes(el.uuid));
+  }, [data, path]);
 
   const filtersEvents = useMemo(
     () =>
