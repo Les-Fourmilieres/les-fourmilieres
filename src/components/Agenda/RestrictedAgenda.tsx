@@ -6,7 +6,7 @@ import {eventsForLink, eventType, type MobilizonEventI} from "./Event";
 import { useMemo, useState } from "react";
 import { Section } from "../Section";
 import {Select, SelectItem} from "../Select.js";
-import {SelectEventTypes} from "./Agenda.js";
+import {SelectEventTypes} from "../../data/EventExtraData.js";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -55,7 +55,6 @@ export function RestrictedAgenda({ path }:{path:string}) {
 						const curEventType = eventType(event)
 						let found = false;
 						SelectEventTypes[eventTypes].forEach(type=> found = found || curEventType.includes(type))
-						console.log(SelectEventTypes[eventTypes] + "- " + curEventType)
 						if(!found) return false
 					}
           return true;

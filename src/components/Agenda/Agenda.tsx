@@ -3,7 +3,7 @@ import { point } from "@turf/turf";
 import { CalendarEvent } from "./CalendarEvent";
 import styled from "styled-components";
 import { fetchEvents } from "./api";
-import {eventType, type EventTypes, type MobilizonEventI, type MobilizonEventWithLivingAreaI} from "./Event";
+import {eventType, type MobilizonEventI, type MobilizonEventWithLivingAreaI} from "./Event";
 import { useMemo, useState } from "react";
 import { getLivingAreas, type LivingAreaI } from "../../core/LivingArea";
 import type { LivingAreaSelectValue } from "../LivingAreaFilter/LivingAreaFilter.types";
@@ -11,6 +11,7 @@ import { LivingAreaFilter } from "../LivingAreaFilter/LivingAreaFilter";
 import { Section } from "../Section";
 import { EventsMap } from "./EventsMap";
 import {Select, SelectItem} from "../Select.js";
+import {SelectEventTypes} from "../../data/EventExtraData.js";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -28,18 +29,6 @@ const EventsContainer = styled.div`
 const FullWidth = styled.div`
   flex: 1 1 100%;
 `;
-
-export const SelectEventTypes: {[key: string] : EventTypes[]} = {
-	"Concerts, DJ Set, Open Air, …": ["Concert", "DJ Set", "Open Air", "Bal populaire"],
-	"Conférences, Tables rondes, Rencontres littéraires, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
-	"Kermesses, Villages associatifs, …": ["Kermesse",  "Village Associatif"],
-	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
-	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque"],
-	"Théâtre, Spectacles vivants, …": [ "Théâtre", "Spectacle vivant"],
-	"Cinéma, Ciné-débat, …": [ "Cinéma", "Ciné-débat"],
-	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
-	"Autre":["Autre"]
-};
 
 const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
   if (!e1.beginsOn || !e2.beginsOn) return 0;
@@ -90,7 +79,6 @@ export function Agenda() {
 						const curEventType = eventType(event)
 						let found = false;
 						SelectEventTypes[eventTypes].forEach(type=> found = found || curEventType.includes(type))
-						console.log(SelectEventTypes[eventTypes] + "- " + curEventType)
 						if(!found) return false
 					}
           if (!filter.department) return true;

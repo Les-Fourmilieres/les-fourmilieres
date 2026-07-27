@@ -10,6 +10,18 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Picnic" | "Apéro" | "Repas partagé" |
 	"Autre"
 
+export const SelectEventTypes: {[key: string] : EventTypes[]} = {
+	"Concerts, DJ Set, Open Air, …": ["Concert", "DJ Set", "Open Air", "Bal populaire"],
+	"Conférences, Tables rondes, Rencontres littéraires, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
+	"Kermesses, Villages associatifs, …": ["Kermesse",  "Village Associatif"],
+	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
+	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque"],
+	"Théâtre, Spectacles vivants, …": [ "Théâtre", "Spectacle vivant"],
+	"Cinéma, Ciné-débat, …": [ "Cinéma", "Ciné-débat"],
+	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
+	"Autre":["Autre"]
+};
+
 type EventExtraDataI = {
 	eventTypes:EventTypes[],
 	programLinks?:MenuItem[]
