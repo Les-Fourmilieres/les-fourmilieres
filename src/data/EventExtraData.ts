@@ -153,5 +153,8 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"2ad57bd6-2635-4096-845f-c2fd1e458ff8":{
 		eventTypes:["Braderie", "Atelier sérigraphie", "Arpentage", "Expo"]
-	}
+	},
+	/*"f03047d4-e8fa-4605-8086-dec565f70d12":{
+		eventTypes:["Festival"]
+	}*/
 }
