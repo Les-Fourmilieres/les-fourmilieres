@@ -17,7 +17,7 @@ export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
 	return eventExtraData[event.uuid]?.eventTypes || ["Autre"]
 }
 export const eventLinks:(event:MobilizonEventI) => MenuItem[]|undefined = (event)=> {
-	return eventExtraData[event.uuid].programLinks
+	return eventExtraData[event.uuid]?.programLinks
 }
 export const eventsForLink:(path:string) => string[] = (path)=> {
 	const events:string[] = []
@@ -52,7 +52,6 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	case "Apéro":
 	case "Repas partagé":
 		return picnic_cover
-
 	default:
 		return "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp"
 	}

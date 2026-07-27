@@ -2,9 +2,9 @@ import type {MenuItem} from "../components/Header/Menu.js";
 
 export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
-	"Kermesse" | "Village Associatif" |
+	"Kermesse" | "Village Associatif" | "Braderie" | "Expo" |
 	"Manifestation" | "Pride" | "Parade" |
-	"Atelier cuisine" | "Atelier d'expression" | "Fresque" |
+	"Atelier cuisine" | "Atelier d'expression" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
 	"Théâtre" | "Spectacle vivant" |
 	"Projection" | "Ciné-débat" |
 	"Picnic" | "Apéro" | "Repas partagé" |
@@ -13,9 +13,9 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Concerts, DJ Set, Open Air, …": ["Concert", "DJ Set", "Open Air", "Bal populaire"],
 	"Conférences, Tables rondes, Rencontres littéraires, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
-	"Kermesses, Villages associatifs, …": ["Kermesse",  "Village Associatif"],
+	"Kermesses, Braderie, Villages associatifs, Expo, …": ["Kermesse",  "Village Associatif", "Braderie", "Expo"],
 	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
-	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque"],
+	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque", "Atelier sérigraphie", "Arpentage"],
 	"Théâtre, Spectacles vivants, …": [ "Théâtre", "Spectacle vivant"],
 	"Projection, Ciné-débat, …": [ "Projection", "Ciné-débat"],
 	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
@@ -147,5 +147,11 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	"c0045865-03dc-4fb8-8ff1-60fc06a3ed64":{
 		eventTypes:["Parade", "Concert", "DJ Set"],
 		programLinks:[lodeve]
+	},
+	"2c83fc3a-b436-43e3-b0f9-231f81264b94":{
+		eventTypes:["Conférence"]
+	},
+	"2ad57bd6-2635-4096-845f-c2fd1e458ff8":{
+		eventTypes:["Braderie", "Atelier sérigraphie", "Arpentage", "Expo"]
 	}
 }
