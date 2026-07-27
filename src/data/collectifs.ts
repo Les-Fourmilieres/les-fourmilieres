@@ -664,7 +664,8 @@ export const collectifs: CollectifI[] = [
     position: { lat: 44.47473, lng: 2.461218 },
 		url:"https://www.lachaloupe.org/",
 		logo:"collectifs/logo-chaloupe.png",
-		type:["Tiers-lieu"]
+		type:["Tiers-lieu", "Café associatif"],
+		description:"Depuis plus de deux ans, nous sommes un lieu associatif en plein cœur de Marcillac-Vallon, offrant un potentiel à la hauteur de nos ambitions et contribuant à dynamiser la vie du village et de ses environs."
   },
   {
     slug: "la-cimade-beziers",
