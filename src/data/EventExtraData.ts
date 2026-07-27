@@ -6,7 +6,7 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Manifestation" | "Pride" | "Parade" |
 	"Atelier cuisine" | "Atelier d'expression" | "Fresque" |
 	"Théâtre" | "Spectacle vivant" |
-	"Cinéma" | "Ciné-débat" |
+	"Projection" | "Ciné-débat" |
 	"Picnic" | "Apéro" | "Repas partagé" |
 	"Autre"
 
@@ -17,7 +17,7 @@ export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
 	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque"],
 	"Théâtre, Spectacles vivants, …": [ "Théâtre", "Spectacle vivant"],
-	"Cinéma, Ciné-débat, …": [ "Cinéma", "Ciné-débat"],
+	"Projection, Ciné-débat, …": [ "Projection", "Ciné-débat"],
 	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
 	"Autre":["Autre"]
 };
@@ -69,7 +69,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["Fresque"]
 	},
 	"5e505d63-e827-4cd5-83a3-699d85554caa":{
-		eventTypes:["Cinéma"]
+		eventTypes:["Projection"]
 	},
 	"ee734fc5-b151-45ab-94a7-6109aaf7cf78":{
 		eventTypes:["Concert"],
@@ -105,7 +105,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["DJ Set", "Open Air"]
 	},
 	"5e0dc165-747b-44dd-b2bc-b674f0aeb4c2":{
-		eventTypes:["Cinéma"]
+		eventTypes:["Projection"]
 	},
 	"e24446de-b4da-4bbb-bcf3-efceb2a9ea7c": {
 		eventTypes:["Atelier d'expression"],
@@ -133,7 +133,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		programLinks:[lodeve]
 	},
 	"bc7705b0-2c3b-49d8-b415-6d182c6ecc69":{
-		eventTypes:["Concert", "Conférence", "Cinéma"],
+		eventTypes:["Concert", "Conférence", "Projection"],
 		programLinks:[lodeve]
 	},
 	"c06f60b1-0b98-4995-9862-389a6aba80e8":{

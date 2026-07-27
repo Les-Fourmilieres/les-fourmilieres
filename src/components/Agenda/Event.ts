@@ -14,7 +14,7 @@ import type {MenuItem} from "../Header/Menu.js";
 import {eventExtraData, type EventTypes} from "../../data/EventExtraData.js";
 
 export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
-	return eventExtraData[event.uuid].eventTypes || ["Autre"]
+	return eventExtraData[event.uuid]?.eventTypes || ["Autre"]
 }
 export const eventLinks:(event:MobilizonEventI) => MenuItem[]|undefined = (event)=> {
 	return eventExtraData[event.uuid].programLinks
@@ -29,7 +29,7 @@ export const eventsForLink:(path:string) => string[] = (path)=> {
 
 export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	switch (type){
-	case "Cinéma":
+	case "Projection":
 	case "Ciné-débat":
 		return cinema_cover
 	case "DJ Set":
