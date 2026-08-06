@@ -940,6 +940,18 @@ export const collectifs: CollectifI[] = [
 		type:["Librairie"]
 	},
 	{
+		slug:"melando",
+		name:"Melando",
+		description:"Melando est une association qui, depuis 16 ans, organise en itinérance dans les villages du Pic Saint Loup des spectacles, des ateliers et des rencontres artistiques et culturelles. Depuis janvier 2026 c'est aussi un espace de vie sociale avec un local à St Martin-de-Londres et des RDV réguliers, chaque semaine, dans le bassin londrain et le plateau violien.",
+		departement:"Hérault",
+		type:["Collectif artistique"],
+		position:{lat:43.791522722735316, lng:3.7312672437868444},
+		url:"www.melando.fr",
+		instagram:"https://www.instagram.com/melandosaisonartistique/",
+		facebook:"https://www.facebook.com/rencontresdesculturesenpicsaintloup/",
+		logo:"collectifs/melando-logo.png"
+	},
+	{
 		slug:"mets-ta-peau",
 		name:"Mets ta peau",
 		position:{lat:43.61058841077423, lng:3.8704047116330846},
