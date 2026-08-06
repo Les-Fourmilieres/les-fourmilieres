@@ -5,7 +5,7 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Kermesse" | "Village Associatif" | "Braderie" | "Expo" |
 	"Manifestation" | "Pride" | "Parade" |
 	"Atelier cuisine" | "Atelier d'expression" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
-	"Théâtre" | "Spectacle vivant" |
+	"Théâtre" | "Spectacle vivant" | "Dragshow" |
 	"Projection" | "Ciné-débat" |
 	"Picnic" | "Apéro" | "Repas partagé" |
 	"Autre"
@@ -16,7 +16,7 @@ export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Kermesses, Braderie, Villages associatifs, Expo, …": ["Kermesse",  "Village Associatif", "Braderie", "Expo"],
 	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
 	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque", "Atelier sérigraphie", "Arpentage"],
-	"Théâtre, Spectacles vivants, …": [ "Théâtre", "Spectacle vivant"],
+	"Théâtre, Spectacles vivants, Dragshow, …": [ "Théâtre", "Spectacle vivant", "Dragshow"],
 	"Projection, Ciné-débat, …": [ "Projection", "Ciné-débat"],
 	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
 	"Autre":["Autre"]
@@ -171,6 +171,9 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"8fde90a6-8664-44d6-91c7-614b852044a6":{
 		eventTypes:["Conférence"]
+	},
+	"69557963-13b0-4c9b-b126-32ab5d8b480f":{
+		eventTypes:["Concert", "DJ Set", "Dragshow"]
 	}
 	/*"f03047d4-e8fa-4605-8086-dec565f70d12":{
 		eventTypes:["Festival"]

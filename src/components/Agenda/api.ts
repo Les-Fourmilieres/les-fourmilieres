@@ -141,7 +141,7 @@ interface SearchOptions {
 export async function fetchEvents({ showUnConfirmed = false }: SearchOptions) {
   //const eventsPage = 1;
   const limit = 100;
-  const after = new Date(2026, 8, 15);
+  const after = new Date(2026, 7, 25);
 
   const query = buildGraphQlQuery();
   const variables = {
