@@ -154,6 +154,24 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	"2ad57bd6-2635-4096-845f-c2fd1e458ff8":{
 		eventTypes:["Braderie", "Atelier sérigraphie", "Arpentage", "Expo"]
 	},
+	"8cd0fb3b-126d-436c-bd98-4d56b2fcbf17":{
+		eventTypes:["Fresque"]
+	},
+	"59c4c5f9-f127-470c-a852-8e5d0ed79bef":{
+		eventTypes:["Table-Ronde"]
+	},
+	"08c5d7b9-25b5-40ac-99d5-701ea3f4b511":{
+		eventTypes:["Théâtre"]
+	},
+	"be48d1bb-12b9-4ddc-8eef-ee6dc050bd18":{
+		eventTypes:["Pride"]
+	},
+	"b93d6081-c7f0-447b-8e40-80edf41ffd4c":{
+		eventTypes:["Concert", "Table-Ronde", "Village Associatif"]
+	},
+	"8fde90a6-8664-44d6-91c7-614b852044a6":{
+		eventTypes:["Conférence"]
+	}
 	/*"f03047d4-e8fa-4605-8086-dec565f70d12":{
 		eventTypes:["Festival"]
 	}*/
