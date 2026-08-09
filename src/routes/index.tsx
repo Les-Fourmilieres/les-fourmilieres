@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       { title: `🐜 Les Fourmilières · Festival antifasciste et solidaire` },
       {
         name: "description",
-        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une centaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l'Aude, l'Hérault, le Gard, la Lozère et l'Aveyron.`,
+        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une centaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l'Aude, l'Hérault, le Gard, la Lozère, l'Ardèche et l'Aveyron.`,
       },
       {
         property: "og:title",
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:description",
-        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une centaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l'Aude, l'Hérault, le Gard, la Lozère et l'Aveyron.`,
+        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une centaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l'Aude, l'Hérault, le Gard, la Lozère, l'Ardèche et l'Aveyron.`,
       },
       { property: "og:type", content: "website" },
     ],
@@ -91,9 +91,8 @@ function Home() {
               au <strong>11&nbsp;octobre 2026</strong>
             </DatesSection>
             <DatesSection>
-              dans l'<strong>Aude</strong>, l'<strong>Hérault</strong>,<br /> le{" "}
-              <strong>Gard</strong>, la <strong>Lozère</strong> et{" "}
-              <strong>l'Aveyron</strong>
+              dans l'<strong>Aude</strong>, l'<strong>Hérault</strong> le <strong>Gard</strong>,<br />
+							la <strong>Lozère</strong>, l'<strong>Ardèche</strong> et <strong>l'Aveyron</strong>
             </DatesSection>
           </PlaceAndDateSection>
           <HeroLogo>

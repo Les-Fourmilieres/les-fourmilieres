@@ -45,7 +45,7 @@ function RouteComponent() {
       </h2>
       <ul>
         <li>
-          vous êtes situé·e dans l'Aude, l'Aveyron, le Gard, l'Hérault ou la
+          vous êtes situé·e dans l'Aude, l'Aveyron, l'Ardèche, le Gard, l'Hérault ou la
           Lozère.
         </li>
         <li>
