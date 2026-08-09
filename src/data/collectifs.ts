@@ -932,12 +932,14 @@ export const collectifs: CollectifI[] = [
 	},
 	{
 		slug: "librairie-alterlivres",
-		name: "Librairies Alterlivres",
+		name: "Librairie Alterlivres",
 		departement: "Gard",
-		position: {lat: 43.94315880721006, lng: 3.9491152693583063},
-		logo: "collectifs/logo-librairie-alterlive.jpg",
+		position: {lat: 43.9433317470306, lng:3.9491332684382647},
+		logo: "collectifs/logo-librairie-alterlive.webp",
 		url: "http://www.alterlivres.com/",
-		type:["Librairie"]
+		type:["Librairie"],
+		description:"Alterlivres c’est un choix décalé de livres en tous genres, un mélange qui va de l’Histoire aux récits d’aventure, de la littérature dessinée aux beaux livres illustrés proposés à des prix surprenants, du roman noir à la littérature mal élevée. Et aussi des essais et des pamphlets pour y voir plus clair dans ce qui se passe dans le monde, sans oublier des livres pour enfants choisis avec soin.",
+		facebook:"https://www.facebook.com/alterlivres"
 	},
 	{
 		slug:"marche-climat-montpellier",
