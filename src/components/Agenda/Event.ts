@@ -4,8 +4,7 @@ import cinema_cover from "../../assets/events/cinema.png?url";
 import concert_cover from "../../assets/events/concert.png?url";
 import conf_cover from "../../assets/events/conf.png?url";
 import picnic_cover from "../../assets/events/picnic.png?url"
-import table_ronde_cover from "../../assets/events/table-ronde.png?url"
-import rencontre_litteraire_cover from "../../assets/events/rencontre-litteraire.png?url"
+import autre_cover from "../../assets/events/autre.png?url"
 import djset_cover from "../../assets/events/djset.png?url"
 import openair_cover from "../../assets/events/openair.png?url"
 import balpop_cover from "../../assets/events/balpop.png?url"
@@ -40,20 +39,18 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 		return balpop_cover
 	case "Concert":
 		return concert_cover
-	case "Conférence":
-		return conf_cover
 	case "AG":
 		return ag_cover
+	case "Conférence":
 	case "Rencontre Littéraire":
-		return rencontre_litteraire_cover
 	case "Table-Ronde":
-		return table_ronde_cover
+		return conf_cover
 	case "Picnic":
 	case "Apéro":
 	case "Repas partagé":
 		return picnic_cover
 	default:
-		return "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp"
+		return autre_cover
 	}
 }
 
