@@ -174,8 +174,11 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"69557963-13b0-4c9b-b126-32ab5d8b480f":{
 		eventTypes:["Concert", "DJ Set", "Dragshow"]
+	},
+	"205537bf-df3a-4bc4-ac99-5948aeb87a99":{
+		eventTypes:["Concert"]
+	},
+	"2781745b-4d3d-4b7d-a825-4a4169f3a85b":{
+		eventTypes:["Table-Ronde"]
 	}
-	/*"f03047d4-e8fa-4605-8086-dec565f70d12":{
-		eventTypes:["Festival"]
-	}*/
 }
