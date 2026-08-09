@@ -1,10 +1,11 @@
-export type Departements = "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère";
+export type Departements = "Ardèche" | "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère";
 export type Types = "Café associatif" | "Tiers-lieu" | "Festival" | "Librairie" |
 	"Théâtre" | "Syndicat" | "Bar - Brasserie - Commerce" | "Média" | /*"Cinéma" |*/
 	"Collectif artistique" | "Collectif événementiel" | "Collectif militant" | "Collectif pour mieux habiter" |
 	"Collectif d'accueil de réfugiés" | "Groupement de collectifs" | "Collectif d'éducation populaire"
 export const departements: Departements[] = [
-  "Aude",
+  "Ardèche",
+	"Aude",
   "Aveyron",
   "Gard",
   "Hérault",
@@ -178,6 +179,18 @@ export const collectifs: CollectifI[] = [
     departement: "Hérault",
     position: { lat: 43.826338, lng: 3.774748 },
   },*/
+	{
+		slug:"auberge-de-boffres",
+		name:"Auberge de Boffres",
+		departement:"Ardèche",
+		type:["Bar - Brasserie - Commerce"],
+		position:{lat:44.92023513798938, lng:4.702049254789491},
+		description:"Restaurant café bar épicerie de village, gîtes et événements festifs et militants. En SCOP autogérée",
+		url:"http://aubergedeboffres.fr/",
+		logo:"collectifs/auberge-boffres.png",
+		facebook:"https://www.facebook.com/AubergedeBoffres",
+		instagram:"https://www.instagram.com/aubergedeboffres/"
+	},
   {
     slug: "bar-du-midi",
     name: "Bar du Midi",

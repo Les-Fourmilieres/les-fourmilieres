@@ -23,7 +23,8 @@ const filtered = {
   ...geojson,
   features: geojson.features.filter(
     (feature) =>
-      String(feature.properties.bv2022).startsWith("11") ||
+			String(feature.properties.bv2022).startsWith("07") ||
+			String(feature.properties.bv2022).startsWith("11") ||
       String(feature.properties.bv2022).startsWith("12") ||
       String(feature.properties.bv2022).startsWith("30") ||
       String(feature.properties.bv2022).startsWith("34"),
