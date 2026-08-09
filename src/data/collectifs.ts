@@ -940,6 +940,18 @@ export const collectifs: CollectifI[] = [
 		type:["Librairie"]
 	},
 	{
+		slug:"marche-climat-montpellier",
+		name:"Marche pour le climat, la paix et la solidarité",
+		departement:"Hérault",
+		position:{lat:43.6094, lng:3.8814},
+		type:["Collectif militant"],
+		description:"Nous souhaitons défendre des valeurs essentielles et donner de la visibilité à des causes justes et durables. Dans une ambiance conviviale ouverte à tou.te.s nous marcherons pour exiger des mesures politiques qui permettent de construire ensemble un monde où les êtres vivants pourront coexister en paix.",
+		url:"https://26septembre.org/",
+		instagram:"https://www.instagram.com/m26septembre/",
+		facebook:"https://www.facebook.com/people/26-Septembre/61592712691495/",
+		logo:"collectifs/marche-climat.webp"
+	},
+	{
 		slug:"melando",
 		name:"Melando",
 		description:"Melando est une association qui, depuis 16 ans, organise en itinérance dans les villages du Pic Saint Loup des spectacles, des ateliers et des rencontres artistiques et culturelles. Depuis janvier 2026 c'est aussi un espace de vie sociale avec un local à St Martin-de-Londres et des RDV réguliers, chaque semaine, dans le bassin londrain et le plateau violien.",
