@@ -190,7 +190,7 @@ export function EventsMap({ events }: Props) {
 						const args = {
 							icon: L.icon({
 								iconUrl: icon_url,
-								iconSize: [46, 54],
+								iconSize: [54, 54],
 								iconAnchor: [23, 54],
 							}),
 						}
