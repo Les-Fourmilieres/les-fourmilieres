@@ -9,8 +9,16 @@ import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "react-aria-components";
 import { ChevronsRight } from "lucide-react";
-import type { MobilizonEventI } from "./Event";
+import {eventType, type MobilizonEventI} from "./Event";
 import { EventPreview } from "./EventPreview";
+
+import pointer_autre from "../../assets/events/pointer_autre.png?url"
+import pointer_concert from "../../assets/events/pointer_concert.png?url"
+import pointer_conf from "../../assets/events/pointer_conf.png?url"
+import pointer_fresque from "../../assets/events/pointer_fresque.png?url"
+import pointer_kermesse from "../../assets/events/pointer_kermesse.png?url"
+import pointer_picnic from "../../assets/events/pointer_picnic.png?url"
+import pointer_proj from "../../assets/events/pointer_proj.png?url"
 
 L.Icon.Default.prototype.options.iconUrl = markerIconUrl;
 L.Icon.Default.prototype.options.iconRetinaUrl = markerIconRetinaUrl;
@@ -122,7 +130,7 @@ export function EventsMap({ events }: Props) {
   }, [events]);
   return (
     <Container>
-      <StyledMapContainer center={[43.6, 3.9]} zoom={8} ref={mapRef}>
+      <StyledMapContainer center={[43.9, 3.9]} zoom={8} ref={mapRef}>
         <TileLayer
           attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -133,6 +141,67 @@ export function EventsMap({ events }: Props) {
           if (!event.physicalAddress?.geom) return null;
           const [lng, lat] = event.physicalAddress!.geom!.split(";");
           const position: [number, number] = [parseFloat(lat), parseFloat(lng)];
+						let icon_url = pointer_autre
+						switch (eventType(event)[0]) {
+						case "Concert":
+						case "DJ Set":
+						case "Open Air":
+						case "Bal populaire":
+							icon_url = pointer_concert
+							break
+						case "Conférence":
+						case "Rencontre Littéraire":
+						case "Table-Ronde":
+							icon_url = pointer_conf
+							break
+						case "Kermesse":
+						case "Village Associatif":
+						case "Braderie":
+						case "Expo":
+							icon_url = pointer_kermesse
+							break
+						case "Manifestation":
+						case "Pride":
+						case "Parade":
+							icon_url = pointer_autre
+							break
+							/*
+"Manifestation" | "Pride" | "Parade" |
+"Atelier cuisine" | "Atelier d'expression" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
+"Théâtre" | "Spectacle vivant" | "Dragshow" |
+"Projection" | "Ciné-débat" |
+"Picnic" | "Apéro" | "Repas partagé" |
+"Autre"
+	 */
+						case "Atelier cuisine":
+						case "Atelier d'expression":
+						case "Fresque":
+						case "Atelier sérigraphie":
+						case "Arpentage":
+							icon_url = pointer_fresque
+							break
+						case "Théâtre":
+						case "Spectacle vivant":
+						case "Dragshow":
+							icon_url = pointer_autre
+							break
+						case "Projection":
+						case "Ciné-débat":
+							icon_url = pointer_proj
+							break
+						case "Picnic":
+						case "Apéro":
+						case "Repas partagé":
+							icon_url = pointer_picnic
+							break
+						}
+						const args = {
+							icon: L.icon({
+								iconUrl: icon_url,
+								iconSize: [46, 54],
+								iconAnchor: [23, 54],
+							}),
+						}
           return (
             <Marker
               key={event.uuid}
@@ -145,6 +214,7 @@ export function EventsMap({ events }: Props) {
                   setSelectedEvent(null);
                 },
               }}
+							{...args}
             >
               <Popup>{event.title}</Popup>
             </Marker>
