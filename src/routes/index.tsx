@@ -5,6 +5,7 @@ import { Cagnotte } from "../components/Cagnotte/Cagnotte";
 import { Section } from "../components/Section";
 import { Teaser } from "../views/Teaser";
 import { Newsletter } from "../components/Newsletter/Newsletter";
+import {useMediaQuery} from "react-responsive";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -80,6 +81,7 @@ const HeroTagLine = styled.h3`
 
 // eslint-disable-next-line react-refresh/only-export-components
 function Home() {
+	const isMobile = useMediaQuery({ maxWidth: 800 });
   return (
     <>
       <HeroSection>
@@ -90,10 +92,17 @@ function Home() {
               <br />
               au <strong>11&nbsp;octobre 2026</strong>
             </DatesSection>
-            <DatesSection>
-              dans l'<strong>Aude</strong>, l'<strong>Hérault</strong> le <strong>Gard</strong>,<br />
+						{ isMobile?
+						<DatesSection>
+              dans l'<strong>Aude</strong>, l'<strong>Hérault</strong>,<br />
+							le <strong>Gard</strong> la <strong>Lozère</strong>,<br />
+							l'<strong>Ardèche</strong> et <strong>l'Aveyron</strong>
+            </DatesSection>:
+						<DatesSection>
+							dans l'<strong>Aude</strong>, l'<strong>Hérault</strong> le <strong>Gard</strong>,<br />
 							la <strong>Lozère</strong>, l'<strong>Ardèche</strong> et <strong>l'Aveyron</strong>
-            </DatesSection>
+						</DatesSection>
+						}
           </PlaceAndDateSection>
           <HeroLogo>
             <div style={{ width: "100%" }}>
