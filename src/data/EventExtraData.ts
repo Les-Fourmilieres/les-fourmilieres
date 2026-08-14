@@ -180,5 +180,15 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"2781745b-4d3d-4b7d-a825-4a4169f3a85b":{
 		eventTypes:["Table-Ronde"]
+	},
+	"f4bc64a2-c443-4e15-a9fe-72fc1663788c":{
+		eventTypes:["Ciné-débat"]
+	},
+	"754cf40f-6ceb-44f4-8772-78dd75d42614":{
+		eventTypes:["Manifestation"]
+	},
+	"1b0bb799-bc15-440f-90cf-c51d0e2fa9be":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
 	}
 }
