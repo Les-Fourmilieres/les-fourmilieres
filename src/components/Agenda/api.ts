@@ -4,6 +4,7 @@ import {
   MobilizonSingleEventSchema,
   type MobilizonEventParticipants,
 } from "./Event";
+import {eventExtraData} from "../../data/EventExtraData.js";
 
 const BASE_URL = "https://agenda.les-fourmilieres.org/api";
 
@@ -168,7 +169,13 @@ export async function fetchEvents({ showUnConfirmed = false }: SearchOptions) {
     },
   });
 
-  return MobilizonResponseSchema.parse(await response.json());
+	const mobilizonResponse = MobilizonResponseSchema.parse(await response.json());
+	mobilizonResponse.data.searchEvents.elements.forEach(event=>{
+		if(event.physicalAddress) event.physicalAddress.geom = event.physicalAddress.geom || eventExtraData[event.uuid].physicalAdress?.geom
+		else event.physicalAddress = eventExtraData[event.uuid].physicalAdress
+	})
+
+  return mobilizonResponse
 }
 
 export async function fetchEventByUuid(uuid: string) {
@@ -192,7 +199,10 @@ export async function fetchEventByUuid(uuid: string) {
       "Content-Type": "application/json",
     },
   });
-  return MobilizonSingleEventSchema.parse(await response.json());
+	const mobilizonSingleEvent = MobilizonSingleEventSchema.parse(await response.json());
+	if(mobilizonSingleEvent.data.event.physicalAddress) mobilizonSingleEvent.data.event.physicalAddress.geom = mobilizonSingleEvent.data.event.physicalAddress.geom || eventExtraData[uuid].physicalAdress?.geom
+	else mobilizonSingleEvent.data.event.physicalAddress = eventExtraData[uuid].physicalAdress
+	return mobilizonSingleEvent
 }
 
 export async function fetchEventParticipants(

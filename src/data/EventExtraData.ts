@@ -1,4 +1,5 @@
 import type {MenuItem} from "../components/Header/Menu.js";
+import {type MobilizonPhysicalAddressI} from "../components/Agenda/Event.js";
 
 export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
@@ -24,7 +25,8 @@ export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 
 type EventExtraDataI = {
 	eventTypes:EventTypes[],
-	programLinks?:MenuItem[]
+	programLinks?:MenuItem[],
+	physicalAdress?:MobilizonPhysicalAddressI //Default value, overridden by Mobilizon. Could include only a geom default value
 }
 
 const halleTropisme:MenuItem = {
@@ -63,7 +65,8 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["Conférence"]
 	},
 	"a28a1a79-9595-4cc7-a4f6-bce7ac6a84a3":{
-		eventTypes:["Atelier cuisine", "Atelier d'expression", "Concert", "Kermesse"]
+		eventTypes:["Atelier cuisine", "Atelier d'expression", "Concert", "Kermesse"],
+		physicalAdress:{geom: "3.6146139412570664;43.99013933871999"}
 	},
 	"76f7c610-663c-4792-b0c2-41cfd3df2fd7":{
 		eventTypes:["Fresque"]
@@ -105,7 +108,8 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["DJ Set", "Open Air"]
 	},
 	"5e0dc165-747b-44dd-b2bc-b674f0aeb4c2":{
-		eventTypes:["Projection"]
+		eventTypes:["Projection"],
+		physicalAdress:{geom: "3.858621;43.601846"}
 	},
 	"e24446de-b4da-4bbb-bcf3-efceb2a9ea7c": {
 		eventTypes:["Atelier d'expression"],
@@ -155,7 +159,11 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["Braderie", "Atelier sérigraphie", "Arpentage", "Expo"]
 	},
 	"8cd0fb3b-126d-436c-bd98-4d56b2fcbf17":{
-		eventTypes:["Fresque"]
+		eventTypes:["Fresque"],
+		physicalAdress:{
+			description: "Mas des Moulins",
+			geom:"3.8440761429693677;43.629717824973525"
+		}
 	},
 	"59c4c5f9-f127-470c-a852-8e5d0ed79bef":{
 		eventTypes:["Table-Ronde"]
@@ -170,7 +178,8 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["Concert", "Table-Ronde", "Village Associatif"]
 	},
 	"8fde90a6-8664-44d6-91c7-614b852044a6":{
-		eventTypes:["Conférence"]
+		eventTypes:["Conférence"],
+		physicalAdress:{geom: "2.461218;44.47473"}
 	},
 	"69557963-13b0-4c9b-b126-32ab5d8b480f":{
 		eventTypes:["Concert", "DJ Set", "Dragshow"]
@@ -190,5 +199,12 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	"1b0bb799-bc15-440f-90cf-c51d0e2fa9be":{
 		eventTypes:["Concert"],
 		programLinks:[lodeve]
+	},
+	"f03047d4-e8fa-4605-8086-dec565f70d12":{
+		eventTypes:["Autre"],
+		physicalAdress:{
+			description: "Centre-ville de Nîmes",
+			geom: "4.358859;43.836139"
+		}
 	}
 }

@@ -124,6 +124,7 @@ export type MobilizonEventI = z.infer<typeof MobilizonEventSchema>;
 export type MobilizonEventWithLivingAreaI = MobilizonEventI & {
   livingArea: LivingAreaI | undefined;
 };
+export type MobilizonPhysicalAddressI = z.infer<typeof MobilizonAddressSchema>
 export type MobilizonEventSchema = z.infer<typeof MobilizonSearchEventsSchema>;
 
 const MobilizonEventParticipantsSchema = z.object({
