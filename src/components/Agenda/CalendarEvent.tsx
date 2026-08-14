@@ -7,6 +7,14 @@ import { EventTime } from "./EventTime";
 import { EventAddress } from "./EventAddress";
 import { ParticipateButton } from "./ParticipateButton";
 
+import picto_autre from "../../assets/events/picto_autre.png?url"
+import picto_concert from "../../assets/events/picto_concert.png?url"
+import picto_conf from "../../assets/events/picto_conf.png?url"
+import picto_fresque from "../../assets/events/picto_fresque.png?url"
+import picto_kermesse from "../../assets/events/picto_kermesse.png?url"
+import picto_picnic from "../../assets/events/picto_picnic.png?url"
+import picto_proj from "../../assets/events/picto_proj.png?url"
+
 interface Props {
   event: MobilizonEventI;
 }
@@ -73,18 +81,86 @@ const EventTypes = styled.div`
   justify-content: flex-end;
   gap: 4px 8px;
   flex-wrap: wrap;
+	padding-bottom: 10px;
 `;
 
-const EventType = styled.span`
+export const EventType = styled.span`
 	background-color: var(--accent-dark);
 	color: var(--accent-contrast);
-	//font-weight: 200;
+	font-weight: 500;
 	padding: 0px 4px;
-	border-radius: 4px;
+	border-radius: 5px;
 	white-space: nowrap;
 	font-size: 14px;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		height: 30px;
+		width: 36px;
+		transform: scale(.7);
+		margin-right: 3px;
+		margin-top: -2px;
+		margin-bottom: -2px;
+		vertical-align: middle;
+	}
+/*
+
+ */
+	&[data-cat="Concert"]::before,
+  &[data-cat="DJ Set"]::before,
+  &[data-cat="Open Air"]::before,
+  &[data-cat="Bal populaire"]::before {
+		background: url("${picto_concert}") no-repeat 0 center;
+	}
+
+	&[data-cat="Conférence"]::before,
+	&[data-cat="Rencontre Littéraire"]::before,
+	&[data-cat="Table-Ronde"]::before {
+		background: url("${picto_conf}") no-repeat 0 center;
+	}
+
+	&[data-cat="Kermesse"]::before,
+	&[data-cat="Village Associatif"]::before,
+	&[data-cat="Braderie"]::before,
+	&[data-cat="Expo"]::before {
+		background: url("${picto_kermesse}") no-repeat 0 center;
+	}
+
+	&[data-cat="Manifestation"]::before,
+	&[data-cat="Pride"]::before,
+	&[data-cat="Parade"]::before {
+		background: url("${picto_autre}") no-repeat 0 center;
+	}
+
+	&[data-cat="Atelier cuisine"]::before,
+	&[data-cat="Atelier d'expression"]::before,
+	&[data-cat="Fresque"]::before,
+  &[data-cat="Atelier sérigraphie"]::before, 
+	&[data-cat="Arpentage"]::before {
+		background: url("${picto_fresque}") no-repeat 0 center;
+	}
+
+	&[data-cat="Théâtre"]::before,
+	&[data-cat="Spectacle vivant"]::before,
+	&[data-cat="Dragshow"]::before {
+		background: url("${picto_autre}") no-repeat 0 center;
+	}
+	&[data-cat="Projection"]::before,
+	&[data-cat="Ciné-débat"]::before {
+		background: url("${picto_proj}") no-repeat 0 center;
+	}
+
+	&[data-cat="Picnic"]::before,
+	&[data-cat="Apéro"]::before,
+	&[data-cat="Repas partagé"]::before {
+		background: url("${picto_picnic}") no-repeat 0 center;
+	}
 		
-`
+	&[data-cat="Autre"]::before {
+		background: url("${picto_autre}") no-repeat 0 center;
+	}
+`;
 
 const Actions = styled.div`
   padding: 16px;
@@ -101,7 +177,7 @@ export function CalendarEvent({ event }: Props) {
     <Container>
 			<EventTypes>
 				{eventType(event).map((type) => (
-					<EventType>{type}</EventType>
+					<EventType data-cat={type}>{type}</EventType>
 				))}
 			</EventTypes>
       <Figure

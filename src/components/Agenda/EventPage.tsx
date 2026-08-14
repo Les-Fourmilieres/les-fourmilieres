@@ -7,6 +7,7 @@ import { ParticipateButton } from "./ParticipateButton";
 import { EventAddress } from "./EventAddress";
 import { useMediaQuery } from "react-responsive";
 import {Link} from "../Link/Link.js";
+import {EventType} from "./CalendarEvent.js";
 
 const StyledSection = styled(Section)`
   padding-top: 24px;
@@ -78,16 +79,6 @@ const EventTypes = styled.div`
 	width: 100%;
 `;
 
-const EventType = styled.span`
-	background-color: var(--accent-dark);
-	color: var(--accent-contrast);
-	//font-weight: 200;
-	padding: 0px 4px;
-	border-radius: 4px;
-	white-space: nowrap;
-	font-size: 14px;
-`
-
 interface Props {
   event: MobilizonEventI;
 }
@@ -111,7 +102,7 @@ export function EventPage({ event }: Props) {
       <StyledSection>
 				<EventTypes>
 					{eventType(event).map((type) => (
-						<EventType>{type}</EventType>
+						<EventType data-cat={type}>{type}</EventType>
 					))}
 				</EventTypes>
         {isMobile ? (

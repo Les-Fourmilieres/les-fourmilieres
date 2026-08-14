@@ -165,14 +165,6 @@ export function EventsMap({ events }: Props) {
 						case "Parade":
 							icon_url = pointer_autre
 							break
-							/*
-"Manifestation" | "Pride" | "Parade" |
-"Atelier cuisine" | "Atelier d'expression" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
-"Théâtre" | "Spectacle vivant" | "Dragshow" |
-"Projection" | "Ciné-débat" |
-"Picnic" | "Apéro" | "Repas partagé" |
-"Autre"
-	 */
 						case "Atelier cuisine":
 						case "Atelier d'expression":
 						case "Fresque":

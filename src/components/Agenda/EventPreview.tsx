@@ -6,6 +6,7 @@ import { useClockIcon } from "./useClockIcon";
 import { EventTime } from "./EventTime";
 import { Link } from "../Link/Link";
 import { ParticipateButton } from "./ParticipateButton";
+import {EventType} from "./CalendarEvent.js";
 
 const EventTypes = styled.div`
   display: flex;
@@ -14,16 +15,6 @@ const EventTypes = styled.div`
   gap: 4px 8px;
   flex-wrap: wrap;
 `;
-
-const EventType = styled.span`
-	background-color: var(--accent-dark);
-	color: var(--accent-contrast);
-	//font-weight: 200;
-	padding: 0px 4px;
-	border-radius: 4px;
-	white-space: nowrap;
-	font-size: 14px;
-`
 
 const Content = styled.div`
   padding: 24px 16px;
@@ -99,7 +90,7 @@ export function EventPreview({ event }: Props) {
         </Infos>
 				<EventTypes>
 					{eventType(event).map((type) => (
-						<EventType>{type}</EventType>
+						<EventType data-cat={type}>{type}</EventType>
 					))}
 				</EventTypes>
       </Content>
