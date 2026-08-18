@@ -896,6 +896,19 @@ export const collectifs: CollectifI[] = [
 		description:"Les Aragantes est une collective de designer.euse.s pluridisciplinaires réunies autour d’une volonté commune : faire du design un outil critique, engagé et au service des luttes écoféministes.",
 		type:["Collectif militant"],
   },*/
+	{
+		slug:"les-soulevements-de-la-terre-nimes",
+		name:"Les soulèvements de la Terre - Comité de Nîmes",
+		position:{lat:43.8,lng:4.35},
+		type:["Collectif militant"],
+		departement:"Gard",
+		description:"Mouvement écologiste contre l'artificialisation des sols, l'accaparement de l'eau, pour une agriculture respectueuse",
+		url:"https://lessoulevementsdelaterre.org/",
+		logo:"collectifs/soulevements-de-la-terre.webp",
+		facebook:"https://www.facebook.com/soulevementsterre",
+		instagram:"https://www.instagram.com/soulevements.de.la.terre/",
+		bluesky:"https://bsky.app/profile/lessoulevements.bsky.social",
+	},
   {
     slug: "fourmiliere-lodevois-larzac",
     name: "La Fourmilière Lodévois-Larzac",
