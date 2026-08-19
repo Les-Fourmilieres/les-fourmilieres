@@ -3,10 +3,10 @@ import {type MobilizonPhysicalAddressI} from "../components/Agenda/Event.js";
 
 export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
-	"Kermesse" | "Village Associatif" | "Braderie" | "Expo" |
+	"Kermesse" | "Village Associatif" | "Braderie" | "Expo" | "Loto" |
 	"Manifestation" | "Pride" | "Parade" |
 	"Atelier cuisine" | "Atelier d'expression" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
-	"Théâtre" | "Spectacle vivant" | "Dragshow" |
+	"Théâtre" | "Spectacle vivant" | "Dragshow" | "Lecture" |
 	"Projection" | "Ciné-débat" |
 	"Picnic" | "Apéro" | "Repas partagé" |
 	"Autre"
@@ -14,10 +14,10 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Concerts, DJ Set, Open Air, …": ["Concert", "DJ Set", "Open Air", "Bal populaire"],
 	"Conférences, Tables rondes, Rencontres littéraires, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
-	"Kermesses, Braderie, Villages associatifs, Expo, …": ["Kermesse",  "Village Associatif", "Braderie", "Expo"],
+	"Kermesses, Braderie, Villages associatifs, Expo, Loto, …": ["Kermesse",  "Village Associatif", "Braderie", "Expo", "Loto"],
 	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
 	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque", "Atelier sérigraphie", "Arpentage"],
-	"Théâtre, Spectacles vivants, Dragshow, …": [ "Théâtre", "Spectacle vivant", "Dragshow"],
+	"Théâtre, Spectacles vivants, Dragshow, Lecture, …": [ "Théâtre", "Spectacle vivant", "Dragshow", "Lecture"],
 	"Projection, Ciné-débat, …": [ "Projection", "Ciné-débat"],
 	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
 	"Autre":["Autre"]
@@ -206,5 +206,26 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 			description: "Centre-ville de Nîmes",
 			geom: "4.358859;43.836139"
 		}
+	},
+	"24c312e0-9f97-4f32-9455-a53890a199f1":{
+		eventTypes:["Loto"]
+	},
+	"cb98c0a4-479b-4f5c-9b8c-2f7f45088066":{
+		eventTypes:["Lecture"]
+	},
+	"5a1d83b0-b9e1-4e59-bae6-5c83e8be68b7":{
+		eventTypes:["Théâtre"]
+	},
+	"c76b71de-e3ad-4aad-b4f7-059bf657fe64":{
+		eventTypes:["Théâtre"]
+	},
+	"065871fd-9b68-431a-887c-2645565bf4d2":{
+		eventTypes:["Théâtre"]
+	},
+	"659ab5cb-ba81-4337-a536-bac696f43ad9":{
+		eventTypes:["Théâtre"]
+	},
+	"9eb5e5a7-c760-4c1c-9868-d86dda1122dd":{
+		eventTypes:["DJ Set"]
 	}
 }

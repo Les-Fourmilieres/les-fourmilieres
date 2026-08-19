@@ -123,6 +123,7 @@ export const EventType = styled.span`
 	&[data-cat="Kermesse"]::before,
 	&[data-cat="Village Associatif"]::before,
 	&[data-cat="Braderie"]::before,
+  &[data-cat="Loto"]::before,
 	&[data-cat="Expo"]::before {
 		background: url("${picto_kermesse}") no-repeat 0 center;
 	}
@@ -143,6 +144,7 @@ export const EventType = styled.span`
 
 	&[data-cat="Théâtre"]::before,
 	&[data-cat="Spectacle vivant"]::before,
+  &[data-cat="Lecture"]::before,
 	&[data-cat="Dragshow"]::before {
 		background: url("${picto_autre}") no-repeat 0 center;
 	}

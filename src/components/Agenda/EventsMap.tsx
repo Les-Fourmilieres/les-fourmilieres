@@ -158,6 +158,7 @@ export function EventsMap({ events }: Props) {
 						case "Village Associatif":
 						case "Braderie":
 						case "Expo":
+						case "Loto":
 							icon_url = pointer_kermesse
 							break
 						case "Manifestation":
@@ -175,6 +176,7 @@ export function EventsMap({ events }: Props) {
 						case "Théâtre":
 						case "Spectacle vivant":
 						case "Dragshow":
+						case "Lecture":
 							icon_url = pointer_autre
 							break
 						case "Projection":

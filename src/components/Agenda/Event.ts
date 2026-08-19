@@ -9,6 +9,7 @@ import djset_cover from "../../assets/events/djset.png?url"
 import openair_cover from "../../assets/events/openair.png?url"
 import balpop_cover from "../../assets/events/balpop.png?url"
 import ag_cover from "../../assets/events/ag.png?url"
+import kermesse_cover from "../../assets/events/kermesse.png?url"
 import type {MenuItem} from "../Header/Menu.js";
 import {eventExtraData, type EventTypes} from "../../data/EventExtraData.js";
 
@@ -49,6 +50,12 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	case "Apéro":
 	case "Repas partagé":
 		return picnic_cover
+	case "Kermesse":
+	case "Loto":
+	case "Expo":
+	case "Braderie":
+	case "Village Associatif":
+		return kermesse_cover
 	default:
 		return autre_cover
 	}
