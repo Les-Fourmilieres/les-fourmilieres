@@ -1066,6 +1066,16 @@ export const collectifs: CollectifI[] = [
 		type:["Collectif d'accueil de réfugiés"]
   },
 	{
+		slug:"oai-e-libertat",
+		name:"Oaï e Libertat - Nîmes Antifasciste",
+		description:"Oaï e Libertat, « bordel et liberté » en occitan, veut se réapproprier les espaces de notre territoire en y combattant le fascisme et les garants de l'ordre social dominant (police, justice). Nous sommes antifascistes, et notre esprit de résistance se définit dans la lutte contre le racisme, le sexisme, les LGBTphobies et toute autre forme de discrimination.",
+		departement:"Gard",
+		type:["Collectif militant"],
+		instagram:"https://www.instagram.com/oai_e_libertat/",
+		logo:"collectifs/oai-e-libertat.png",
+		bdv:"30189"
+	},
+	{
 		slug: "planning-familial-sud-cevennes",
 		name: "Planning familial Sud Cévennes",
 		departement: "Gard",
