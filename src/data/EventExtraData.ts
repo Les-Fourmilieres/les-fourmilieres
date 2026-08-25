@@ -39,6 +39,11 @@ const lodeve:MenuItem = {
 	label:"Consulter toute la programmation de La Fourmilière de Lodève"
 }
 
+const lfp:MenuItem = {
+	to:"/festival-des-luttes-populaires",
+	label:"Voir toute la programmation du Festival des Luttes Populaires"
+}
+
 export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	"538f4ebe-8c97-43fe-b2c6-9040993b6bb0":{
 		eventTypes:["Conférence"]
@@ -227,5 +232,49 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"9eb5e5a7-c760-4c1c-9868-d86dda1122dd":{
 		eventTypes:["DJ Set"]
-	}
+	},
+	"b17f8c43-4d6e-4317-bc04-b439382810bb":{
+		eventTypes:["Repas partagé"],
+		programLinks:[lfp]
+	},
+	"6922f3bc-189e-48b6-9286-6399666f85d7":{
+		eventTypes:["Conférence"],
+		programLinks:[lfp]
+	},
+	"384c9efb-a817-49d0-a807-e3c5f78c0336":{
+		eventTypes:["Conférence"],
+		programLinks:[lfp]
+	},
+	"cc9fa2b2-8ddc-4eaa-a239-feac63189fd2":{
+		eventTypes:["Conférence"],
+		programLinks:[lfp]
+	},
+	"fe55750e-7cd9-47b1-a789-a7f5f1634ee1":{
+		eventTypes:["Concert"],
+		programLinks:[lfp]
+	},
+	"03895f7c-35be-402c-92e4-502a4be1ee54":{
+		eventTypes:["Théâtre"],
+		programLinks:[lfp]
+	},
+	"4425079d-15b8-4cd3-8fe6-e7378af2b81f":{
+		eventTypes:["Concert"],
+		programLinks:[lfp]
+	},
+	"57054d56-1fce-4e37-a4d9-4d0f045af703":{
+		eventTypes:["DJ Set"],
+		programLinks:[lfp]
+	},
+	"c190d464-124d-48be-87ee-49d83082cb92":{
+		eventTypes:["Projection"],
+		programLinks:[lfp]
+	},
+	"854130ac-c3f4-4159-84e2-d6c88ec35761":{
+		eventTypes:["Concert"],
+		programLinks:[lfp]
+	},
+	"cb1ef331-c541-4a61-9454-ef606bd819e0":{
+		eventTypes:["Concert"],
+		programLinks:[lfp]
+	},
 }

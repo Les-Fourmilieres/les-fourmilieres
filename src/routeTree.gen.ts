@@ -19,6 +19,7 @@ import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaFourmiliereDeLodeveRouteImport } from './routes/la-fourmiliere-de-lodeve'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
+import { Route as FestivalDesLuttesPopulairesRouteImport } from './routes/festival-des-luttes-populaires'
 import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendemains-meilleurs'
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
 import { Route as R30SeptembreHalleTropismeRouteImport } from './routes/30-septembre-halle-tropisme'
@@ -78,6 +79,12 @@ const LaCharteRoute = LaCharteRouteImport.update({
   path: '/la-charte',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FestivalDesLuttesPopulairesRoute =
+  FestivalDesLuttesPopulairesRouteImport.update({
+    id: '/festival-des-luttes-populaires',
+    path: '/festival-des-luttes-populaires',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DesLendemainsMeilleursRoute = DesLendemainsMeilleursRouteImport.update({
   id: '/des-lendemains-meilleurs',
   path: '/des-lendemains-meilleurs',
@@ -116,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
+  '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
@@ -134,6 +142,7 @@ export interface FileRoutesByTo {
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
+  '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
@@ -153,6 +162,7 @@ export interface FileRoutesById {
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
+  '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
@@ -173,6 +183,7 @@ export interface FileRouteTypes {
     | '/30-septembre-halle-tropisme'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
+    | '/festival-des-luttes-populaires'
     | '/la-charte'
     | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
@@ -191,6 +202,7 @@ export interface FileRouteTypes {
     | '/30-septembre-halle-tropisme'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
+    | '/festival-des-luttes-populaires'
     | '/la-charte'
     | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
@@ -209,6 +221,7 @@ export interface FileRouteTypes {
     | '/30-septembre-halle-tropisme'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
+    | '/festival-des-luttes-populaires'
     | '/la-charte'
     | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
@@ -228,6 +241,7 @@ export interface RootRouteChildren {
   R30SeptembreHalleTropismeRoute: typeof R30SeptembreHalleTropismeRoute
   BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
   DesLendemainsMeilleursRoute: typeof DesLendemainsMeilleursRoute
+  FestivalDesLuttesPopulairesRoute: typeof FestivalDesLuttesPopulairesRoute
   LaCharteRoute: typeof LaCharteRoute
   LaFourmiliereDeLodeveRoute: typeof LaFourmiliereDeLodeveRoute
   LeProgrammeRoute: typeof LeProgrammeRoute
@@ -314,6 +328,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LaCharteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/festival-des-luttes-populaires': {
+      id: '/festival-des-luttes-populaires'
+      path: '/festival-des-luttes-populaires'
+      fullPath: '/festival-des-luttes-populaires'
+      preLoaderRoute: typeof FestivalDesLuttesPopulairesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/des-lendemains-meilleurs': {
       id: '/des-lendemains-meilleurs'
       path: '/des-lendemains-meilleurs'
@@ -365,6 +386,7 @@ const rootRouteChildren: RootRouteChildren = {
   BatailleCulturelleHistoireDu14JuilletRoute:
     BatailleCulturelleHistoireDu14JuilletRoute,
   DesLendemainsMeilleursRoute: DesLendemainsMeilleursRoute,
+  FestivalDesLuttesPopulairesRoute: FestivalDesLuttesPopulairesRoute,
   LaCharteRoute: LaCharteRoute,
   LaFourmiliereDeLodeveRoute: LaFourmiliereDeLodeveRoute,
   LeProgrammeRoute: LeProgrammeRoute,
