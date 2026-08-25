@@ -277,4 +277,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["Concert"],
 		programLinks:[lfp]
 	},
+	"3e18f472-cadf-4c8a-8b61-fb39adf2cf8f":{
+		eventTypes:["Ciné-débat"]
+	}
 }
