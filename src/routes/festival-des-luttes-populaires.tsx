@@ -19,7 +19,10 @@ const Covers = styled.aside`
 `;
 
 const CovertPart = styled.img`
-	max-width: 500px;	
+	max-width: 500px;
+	@media (max-width: 550px) {
+	  max-width: 90%;
+	}
 `
 
 
