@@ -14,6 +14,8 @@ import picto_fresque from "../../assets/events/picto_fresque.png?url"
 import picto_kermesse from "../../assets/events/picto_kermesse.png?url"
 import picto_picnic from "../../assets/events/picto_picnic.png?url"
 import picto_proj from "../../assets/events/picto_proj.png?url"
+import picto_theatre from "../../assets/events/picto_theatre.png?url"
+import picto_manif from "../../assets/events/picto_manif.png?url"
 
 interface Props {
   event: MobilizonEventI;
@@ -131,7 +133,7 @@ export const EventType = styled.span`
 	&[data-cat="Manifestation"]::before,
 	&[data-cat="Pride"]::before,
 	&[data-cat="Parade"]::before {
-		background: url("${picto_autre}") no-repeat 0 center;
+		background: url("${picto_manif}") no-repeat 0 center;
 	}
 
 	&[data-cat="Atelier cuisine"]::before,
@@ -146,7 +148,7 @@ export const EventType = styled.span`
 	&[data-cat="Spectacle vivant"]::before,
   &[data-cat="Lecture"]::before,
 	&[data-cat="Dragshow"]::before {
-		background: url("${picto_autre}") no-repeat 0 center;
+		background: url("${picto_theatre}") no-repeat 0 center;
 	}
 	&[data-cat="Projection"]::before,
 	&[data-cat="Ciné-débat"]::before {

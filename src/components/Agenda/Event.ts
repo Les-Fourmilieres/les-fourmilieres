@@ -10,6 +10,8 @@ import openair_cover from "../../assets/events/openair.png?url"
 import balpop_cover from "../../assets/events/balpop.png?url"
 import ag_cover from "../../assets/events/ag.png?url"
 import kermesse_cover from "../../assets/events/kermesse.png?url"
+import theatre_cover from "../../assets/events/theatre.png?url"
+import manif_cover from "../../assets/events/manif.png?url"
 import type {MenuItem} from "../Header/Menu.js";
 import {eventExtraData, type EventTypes} from "../../data/EventExtraData.js";
 
@@ -56,6 +58,15 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	case "Braderie":
 	case "Village Associatif":
 		return kermesse_cover
+	case "Théâtre":
+	case "Dragshow":
+	case "Spectacle vivant":
+	case "Lecture":
+		return theatre_cover
+	case "Manifestation":
+	case "Pride":
+	case "Parade":
+		return manif_cover
 	default:
 		return autre_cover
 	}

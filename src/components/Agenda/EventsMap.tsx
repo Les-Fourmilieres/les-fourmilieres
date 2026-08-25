@@ -19,6 +19,8 @@ import pointer_fresque from "../../assets/events/pointer_fresque.png?url"
 import pointer_kermesse from "../../assets/events/pointer_kermesse.png?url"
 import pointer_picnic from "../../assets/events/pointer_picnic.png?url"
 import pointer_proj from "../../assets/events/pointer_proj.png?url"
+import pointer_theatre from "../../assets/events/pointer_theatre.png?url"
+import pointer_manif from "../../assets/events/pointer_manif.png?url"
 
 L.Icon.Default.prototype.options.iconUrl = markerIconUrl;
 L.Icon.Default.prototype.options.iconRetinaUrl = markerIconRetinaUrl;
@@ -164,7 +166,7 @@ export function EventsMap({ events }: Props) {
 						case "Manifestation":
 						case "Pride":
 						case "Parade":
-							icon_url = pointer_autre
+							icon_url = pointer_manif
 							break
 						case "Atelier cuisine":
 						case "Atelier d'expression":
@@ -177,7 +179,7 @@ export function EventsMap({ events }: Props) {
 						case "Spectacle vivant":
 						case "Dragshow":
 						case "Lecture":
-							icon_url = pointer_autre
+							icon_url = pointer_theatre
 							break
 						case "Projection":
 						case "Ciné-débat":
