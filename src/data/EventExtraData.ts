@@ -278,6 +278,9 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		programLinks:[lfp]
 	},
 	"3e18f472-cadf-4c8a-8b61-fb39adf2cf8f":{
-		eventTypes:["Ciné-débat"]
+		eventTypes:["Ciné-débat"],
+		physicalAdress:{
+			geom: "3.691129156575649;43.40614887484989"
+		}
 	}
 }
