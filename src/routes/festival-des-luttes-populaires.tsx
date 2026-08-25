@@ -31,10 +31,12 @@ function RouteComponent() {
 	return (
 		<Section>
 			<h1>Festival des luttes populaires</h1>
+			<h2>Notre énergie collective face à leurs énergies polluantes !</h2>
 			<Covers>
-				<CovertPart src={cover}/>
-				<CovertPart src={lineup}/>
+				<CovertPart src={cover} alt={"Affiche du Festival des luttes populaire à l'Olivette de Langel Armissan 11110. Prix libre."}/>
+				<CovertPart src={lineup} alt={"Flyer du programme. Toute la programmation est reprise dans la page ci-dessous"}/>
 			</Covers>
+
 
 			<p>Le festival des luttes populaires accueilli à <Link href={"https://olivettedelangel.fr/festival/"}>L'olivette et jardin de Langel</Link> est organisé par le collectif Mutvitz11
 				qui distribue du café zapatiste en provenance directe de coopératives du Chiapas au Mexique.</p>
