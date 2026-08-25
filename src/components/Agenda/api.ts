@@ -171,8 +171,8 @@ export async function fetchEvents({ showUnConfirmed = false }: SearchOptions) {
 
 	const mobilizonResponse = MobilizonResponseSchema.parse(await response.json());
 	mobilizonResponse.data.searchEvents.elements.forEach(event=>{
-		if(event.physicalAddress) event.physicalAddress.geom = event.physicalAddress.geom || eventExtraData[event.uuid].physicalAdress?.geom
-		else event.physicalAddress = eventExtraData[event.uuid].physicalAdress
+		if(event.physicalAddress) event.physicalAddress.geom = event.physicalAddress.geom || eventExtraData[event.uuid]?.physicalAdress?.geom
+		else event.physicalAddress = eventExtraData[event.uuid]?.physicalAdress
 	})
 
   return mobilizonResponse
