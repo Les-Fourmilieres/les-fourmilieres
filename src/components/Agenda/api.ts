@@ -200,8 +200,8 @@ export async function fetchEventByUuid(uuid: string) {
     },
   });
 	const mobilizonSingleEvent = MobilizonSingleEventSchema.parse(await response.json());
-	if(mobilizonSingleEvent.data.event.physicalAddress) mobilizonSingleEvent.data.event.physicalAddress.geom = mobilizonSingleEvent.data.event.physicalAddress.geom || eventExtraData[uuid].physicalAdress?.geom
-	else mobilizonSingleEvent.data.event.physicalAddress = eventExtraData[uuid].physicalAdress
+	if(mobilizonSingleEvent.data.event.physicalAddress) mobilizonSingleEvent.data.event.physicalAddress.geom = mobilizonSingleEvent.data.event.physicalAddress.geom || eventExtraData[uuid]?.physicalAdress?.geom
+	else mobilizonSingleEvent.data.event.physicalAddress = eventExtraData[uuid]?.physicalAdress
 	return mobilizonSingleEvent
 }
 
