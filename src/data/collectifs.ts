@@ -560,6 +560,18 @@ export const collectifs: CollectifI[] = [
 		description: "Syndicat National Untaire des Territoriaux de l'Hérault.",
 		type:["Syndicat"],
 	},*/
+	{
+		slug:"ile-des-possibles",
+		name:"L'Île des possibles",
+		logo:"collectifs/ile-des-possibles.webp",
+		position:{lat:43.599381999323924, lng:3.8666944412998236},
+		departement:"Hérault",
+		type:["Collectif d'éducation populaire"],
+		instagram:"https://www.instagram.com/iledespossibles.montpellier/?hl=fr",
+		facebook:"https://www.facebook.com/p/L%C3%8Ele-des-Possibles-100065086740540/",
+		url:"https://www.communauteopenlande.org/communaute-open-lande-occitanie/",
+		description:"L’association L’Île des Possibles, créée en 2022, favorise la sensibilisation citoyenne, l’économie régénérative et expérimente différentes formes de participations et d’engagements dans les domaines écologiques, culturels et sociaux."
+	},
   {
     slug: "ilot-vert-de-la-soulondres",
     name: "L'Ilot Vert de la Soulondres",
@@ -1187,6 +1199,16 @@ export const collectifs: CollectifI[] = [
 		type:["Collectif militant"]
   },*/
 	{
+		slug:"theatre-dans-la-foret",
+		name:"Théâtre dans la Forêt",
+		logo:"collectifs/theatre-dans-la-foret.png",
+		position:{lat:43.77844543889691, lng:3.4173633589575894},
+		departement:"Hérault",
+		type:["Théâtre"],
+		url:"https://parlatges.org/",
+		facebook:"https://www.facebook.com/parlatges"
+	},
+	{
 		slug:"theatre-beaux-arts-tabards",
 		name:"Théâtre Beaux Arts Tabards",
 		position:{lat:43.61693709334822, lng:3.8782535113901693},
@@ -1272,4 +1294,13 @@ export const collectifs: CollectifI[] = [
 		description:"Association pour la réhabilitation du village de Celles.",
 		type:["Collectif pour mieux habiter"]
   },
+	{
+		slug: "volkane",
+		name: "Volkan.e",
+		departement:"Hérault",
+		bdv: "34172",
+		logo: "collectifs/volkane.jpg",
+		type:["Collectif artistique", "Collectif militant"],
+		description:"Collectif d'artivistes engagé.es contre toutes les formes d'oppression, nous appelons l'art au secours de nos luttes."
+	}
 ];
