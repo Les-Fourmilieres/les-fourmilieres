@@ -5,7 +5,6 @@ import {
   Figure,
   Introduction,
   Question,
-  Quote,
   Subtitle,
 } from "../Article";
 
@@ -283,62 +282,6 @@ function RouteComponent() {
         </strong>{" "}
         C'est là que se trouve sans doute une réponse de gauche à la
         récupération des luttes agricoles par l'extrême droite.
-        <br />
-        <br />
-        En 1907 dans le Languedoc et le Roussillon, les vignerons se révoltent
-        contre l’import massif de vins étrangers. Ils inventent ainsi les codes
-        des manifestations agricoles françaises contemporaines : défilés sur la
-        voie publique, interpellation des autorités locales et prise de parole
-        publique pour porter leurs revendications et rallier la population à
-        leur cause.
-        <br />
-        <br />
-        Ruinés par la surproduction et la chute des prix, ces vignerons
-        demandent la limitation des importations et la reconnaissance de la
-        qualité de leurs productions. Ils créent des comités de défense
-        viticoles et organisent des marches de protestation puis des
-        rassemblements. Le 9 juin 1907, entre 600 et 800 000 personnes se
-        rassemblent à Montpellier. C’est la plus grande manifestation de la IIIe
-        République.
-        <br />
-        <br />
-      </Answer>
-      <Quote>
-        Dans les politiques économiques des années 1880, les préoccupations de
-        santé publique sont encore subalternes par rapport aux intérêts fiscaux
-        ou commerciaux
-      </Quote>
-      <Answer>
-        En 1911, les vignerons de l’Aube déclenchent un mouvement de
-        protestation similaire en reprenant les modes d’action et les slogans de
-        leurs confrères. En effet, l’imagerie des révoltes du Midi a beaucoup
-        circulé par voie de presse mais aussi par l’édition de cartes postales.
-        <br />
-        <br />
-        Des agriculteurs qui manifestent à cause d’un marché les mettant en
-        difficulté face aux autres exportateurs soumis à des règles plus
-        légères… comme une impression de déjà-vu.
-      </Answer>
-
-      <h3>« Des moutons, pas des canons » : la défense du plateau du Larzac</h3>
-
-      <Answer>
-        En 1971, le ministère de la Défense prévoit d’étendre un camp militaire
-        situé près de Millau (Aveyron). Une centaine de paysans refusent de
-        céder le plateau du Larzac et se rassemblent sous le slogan « Gardarem
-        lo Larzac » (Nous garderons le Larzac).
-        <br />
-        <br />
-        En 1973, les mouvements pacifistes et anti-nucléaires rejoignent la
-        cause : entre 60 et 100 000 personnes se retrouvent dans le Larzac pour
-        soutenir les paysans et former un mouvement hétéroclite qui livrera une
-        guerre d’usure aux pouvoirs publics : rassemblements sur le plateau,
-        manifestations, marches vers Paris, actions de désobéissance civile.
-        <br />
-        <br />
-        Le Larzac acquière une réputation internationale et en 1981 le président
-        François Mitterrand, fidèle à une promesse de campagne, renonce à
-        l’expropriation des paysans.
       </Answer>
     </Article>
   );
