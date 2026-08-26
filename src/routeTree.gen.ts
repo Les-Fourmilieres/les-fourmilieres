@@ -18,10 +18,13 @@ import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaFourmiliereDeLodeveRouteImport } from './routes/la-fourmiliere-de-lodeve'
+import { Route as LaFourmiliereBruleRouteImport } from './routes/la-fourmiliere-brule'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as FestivalDesLuttesPopulairesRouteImport } from './routes/festival-des-luttes-populaires'
+import { Route as EntretienEmmanuelNegrierRouteImport } from './routes/entretien-emmanuel-negrier'
 import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendemains-meilleurs'
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
+import { Route as BatailleCulturelleDesLuttesPaysannesRouteImport } from './routes/bataille-culturelle-des-luttes-paysannes'
 import { Route as R30SeptembreHalleTropismeRouteImport } from './routes/30-septembre-halle-tropisme'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgrammeIndexRouteImport } from './routes/programme/index'
@@ -74,6 +77,11 @@ const LaFourmiliereDeLodeveRoute = LaFourmiliereDeLodeveRouteImport.update({
   path: '/la-fourmiliere-de-lodeve',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LaFourmiliereBruleRoute = LaFourmiliereBruleRouteImport.update({
+  id: '/la-fourmiliere-brule',
+  path: '/la-fourmiliere-brule',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LaCharteRoute = LaCharteRouteImport.update({
   id: '/la-charte',
   path: '/la-charte',
@@ -85,6 +93,12 @@ const FestivalDesLuttesPopulairesRoute =
     path: '/festival-des-luttes-populaires',
     getParentRoute: () => rootRouteImport,
   } as any)
+const EntretienEmmanuelNegrierRoute =
+  EntretienEmmanuelNegrierRouteImport.update({
+    id: '/entretien-emmanuel-negrier',
+    path: '/entretien-emmanuel-negrier',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DesLendemainsMeilleursRoute = DesLendemainsMeilleursRouteImport.update({
   id: '/des-lendemains-meilleurs',
   path: '/des-lendemains-meilleurs',
@@ -94,6 +108,12 @@ const BatailleCulturelleHistoireDu14JuilletRoute =
   BatailleCulturelleHistoireDu14JuilletRouteImport.update({
     id: '/bataille-culturelle-histoire-du-14-juillet',
     path: '/bataille-culturelle-histoire-du-14-juillet',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BatailleCulturelleDesLuttesPaysannesRoute =
+  BatailleCulturelleDesLuttesPaysannesRouteImport.update({
+    id: '/bataille-culturelle-des-luttes-paysannes',
+    path: '/bataille-culturelle-des-luttes-paysannes',
     getParentRoute: () => rootRouteImport,
   } as any)
 const R30SeptembreHalleTropismeRoute =
@@ -121,10 +141,13 @@ const ProgrammeUuidRoute = ProgrammeUuidRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
+  '/bataille-culturelle-des-luttes-paysannes': typeof BatailleCulturelleDesLuttesPaysannesRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
+  '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
+  '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
@@ -140,10 +163,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
+  '/bataille-culturelle-des-luttes-paysannes': typeof BatailleCulturelleDesLuttesPaysannesRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
+  '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
+  '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
@@ -160,10 +186,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
+  '/bataille-culturelle-des-luttes-paysannes': typeof BatailleCulturelleDesLuttesPaysannesRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
+  '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
+  '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
@@ -181,10 +210,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/30-septembre-halle-tropisme'
+    | '/bataille-culturelle-des-luttes-paysannes'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
+    | '/entretien-emmanuel-negrier'
     | '/festival-des-luttes-populaires'
     | '/la-charte'
+    | '/la-fourmiliere-brule'
     | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
     | '/les-fourmilieres'
@@ -200,10 +232,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/30-septembre-halle-tropisme'
+    | '/bataille-culturelle-des-luttes-paysannes'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
+    | '/entretien-emmanuel-negrier'
     | '/festival-des-luttes-populaires'
     | '/la-charte'
+    | '/la-fourmiliere-brule'
     | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
     | '/les-fourmilieres'
@@ -219,10 +254,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/30-septembre-halle-tropisme'
+    | '/bataille-culturelle-des-luttes-paysannes'
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
+    | '/entretien-emmanuel-negrier'
     | '/festival-des-luttes-populaires'
     | '/la-charte'
+    | '/la-fourmiliere-brule'
     | '/la-fourmiliere-de-lodeve'
     | '/le-programme'
     | '/les-fourmilieres'
@@ -239,10 +277,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   R30SeptembreHalleTropismeRoute: typeof R30SeptembreHalleTropismeRoute
+  BatailleCulturelleDesLuttesPaysannesRoute: typeof BatailleCulturelleDesLuttesPaysannesRoute
   BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
   DesLendemainsMeilleursRoute: typeof DesLendemainsMeilleursRoute
+  EntretienEmmanuelNegrierRoute: typeof EntretienEmmanuelNegrierRoute
   FestivalDesLuttesPopulairesRoute: typeof FestivalDesLuttesPopulairesRoute
   LaCharteRoute: typeof LaCharteRoute
+  LaFourmiliereBruleRoute: typeof LaFourmiliereBruleRoute
   LaFourmiliereDeLodeveRoute: typeof LaFourmiliereDeLodeveRoute
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
@@ -321,6 +362,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LaFourmiliereDeLodeveRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/la-fourmiliere-brule': {
+      id: '/la-fourmiliere-brule'
+      path: '/la-fourmiliere-brule'
+      fullPath: '/la-fourmiliere-brule'
+      preLoaderRoute: typeof LaFourmiliereBruleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/la-charte': {
       id: '/la-charte'
       path: '/la-charte'
@@ -335,6 +383,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FestivalDesLuttesPopulairesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/entretien-emmanuel-negrier': {
+      id: '/entretien-emmanuel-negrier'
+      path: '/entretien-emmanuel-negrier'
+      fullPath: '/entretien-emmanuel-negrier'
+      preLoaderRoute: typeof EntretienEmmanuelNegrierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/des-lendemains-meilleurs': {
       id: '/des-lendemains-meilleurs'
       path: '/des-lendemains-meilleurs'
@@ -347,6 +402,13 @@ declare module '@tanstack/react-router' {
       path: '/bataille-culturelle-histoire-du-14-juillet'
       fullPath: '/bataille-culturelle-histoire-du-14-juillet'
       preLoaderRoute: typeof BatailleCulturelleHistoireDu14JuilletRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bataille-culturelle-des-luttes-paysannes': {
+      id: '/bataille-culturelle-des-luttes-paysannes'
+      path: '/bataille-culturelle-des-luttes-paysannes'
+      fullPath: '/bataille-culturelle-des-luttes-paysannes'
+      preLoaderRoute: typeof BatailleCulturelleDesLuttesPaysannesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/30-septembre-halle-tropisme': {
@@ -383,11 +445,15 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   R30SeptembreHalleTropismeRoute: R30SeptembreHalleTropismeRoute,
+  BatailleCulturelleDesLuttesPaysannesRoute:
+    BatailleCulturelleDesLuttesPaysannesRoute,
   BatailleCulturelleHistoireDu14JuilletRoute:
     BatailleCulturelleHistoireDu14JuilletRoute,
   DesLendemainsMeilleursRoute: DesLendemainsMeilleursRoute,
+  EntretienEmmanuelNegrierRoute: EntretienEmmanuelNegrierRoute,
   FestivalDesLuttesPopulairesRoute: FestivalDesLuttesPopulairesRoute,
   LaCharteRoute: LaCharteRoute,
+  LaFourmiliereBruleRoute: LaFourmiliereBruleRoute,
   LaFourmiliereDeLodeveRoute: LaFourmiliereDeLodeveRoute,
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,

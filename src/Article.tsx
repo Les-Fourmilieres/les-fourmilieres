@@ -17,6 +17,12 @@ export const Subtitle = styled.h2`
   margin-top: -24px;
 `;
 
+export const Quote = styled.blockquote`
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.5em;
+`;
+
 export const Figure = styled.figure`
   margin: 24px 0 40px;
   padding: 0;
