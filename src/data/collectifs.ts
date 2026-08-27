@@ -128,7 +128,7 @@ export const collectifs: CollectifI[] = [
 		url: "https://souslesetoiles.art",
 		facebook:"https://www.facebook.com/asso.souslesetoiles/",
 		logo: "collectifs/logo-sous-les-etoiles.png",
-		description:"Réaliser ensemble des petits films sur le territoire du Pays Viganais.",
+		description:"L'asso Sous les étoiles réalise des films amateurs avec habitantes et habitants du Pays Viganais, de 2 à 101 ans, pour créer des liens et construire ensemble.",
 		type:["Collectif artistique"],
 	},
 	{
@@ -322,6 +322,14 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/collectif-enfantiste-logo.webp",
 		type:["Collectif militant"]
 	},
+	{
+		slug:"collectif-faites-des-solidarite",
+		name:"Collectif Faites des Solidarités",
+		position: { lat: 43.989109, lng: 3.602829 },
+		departement:"Gard",
+		description:"Le collectif Faites des solidarités s'est créé suite à l'appel du quartier généreux de mars 2026. Il est composé d'habitantes et habitants du Pays Viganais, d'associations, de collectifs et de syndicats. Ensemble nous souhaitons mener des projets sur le long terme, uni•es par nos engagements aussi multiples et différents soient ils. Nous participons au festival des Fourmilières, que nous avons co-construit avec les habitantes et habitants du quartier des Arennes, comme un point d'étape sur le long chemin de nos actions antifascistes et solidaires. Les structures participant à la faites des solidarités, début septembre 2026, sont : Les amis de la terre, Le Collectif Pays Viganais Terre d’Accueil, Le planning familial Sud Cévennes, Le pain d’la bouche, L'Union Locale CGT Le Vigan, Bienvenue A Mandagoût, l'association Sous les étoiles, la cantine de l’Etuve.",
+		type:["Groupement de collectifs"]
+	},
   {
     slug: "collectif-gilets-jaunes-de-gignac-et-alentours",
     name: "Collectif Gilets jaunes de Gignac et alentours",
@@ -502,13 +510,6 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/groove-your-ass-logo.png",
 		type:["Festival", "Collectif événementiel"],
 	},
-  {
-    slug: "faites-des-solidarites",
-    name: "Faites des solidarités",
-    departement: "Gard",
-    position: { lat: 43.989109, lng: 3.602829 },
-		type:["Groupement de collectifs"]
-  },
 	{
 		slug:"festival-des-luttes-populaires",
 		name:"Festival des luttes populaires",
@@ -882,6 +883,14 @@ export const collectifs: CollectifI[] = [
 		type:["Café associatif"]
   },
 	{
+		slug: "le-pain-de-la-bouche",
+		name: "Le pain d'la bouche",
+		description:"Le pain d’la bouche, ce sont des habitant.es qui souhaitent mettre leur force collective autour : de l’alimentation comme commun, de savoir-faire à défendre et d’envies de partager des manières d’associer gastronomie, autonomie et sécurité alimentaires. Le pain d’la bouche, c’est un outil au service d’un territoire : un four mobile auto-construit en terre-paille avec lequel se déplacent et se déploient plein d’activités...",
+		departement: "Gard",
+		bdv:"30350",
+		type:["Collectif militant"],
+	},
+	{
 		slug:"le-recif",
 		name:"Le Récif",
 		description:"Le RÉCIF est une association d’Éducation Populaire et d’actions culturelles. Le collectif développe des actions permettant la diffusion d’idées et d’outils de l’Éducation Populaire.",
@@ -1060,6 +1069,15 @@ export const collectifs: CollectifI[] = [
 		logo: "collectifs/nous-carcassone.png",
 		instagram : "https://www.instagram.com/nouscarcassonne",
 		type:["Collectif militant"],
+	},
+	{
+		slug: "pays-viganais-terre-d-accueil",
+		name: "Pays Viganais Terre d'Accueil",
+		description: "Collectif qui accueille et accompagne des personnes en situation d'exil.",
+		departement: "Gard",
+		type:["Collectif d'accueil de réfugiés"],
+		position:{lat:43.99224296746191, lng:3.6066859556171114},
+		url:"https://www.pvigtac.fr/"
 	},
   /*{
     slug: "nouvelle-librairie-setoise",
@@ -1285,6 +1303,13 @@ export const collectifs: CollectifI[] = [
     instagram: "https://www.instagram.com/ucl_montpellier",
 		type:["Collectif militant"]
   },
+	{
+		slug:"union-locale-cgt",
+		name:"Union locale de la CGT",
+		departement:"Gard",
+		bdv:"30150",
+		type:["Syndicat"]
+	},
   {
     slug: "union-syndicale-solidaire-34",
     name: "Union syndicale Solidaires 34",
