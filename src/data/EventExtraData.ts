@@ -13,11 +13,11 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 
 export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Concerts, DJ Set, Open Air, …": ["Concert", "DJ Set", "Open Air", "Bal populaire"],
-	"Conférences, Tables rondes, Rencontres littéraires, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
-	"Kermesses, Braderie, Villages associatifs, Expo, Loto, …": ["Kermesse",  "Village Associatif", "Braderie", "Expo", "Loto"],
+	"Conférences, Tables rondes, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
+	"Kermesses, Braderie, Expo, …": ["Kermesse",  "Village Associatif", "Braderie", "Expo", "Loto"],
 	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
 	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque", "Atelier sérigraphie", "Arpentage"],
-	"Théâtre, Spectacles vivants, Dragshow, Lecture, …": [ "Théâtre", "Spectacle vivant", "Dragshow", "Lecture"],
+	"Théâtre, Spectacles vivants, Dragshow, …": [ "Théâtre", "Spectacle vivant", "Dragshow", "Lecture"],
 	"Projection, Ciné-débat, …": [ "Projection", "Ciné-débat"],
 	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
 	"Autre":["Autre"]
