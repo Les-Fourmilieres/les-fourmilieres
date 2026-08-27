@@ -1,4 +1,4 @@
-export type Departements = "Ardèche" | "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère";
+export type Departements = "Ardèche" | "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère" | "Bouche-du-Rhone";
 export type Types = "Café associatif" | "Tiers-lieu" | "Festival" | "Librairie" |
 	"Théâtre" | "Syndicat" | "Bar - Brasserie - Commerce" | "Média" | /*"Cinéma" |*/
 	"Collectif artistique" | "Collectif événementiel" | "Collectif militant" | "Collectif pour mieux habiter" |
@@ -10,6 +10,7 @@ export const departements: Departements[] = [
   "Gard",
   "Hérault",
   "Lozère",
+	"Bouche-du-Rhone"
 ];
 
 export interface CollectifI {
