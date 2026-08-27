@@ -881,6 +881,18 @@ export const collectifs: CollectifI[] = [
 		type:["Café associatif"]
   },
 	{
+		slug:"le-recif",
+		name:"Le Récif",
+		description:"Le RÉCIF est une association d’Éducation Populaire et d’actions culturelles. Le collectif développe des actions permettant la diffusion d’idées et d’outils de l’Éducation Populaire.",
+		departement:"Hérault",
+		type:["Tiers-lieu", "Collectif d'éducation populaire"],
+		logo:"collectifs/le-recif.webp",
+		instagram:"https://www.instagram.com/le_recif_collectif",
+		position:{lat:43.60569217045826, lng:3.871344504739471},
+		facebook:"https://www.facebook.com/assolerecif",
+		url:"https://linktr.ee/Recif_association"
+	},
+	{
 		slug:"les-ateliers-de-l-espoir",
 		name:"Les ateliers de l'espoir",
 		position:{lat:43.616069984395224, lng:3.8749604255900065},
