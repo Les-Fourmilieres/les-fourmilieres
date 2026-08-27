@@ -282,5 +282,14 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		physicalAdress:{
 			geom: "3.691129156575649;43.40614887484989"
 		}
+	},
+	"e1a5e198-4238-4020-8a20-fa986eff27fe":{
+		eventTypes:["Expo"]
+	},
+	"afdbd57d-0bd4-44f6-abfb-4b80a8286920":{
+		eventTypes:["Expo"]
+	},
+	"633c0e74-6cca-4bb2-974a-67a156e3ea84":{
+		eventTypes:["Conférence"]
 	}
 }
