@@ -1130,6 +1130,16 @@ export const collectifs: CollectifI[] = [
 		type:["Collectif militant"],
   },*/
 	{
+		slug:"queer-team-arles",
+		name:"Queer Team Arles",
+		departement:"Bouche-du-Rhone",
+		description:"Asso LGBTQI+ arlésienne",
+		type:["Collectif militant"],
+		position:{lat:43.67640985146661, lng:4.62761377050663},
+		instagram:"https://www.instagram.com/queerteam_arles",
+		logo:"collectifs/queer-team-arles.png"
+	},
+	{
 		slug:"raices-flamencas",
 		name:"Raices Flamencas",
 		departement:"Hérault",
