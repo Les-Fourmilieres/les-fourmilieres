@@ -324,5 +324,12 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	"938d683f-5559-4324-b442-22cc0399e7f6":{
 		eventTypes:["Conte", "Goûter"],
 		programLinks:[fds]
+	},
+	"0e275a07-2610-4be6-b60b-ae88cda219f1":{
+		eventTypes:["Pride"],
+		physicalAdress:{
+			description: "Centre-ville d'Arles",
+			geom: "4.62761377050663;43.67640985146661"
+		}
 	}
 }
