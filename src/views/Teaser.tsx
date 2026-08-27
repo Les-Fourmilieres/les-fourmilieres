@@ -19,10 +19,9 @@ export function Teaser() {
           Les Fourmilières est un{" "}
           <strong>festival solidaire et antifasciste</strong>. Nous sommes des
           collectifs, associations, librairies, brasseries, syndicats, lieux
-          culturels, troupes de théâtre, associations sportives, tiers lieux,
-          cinémas. Nous sommes actuellement une centaine de collectifs
-          répartis du Larzac aux Cévennes et jusqu’au littoral, sur l’Aude,
-          l’Aveyron, le Gard, l’Hérault et la Lozère.
+          culturels, troupes de théâtre, tiers lieux,  cinémas. Nous sommes
+					actuellement plus d'une centaine de collectifs répartis de la vallée
+					de l'Aveyron jusqu'aux monts d'Ardèche, des  montagnes jusqu'au littoral.
         </p>
 
         <p>

@@ -10,7 +10,7 @@ export const Route = createRootRoute({
       { title: `🐜 Les Fourmilières · Festival antifasciste et solidaire` },
       {
         name: "description",
-        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une centaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l'Aude, l'Hérault, le Gard, la Lozère, l'Ardèche et l'Aveyron.`,
+        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, tiers lieux, cinémas. Nous sommes actuellement plus d'une centaine de collectifs répartis dans le midi : de la vallée de l'Aveyron jusqu'aux monts d'Ardèche, des montagnes jusqu'au littoral.`,
       },
       {
         property: "og:title",
@@ -18,7 +18,7 @@ export const Route = createRootRoute({
       },
       {
         property: "og:description",
-        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, associations sportives, tiers lieux, cinémas. Nous sommes actuellement une centaine de collectifs répartis du Larzac aux Cévennes et jusqu’au littoral, sur l'Aude, l'Hérault, le Gard, la Lozère, l'Ardèche et l'Aveyron.`,
+        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, tiers lieux, cinémas. Nous sommes actuellement plus d'une centaine de collectifs répartis dans le midi : de la vallée de l'Aveyron jusqu'aux monts d'Ardèche, des montagnes jusqu'au littoral.`,
       },
       { property: "og:type", content: "website" },
       {
