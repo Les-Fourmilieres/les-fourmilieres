@@ -138,6 +138,7 @@ export const EventType = styled.span`
 
 	&[data-cat="Atelier cuisine"]::before,
 	&[data-cat="Atelier d'expression"]::before,
+  &[data-cat="Atelier militant"]::before,
 	&[data-cat="Fresque"]::before,
   &[data-cat="Atelier sérigraphie"]::before, 
 	&[data-cat="Arpentage"]::before {
@@ -157,6 +158,7 @@ export const EventType = styled.span`
 
 	&[data-cat="Picnic"]::before,
 	&[data-cat="Apéro"]::before,
+  &[data-cat="Cantine"]::before,
 	&[data-cat="Repas partagé"]::before {
 		background: url("${picto_picnic}") no-repeat 0 center;
 	}

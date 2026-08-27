@@ -21,6 +21,7 @@ import { Route as LaFourmiliereDeLodeveRouteImport } from './routes/la-fourmilie
 import { Route as LaFourmiliereBruleRouteImport } from './routes/la-fourmiliere-brule'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as FestivalDesLuttesPopulairesRouteImport } from './routes/festival-des-luttes-populaires'
+import { Route as FaitesDesSolidaritesRouteImport } from './routes/faites-des-solidarites'
 import { Route as EntretienEmmanuelNegrierRouteImport } from './routes/entretien-emmanuel-negrier'
 import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendemains-meilleurs'
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
@@ -93,6 +94,11 @@ const FestivalDesLuttesPopulairesRoute =
     path: '/festival-des-luttes-populaires',
     getParentRoute: () => rootRouteImport,
   } as any)
+const FaitesDesSolidaritesRoute = FaitesDesSolidaritesRouteImport.update({
+  id: '/faites-des-solidarites',
+  path: '/faites-des-solidarites',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EntretienEmmanuelNegrierRoute =
   EntretienEmmanuelNegrierRouteImport.update({
     id: '/entretien-emmanuel-negrier',
@@ -145,6 +151,7 @@ export interface FileRoutesByFullPath {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
+  '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
@@ -167,6 +174,7 @@ export interface FileRoutesByTo {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
+  '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
@@ -190,6 +198,7 @@ export interface FileRoutesById {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
+  '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
@@ -214,6 +223,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/entretien-emmanuel-negrier'
+    | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
     | '/la-charte'
     | '/la-fourmiliere-brule'
@@ -236,6 +246,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/entretien-emmanuel-negrier'
+    | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
     | '/la-charte'
     | '/la-fourmiliere-brule'
@@ -258,6 +269,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/entretien-emmanuel-negrier'
+    | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
     | '/la-charte'
     | '/la-fourmiliere-brule'
@@ -281,6 +293,7 @@ export interface RootRouteChildren {
   BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
   DesLendemainsMeilleursRoute: typeof DesLendemainsMeilleursRoute
   EntretienEmmanuelNegrierRoute: typeof EntretienEmmanuelNegrierRoute
+  FaitesDesSolidaritesRoute: typeof FaitesDesSolidaritesRoute
   FestivalDesLuttesPopulairesRoute: typeof FestivalDesLuttesPopulairesRoute
   LaCharteRoute: typeof LaCharteRoute
   LaFourmiliereBruleRoute: typeof LaFourmiliereBruleRoute
@@ -383,6 +396,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FestivalDesLuttesPopulairesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faites-des-solidarites': {
+      id: '/faites-des-solidarites'
+      path: '/faites-des-solidarites'
+      fullPath: '/faites-des-solidarites'
+      preLoaderRoute: typeof FaitesDesSolidaritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/entretien-emmanuel-negrier': {
       id: '/entretien-emmanuel-negrier'
       path: '/entretien-emmanuel-negrier'
@@ -451,6 +471,7 @@ const rootRouteChildren: RootRouteChildren = {
     BatailleCulturelleHistoireDu14JuilletRoute,
   DesLendemainsMeilleursRoute: DesLendemainsMeilleursRoute,
   EntretienEmmanuelNegrierRoute: EntretienEmmanuelNegrierRoute,
+  FaitesDesSolidaritesRoute: FaitesDesSolidaritesRoute,
   FestivalDesLuttesPopulairesRoute: FestivalDesLuttesPopulairesRoute,
   LaCharteRoute: LaCharteRoute,
   LaFourmiliereBruleRoute: LaFourmiliereBruleRoute,

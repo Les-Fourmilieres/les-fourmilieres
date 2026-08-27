@@ -5,10 +5,10 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Conférence" | "Rencontre Littéraire" | "AG" | "Table-Ronde" |
 	"Kermesse" | "Village Associatif" | "Braderie" | "Expo" | "Loto" |
 	"Manifestation" | "Pride" | "Parade" |
-	"Atelier cuisine" | "Atelier d'expression" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
-	"Théâtre" | "Spectacle vivant" | "Dragshow" | "Lecture" |
+	"Atelier cuisine" | "Atelier d'expression" | "Atelier militant" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
+	"Théâtre" | "Spectacle vivant" | "Dragshow" | "Lecture" | "Conte" |
 	"Projection" | "Ciné-débat" |
-	"Picnic" | "Apéro" | "Repas partagé" |
+	"Picnic" | "Apéro" | "Repas partagé" | "Cantine" | "Pizza" | "Goûter" |
 	"Autre"
 
 export const SelectEventTypes: {[key: string] : EventTypes[]} = {
@@ -16,10 +16,10 @@ export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Conférences, Tables rondes, …": ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
 	"Kermesses, Braderie, Expo, …": ["Kermesse",  "Village Associatif", "Braderie", "Expo", "Loto"],
 	"Manifestation, Pride, Parade, …": [ "Manifestation", "Pride", "Parade"],
-	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque", "Atelier sérigraphie", "Arpentage"],
-	"Théâtre, Spectacles vivants, Dragshow, …": [ "Théâtre", "Spectacle vivant", "Dragshow", "Lecture"],
+	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque", "Atelier sérigraphie", "Arpentage", "Atelier militant"],
+	"Théâtre, Spectacles vivants, Dragshow, …": [ "Théâtre", "Spectacle vivant", "Dragshow", "Lecture", "Conte"],
 	"Projection, Ciné-débat, …": [ "Projection", "Ciné-débat"],
-	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé"],
+	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé", "Cantine", "Pizza", "Goûter"],
 	"Autre":["Autre"]
 };
 
@@ -42,6 +42,11 @@ const lodeve:MenuItem = {
 const lfp:MenuItem = {
 	to:"/festival-des-luttes-populaires",
 	label:"Voir toute la programmation du Festival des Luttes Populaires"
+}
+
+const fds:MenuItem = {
+	to:"/faites-des-solidarites",
+	label:"Voir toute la programmation de la Faites des Solidarités"
 }
 
 export const eventExtraData:{[key: string] : EventExtraDataI;} = {
@@ -291,5 +296,33 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"633c0e74-6cca-4bb2-974a-67a156e3ea84":{
 		eventTypes:["Conférence"]
+	},
+	"ab8971e9-9c2e-45cb-929f-993b7cbc574e":{
+		eventTypes:["Cantine"],
+		programLinks:[fds]
+	},
+	"96636c06-14ec-46f4-b132-0d54ab0304c6":{
+		eventTypes:["Atelier militant"],
+		programLinks:[fds]
+	},
+	"8917b7c0-0311-40b5-997c-bcd5fd860503":{
+		eventTypes:["Atelier cuisine", "Atelier d'expression", "Atelier militant"],
+		programLinks:[fds]
+	},
+	"7c0afecb-e4b3-47cc-909b-2ce89e1e4fe2":{
+		eventTypes:["Atelier cuisine", "Pizza", "Concert"],
+		programLinks:[fds]
+	},
+	"5bffbb5b-0e7d-4982-bc04-07aa28bc8d91":{
+		eventTypes:["Repas partagé", "Bal populaire"],
+		programLinks:[fds]
+	},
+	"88e99442-3d96-42fe-a70b-6b03fc904d95":{
+		eventTypes:["Atelier d'expression", "Atelier cuisine"],
+		programLinks:[fds]
+	},
+	"938d683f-5559-4324-b442-22cc0399e7f6":{
+		eventTypes:["Conte", "Goûter"],
+		programLinks:[fds]
 	}
 }

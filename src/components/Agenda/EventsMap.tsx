@@ -171,6 +171,7 @@ export function EventsMap({ events }: Props) {
 						case "Atelier cuisine":
 						case "Atelier d'expression":
 						case "Fresque":
+						case "Atelier militant":
 						case "Atelier sérigraphie":
 						case "Arpentage":
 							icon_url = pointer_fresque
@@ -178,6 +179,7 @@ export function EventsMap({ events }: Props) {
 						case "Théâtre":
 						case "Spectacle vivant":
 						case "Dragshow":
+						case "Conte":
 						case "Lecture":
 							icon_url = pointer_theatre
 							break
@@ -188,6 +190,9 @@ export function EventsMap({ events }: Props) {
 						case "Picnic":
 						case "Apéro":
 						case "Repas partagé":
+						case "Cantine":
+						case "Goûter":
+						case "Pizza":
 							icon_url = pointer_picnic
 							break
 						}

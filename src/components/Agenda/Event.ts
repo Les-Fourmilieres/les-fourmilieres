@@ -12,6 +12,7 @@ import ag_cover from "../../assets/events/ag.png?url"
 import kermesse_cover from "../../assets/events/kermesse.png?url"
 import theatre_cover from "../../assets/events/theatre.png?url"
 import manif_cover from "../../assets/events/manif.png?url"
+import atelier_cover from "../../assets/events/fresque.png?url"
 import type {MenuItem} from "../Header/Menu.js";
 import {eventExtraData, type EventTypes} from "../../data/EventExtraData.js";
 
@@ -51,6 +52,9 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	case "Picnic":
 	case "Apéro":
 	case "Repas partagé":
+	case "Cantine":
+	case "Goûter":
+	case "Pizza":
 		return picnic_cover
 	case "Kermesse":
 	case "Loto":
@@ -61,12 +65,18 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	case "Théâtre":
 	case "Dragshow":
 	case "Spectacle vivant":
+	case "Conte":
 	case "Lecture":
 		return theatre_cover
 	case "Manifestation":
 	case "Pride":
 	case "Parade":
 		return manif_cover
+	case "Atelier cuisine":
+	case "Atelier d'expression":
+	case "Fresque":
+	case "Atelier sérigraphie":
+		return atelier_cover
 	default:
 		return autre_cover
 	}
