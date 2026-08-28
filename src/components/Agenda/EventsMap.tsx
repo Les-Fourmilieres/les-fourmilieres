@@ -193,6 +193,7 @@ export function EventsMap({ events }: Props) {
 						case "Cantine":
 						case "Goûter":
 						case "Pizza":
+						case "Banquet populaire":
 							icon_url = pointer_picnic
 							break
 						}

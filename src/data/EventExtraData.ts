@@ -8,7 +8,7 @@ export type EventTypes = "Concert" | "DJ Set" | "Open Air" | "Bal populaire" |
 	"Atelier cuisine" | "Atelier d'expression" | "Atelier militant" | "Fresque" | "Atelier sérigraphie" | "Arpentage" |
 	"Théâtre" | "Spectacle vivant" | "Dragshow" | "Lecture" | "Conte" |
 	"Projection" | "Ciné-débat" |
-	"Picnic" | "Apéro" | "Repas partagé" | "Cantine" | "Pizza" | "Goûter" |
+	"Picnic" | "Apéro" | "Repas partagé" | "Cantine" | "Pizza" | "Goûter" | "Banquet populaire" |
 	"Autre"
 
 export const SelectEventTypes: {[key: string] : EventTypes[]} = {
@@ -19,7 +19,7 @@ export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Ateliers, Fresques, …" : ["Atelier cuisine", "Atelier d'expression", "Fresque", "Atelier sérigraphie", "Arpentage", "Atelier militant"],
 	"Théâtre, Spectacles vivants, Dragshow, …": [ "Théâtre", "Spectacle vivant", "Dragshow", "Lecture", "Conte"],
 	"Projection, Ciné-débat, …": [ "Projection", "Ciné-débat"],
-	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé", "Cantine", "Pizza", "Goûter"],
+	"Picnic, apéro, repas partagé, …": ["Picnic", "Apéro", "Repas partagé", "Cantine", "Pizza", "Goûter", "Banquet populaire"],
 	"Autre":["Autre"]
 };
 
@@ -331,5 +331,23 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 			description: "Centre-ville d'Arles",
 			geom: "4.62761377050663;43.67640985146661"
 		}
+	},
+	"9bebffdf-b392-421a-9340-e5e053be4918":{
+		eventTypes:["Ciné-débat"],
+		physicalAdress:{
+			description: "La Base",
+			street: "15 rue Chaptal",
+			locality: "Montpellier",
+			geom:"3.870942689460005;43.60543284302407"
+		}
+	},
+	"b0f03c3d-2588-43d1-8635-44fcc131f3fb":{
+		eventTypes:["Conférence"]
+	},
+	"e015f26b-265e-4e5b-884d-87dbcb268d23":{
+		eventTypes:["Banquet populaire"]
+	},
+	"dd44f90a-8134-4a13-a73e-7747b677a5c1":{
+		eventTypes:["Spectacle vivant"]
 	}
 }

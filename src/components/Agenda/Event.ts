@@ -55,6 +55,7 @@ export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
 	case "Cantine":
 	case "Goûter":
 	case "Pizza":
+	case "Banquet populaire":
 		return picnic_cover
 	case "Kermesse":
 	case "Loto":
