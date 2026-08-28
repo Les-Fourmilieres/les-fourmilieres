@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
 import { Link } from "../components/Link/Link.js";
 import cp26 from "../assets/presse/CP_Les_Fourmilieres26.pdf?url";
+import dp from "../assets/presse/DP_Fourmilières.pdf?url";
 import styled from "styled-components";
 
 const CpLink = styled.a`
@@ -21,6 +22,14 @@ function RouteComponent() {
     <Section>
       <h1>Espace presse</h1>
       <Section>
+				<h2>Dossier de presse</h2>
+					<p>
+						Télécharger le{" "}
+						<CpLink href={dp} target="_blank">
+							dossier de presse
+						</CpLink>
+						.
+					</p>
         <h2>Communiqués de presse</h2>
         <p>
           Télécharger le{" "}
