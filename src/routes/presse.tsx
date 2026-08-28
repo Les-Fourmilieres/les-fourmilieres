@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import { Link } from "../components/Link/Link.js";
 import cp26 from "../assets/presse/CP_Les_Fourmilieres26.pdf?url";
 import dp from "../assets/presse/DP_Fourmilières.pdf?url";
 import styled from "styled-components";
@@ -37,14 +36,6 @@ function RouteComponent() {
             communiqué de presse du 15 juillet
           </CpLink>
           .
-        </p>
-      </Section>
-      <Section>
-        <h2>Contact presse</h2>
-        <p>
-          <Link href="mailto:presse@les-fourmilieres.org">
-            presse@les-fourmilieres.org
-          </Link>
         </p>
       </Section>
     </Section>
