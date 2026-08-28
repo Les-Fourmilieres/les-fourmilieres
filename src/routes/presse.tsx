@@ -25,7 +25,7 @@ function RouteComponent() {
 					<p>
 						Télécharger le{" "}
 						<CpLink href={dp} target="_blank">
-							dossier d epresse
+							dossier de presse
 						</CpLink>
 						.
 					</p>
