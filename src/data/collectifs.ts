@@ -426,7 +426,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/de-lautre-cote-logo.png",
 		type:["Tiers-lieu"],
 	},
-  {
+  /*{
     slug: "dear-valid-people",
     name: "Dear Valid People",
     departement: "Hérault",
@@ -437,7 +437,7 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/dearvalidpeople/",
 		logo:"collectifs/dear-valid-people-logo.webp",
 		type:["Collectif militant"],
-  },
+  },*/
   {
     slug: "en-vie-a-beziers",
     name: "En Vie à Béziers (EVAB)",
