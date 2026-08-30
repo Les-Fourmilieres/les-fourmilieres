@@ -23,30 +23,40 @@ export const SelectEventTypes: {[key: string] : EventTypes[]} = {
 	"Autre":["Autre"]
 };
 
+export interface ExtendedMenuItem extends MenuItem {
+	desc?:string
+}
+
 type EventExtraDataI = {
 	eventTypes:EventTypes[],
-	programLinks?:MenuItem[],
-	physicalAdress?:MobilizonPhysicalAddressI //Default value, overridden by Mobilizon. Could include only a geom default value
+	programLinks?:ExtendedMenuItem[],
+	physicalAddress?:MobilizonPhysicalAddressI //Default value, overridden by Mobilizon. Could include only a geom default value
+	overridePhysicalAddress?:MobilizonPhysicalAddressI //Override value
 }
 
-const halleTropisme:MenuItem = {
+const halleTropisme:ExtendedMenuItem = {
 	to:"/30-septembre-halle-tropisme",
-	label:"Voir toute la programmation du 30 septembre à la Halle Tropisme"
+	label:"Voir toute la programmation du 30 septembre à la Halle Tropisme",
+	// desc:"Le 30 septembre, les Fourmilières investissent la Halle Tropisme pour une après-midi de conférences et kermesses pour petits et grands suivie d'un concert puis DJ Set."
+
 }
 
-const lodeve:MenuItem = {
+const lodeve:ExtendedMenuItem = {
 	to:"/la-fourmiliere-de-lodeve",
-	label:"Consulter toute la programmation de La Fourmilière de Lodève"
+	label:"Consulter toute la programmation de La Fourmilière Lodève-Larzac",
+	desc:"Cet événement s'inscrit dans la programmation de la Fourmilière Lodève-Larzac qui programme 15 jours de festival sur toute la durée des Fourmilières."
 }
 
-const lfp:MenuItem = {
+const lfp:ExtendedMenuItem = {
 	to:"/festival-des-luttes-populaires",
-	label:"Voir toute la programmation du Festival des Luttes Populaires"
+	label:"Voir toute la programmation du Festival des Luttes Populaires",
+	desc: "Cet événement s'inscrit dans la 9ième édition du Festival des Luttes Populaires, un festival mêlant conférences et concerts les 26 et 27 septembre."
 }
 
-const fds:MenuItem = {
+const fds:ExtendedMenuItem = {
 	to:"/faites-des-solidarites",
-	label:"Voir toute la programmation de la Faites des Solidarités"
+	label:"Voir toute la programmation de la Faites des Solidarités",
+	desc: "Cet événement s'inscrit dans la Faites des Solidarités, 2 jours mêlant ateliers et cuisine populaire et partagée dans le quartier des Arènes au Vigan."
 }
 
 export const eventExtraData:{[key: string] : EventExtraDataI;} = {
@@ -76,7 +86,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"a28a1a79-9595-4cc7-a4f6-bce7ac6a84a3":{
 		eventTypes:["Atelier cuisine", "Atelier d'expression", "Concert", "Kermesse"],
-		physicalAdress:{geom: "3.6146139412570664;43.99013933871999"}
+		physicalAddress:{geom: "3.6146139412570664;43.99013933871999"}
 	},
 	"76f7c610-663c-4792-b0c2-41cfd3df2fd7":{
 		eventTypes:["Fresque"]
@@ -119,7 +129,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"5e0dc165-747b-44dd-b2bc-b674f0aeb4c2":{
 		eventTypes:["Projection"],
-		physicalAdress:{geom: "3.858621;43.601846"}
+		physicalAddress:{geom: "3.858621;43.601846"}
 	},
 	"e24446de-b4da-4bbb-bcf3-efceb2a9ea7c": {
 		eventTypes:["Atelier d'expression"],
@@ -144,7 +154,11 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"47fd12d7-b2ca-4be3-a981-fde01ec0422b":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		physicalAddress:{
+			description: "Lodève (lieux à préciser)",
+			geom:"3.3163397569504283;43.733208459921066"
+		}
 	},
 	"bc7705b0-2c3b-49d8-b415-6d182c6ecc69":{
 		eventTypes:["Concert", "Conférence", "Projection"],
@@ -170,7 +184,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"8cd0fb3b-126d-436c-bd98-4d56b2fcbf17":{
 		eventTypes:["Fresque"],
-		physicalAdress:{
+		physicalAddress:{
 			description: "Mas des Moulins",
 			geom:"3.8440761429693677;43.629717824973525"
 		}
@@ -189,7 +203,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"8fde90a6-8664-44d6-91c7-614b852044a6":{
 		eventTypes:["Conférence"],
-		physicalAdress:{geom: "2.461218;44.47473"}
+		physicalAddress:{geom: "2.461218;44.47473"}
 	},
 	"69557963-13b0-4c9b-b126-32ab5d8b480f":{
 		eventTypes:["Concert", "DJ Set", "Dragshow"]
@@ -212,7 +226,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"f03047d4-e8fa-4605-8086-dec565f70d12":{
 		eventTypes:["Autre"],
-		physicalAdress:{
+		physicalAddress:{
 			description: "Centre-ville de Nîmes",
 			geom: "4.358859;43.836139"
 		}
@@ -284,7 +298,7 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"3e18f472-cadf-4c8a-8b61-fb39adf2cf8f":{
 		eventTypes:["Ciné-débat"],
-		physicalAdress:{
+		physicalAddress:{
 			geom: "3.691129156575649;43.40614887484989"
 		}
 	},
@@ -327,14 +341,14 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"0e275a07-2610-4be6-b60b-ae88cda219f1":{
 		eventTypes:["Pride"],
-		physicalAdress:{
+		physicalAddress:{
 			description: "Centre-ville d'Arles",
 			geom: "4.62761377050663;43.67640985146661"
 		}
 	},
 	"9bebffdf-b392-421a-9340-e5e053be4918":{
 		eventTypes:["Ciné-débat"],
-		physicalAdress:{
+		physicalAddress:{
 			description: "La Base",
 			street: "15 rue Chaptal",
 			locality: "Montpellier",
@@ -349,5 +363,95 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"dd44f90a-8134-4a13-a73e-7747b677a5c1":{
 		eventTypes:["Spectacle vivant"]
+	},
+	"ec3a24a6-f7e7-4fd6-9898-34ca3f213b60":{
+		eventTypes:["DJ Set"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			description: "Lodève (lieux à préciser)",
+			geom:"3.3163397569504283;43.733208459921066"
+		}
+	},
+	"65a6488f-6877-4606-b03f-ee8873632703":{
+		eventTypes:["Arpentage"]
+	},
+	"aac53e1b-4760-4b4c-a552-07dc6b125f54":{
+		eventTypes:["Expo"],
+	},
+	"73733af0-98ed-49f4-8da5-997b5bcb2af3":{
+		eventTypes:["Conférence"],
+		programLinks:[lodeve]
+	},
+	"e763eb22-e203-4efc-afb2-67deb4f54482":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			description: "Brasserie Lodèva, Lodève",
+			geom:"3.324022465288582;43.73025580653958"
+		}
+	},
+	"0f4cf1a9-88c6-4028-8ac4-8a4ed4c86cf0":{
+		eventTypes:["Lecture"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			description: "Brasserie Lodèva, Lodève",
+			geom:"3.324022465288582;43.73025580653958"
+		}
+	},
+	"4487620c-07ae-4836-8fc8-6db44193a83f":{
+		eventTypes:["Concert", "Théâtre"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			description: "Lodève (lieux à préciser)",
+			geom:"3.3163397569504283;43.733208459921066"
+		}
+	},
+	"36836714-c035-4e5f-a97f-47d6a05029b1":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			geom:"3.324022465288582;43.73025580653958"
+		}
+	},
+	"88766b3e-2a6b-4b61-a281-ce6ec7dbf25c":{
+		eventTypes:["Projection"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			geom:"3.3163397569504283;43.733208459921066"
+		}
+	},
+	"83c5a2f6-bf9e-4c1c-8c05-05734dec26da":{
+		eventTypes:["Concert", "Théâtre"],
+		programLinks:[lodeve],
+		overridePhysicalAddress:{
+			description: "Lodève (lieux à préciser)",
+			geom:"3.3163397569504283;43.733208459921066"
+		}
+	},
+	"762e42ec-3ab1-4422-87ac-9ad15abf39b1":{
+		eventTypes:["Table-Ronde"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			description: "Lodève (lieux à préciser)",
+			geom:"3.3163397569504283;43.733208459921066"
+		}
+	},
+	"f8230be7-7806-4b12-8357-0072a12ab3e3":{
+		eventTypes:["Théâtre"],
+		programLinks:[lodeve],
+		physicalAddress:{
+			description: "Lodève (lieux à préciser)",
+			geom:"3.3163397569504283;43.733208459921066"
+		}
+	},
+	"94418219-de82-419e-95d3-a5cb6213ea6e":{
+		eventTypes:["Concert", "Théâtre"]
+	},
+	"c9684b06-08cb-4443-a6d0-9a3d90056d82":{
+		eventTypes:["Kermesse", "Table-Ronde"],
+		overridePhysicalAddress:{
+			description: "Macondo, Montarnaud",
+			geom: "3.728561963362193;43.62506823340958"
+		}
 	}
 }

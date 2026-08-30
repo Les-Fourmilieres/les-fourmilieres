@@ -10,9 +10,9 @@ export const Route = createFileRoute("/la-fourmiliere-de-lodeve")({
 function RouteComponent() {
 	return (
 		<Section>
-			<h1>Programme de la fourmilière de Lodève</h1>
+			<h1>Programme de la fourmilière Lodève-Larzac</h1>
 
-			<p>Retrouvez ici prochainement toute la programmation de La Fourmilière de Lodève !</p>
+			<p>La programmation des 15 jours du festival à Lodève est encore en cours. Vous trouverez nos premiers événements ci-dessous.</p>
 
 			<RestrictedAgenda path={Route.to} />
 		</Section>

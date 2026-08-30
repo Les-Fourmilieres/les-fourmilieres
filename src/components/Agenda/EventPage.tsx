@@ -133,6 +133,7 @@ export function EventPage({ event }: Props) {
         )}
 				{eventLinks(event)?.map(eventsPage=>
 						<Section>
+							{eventsPage.desc ? <p>{eventsPage.desc}</p>:null}
 							<Link to={eventsPage.to}>{eventsPage.label}</Link>
 						</Section>
 				)}

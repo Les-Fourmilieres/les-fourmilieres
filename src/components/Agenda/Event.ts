@@ -13,13 +13,12 @@ import kermesse_cover from "../../assets/events/kermesse.png?url"
 import theatre_cover from "../../assets/events/theatre.png?url"
 import manif_cover from "../../assets/events/manif.png?url"
 import atelier_cover from "../../assets/events/fresque.png?url"
-import type {MenuItem} from "../Header/Menu.js";
-import {eventExtraData, type EventTypes} from "../../data/EventExtraData.js";
+import {eventExtraData, type EventTypes, type ExtendedMenuItem} from "../../data/EventExtraData.js";
 
 export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
 	return eventExtraData[event.uuid]?.eventTypes || ["Autre"]
 }
-export const eventLinks:(event:MobilizonEventI) => MenuItem[]|undefined = (event)=> {
+export const eventLinks:(event:MobilizonEventI) => ExtendedMenuItem[]|undefined = (event)=> {
 	return eventExtraData[event.uuid]?.programLinks
 }
 export const eventsForLink:(path:string) => string[] = (path)=> {
