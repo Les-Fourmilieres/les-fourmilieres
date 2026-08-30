@@ -313,30 +313,58 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 	},
 	"ab8971e9-9c2e-45cb-929f-993b7cbc574e":{
 		eventTypes:["Cantine"],
+		physicalAddress:{
+			description: "Foyer Albouy, Le Vigan",
+			geom:"3.6145646494390755;43.99010945471654"
+		},
 		programLinks:[fds]
 	},
 	"96636c06-14ec-46f4-b132-0d54ab0304c6":{
 		eventTypes:["Atelier militant"],
-		programLinks:[fds]
+		programLinks:[fds],
+		physicalAddress:{
+			description: "Foyer Albouy, Le Vigan",
+			geom:"3.6145646494390755;43.99010945471654"
+		},
 	},
 	"8917b7c0-0311-40b5-997c-bcd5fd860503":{
 		eventTypes:["Atelier cuisine", "Atelier d'expression", "Atelier militant"],
-		programLinks:[fds]
+		programLinks:[fds],
+		physicalAddress:{
+			description: "Foyer Albouy, Le Vigan",
+			geom:"3.6145646494390755;43.99010945471654"
+		},
 	},
 	"7c0afecb-e4b3-47cc-909b-2ce89e1e4fe2":{
 		eventTypes:["Atelier cuisine", "Pizza", "Concert"],
+		physicalAddress:{
+			description: "Foyer Albouy, Le Vigan",
+			geom:"3.6145646494390755;43.99010945471654"
+		},
 		programLinks:[fds]
 	},
 	"5bffbb5b-0e7d-4982-bc04-07aa28bc8d91":{
 		eventTypes:["Repas partagé", "Bal populaire"],
+		physicalAddress:{
+			description: "Foyer Albouy, Le Vigan",
+			geom:"3.6145646494390755;43.99010945471654"
+		},
 		programLinks:[fds]
 	},
 	"88e99442-3d96-42fe-a70b-6b03fc904d95":{
 		eventTypes:["Atelier d'expression", "Atelier cuisine"],
+		physicalAddress:{
+			description: "Foyer Albouy, Le Vigan",
+			geom:"3.6145646494390755;43.99010945471654"
+		},
 		programLinks:[fds]
 	},
 	"938d683f-5559-4324-b442-22cc0399e7f6":{
 		eventTypes:["Conte", "Goûter"],
+		physicalAddress:{
+			description: "Foyer Albouy, Le Vigan",
+			geom:"3.6145646494390755;43.99010945471654"
+		},
 		programLinks:[fds]
 	},
 	"0e275a07-2610-4be6-b60b-ae88cda219f1":{
