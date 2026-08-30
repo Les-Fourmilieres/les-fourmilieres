@@ -481,5 +481,12 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 			description: "Macondo, Montarnaud",
 			geom: "3.728561963362193;43.62506823340958"
 		}
+	},
+	"b9e5c3ab-b3bf-4f9c-aba7-b67297ba23b9":{
+		eventTypes:["Autre"],
+		overridePhysicalAddress:{
+			description: "Bézier (lieux à définir)",
+			geom: "3.2171179151191325;43.34150194890089"
+		}
 	}
 }
