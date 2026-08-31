@@ -4,14 +4,14 @@ import {
   MobilizonSingleEventSchema,
   type MobilizonEventParticipants,
 } from "./Event";
-import {eventExtraData} from "../../data/EventExtraData.js";
+import { eventExtraData } from "../../data/EventExtraData.js";
 
 const BASE_URL = "https://agenda.les-fourmilieres.org/api";
 
 function buildGraphQlQuery() {
   return `
-    query SearchEventsInWindow($beginsOn: DateTime, $endsOn: DateTime, $limit: Int, $statusOneOf: [EventStatus]) {
-      searchEvents(beginsOn: $beginsOn, endsOn: $endsOn, limit: $limit, statusOneOf: $statusOneOf) {
+    query SearchEventsInWindow($beginsOn: DateTime, $endsOn: DateTime, $limit: Int, $page: Int, $statusOneOf: [EventStatus]) {
+      searchEvents(beginsOn: $beginsOn, endsOn: $endsOn, limit: $limit, page: $page, statusOneOf: $statusOneOf) {
         total
         elements {
           __typename
@@ -136,10 +136,14 @@ function getSinqleEventQuery() {
 }
 
 interface SearchOptions {
+  page?: number;
   showUnConfirmed?: boolean;
 }
 
-export async function fetchEvents({ showUnConfirmed = false }: SearchOptions) {
+export async function fetchEvents({
+  showUnConfirmed = false,
+  page = 1,
+}: SearchOptions) {
   //const eventsPage = 1;
   const limit = 100;
   const after = new Date(2026, 7, 25);
@@ -147,7 +151,8 @@ export async function fetchEvents({ showUnConfirmed = false }: SearchOptions) {
   const query = buildGraphQlQuery();
   const variables = {
     beginsOn: after,
-    limit: limit,
+    limit,
+    page,
     statusOneOf: showUnConfirmed ? ["CONFIRMED", "TENTATIVE"] : ["CONFIRMED"],
   };
   const payload = JSON.stringify({ query: query, variables: variables });
@@ -169,14 +174,21 @@ export async function fetchEvents({ showUnConfirmed = false }: SearchOptions) {
     },
   });
 
-	const mobilizonResponse = MobilizonResponseSchema.parse(await response.json());
-	mobilizonResponse.data.searchEvents.elements.forEach(event=>{
-		if(eventExtraData[event.uuid]?.overridePhysicalAddress) event.physicalAddress = eventExtraData[event.uuid].overridePhysicalAddress
-		else if(event.physicalAddress) event.physicalAddress.geom = event.physicalAddress.geom || eventExtraData[event.uuid]?.physicalAddress?.geom
-		else event.physicalAddress = eventExtraData[event.uuid]?.physicalAddress
-	})
+  const mobilizonResponse = MobilizonResponseSchema.parse(
+    await response.json(),
+  );
+  mobilizonResponse.data.searchEvents.elements.forEach((event) => {
+    if (eventExtraData[event.uuid]?.overridePhysicalAddress)
+      event.physicalAddress =
+        eventExtraData[event.uuid].overridePhysicalAddress;
+    else if (event.physicalAddress)
+      event.physicalAddress.geom =
+        event.physicalAddress.geom ||
+        eventExtraData[event.uuid]?.physicalAddress?.geom;
+    else event.physicalAddress = eventExtraData[event.uuid]?.physicalAddress;
+  });
 
-  return mobilizonResponse
+  return mobilizonResponse;
 }
 
 export async function fetchEventByUuid(uuid: string) {
@@ -200,11 +212,20 @@ export async function fetchEventByUuid(uuid: string) {
       "Content-Type": "application/json",
     },
   });
-	const mobilizonSingleEvent = MobilizonSingleEventSchema.parse(await response.json());
-	if(eventExtraData[uuid]?.overridePhysicalAddress) mobilizonSingleEvent.data.event.physicalAddress = eventExtraData[uuid].overridePhysicalAddress
-	if(mobilizonSingleEvent.data.event.physicalAddress) mobilizonSingleEvent.data.event.physicalAddress.geom = mobilizonSingleEvent.data.event.physicalAddress.geom || eventExtraData[uuid]?.physicalAddress?.geom
-	else mobilizonSingleEvent.data.event.physicalAddress = eventExtraData[uuid]?.physicalAddress
-	return mobilizonSingleEvent
+  const mobilizonSingleEvent = MobilizonSingleEventSchema.parse(
+    await response.json(),
+  );
+  if (eventExtraData[uuid]?.overridePhysicalAddress)
+    mobilizonSingleEvent.data.event.physicalAddress =
+      eventExtraData[uuid].overridePhysicalAddress;
+  if (mobilizonSingleEvent.data.event.physicalAddress)
+    mobilizonSingleEvent.data.event.physicalAddress.geom =
+      mobilizonSingleEvent.data.event.physicalAddress.geom ||
+      eventExtraData[uuid]?.physicalAddress?.geom;
+  else
+    mobilizonSingleEvent.data.event.physicalAddress =
+      eventExtraData[uuid]?.physicalAddress;
+  return mobilizonSingleEvent;
 }
 
 export async function fetchEventParticipants(

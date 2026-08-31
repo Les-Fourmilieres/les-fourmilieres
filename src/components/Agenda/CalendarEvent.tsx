@@ -86,6 +86,7 @@ const EventTypes = styled.div`
 	padding-bottom: 10px;
 `;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const EventType = styled.span`
 	background-color: var(--accent-dark);
 	color: var(--accent-contrast);
