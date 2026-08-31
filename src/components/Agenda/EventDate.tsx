@@ -1,10 +1,19 @@
 import styled from "styled-components";
 import type { MobilizonEventI } from "./Event";
 import { getDayLabel, getShortMonthLabel } from "../../utils/days";
+import { ChevronRight } from "lucide-react";
+import { datesAreSameDay } from "./datesAreSameDay";
 
 interface Props {
   event: MobilizonEventI;
 }
+
+const MultiDayContainer = styled.div`
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0px 16px;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +25,21 @@ const Container = styled.div`
   padding: 8px 16px;
   margin: -8px;
   border-radius: 8px;
+  overflow: visible;
+
+  ${MultiDayContainer} & {
+    padding: 4px 8px;
+    margin: -4px;
+  }
+`;
+
+const ChevronContainer = styled(Container)`
+  padding: 0;
+  margin: 0;
+  ${MultiDayContainer} & {
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const DayContainer = styled.div`
@@ -39,6 +63,29 @@ const dateRenderOptions: Intl.DateTimeFormatOptions = { day: "2-digit" };
 
 export function EventDate({ event }: Props) {
   if (!event.beginsOn && !event.endsOn) return null;
+
+  if (!datesAreSameDay(event.beginsOn!, event.endsOn!))
+    return (
+      <MultiDayContainer>
+        <Container>
+          <DayContainer>{getDayLabel(event.beginsOn!)}</DayContainer>
+          <DateContainer>
+            {event.beginsOn!.toLocaleDateString(localTime, dateRenderOptions)}
+          </DateContainer>
+          <MonthContainer>{getShortMonthLabel(event.beginsOn!)}</MonthContainer>
+        </Container>
+        <ChevronContainer>
+          <ChevronRight size={32} />
+        </ChevronContainer>
+        <Container>
+          <DayContainer>{getDayLabel(event.endsOn!)}</DayContainer>
+          <DateContainer>
+            {event.endsOn!.toLocaleDateString(localTime, dateRenderOptions)}
+          </DateContainer>
+          <MonthContainer>{getShortMonthLabel(event.endsOn!)}</MonthContainer>
+        </Container>
+      </MultiDayContainer>
+    );
 
   if (event.beginsOn)
     return (

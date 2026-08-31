@@ -1,5 +1,6 @@
+import { datesAreSameDay } from "./datesAreSameDay";
 import type { MobilizonEventI } from "./Event";
-import { localTime, timeRenderOptions } from "./time";
+import { dateRenderOptions, localTime, timeRenderOptions } from "./time";
 
 interface Props {
   event: MobilizonEventI;
@@ -7,6 +8,9 @@ interface Props {
 
 export function EventTime({ event }: Props) {
   if (!event.beginsOn || !event.endsOn) return null;
+  if (!datesAreSameDay(event.beginsOn!, event.endsOn!)) {
+    return `du ${event.beginsOn.toLocaleDateString(localTime, dateRenderOptions)} au ${event.endsOn.toLocaleDateString(localTime, dateRenderOptions)}`;
+  }
   return (
     <>
       {event.beginsOn.toLocaleTimeString(localTime, timeRenderOptions)} -{" "}

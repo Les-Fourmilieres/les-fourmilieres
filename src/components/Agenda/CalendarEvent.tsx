@@ -17,6 +17,7 @@ import picto_proj from "../../assets/events/picto_proj.png?url";
 import picto_theatre from "../../assets/events/picto_theatre.png?url";
 import picto_manif from "../../assets/events/picto_manif.png?url";
 import { eventDefaultCover } from "./EventCover";
+import { datesAreSameDay } from "./datesAreSameDay";
 
 interface Props {
   event: MobilizonEventI;
@@ -212,14 +213,16 @@ export function CalendarEvent({ event }: Props) {
               <EventAddress event={event} />
             </Metadata>
           )}
-          {event.beginsOn && event.endsOn && (
-            <Metadata>
-              {ClockIcon}
-              <span>
-                <EventTime event={event} />
-              </span>
-            </Metadata>
-          )}
+          {event.beginsOn &&
+            event.endsOn &&
+            datesAreSameDay(event.beginsOn, event.endsOn) && (
+              <Metadata>
+                {ClockIcon}
+                <span>
+                  <EventTime event={event} />
+                </span>
+              </Metadata>
+            )}
         </Infos>
       </Content>
       <Actions>

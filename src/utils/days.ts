@@ -9,13 +9,13 @@ enum DAY {
 }
 
 const DaysLabels: Record<DAY, string> = {
-    [DAY.MONDAY]: "lundi",
-    [DAY.TUESDAY]: "mardi",
-    [DAY.WEDNESDAY]: "mercredi",
-    [DAY.THURSDAY]: "jeudi",
-    [DAY.FRIDAY]: "vendredi",
-    [DAY.SATURDAY]: "samedi",
-    [DAY.SUNDAY]: "dimanche",
+    [DAY.MONDAY]: "lun",
+    [DAY.TUESDAY]: "mar",
+    [DAY.WEDNESDAY]: "mer",
+    [DAY.THURSDAY]: "jeu",
+    [DAY.FRIDAY]: "ven",
+    [DAY.SATURDAY]: "sam",
+    [DAY.SUNDAY]: "dim",
 }
 
 export const getDayLabel = (date: Date) => DaysLabels[date.getDay() as DAY];

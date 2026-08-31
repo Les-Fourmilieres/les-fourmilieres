@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import {eventType, type MobilizonEventI} from "./Event";
+import { eventType, type MobilizonEventI } from "./Event";
 import { EventDate } from "./EventDate";
 import { EventAddress } from "./EventAddress";
 import { useClockIcon } from "./useClockIcon";
 import { EventTime } from "./EventTime";
 import { Link } from "../Link/Link";
 import { ParticipateButton } from "./ParticipateButton";
-import {EventType} from "./CalendarEvent.js";
+import { EventType } from "./CalendarEvent.js";
+import { datesAreSameDay } from "./datesAreSameDay.js";
 
 const EventTypes = styled.div`
   display: flex;
@@ -79,20 +80,22 @@ export function EventPreview({ event }: Props) {
               <EventAddress event={event} />
             </Metadata>
           )}
-          {event.beginsOn && event.endsOn && (
-            <Metadata>
-              {ClockIcon}
-              <span>
-                <EventTime event={event} />
-              </span>
-            </Metadata>
-          )}
+          {event.beginsOn &&
+            event.endsOn &&
+            datesAreSameDay(event.beginsOn, event.endsOn) && (
+              <Metadata>
+                {ClockIcon}
+                <span>
+                  <EventTime event={event} />
+                </span>
+              </Metadata>
+            )}
         </Infos>
-				<EventTypes>
-					{eventType(event).map((type) => (
-						<EventType data-cat={type}>{type}</EventType>
-					))}
-				</EventTypes>
+        <EventTypes>
+          {eventType(event).map((type) => (
+            <EventType data-cat={type}>{type}</EventType>
+          ))}
+        </EventTypes>
       </Content>
       <Actions>
         <Link to={`/programme/${event.uuid}`}>Plus d'infos</Link>
