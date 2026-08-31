@@ -24,6 +24,10 @@ const ActionItem = styled.li`
   margin: 0 0 32px;
 `;
 
+const SubTitle = styled.h2`
+  text-align: left;
+`;
+
 const titleVariations = [
   "d’une structure militante",
   "d’une librairie",
@@ -40,13 +44,13 @@ function RouteComponent() {
   return (
     <Container>
       <h1>Comment participer au festival&nbsp;?</h1>
-      <h2>
+      <SubTitle>
         Je fais partie&nbsp; <RotatingText variations={titleVariations} />
-      </h2>
+      </SubTitle>
       <ul>
         <li>
-          vous êtes situé·e dans l'Aude, l'Aveyron, l'Ardèche, le Gard, l'Hérault
-					les Bouches-du-Rhones ou la Lozère.
+          vous êtes situé·e dans l'Aude, l'Aveyron, l'Ardèche, le Gard,
+          l'Hérault les Bouches-du-Rhones ou la Lozère.
         </li>
         <li>
           vous êtes en accord avec l'ensemble de{" "}
@@ -61,33 +65,35 @@ function RouteComponent() {
         <strong>
           Contactez-nous via l'e-mail{" "}
           <Link href="mailto:contact@les-fourmilieres.org">
-						contact@les-fourmilieres.org
+            contact@les-fourmilieres.org
           </Link>
         </strong>
       </p>
 
       <AntSeparator />
       <br />
-      <h2>
+      <SubTitle>
         Je fais partie d&apos;une troupe artistique qui souhaite performer
-      </h2>
+      </SubTitle>
       <p>
         <strong>
           Contactez-nous via l'e-mail{" "}
           <Link href="mailto:contact@les-fourmilieres.org">
-						contact@les-fourmilieres.org
+            contact@les-fourmilieres.org
           </Link>
         </strong>
       </p>
 
       <AntSeparator />
-      <h2>Je suis un·e particulier qui souhaite contribuer au festival</h2>
+      <SubTitle>
+        Je suis un·e particulier qui souhaite contribuer au festival
+      </SubTitle>
       <ul>
         <ActionItem>
           Soutenez-nous via la cagnotte afin de défrayer les intervenant·es,
-					rémunérer les artistes et technicien·nes, nous donner les moyens de
-					communiquer le plus largement possible et faciliter l'accès au festival
-					pour tous·tes, vous pouvez faire un don au festival.{" "}
+          rémunérer les artistes et technicien·nes, nous donner les moyens de
+          communiquer le plus largement possible et faciliter l'accès au
+          festival pour tous·tes, vous pouvez faire un don au festival.{" "}
           <CagnotteHeader progress={defaultProgress} isMobile={false} />
         </ActionItem>
 

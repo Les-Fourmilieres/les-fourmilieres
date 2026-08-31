@@ -1,10 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 interface RotatingTextProps {
   variations: string[];
   interval?: number;
 }
+
+const Container = styled.span`
+  position: relative;
+  vertical-align: middle;
+`;
 
 export function RotatingText({ variations }: RotatingTextProps) {
   const [index, setIndex] = useState(0);
@@ -18,13 +24,13 @@ export function RotatingText({ variations }: RotatingTextProps) {
   }, [setIndex, variations.length]);
 
   return (
-    <span style={{ position: "relative" }}>
+    <Container>
       <AnimatePresence mode="wait">
         <motion.span
           style={{
             position: "absolute",
             left: 0,
-            top: 0,
+            top: 2,
             whiteSpace: "nowrap",
           }}
           key={index}
@@ -36,6 +42,6 @@ export function RotatingText({ variations }: RotatingTextProps) {
           {variations[index]}
         </motion.span>
       </AnimatePresence>
-    </span>
+    </Container>
   );
 }

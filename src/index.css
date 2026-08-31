@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Body Grosteque";
+  font-family: "Archivo_Condensed";
   font-weight: bold;
   font-style: normal;
-  src: url("/Body-Grotesque-Bold-trial.woff2") format("woff2");
+  src: url("/Archivo_SemiCondensed-Bold.woff2") format("woff2");
 }
 
 :root {
@@ -28,7 +28,7 @@
   --hover: rgba(0, 0, 0, 0.1);
 
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: "Body Grosteque", system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: "Archivo_Condensed", system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
   --contentWidth: 1080px;
   --textMaxWidth: 75ch;
