@@ -33,6 +33,7 @@ const Column = styled.div`
 
 const LogoColumn = styled(Column)`
   align-items: flex-start;
+  overflow: hidden;
   @media (max-width: 800px) {
     align-items: center;
   }
