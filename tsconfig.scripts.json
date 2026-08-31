@@ -6,5 +6,10 @@
     "types": ["node"],
     "strict": true
   },
-  "include": ["scripts/**/*.ts", "src/components/Agenda/Event.ts", "src/data/EventExtraData.ts"]
+  "include": [
+    "scripts/**/*.ts",
+    "src/components/Agenda/Event.ts",
+    "src/data/EventExtraData.ts",
+    "src/core"
+  ]
 }
