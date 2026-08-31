@@ -34,7 +34,7 @@ function RouteComponent() {
 			<Section>
 				<h2>Les 26 et 27 septembre - Weekend d'ouverture au lodeva</h2>
 				<Covers>
-					Retrouvez-nous au Lodeva les 26 et 27 septembre pour des conférences et concerts pour lancer la fourmilière Lodève-Larzac
+					Retrouvez-nous au Lodeva les 26 et 27 septembre pour des conférences et concerts pour lancer la fourmilière Lodève-Larzac.
 					<CovertPart src={prog_we_2627} alt={"Affiche de la programmation du Weekend du 26 et 27 septembre."}/>
 				</Covers>
 			</Section>
