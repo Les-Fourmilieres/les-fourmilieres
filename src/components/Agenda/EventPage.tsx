@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { Section } from "../Section";
-import {eventDefaultCover, eventLinks, eventType, type MobilizonEventI} from "./Event";
+import { eventLinks, eventType, type MobilizonEventI } from "./Event";
 import { EventDate } from "./EventDate";
 import { EventTime } from "./EventTime";
 import { ParticipateButton } from "./ParticipateButton";
 import { EventAddress } from "./EventAddress";
 import { useMediaQuery } from "react-responsive";
-import {Link} from "../Link/Link.js";
-import {EventType} from "./CalendarEvent.js";
+import { Link } from "../Link/Link.js";
+import { EventType } from "./CalendarEvent.js";
+import { eventDefaultCover } from "./EventCover.js";
 
 const StyledSection = styled(Section)`
   padding-top: 24px;
@@ -46,7 +47,7 @@ const Content = styled.main`
 `;
 
 const EventCover = styled.aside`
-	margin-top: 50px;
+  margin-top: 50px;
   height: 400px;
   background-size: contain;
   background-position: center center;
@@ -76,7 +77,7 @@ const EventTypes = styled.div`
   justify-content: flex-start;
   gap: 4px 8px;
   flex-wrap: wrap;
-	width: 100%;
+  width: 100%;
 `;
 
 interface Props {
@@ -89,22 +90,23 @@ export function EventPage({ event }: Props) {
     <>
       <EventCover
         style={
-					event.picture?.url &&
-					event.picture.url != "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp?name=les-fourmilieres-preview.webp"
-						? {
-							backgroundImage: `url(${event.picture?.url})`,
-						}
-						: {
-							backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
-						}
-				}
+          event.picture?.url &&
+          event.picture.url !=
+            "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp?name=les-fourmilieres-preview.webp"
+            ? {
+                backgroundImage: `url(${event.picture?.url})`,
+              }
+            : {
+                backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
+              }
+        }
       ></EventCover>
       <StyledSection>
-				<EventTypes>
-					{eventType(event).map((type) => (
-						<EventType data-cat={type}>{type}</EventType>
-					))}
-				</EventTypes>
+        <EventTypes>
+          {eventType(event).map((type) => (
+            <EventType data-cat={type}>{type}</EventType>
+          ))}
+        </EventTypes>
         {isMobile ? (
           <EventHeader>
             <Title>{event.title}</Title>
@@ -131,13 +133,12 @@ export function EventPage({ event }: Props) {
         {event.description && (
           <Content dangerouslySetInnerHTML={{ __html: event.description }} />
         )}
-				{eventLinks(event)?.map(eventsPage=>
-						<Section>
-							{eventsPage.desc ? <p>{eventsPage.desc}</p>:null}
-							<Link to={eventsPage.to}>{eventsPage.label}</Link>
-						</Section>
-				)}
-
+        {eventLinks(event)?.map((eventsPage) => (
+          <Section>
+            {eventsPage.desc ? <p>{eventsPage.desc}</p> : null}
+            <Link to={eventsPage.to}>{eventsPage.label}</Link>
+          </Section>
+        ))}
       </StyledSection>
     </>
   );

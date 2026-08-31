@@ -1,86 +1,28 @@
 import z from "zod";
 import type { LivingAreaI } from "../../core/LivingArea";
-import cinema_cover from "../../assets/events/cinema.png?url";
-import concert_cover from "../../assets/events/concert.png?url";
-import conf_cover from "../../assets/events/conf.png?url";
-import picnic_cover from "../../assets/events/picnic.png?url"
-import autre_cover from "../../assets/events/autre.png?url"
-import djset_cover from "../../assets/events/djset.png?url"
-import openair_cover from "../../assets/events/openair.png?url"
-import balpop_cover from "../../assets/events/balpop.png?url"
-import ag_cover from "../../assets/events/ag.png?url"
-import kermesse_cover from "../../assets/events/kermesse.png?url"
-import theatre_cover from "../../assets/events/theatre.png?url"
-import manif_cover from "../../assets/events/manif.png?url"
-import atelier_cover from "../../assets/events/fresque.png?url"
-import {eventExtraData, type EventTypes, type ExtendedMenuItem} from "../../data/EventExtraData.js";
+import {
+  eventExtraData,
+  type EventTypes,
+  type ExtendedMenuItem,
+} from "../../data/EventExtraData.js";
 
-export const eventType:(event:MobilizonEventI) => EventTypes[] = (event)=> {
-	return eventExtraData[event.uuid]?.eventTypes || ["Autre"]
-}
-export const eventLinks:(event:MobilizonEventI) => ExtendedMenuItem[]|undefined = (event)=> {
-	return eventExtraData[event.uuid]?.programLinks
-}
-export const eventsForLink:(path:string) => string[] = (path)=> {
-	const events:string[] = []
-	Object.entries(eventExtraData).forEach((entry)=>entry[1].programLinks?.forEach(link=>{
-		if(link.to == path) events.push(entry[0])
-	}))
-	return events
-}
-
-export const eventDefaultCover:(type:EventTypes)=>string = (type)=>{
-	switch (type){
-	case "Projection":
-	case "Ciné-débat":
-		return cinema_cover
-	case "DJ Set":
-		return djset_cover
-	case "Open Air":
-		return openair_cover
-	case "Bal populaire":
-		return balpop_cover
-	case "Concert":
-		return concert_cover
-	case "AG":
-		return ag_cover
-	case "Conférence":
-	case "Rencontre Littéraire":
-	case "Table-Ronde":
-		return conf_cover
-	case "Picnic":
-	case "Apéro":
-	case "Repas partagé":
-	case "Cantine":
-	case "Goûter":
-	case "Pizza":
-	case "Banquet populaire":
-		return picnic_cover
-	case "Kermesse":
-	case "Loto":
-	case "Expo":
-	case "Braderie":
-	case "Village Associatif":
-		return kermesse_cover
-	case "Théâtre":
-	case "Dragshow":
-	case "Spectacle vivant":
-	case "Conte":
-	case "Lecture":
-		return theatre_cover
-	case "Manifestation":
-	case "Pride":
-	case "Parade":
-		return manif_cover
-	case "Atelier cuisine":
-	case "Atelier d'expression":
-	case "Fresque":
-	case "Atelier sérigraphie":
-		return atelier_cover
-	default:
-		return autre_cover
-	}
-}
+export const eventType: (event: MobilizonEventI) => EventTypes[] = (event) => {
+  return eventExtraData[event.uuid]?.eventTypes || ["Autre"];
+};
+export const eventLinks: (
+  event: MobilizonEventI,
+) => ExtendedMenuItem[] | undefined = (event) => {
+  return eventExtraData[event.uuid]?.programLinks;
+};
+export const eventsForLink: (path: string) => string[] = (path) => {
+  const events: string[] = [];
+  Object.entries(eventExtraData).forEach((entry) =>
+    entry[1].programLinks?.forEach((link) => {
+      if (link.to == path) events.push(entry[0]);
+    }),
+  );
+  return events;
+};
 
 const MobilizonMediaSchema = z.object({
   url: z.string().optional().nullable(),
@@ -126,6 +68,7 @@ const MobilizonEventSchema = z.object({
   title: z.string().nullable().optional(),
   url: z.string().nullable().optional(),
   uuid: z.string(),
+  updatedAt: z.string().optional().nullable(),
 });
 
 const MobilizonSearchEventsSchema = z.object({
@@ -152,7 +95,7 @@ export type MobilizonEventI = z.infer<typeof MobilizonEventSchema>;
 export type MobilizonEventWithLivingAreaI = MobilizonEventI & {
   livingArea: LivingAreaI | undefined;
 };
-export type MobilizonPhysicalAddressI = z.infer<typeof MobilizonAddressSchema>
+export type MobilizonPhysicalAddressI = z.infer<typeof MobilizonAddressSchema>;
 export type MobilizonEventSchema = z.infer<typeof MobilizonSearchEventsSchema>;
 
 const MobilizonEventParticipantsSchema = z.object({
