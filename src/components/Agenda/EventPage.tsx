@@ -95,6 +95,7 @@ export function EventPage({ event }: Props) {
             "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp?name=les-fourmilieres-preview.webp"
             ? {
                 backgroundImage: `url(${event.picture?.url})`,
+                backgroundSize: "cover",
               }
             : {
                 backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
