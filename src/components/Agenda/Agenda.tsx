@@ -1,3 +1,4 @@
+import { CalendarDate, parseDate } from "@internationalized/date";
 import { useQueries, useQuery } from "@tanstack/react-query";
 import { point } from "@turf/turf";
 import { CalendarEvent } from "./CalendarEvent";
@@ -16,6 +17,8 @@ import { Section } from "../Section";
 import { EventsMap } from "./EventsMap";
 import { Select, SelectItem } from "../Select.js";
 import { SelectEventTypes } from "../../data/EventExtraData.js";
+import { I18nProvider, type RangeValue } from "react-aria-components";
+import { DateRangePicker } from "../DatePicker/RangeDatePicker.js";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -32,6 +35,10 @@ const EventsContainer = styled.div`
 
 const FullWidth = styled.div`
   flex: 1 1 100%;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  flex-wrap: wrap;
 `;
 
 const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
@@ -40,8 +47,13 @@ const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
   if (e1.beginsOn > e2.beginsOn) return 1;
   return 0;
 };
+
 const params = { showUnConfirmed: false };
+
 export function Agenda() {
+  const [dateRange, setDateRange] = useState<RangeValue<CalendarDate> | null>(
+    null,
+  );
   const { data } = useQuery({
     queryKey: ["calendar", params, 0],
     queryFn: () => fetchEvents(params),
@@ -99,6 +111,17 @@ export function Agenda() {
     () =>
       events
         .filter((event) => {
+          if (!dateRange) return true;
+          if (!event.beginsOn || !event.endsOn) return false;
+
+          return (
+            event.beginsOn!.getTime() <
+              dateRange.end.toDate("Europe/Paris").getTime() + 24 * 3_600_000 &&
+            event.endsOn!.getTime() >=
+              dateRange.start.toDate("Europe/Paris").getTime()
+          );
+        })
+        .filter((event) => {
           if (eventTypes != null) {
             const curEventType = eventType(event);
             let found = false;
@@ -113,7 +136,7 @@ export function Agenda() {
           return event.livingArea?.code.startsWith(filter.department);
         })
         .sort(sortEventByDate),
-    [events, filter, eventTypes],
+    [events, filter, eventTypes, dateRange],
   );
 
   const livingAreasFacets = useMemo(() => {
@@ -176,6 +199,8 @@ export function Agenda() {
     return Array.from(eventTypesSet.values());
   }, [events]);
 
+  console.log(dateRange);
+
   if (!data) return null;
 
   return (
@@ -189,11 +214,21 @@ export function Agenda() {
       <EventsMap events={filtersEvents} />
       <EventsContainer>
         <FullWidth>
+          <I18nProvider locale="fr-FR-u-ca-gregory">
+            <DateRangePicker
+              value={dateRange}
+              onChange={setDateRange}
+              defaultValue={{
+                start: parseDate("2026-09-15"),
+                end: parseDate("2026-10-11"),
+              }}
+            />
+          </I18nProvider>
           <Select
             label="Type d'événement…"
             value={eventTypes}
             style={{
-              width: "100%",
+              flex: "1 1 300px",
               display: "flex",
               justifyContent: "stretch",
             }}

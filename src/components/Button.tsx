@@ -3,7 +3,7 @@ import { Button as RacButton } from "react-aria-components";
 
 interface Props {
   size?: "small" | "default";
-  variant?: "primary" | "default";
+  variant?: "primary" | "default" | "quiet";
 }
 
 export const Button = styled(RacButton)<Props>`
