@@ -215,7 +215,8 @@ ${events.map(
     <lastmod>${event.updatedAt ? event.updatedAt.split("T")[0] : getToday().split("T")[0]}</lastmod>
     <priority>0.9</priority>
   </url>`,
-)}
+)
+	.join("\t")}
 
 </urlset>`;
 
