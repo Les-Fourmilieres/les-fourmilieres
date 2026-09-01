@@ -7,15 +7,15 @@ import { EventTime } from "./EventTime";
 import { EventAddress } from "./EventAddress";
 import { ParticipateButton } from "./ParticipateButton";
 
-import picto_autre from "../../assets/events/picto_autre.png?url";
-import picto_concert from "../../assets/events/picto_concert.png?url";
-import picto_conf from "../../assets/events/picto_conf.png?url";
-import picto_fresque from "../../assets/events/picto_fresque.png?url";
-import picto_kermesse from "../../assets/events/picto_kermesse.png?url";
-import picto_picnic from "../../assets/events/picto_picnic.png?url";
-import picto_proj from "../../assets/events/picto_proj.png?url";
-import picto_theatre from "../../assets/events/picto_theatre.png?url";
-import picto_manif from "../../assets/events/picto_manif.png?url";
+import picto_autre from "../../assets/events/picto_autre.webp?url";
+import picto_concert from "../../assets/events/picto_concert.webp?url";
+import picto_conf from "../../assets/events/picto_conf.webp?url";
+import picto_fresque from "../../assets/events/picto_fresque.webp?url";
+import picto_kermesse from "../../assets/events/picto_kermesse.webp?url";
+import picto_picnic from "../../assets/events/picto_picnic.webp?url";
+import picto_proj from "../../assets/events/picto_proj.webp?url";
+import picto_theatre from "../../assets/events/picto_theatre.webp?url";
+import picto_manif from "../../assets/events/picto_manif.webp?url";
 import { eventDefaultCover } from "./EventCover";
 import { datesAreSameDay } from "./datesAreSameDay";
 

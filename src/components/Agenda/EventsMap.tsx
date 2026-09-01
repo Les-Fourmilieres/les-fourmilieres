@@ -12,15 +12,15 @@ import { ChevronsRight } from "lucide-react";
 import {eventType, type MobilizonEventI} from "./Event";
 import { EventPreview } from "./EventPreview";
 
-import pointer_autre from "../../assets/events/pointer_autre.png?url"
-import pointer_concert from "../../assets/events/pointer_concert.png?url"
-import pointer_conf from "../../assets/events/pointer_conf.png?url"
-import pointer_fresque from "../../assets/events/pointer_fresque.png?url"
-import pointer_kermesse from "../../assets/events/pointer_kermesse.png?url"
-import pointer_picnic from "../../assets/events/pointer_picnic.png?url"
-import pointer_proj from "../../assets/events/pointer_proj.png?url"
-import pointer_theatre from "../../assets/events/pointer_theatre.png?url"
-import pointer_manif from "../../assets/events/pointer_manif.png?url"
+import pointer_autre from "../../assets/events/pointer_autre.webp?url"
+import pointer_concert from "../../assets/events/pointer_concert.webp?url"
+import pointer_conf from "../../assets/events/pointer_conf.webp?url"
+import pointer_fresque from "../../assets/events/pointer_fresque.webp?url"
+import pointer_kermesse from "../../assets/events/pointer_kermesse.webp?url"
+import pointer_picnic from "../../assets/events/pointer_picnic.webp?url"
+import pointer_proj from "../../assets/events/pointer_proj.webp?url"
+import pointer_theatre from "../../assets/events/pointer_theatre.webp?url"
+import pointer_manif from "../../assets/events/pointer_manif.webp?url"
 
 L.Icon.Default.prototype.options.iconUrl = markerIconUrl;
 L.Icon.Default.prototype.options.iconRetinaUrl = markerIconRetinaUrl;
