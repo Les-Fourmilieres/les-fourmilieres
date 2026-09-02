@@ -410,14 +410,6 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 		eventTypes:["Conférence"],
 		programLinks:[lodeve]
 	},
-	"e763eb22-e203-4efc-afb2-67deb4f54482":{
-		eventTypes:["Concert"],
-		programLinks:[lodeve],
-		physicalAddress:{
-			description: "Brasserie Lodèva, Lodève",
-			geom:"3.324022465288582;43.73025580653958"
-		}
-	},
 	"0f4cf1a9-88c6-4028-8ac4-8a4ed4c86cf0":{
 		eventTypes:["Lecture"],
 		programLinks:[lodeve],
@@ -488,5 +480,11 @@ export const eventExtraData:{[key: string] : EventExtraDataI;} = {
 			description: "Bézier (lieux à définir)",
 			geom: "3.2171179151191325;43.34150194890089"
 		}
+	},
+	"2ec529d3-1d6e-4c8f-a0ca-7cdd242cb9a1":{
+		eventTypes:["Expo"]
+	},
+	"7b11dab7-c001-4045-a1c0-3c6ba6f7986d":{
+		eventTypes:["Lecture"]
 	}
 }

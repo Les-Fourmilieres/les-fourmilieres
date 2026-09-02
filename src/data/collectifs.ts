@@ -301,6 +301,25 @@ export const collectifs: CollectifI[] = [
 		type:["Collectif d'accueil de réfugiés"],
   },
 	{
+		slug:"collectif-antifacscite-antiraciste-bagnols",
+		name:"Collectif antifasciste et antiraciste Bagnols",
+		description:"collectif de lutte contre le fascisme et le racisme",
+		departement:"Gard",
+		type:["Collectif militant"],
+		position:{lat:44.160499, lng:4.623546},
+		instagram:"https://www.instagram.com/bagnolsantifa",
+		logo:"collectifs/collectif-bagnols-antifa.webp"
+	},
+	{
+		slug:"collectif-antifa-millevoix",
+		name:"Collectif Antifa MillaVoix",
+		description:"Collectif de lutte Antiraciste et Antifa de Millau",
+		departement:"Aveyron",
+		type:["Collectif militant"],
+		bdv:"12145",
+		logo:"collectifs/millavoix.webp"
+	},
+	{
 		slug:"collectif-ganges-solidarite",
 		name:"Collectif Ganges Solidarité",
 		departement:"Hérault",
