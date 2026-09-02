@@ -27,14 +27,14 @@ const CovertPart = styled.img`
 function RouteComponent() {
 	return (
 		<Section>
-			<h1>Programme de la fourmilière Lodève-Larzac</h1>
+			<h1>Programme de la fourmilière Lodèvois-Larzac</h1>
 
 			<p>La programmation des 15 jours du festival à Lodève est encore en cours. Vous trouverez nos premiers événements ci-dessous.</p>
 
 			<Section>
 				<h2>Les 26 et 27 septembre - Weekend d'ouverture au lodeva</h2>
 				<Covers>
-					Retrouvez-nous au Lodeva les 26 et 27 septembre pour des conférences et concerts pour lancer la fourmilière Lodève-Larzac.
+					Retrouvez-nous au Lodeva les 26 et 27 septembre pour des conférences et concerts pour lancer la fourmilière Lodèvois-Larzac.
 					<CovertPart src={prog_we_2627} alt={"Affiche de la programmation du Weekend du 26 et 27 septembre."}/>
 				</Covers>
 			</Section>
