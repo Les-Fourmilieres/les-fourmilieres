@@ -144,12 +144,14 @@ export const EventType = styled.span`
   &[data-cat="Atelier d'expression"]::before,
   &[data-cat="Atelier militant"]::before,
   &[data-cat="Fresque"]::before,
+  &[data-cat="Formation"]::before,
   &[data-cat="Atelier sérigraphie"]::before,
   &[data-cat="Arpentage"]::before {
     background: url("${picto_fresque}") no-repeat 0 center;
   }
 
   &[data-cat="Théâtre"]::before,
+  &[data-cat="Conte"]::before,
   &[data-cat="Spectacle vivant"]::before,
   &[data-cat="Lecture"]::before,
   &[data-cat="Dragshow"]::before {

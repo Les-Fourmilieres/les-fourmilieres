@@ -22,6 +22,7 @@ export type EventTypes =
   | "Atelier d'expression"
   | "Atelier militant"
   | "Fresque"
+	| "Formation"
   | "Atelier sérigraphie"
   | "Arpentage"
   | "Théâtre"
@@ -72,6 +73,7 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
     "Atelier cuisine",
     "Atelier d'expression",
     "Fresque",
+		"Formation",
     "Atelier sérigraphie",
     "Arpentage",
     "Atelier militant",
@@ -564,4 +566,28 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "7b11dab7-c001-4045-a1c0-3c6ba6f7986d": {
     eventTypes: ["Lecture"],
   },
+	"0c645c5c-5435-467a-9fa8-a803427f0c07":{
+		eventTypes:["Projection"]
+	},
+	"44e4ec18-f604-4d74-b526-8064f0e58779":{
+		eventTypes:["Projection"]
+	},
+	"745a59a9-8677-4368-a616-3e128b21447d":{
+		eventTypes:["Lecture"]
+	},
+	"b2d1e79f-077a-4852-be67-958c58df4baa":{
+		eventTypes:["Expo"]
+	},
+	"2797ad37-0da5-4f5a-be09-64033f19e1f5":{
+		eventTypes:["Formation"]
+	},
+	"6cf0c898-bc84-4f70-9400-6c6ed9548c7f":{
+		eventTypes:["Conte"]
+	},
+	"72746618-80ea-4429-9533-3e31ea99051c":{
+		eventTypes:["Formation"]
+	},
+	"815414dd-1acd-46db-9ce2-72889cf49579":{
+		eventTypes:["Formation"]
+	}
 };

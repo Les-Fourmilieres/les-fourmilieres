@@ -59,6 +59,7 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
     case "Atelier cuisine":
     case "Atelier d'expression":
     case "Fresque":
+		case "Formation":
     case "Atelier sérigraphie":
       return atelier_cover;
     default:
