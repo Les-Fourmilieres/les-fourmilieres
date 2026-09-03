@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { convert } from "html-to-text";
 import { fetchAllEvents } from "./fetchEvents";
+import { EventTypes } from "../src/data/EventExtraData";
+import { eventType } from "../src/components/Agenda/Event";
 
 const ROUTES_DIR = path.join(process.cwd(), "src/routes");
 
@@ -118,6 +120,59 @@ cleaned.forEach(({ path, file }) => {
   fs.writeFileSync(`./dist${path}.html`, fileContent);
 });
 
+function eventDefaultCover(type: EventTypes) {
+  switch (type) {
+    case "Projection":
+    case "Ciné-débat":
+      return "https://les-fourmilieres.org/events/cinema.png";
+    case "DJ Set":
+      return "https://les-fourmilieres.org/events/djset.png";
+    case "Open Air":
+      return "https://les-fourmilieres.org/events/openair.png";
+    case "Bal populaire":
+      return "https://les-fourmilieres.org/events/balpop.png";
+    case "Concert":
+      return "https://les-fourmilieres.org/events/concert.png";
+    case "AG":
+      return "https://les-fourmilieres.org/events/ag.png";
+    case "Conférence":
+    case "Rencontre Littéraire":
+    case "Table-Ronde":
+      return "https://les-fourmilieres.org/events/conf.png";
+    case "Picnic":
+    case "Apéro":
+    case "Repas partagé":
+    case "Cantine":
+    case "Goûter":
+    case "Pizza":
+    case "Banquet populaire":
+      return "https://les-fourmilieres.org/events/picnic.png";
+    case "Kermesse":
+    case "Loto":
+    case "Expo":
+    case "Braderie":
+    case "Village Associatif":
+      return "https://les-fourmilieres.org/events/kermesse.png";
+    case "Théâtre":
+    case "Dragshow":
+    case "Spectacle vivant":
+    case "Conte":
+    case "Lecture":
+      return "https://les-fourmilieres.org/events/theatre.png";
+    case "Manifestation":
+    case "Pride":
+    case "Parade":
+      return "https://les-fourmilieres.org/events/manif.png";
+    case "Atelier cuisine":
+    case "Atelier d'expression":
+    case "Fresque":
+    case "Atelier sérigraphie":
+      return "https://les-fourmilieres.org/events/fresque.png";
+    default:
+      return "https://les-fourmilieres.org/events/autre.png";
+  }
+}
+
 events.forEach((event) => {
   console.log(`page: programme/${event.uuid}, file: ${event.uuid}`);
   const description = convert(event.description ?? "").split("\n")[0];
@@ -125,6 +180,9 @@ events.forEach((event) => {
     description.length > 155
       ? `${description.substring(0, 150)}…`
       : description;
+  const picture = event.picture
+      ? event.picture.url
+      : eventDefaultCover(eventType(event)[0])
   const eventShema = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -143,7 +201,7 @@ events.forEach((event) => {
         addressCountry: "FR",
       },
     },
-    image: event.picture ? [event.picture.url] : [],
+    image: [picture],
     description: summary,
     offers: event.externalParticipationUrl
       ? {
@@ -161,7 +219,7 @@ events.forEach((event) => {
     "<head>",
     `<head>
       <title>🐜 Les Fourmilières · ${event.title}</title>
-      ${event.picture ? `<meta property="og:image" content="${event.picture.url}" />` : `<meta property="og:image" content="https://les-fourmilieres.org/les-fourmilieres-preview.webp" />`}
+      <meta property="og:image" content="${picture}" />
       <meta property="og:locale" content="fr_FR" />
       <meta name="description" content="${summary}" />
       <meta property="og:title" content="🐜 Les Fourmilières · ${event.title?.replaceAll('"', '\\"')}">
