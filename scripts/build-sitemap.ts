@@ -184,6 +184,14 @@ const rawRoutes = scanRoutes(ROUTES_DIR);
 
 const events = await fetchAllEvents();
 
+const lastSchemaUpdateDate = new Date(2026, 8, 3).toDateString();
+function getEventLastMod(event: Awaited<ReturnType<typeof fetchAllEvents>>[0]) {
+  if (!event.updatedAt || event.updatedAt < lastSchemaUpdateDate) {
+    return getToday().split("T")[0];
+  }
+  return event.updatedAt.split("T")[0];
+}
+
 // nettoyage + normalisation
 const cleaned = rawRoutes.filter(
   (r) =>
@@ -208,15 +216,16 @@ ${cleaned
   })
   .join("\n")}
 
-${events.map(
-  (event) => `
+${events
+  .map(
+    (event) => `
   <url>
     <loc>${SITE}/programme/${event.uuid}</loc>
-    <lastmod>${event.updatedAt ? event.updatedAt.split("T")[0] : getToday().split("T")[0]}</lastmod>
+    <lastmod>${getEventLastMod(event)}</lastmod>
     <priority>0.9</priority>
   </url>`,
-)
-	.join("\t")}
+  )
+  .join("\t")}
 
 </urlset>`;
 
