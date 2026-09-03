@@ -12,31 +12,6 @@ export const Route = createFileRoute(
   "/bataille-culturelle-des-luttes-paysannes",
 )({
   component: RouteComponent,
-  head: () => ({
-    meta: [
-      {
-        title: `🐜 Les Fourmilières · Bataille culturelle : des luttes paysannes`,
-      },
-      {
-        name: "description",
-        content: `Bataille Culturelle : des luttes paysannes`,
-      },
-      {
-        property: "og:title",
-        content: `Bataille Culturelle : des luttes paysannes`,
-      },
-      {
-        property: "og:description",
-        content: `Bataille Culturelle : des luttes paysannes`,
-      },
-      { property: "og:type", content: "article" },
-      {
-        property: "og:image",
-        content:
-          "https://les-fourmilieres.org/bataille-culturelle-des-luttes-paysannes.webp",
-      },
-    ],
-  }),
 });
 
 // eslint-disable-next-line react-refresh/only-export-components

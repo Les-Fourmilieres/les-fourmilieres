@@ -10,28 +10,6 @@ import {
 
 export const Route = createFileRoute("/entretien-emmanuel-negrier")({
   component: RouteComponent,
-  head: () => ({
-    meta: [
-      { title: `🐜 Les Fourmilières · Entretien avec Emmanuel Négrier` },
-      {
-        name: "description",
-        content: `Entretien avec Emmanuel Négrier : les « quatre P » du renversement`,
-      },
-      {
-        property: "og:title",
-        content: `Entretien avec Emmanuel Négrier : les « quatre P » du renversement`,
-      },
-      {
-        property: "og:description",
-        content: `Entretien avec Emmanuel Négrier : les « quatre P » du renversement`,
-      },
-      { property: "og:type", content: "article" },
-      {
-        property: "og:image",
-        content: "https://les-fourmilieres.org/emmanuel-negrier-entretien.webp",
-      },
-    ],
-  }),
 });
 
 // eslint-disable-next-line react-refresh/only-export-components

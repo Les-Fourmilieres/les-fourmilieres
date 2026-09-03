@@ -49,18 +49,78 @@ const events = await fetchAllEvents();
 if (!fs.existsSync("./dist/programme")) {
   fs.mkdirSync("./dist/programme");
 }
+const indexFileContent = fs.readFileSync("./dist/index.html", "utf-8");
+
+const titles: Record<string, string> = {
+  "/bataille-culturelle-des-luttes-paysannes":
+    "🐜 Les Fourmilières · Bataille culturelle : des luttes paysannes",
+  "/bataille-culturelle-histoire-du-14-juillet":
+    "🐜 Les Fourmilières · L'histoire du 14 juillet",
+  "/entretien-emmanuel-negrier":
+    "🐜 Les Fourmilières · Entretien avec Emmanuel Négrier",
+  "/safia-dahani-les-extremes-droites-contemporaines":
+    "🐜 Les Fourmilières · Entretien avec Safia Dahani",
+};
+
+const descriptions: Record<string, string> = {
+  "/bataille-culturelle-des-luttes-paysannes":
+    "Bataille Culturelle : des luttes paysannes",
+  "/bataille-culturelle-histoire-du-14-juillet":
+    "Bataille Culturelle : L'histoire du 14 juillet",
+  "/entretien-emmanuel-negrier":
+    "Entretien avec Emmanuel Négrier : les « quatre P » du renversement",
+  "/safia-dahani-les-extremes-droites-contemporaines":
+    "Entretien avec Safia Dahani : Processus de banalisation des extrêmes droites",
+};
+
+const images: Record<string, string> = {
+  "/bataille-culturelle-des-luttes-paysannes":
+    "https://les-fourmilieres.org/bataille-culturelle-des-luttes-paysannes.webp",
+  "/bataille-culturelle-histoire-du-14-juillet":
+    "https://les-fourmilieres.org/bataille-culturelle-histoire-du-14-juillet.webp",
+  "/entretien-emmanuel-negrier":
+    "https://les-fourmilieres.org/emmanuel-negrier-entretien.webp",
+  "/safia-dahani-les-extremes-droites-contemporaines":
+    "https://les-fourmilieres.org/entretien-sofia-dahani.webp",
+};
+const types: Record<string, string> = {
+  "/bataille-culturelle-des-luttes-paysannes": "article",
+  "/bataille-culturelle-histoire-du-14-juillet": "article",
+  "/entretien-emmanuel-negrier": "article",
+  "/safia-dahani-les-extremes-droites-contemporaines": "article",
+};
 
 cleaned.forEach(({ path, file }) => {
   if (path === "/") return;
   console.log(`page: ${path}, file: ${file}`);
-  fs.copyFileSync("./dist/index.html", `./dist${path}.html`);
-});
+  const title =
+    titles[path] ?? "🐜 Les Fourmilières · Festival antifasciste et solidaire";
+  const description =
+    descriptions[path] ??
+    "Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, tiers lieux, cinémas. Nous sommes actuellement plus d'une centaine de collectifs répartis dans le midi : de la vallée de l'Aveyron jusqu'aux monts d'Ardèche, des montagnes jusqu'au littoral.";
+  const image =
+    images[path] ??
+    "https://les-fourmilieres.org/les-fourmilieres-preview.webp";
+  const ogType = types[path] ?? "website";
 
-const indexFileContent = fs.readFileSync("./dist/index.html", "utf-8");
+  const fileContent = indexFileContent.replace(
+    "<head>",
+    `<head>
+    <title>${title}</title>
+    <meta property="og:image" content="${image}" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="description" content="${description}" />
+    <meta property="og:title" content="${title}" />
+    <meta property="og:description" content="${description}" />
+    <meta property="og:type" content="${ogType}" />`,
+  );
+
+  fs.writeFileSync(`./dist${path}.html`, fileContent);
+});
 
 events.forEach((event) => {
   console.log(`page: programme/${event.uuid}, file: ${event.uuid}`);
-  const description = convert(event.description ?? "");
+  const description = convert(event.description ?? "").split("\n")[0];
   const summary =
     description.length > 155
       ? `${description.substring(0, 150)}…`

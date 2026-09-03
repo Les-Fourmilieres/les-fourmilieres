@@ -12,29 +12,6 @@ export const Route = createFileRoute(
   "/bataille-culturelle-histoire-du-14-juillet",
 )({
   component: RouteComponent,
-  head: () => ({
-    meta: [
-      { title: `🐜 Les Fourmilières · L'histoire du 14 juillet` },
-      {
-        name: "description",
-        content: `Bataille Culturelle : L'histoire du 14 juillet`,
-      },
-      {
-        property: "og:title",
-        content: `Bataille Culturelle : L'histoire du 14 juillet`,
-      },
-      {
-        property: "og:description",
-        content: `Bataille Culturelle : L'histoire du 14 juillet`,
-      },
-      { property: "og:type", content: "article" },
-      {
-        property: "og:image",
-        content:
-          "https://les-fourmilieres.org/bataille-culturelle-histoire-du-14-juillet.webp",
-      },
-    ],
-  }),
 });
 
 // eslint-disable-next-line react-refresh/only-export-components

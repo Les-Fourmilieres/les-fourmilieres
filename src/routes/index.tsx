@@ -5,28 +5,10 @@ import { Cagnotte } from "../components/Cagnotte/Cagnotte";
 import { Section } from "../components/Section";
 import { Teaser } from "../views/Teaser";
 import { Newsletter } from "../components/Newsletter/Newsletter";
-import {useMediaQuery} from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 
 export const Route = createFileRoute("/")({
   component: Home,
-  head: () => ({
-    meta: [
-      { title: `🐜 Les Fourmilières · Festival antifasciste et solidaire` },
-      {
-        name: "description",
-        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, tiers lieux, cinémas. Nous sommes actuellement plus d'une centaine de collectifs répartis dans le midi : de la vallée de l'Aveyron jusqu'aux monts d'Ardèche, des montagnes jusqu'au littoral.`,
-      },
-      {
-        property: "og:title",
-        content: `🐜 Les Fourmilières · Festival antifasciste et solidaire`,
-      },
-      {
-        property: "og:description",
-        content: `Les Fourmilières est un festival solidaire et antifasciste. Nous sommes des collectifs, associations, librairies, brasseries, syndicats, lieux culturels, troupes de théâtre, tiers lieux, cinémas. Nous sommes actuellement plus d'une centaine de collectifs répartis dans le midi : de la vallée de l'Aveyron jusqu'aux monts d'Ardèche, des montagnes jusqu'au littoral.`,
-      },
-      { property: "og:type", content: "website" },
-    ],
-  }),
 });
 
 const HeroSection = styled.div`
@@ -81,7 +63,7 @@ const HeroTagLine = styled.h3`
 
 // eslint-disable-next-line react-refresh/only-export-components
 function Home() {
-	const isMobile = useMediaQuery({ maxWidth: 800 });
+  const isMobile = useMediaQuery({ maxWidth: 800 });
   return (
     <>
       <HeroSection>
@@ -92,18 +74,22 @@ function Home() {
               <br />
               au <strong>11&nbsp;octobre 2026</strong>
             </DatesSection>
-						{ isMobile?
-						<DatesSection>
-							de la Vallée de l'<strong>Aveyron</strong><br/>
-							jusqu'aux Monts d'<strong>Ardèche</strong>,<br/>
-							des <strong>Montagnes</strong> jusqu'au <strong>Littoral</strong>.
-
-						</DatesSection>:
-						<DatesSection>
-							de la Vallée de l'<strong>Aveyron</strong> jusqu'aux Monts d'<strong>Ardèche</strong>,<br/>
-							des <strong>Montagnes</strong> jusqu'au <strong>Littoral</strong>.
-						</DatesSection>
-						}
+            {isMobile ? (
+              <DatesSection>
+                de la Vallée de l'<strong>Aveyron</strong>
+                <br />
+                jusqu'aux Monts d'<strong>Ardèche</strong>,<br />
+                des <strong>Montagnes</strong> jusqu'au{" "}
+                <strong>Littoral</strong>.
+              </DatesSection>
+            ) : (
+              <DatesSection>
+                de la Vallée de l'<strong>Aveyron</strong> jusqu'aux Monts d'
+                <strong>Ardèche</strong>,<br />
+                des <strong>Montagnes</strong> jusqu'au{" "}
+                <strong>Littoral</strong>.
+              </DatesSection>
+            )}
           </PlaceAndDateSection>
           <HeroLogo>
             <div style={{ width: "100%" }}>
