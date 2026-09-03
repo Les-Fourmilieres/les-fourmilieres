@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fetchAllEvents } from "./fetchEvents";
 
 const ROUTES_DIR = path.join(process.cwd(), "src/routes");
 
@@ -41,6 +42,13 @@ const cleaned = rawRoutes.filter(
   (r) =>
     !r.path.includes(":") && !r.path.includes("__") && r.path !== "/programme/",
 ); // on exclut les dynamiques
+
+const events = await fetchAllEvents();
+
+events.reduce((acc, event) => {
+  acc.push({ path: `/programme/${event.uuid}`, file: "" });
+  return acc;
+}, cleaned);
 
 cleaned.forEach(({ path, file }) => {
   if (path === "/") return;
