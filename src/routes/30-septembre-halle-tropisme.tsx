@@ -90,8 +90,9 @@ function RouteComponent() {
         <p>
           🎶 <strong>20h00 - 23h30 | CONCERTS</strong>
         </p>
-        <p>- 20h : concert de Planète Boum Boum</p>
-        <p>- 21h 30 : Performance de Habibitch</p>
+        <p>- 20h : Planète Boum Boum</p>
+				<p>- 21h : La Battante</p>
+        <p>- 21h 30 : DJSet Habibitch</p>
         <p>Et plein de surprises tout au long de la soirée !</p>
         <StyledLinkButton
           href="https://www.helloasso.com/associations/le-quartier-genereux/evenements/festival-les-fourmilieres-a-la-halle-tropisme"
