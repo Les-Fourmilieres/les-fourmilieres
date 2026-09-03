@@ -45,15 +45,17 @@ const cleaned = rawRoutes.filter(
 
 const events = await fetchAllEvents();
 
-events.reduce((acc, event) => {
-  acc.push({ path: `/programme/${event.uuid}`, file: "" });
-  return acc;
-}, cleaned);
+fs.mkdirSync("./dist/programme");
 
 cleaned.forEach(({ path, file }) => {
   if (path === "/") return;
   console.log(`page: ${path}, file: ${file}`);
   fs.copyFileSync("./dist/index.html", `./dist${path}.html`);
+});
+
+events.forEach((event) => {
+  console.log(`page: ${path}, file: ${event.uuid}`);
+  fs.copyFileSync("./dist/index.html", `./dist/programme/${event.uuid}.html`);
 });
 
 console.log("Pages générées :", cleaned.length);
