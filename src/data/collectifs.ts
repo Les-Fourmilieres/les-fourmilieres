@@ -1056,7 +1056,7 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/mets-ta-peau.png"
 
 	},
-	{
+	/*{
 		slug:"mtmsi",
 		name:"Maison des Territoires du Monde et de la Solidarité Internationale",
 		position:{lat:43.61465092197385, lng:3.8803502576714233},
@@ -1066,7 +1066,7 @@ export const collectifs: CollectifI[] = [
 		url:"https://mtmsi.fr/",
 		logo:"collectifs/mtmsi-logo.png",
 		type:["Collectif militant"]
-	},
+	},*/
 	{
 		slug:"mrap-montpellier",
 		name:"MRAP - Montpellier",
