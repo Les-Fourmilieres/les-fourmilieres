@@ -84,6 +84,18 @@ export const collectifs: CollectifI[] = [
 		url:"https://syndicat-asso.fr/",
 		instagram:"https://www.instagram.com/asso.solidaires.34/",
 	},
+	{
+		slug:"association-acquaforte",
+		name:"Association Acquaforte Théâtre",
+		description:"Association franco-argentine créée en 2017. Acquaforte Théâtre est engagée dans le dialogue social et culturel à travers des propositions de théâtre et musique. Nos spectacles s'adressent aussi bien au public adulte qu'au jeune public. Nous croyons en l'art comme moyen de célébrer la diversité culturelle, de susciter la réflexion, de créer des expériences immersives, d'évoquer des questions profondes et de provoquer des émotions. Nos valeurs fondamentales comprennent la créativité, la diversité culturelle, l'authenticité, et la possibilité d'utiliser l'art comme un vecteur de changement social.",
+		departement:"Hérault",
+		type:["Collectif artistique"],
+		position:{lat:43.60514740406174, lng:3.8722629675297457},
+		logo:"collectifs/acquaforte.webp",
+		url:"https://acquafortetheatre.com",
+		instagram:"https://www.instagram.com/acquafortetheatre",
+		facebook:"https://www.facebook.com/acquafortetheatre"
+	},
   {
     slug: "association-boucan",
     name: "BOUCAN",
@@ -150,6 +162,17 @@ export const collectifs: CollectifI[] = [
 		url:"https://attac-montpellier.ouvaton.org/",
 		type:["Collectif militant", "Collectif d'éducation populaire"],
 		description:"Attac promeut et mène des actions de tous ordres en vue de la reconquête, par les citoyens, du pouvoir que la sphère financière exerce sur tous les aspects de la vie politique, économique, sociale, environnementale et culturelle et ce, au niveau local comme à l’échelle de la planète."
+	},
+	{
+		slug:"la-bouscule",
+		name:"La Bouscule",
+		description:"Asso antiraciste décoloniale et intersectionnelle qui existe par et pour les personnes concernées en priorité. Lutte pour un changement de regard sur les personnes minorisées en imaginant des projets mêlant lien social, culture, création artistique et éducation populaire.",
+		departement:"Hérault",
+		type:["Collectif militant"],
+		logo:"collectifs/la-bouscule.webp",
+		url:"https://www.helloasso.com/associations/la-bouscule",
+		instagram:"https://www.instagram.com/labouscule",
+		bdv:"34172"
 	},
   {
     slug: "la-cimade-montpellier",
@@ -489,6 +512,18 @@ export const collectifs: CollectifI[] = [
 		facebook:"https://www.facebook.com/xrmontpellier/",
 		description:"Extinction Rebellion est un mouvement mondial de désobéissance civile en lutte contre l’effondrement écologique et le réchauffement climatique",
 		type:["Collectif militant"],
+	},
+	{
+		slug:"eyeland-festival",
+		name:"Eyeland Festival",
+		description:"SoundSystem Culture Festival entre Musique/Installation immersive et vivre ensemble",
+		departement:"Hérault",
+		type:["Collectif artistique", "Festival"],
+		bdv:"34172",
+		logo:"collectifs/eyland-festival.jpg",
+		url:"https://festival.eyelanduniverse.com",
+		instagram:"https://www.instagram.com/eyeland_festival_poh",
+		facebook:"https://www.facebook.com/EyelandFestivalpoh"
 	},
   {
     slug: "greenpeace-montpellier",
