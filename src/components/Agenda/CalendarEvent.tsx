@@ -85,7 +85,7 @@ const EventTypes = styled.div`
   justify-content: flex-end;
   gap: 4px 8px;
   flex-wrap: wrap;
-  padding-bottom: 10px;
+  padding: 8px;
 `;
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -97,6 +97,7 @@ export const EventType = styled.span`
   border-radius: 5px;
   white-space: nowrap;
   font-size: 14px;
+  box-shadow: var(--shadow);
 
   &::before {
     content: "";
@@ -185,11 +186,6 @@ export function CalendarEvent({ event }: Props) {
   const ClockIcon = useClockIcon(event.beginsOn, 20);
   return (
     <Container>
-      <EventTypes>
-        {eventType(event).map((type) => (
-          <EventType data-cat={type}>{type}</EventType>
-        ))}
-      </EventTypes>
       <Figure
         style={
           event.picture?.url &&
@@ -204,7 +200,13 @@ export function CalendarEvent({ event }: Props) {
                 backgroundSize: "cover",
               }
         }
-      ></Figure>
+      >
+        <EventTypes>
+          {eventType(event).map((type) => (
+            <EventType data-cat={type}>{type}</EventType>
+          ))}
+        </EventTypes>
+      </Figure>
       <Content>
         <EventDate event={event} />
         <Infos>
