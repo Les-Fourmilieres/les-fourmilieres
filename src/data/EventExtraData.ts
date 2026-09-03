@@ -589,5 +589,9 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"815414dd-1acd-46db-9ce2-72889cf49579":{
 		eventTypes:["Formation"]
+	},
+	"c701099b-2aad-43a5-a5c8-20f4a811fa52":{
+		eventTypes:["Concert"],
+		programLinks:[halleTropisme]
 	}
 };
