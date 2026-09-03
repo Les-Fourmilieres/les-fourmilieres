@@ -1,57 +1,88 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import {RestrictedAgenda} from "../components/Agenda/RestrictedAgenda.js";
+import { RestrictedAgenda } from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
-import cover from "../assets/fds/faites-des-solidarites.png?url"
+import cover from "../assets/fds/faites-des-solidarites.png?url";
+import { searchParams } from "../components/Agenda/SearchParams.js";
 
 export const Route = createFileRoute("/faites-des-solidarites")({
-	component: RouteComponent,
+  component: RouteComponent,
+  validateSearch: searchParams,
 });
 
 const Covers = styled.aside`
   display: flex;
-	flex-wrap: wrap;
-	row-gap: 24px;
-	column-gap:24px;
-	justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 24px;
+  justify-content: center;
 `;
 
 const CovertPart = styled.img`
-	max-width: 500px;
-	@media (max-width: 550px) {
-	  max-width: 90%;
-	}
-`
-
+  max-width: 500px;
+  @media (max-width: 550px) {
+    max-width: 90%;
+  }
+`;
 
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
-	return (
-		<Section>
-			<h1>Faites des solidarités</h1>
-			<Covers>
-				<CovertPart src={cover} alt={"Affiche de la Faites des Solidarités."}/>
-			</Covers>
+  return (
+    <Section>
+      <h1>Faites des solidarités</h1>
+      <Covers>
+        <CovertPart src={cover} alt={"Affiche de la Faites des Solidarités."} />
+      </Covers>
 
-			<p>Pendant deux jours, le collectif "faites des solidarités " (habitant•es du quartier des Arennes et du Pays Viganais, assos, collectifs et syndicats locaux), partagerons au quartier des Arennes des ateliers
-				de cuisine dans un four à pain itinérant, de création d’affiche et de visuels pour investir l'espace public, de discussions et d’échanges, de jeux et de partage ... sur le thème des solidarités et de nos capacités collectives à résister
-				à la haine, au racisme, aux discriminations et à l’isolement...</p>
-			<p>Notre démarche s'inscrit sur du long terme, cette fête est un point d'étape, et en complémentarité des actions des collectifs de Ganges !</p>
-			<p><strong>N'hésitez pas à nous contacter pour nous rejoindre :</strong> faitesdessolidarites@etik.com</p>
+      <p>
+        Pendant deux jours, le collectif "faites des solidarités " (habitant•es
+        du quartier des Arennes et du Pays Viganais, assos, collectifs et
+        syndicats locaux), partagerons au quartier des Arennes des ateliers de
+        cuisine dans un four à pain itinérant, de création d’affiche et de
+        visuels pour investir l'espace public, de discussions et d’échanges, de
+        jeux et de partage ... sur le thème des solidarités et de nos capacités
+        collectives à résister à la haine, au racisme, aux discriminations et à
+        l’isolement...
+      </p>
+      <p>
+        Notre démarche s'inscrit sur du long terme, cette fête est un point
+        d'étape, et en complémentarité des actions des collectifs de Ganges !
+      </p>
+      <p>
+        <strong>N'hésitez pas à nous contacter pour nous rejoindre :</strong>{" "}
+        faitesdessolidarites@etik.com
+      </p>
 
+      <p>
+        <strong>En accès libre pendant les deux jours :</strong>
+      </p>
+      <ul>
+        <li>
+          <p>Expos</p>
+        </li>
+        <li>
+          <p>
+            Infokiosque avec des affiches, des brochures des badges et des
+            livres ...
+          </p>
+        </li>
+        <li>
+          <p>
+            Caravane "petite fabrique à films" avec les courts métrages Sous les
+            étoiles 2022,23,24,25 ...
+          </p>
+        </li>
+        <li>
+          <p>Buvette sans alcool</p>
+        </li>
+        <li>
+          <p>La Raîma : bibliothèque-jeux de société</p>
+        </li>
+      </ul>
 
-			<p><strong>En accès libre pendant les deux jours :</strong></p>
-			<ul>
-				<li><p>Expos</p></li>
-				<li><p>Infokiosque avec des affiches, des brochures des badges et des livres ...</p></li>
-				<li><p>Caravane "petite fabrique à films" avec les courts métrages Sous les étoiles 2022,23,24,25 ...</p></li>
-				<li><p>Buvette sans alcool</p></li>
-				<li><p>La Raîma : bibliothèque-jeux de société</p></li>
-			</ul>
-
-			<RestrictedAgenda path={Route.to} />
-		</Section>
-	);
+      <RestrictedAgenda path={Route.to} />
+    </Section>
+  );
 }
 
 /**

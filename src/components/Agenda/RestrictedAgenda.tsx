@@ -6,7 +6,7 @@ import { eventsForLink, eventType, type MobilizonEventI } from "./Event";
 import { useMemo, useState } from "react";
 import { Section } from "../Section";
 import { Select, SelectItem } from "../Select.js";
-import { SelectEventTypes } from "../../data/EventExtraData.js";
+import { SelectEventTypes, type GroupedEventTypes } from "../../data/EventExtraData.js";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -77,7 +77,7 @@ export function RestrictedAgenda({ path }: { path: string }) {
           if (eventTypes != null) {
             const curEventType = eventType(event);
             let found = false;
-            SelectEventTypes[eventTypes].forEach(
+            SelectEventTypes[eventTypes as GroupedEventTypes].forEach(
               (type) => (found = found || curEventType.includes(type)),
             );
             if (!found) return false;
@@ -93,7 +93,7 @@ export function RestrictedAgenda({ path }: { path: string }) {
     events.forEach((event) => {
       eventType(event).forEach((eventType) => {
         Object.keys(SelectEventTypes).forEach((selectKey) => {
-          if (SelectEventTypes[selectKey].includes(eventType))
+          if (SelectEventTypes[selectKey as GroupedEventTypes].includes(eventType))
             eventTypesSet.add(selectKey);
         });
       });

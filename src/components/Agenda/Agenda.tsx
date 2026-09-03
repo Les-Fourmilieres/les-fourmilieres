@@ -9,16 +9,21 @@ import {
   type MobilizonEventI,
   type MobilizonEventWithLivingAreaI,
 } from "./Event";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { getLivingAreas, type LivingAreaI } from "../../core/LivingArea";
 import type { LivingAreaSelectValue } from "../LivingAreaFilter/LivingAreaFilter.types";
 import { LivingAreaFilter } from "../LivingAreaFilter/LivingAreaFilter";
 import { Section } from "../Section";
 import { EventsMap } from "./EventsMap";
 import { Select, SelectItem } from "../Select.js";
-import { SelectEventTypes } from "../../data/EventExtraData.js";
+import {
+  eventTypesLabels,
+  SelectEventTypes,
+  type GroupedEventTypes,
+} from "../../data/EventExtraData.js";
 import { I18nProvider, type RangeValue } from "react-aria-components";
 import { DateRangePicker } from "../DatePicker/RangeDatePicker.js";
+import { Route } from "../../routes/le-programme.js";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -51,9 +56,75 @@ const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
 const params = { showUnConfirmed: false };
 
 export function Agenda() {
-  const [dateRange, setDateRange] = useState<RangeValue<CalendarDate> | null>(
-    null,
-  );
+  const navigate = Route.useNavigate();
+  const searchParams = Route.useSearch();
+
+  const dateRange = useMemo(() => {
+    if (!searchParams.from || !searchParams.to) return null;
+    return {
+      start: parseDate(searchParams.from),
+      end: parseDate(searchParams.to),
+    };
+  }, [searchParams.from, searchParams.to]);
+
+  const setDateRange = (value: RangeValue<CalendarDate> | null) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { from, to, ...previous } = searchParams;
+    if (!value) {
+      navigate({ search: { ...previous } });
+    } else {
+      navigate({
+        search: {
+          ...previous,
+          from: new Date(
+            value.start.year,
+            value.start.month - 1,
+            value.start.day + 1,
+          )
+            .toISOString()
+            .split("T")[0],
+          to: new Date(value.end.year, value.end.month - 1, value.end.day + 1)
+            .toISOString()
+            .split("T")[0],
+        },
+      });
+    }
+  };
+
+  const setFilter = (value: LivingAreaSelectValue) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { bdv, department, ...previous } = searchParams;
+    if (value.livingArea) {
+      navigate({
+        search: {
+          ...previous,
+          department: parseInt(value.department),
+          bdv: parseInt(value.livingArea),
+        },
+      });
+    } else if (value.department) {
+      navigate({
+        search: { ...previous, department: parseInt(value.department) },
+      });
+    } else {
+      navigate({ search: { ...previous } });
+    }
+  };
+
+  const setEventTypes = (value: string | null) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { type, ...previous } = searchParams;
+    if (value) {
+      navigate({
+        search: {
+          ...previous,
+          type: value,
+        },
+      });
+    } else {
+      navigate({ search: { ...previous } });
+    }
+  };
   const { data } = useQuery({
     queryKey: ["calendar", params, 0],
     queryFn: () => fetchEvents(params),
@@ -80,12 +151,6 @@ export function Agenda() {
         return [...acc, ...page.data.data.searchEvents.elements];
       }, data.data.searchEvents.elements);
   }, [data, pages]);
-
-  const [filter, setFilter] = useState<LivingAreaSelectValue>({
-    department: null,
-    livingArea: null,
-  });
-  const [eventTypes, setEventTypes] = useState<string | null>(null);
 
   const events = useMemo(() => {
     if (!allEvents) return [];
@@ -122,21 +187,23 @@ export function Agenda() {
           );
         })
         .filter((event) => {
-          if (eventTypes != null) {
+          if (searchParams.type) {
             const curEventType = eventType(event);
             let found = false;
-            SelectEventTypes[eventTypes].forEach(
+            SelectEventTypes[searchParams.type as GroupedEventTypes].forEach(
               (type) => (found = found || curEventType.includes(type)),
             );
             if (!found) return false;
           }
-          if (!filter.department) return true;
-          if (filter.livingArea)
-            return event.livingArea?.code === filter.livingArea;
-          return event.livingArea?.code.startsWith(filter.department);
+          if (!searchParams.department) return true;
+          if (searchParams.bdv)
+            return event.livingArea?.code === searchParams.bdv.toString();
+          return event.livingArea?.code.startsWith(
+            searchParams.department.toString(),
+          );
         })
         .sort(sortEventByDate),
-    [events, filter, eventTypes, dateRange],
+    [events, searchParams, dateRange],
   );
 
   const livingAreasFacets = useMemo(() => {
@@ -191,7 +258,9 @@ export function Agenda() {
     events.forEach((event) => {
       eventType(event).forEach((eventType) => {
         Object.keys(SelectEventTypes).forEach((selectKey) => {
-          if (SelectEventTypes[selectKey].includes(eventType))
+          if (
+            SelectEventTypes[selectKey as GroupedEventTypes].includes(eventType)
+          )
             eventTypesSet.add(selectKey);
         });
       });
@@ -199,14 +268,17 @@ export function Agenda() {
     return Array.from(eventTypesSet.values());
   }, [events]);
 
-  console.log(dateRange);
-
   if (!data) return null;
 
   return (
     <Section>
       <LivingAreaFilter
-        value={filter}
+        value={
+          {
+            department: searchParams.department?.toString() ?? null,
+            livingArea: searchParams.bdv?.toString() ?? null,
+          } as LivingAreaSelectValue
+        }
         onChange={setFilter}
         postalCodeFacets={postalCodeFacets}
         livingAreaFacets={sortedLivingAreasFacet}
@@ -226,7 +298,7 @@ export function Agenda() {
           </I18nProvider>
           <Select
             label="Type d'événement…"
-            value={eventTypes}
+            value={searchParams.type}
             style={{
               flex: "1 1 300px",
               display: "flex",
@@ -242,7 +314,7 @@ export function Agenda() {
               .filter((key) => eventTypesFacets.includes(key))
               .map((t) => (
                 <SelectItem key={t} id={t}>
-                  {t}
+                  {eventTypesLabels[t as GroupedEventTypes]}
                 </SelectItem>
               ))}
           </Select>
