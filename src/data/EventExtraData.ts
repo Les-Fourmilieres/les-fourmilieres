@@ -593,5 +593,22 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"c701099b-2aad-43a5-a5c8-20f4a811fa52":{
 		eventTypes:["Concert"],
 		programLinks:[halleTropisme]
+	},
+	"11de6093-7a7e-4f07-95c1-8b6654ff5059":{
+		eventTypes:["Rencontre Littéraire", "Arpentage"],
+		programLinks:[halleTropisme]
+	},
+	"6f50e85c-ca06-4bca-919c-645b9dddc5c8":{
+		eventTypes:["Kermesse"],
+		programLinks:[halleTropisme]
+	},
+	"19e71f5e-223b-4354-8fcc-90ab0b009a23":{
+		eventTypes:["Conférence"]
+	},
+	"6fd1f509-724a-4f10-ac15-bf07729bc977":{
+		eventTypes:["Lecture", "Ciné-débat", "Rencontre Littéraire"]
+	},
+	"4cc9926d-684a-48c6-bcbf-0a9e647e9f14":{
+		eventTypes:["Lecture", "Rencontre Littéraire"]
 	}
 };
