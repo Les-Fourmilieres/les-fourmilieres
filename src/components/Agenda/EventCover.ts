@@ -31,6 +31,7 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
     case "Conférence":
     case "Rencontre Littéraire":
     case "Table-Ronde":
+	case "Arpentage":
       return conf_cover;
     case "Picnic":
     case "Apéro":
