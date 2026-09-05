@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { eventType, type MobilizonEventI } from "./Event";
+import {eventLinks, eventType, type MobilizonEventI} from "./Event";
 import { EventDate } from "./EventDate";
 import { useClockIcon } from "./useClockIcon";
 import { Link } from "../Link/Link";
@@ -18,21 +18,35 @@ import picto_theatre from "../../assets/events/picto_theatre.webp?url";
 import picto_manif from "../../assets/events/picto_manif.webp?url";
 import { eventDefaultCover } from "./EventCover";
 import { datesAreSameDay } from "./datesAreSameDay";
+import {createLink} from "@tanstack/react-router";
+
+import { FaCalendarPlus } from "react-icons/fa";
 
 interface Props {
   event: MobilizonEventI;
+	showEventsPageLink:boolean
 }
 
 const Container = styled.div`
-  flex: 1 0 320px;
-  max-width: min(490px, 100%);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--surface);
+	flex: 1 0 320px;
+	background-color: var(--surface);
   box-shadow: var(--shadow);
+	max-width: min(490px, 100%);
+	width: 100%;
+	display: flex;
 `;
+const Tile = styled(createLink(Link))`
+	max-width: min(490px, 100%);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: var(--text);
+	&:visited {
+		color: var(--text);
+	} 
+	text-decoration: none;
+`
 
 const Figure = styled.figure`
   flex: 0 0 200px;
@@ -48,6 +62,31 @@ const Content = styled.div`
   display: flex;
   gap: 16px;
 `;
+
+const ParentPageLink = styled(Link)`
+	background-color: var(--accent-light);
+	color: var(--accent-contrast);
+	text-decoration: none;
+
+	border-radius: 5px;
+	white-space: nowrap;
+	font-size: 15px;
+	font-style: italic;
+	box-shadow: var(--shadow);
+	padding: 0 5px;
+
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+	align-items: center;
+	&:visited {
+		color: var(--accent-contrast);
+	}
+	&:hover{
+			text-decoration: underline;
+	}
+		
+`
 
 const Title = styled.h3`
   margin: 0;
@@ -79,7 +118,7 @@ const Metadata = styled.div`
   }
 `;
 
-const EventTypes = styled.div`
+const LabelsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -94,6 +133,7 @@ export const EventType = styled.span`
   color: var(--accent-contrast);
   font-weight: 500;
   padding: 0px 4px;
+
   border-radius: 5px;
   white-space: nowrap;
   font-size: 14px;
@@ -185,56 +225,63 @@ const Actions = styled.div`
   justify-content: space-between;
 `;
 
-export function CalendarEvent({ event }: Props) {
+export function CalendarEvent({ event, showEventsPageLink }: Props) {
   const ClockIcon = useClockIcon(event.beginsOn, 20);
   return (
     <Container>
-      <Figure
-        style={
-          event.picture?.url &&
-          event.picture.url !=
-            "https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp?name=les-fourmilieres-preview.webp"
-            ? {
-                backgroundImage: `url(${event.picture?.url})`,
-                backgroundSize: "cover",
-              }
-            : {
-                backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
-                backgroundSize: "cover",
-              }
-        }
-      >
-        <EventTypes>
-          {eventType(event).map((type) => (
-            <EventType data-cat={type}>{type}</EventType>
-          ))}
-        </EventTypes>
-      </Figure>
-      <Content>
-        <EventDate event={event} />
-        <Infos>
-          <Title>{event.title}</Title>
-          {event.physicalAddress && (
-            <Metadata>
-              <EventAddress event={event} />
-            </Metadata>
-          )}
-          {event.beginsOn &&
-            event.endsOn &&
-            datesAreSameDay(event.beginsOn, event.endsOn) && (
-              <Metadata>
-                {ClockIcon}
-                <span>
-                  <EventTime event={event} />
-                </span>
-              </Metadata>
-            )}
-        </Infos>
-      </Content>
-      <Actions>
-        <Link to={`/programme/${event.uuid}`}>Plus d'infos</Link>
-        <ParticipateButton event={event} />
-      </Actions>
+			<Tile to={`/programme/${event.uuid}`}>
+				<Figure
+					style={
+						event.picture?.url &&
+						event.picture.url !=
+							"https://agenda.les-fourmilieres.org/media/5d51acc4f1d82879973317de10ae2811f51e947d17923b84d95ea2b69a939adf.webp?name=les-fourmilieres-preview.webp"
+							? {
+									backgroundImage: `url(${event.picture?.url})`,
+									backgroundSize: "cover",
+								}
+							: {
+									backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
+									backgroundSize: "cover",
+								}
+					}
+				>
+					<LabelsContainer>
+						{eventType(event).map((type) => (
+							<EventType data-cat={type}>{type}</EventType>
+						))}
+					</LabelsContainer>
+				</Figure>
+				<LabelsContainer>
+				{showEventsPageLink ? eventLinks(event)?.map((eventsPage) => (
+					<ParentPageLink to={eventsPage.to}><FaCalendarPlus /> {eventsPage.shortLabel}</ParentPageLink>
+				)) : null}
+				</LabelsContainer>
+				<Content>
+					<EventDate event={event} />
+					<Infos>
+						<Title>{event.title}</Title>
+						{event.physicalAddress && (
+							<Metadata>
+								<EventAddress event={event} />
+							</Metadata>
+						)}
+						{event.beginsOn &&
+							event.endsOn &&
+							datesAreSameDay(event.beginsOn, event.endsOn) && (
+								<Metadata>
+									{ClockIcon}
+									<span>
+										<EventTime event={event} />
+									</span>
+								</Metadata>
+							)}
+					</Infos>
+				</Content>
+				<Actions>
+					<Link to={`/programme/${event.uuid}`}>Plus d'infos</Link>
+					<ParticipateButton event={event} />
+				</Actions>
+			</Tile>
     </Container>
   );
 }

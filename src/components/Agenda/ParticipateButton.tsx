@@ -37,7 +37,8 @@ interface Props {
 
 export function ParticipateButton({ event }: Props) {
   const [participateModalVisible, setParticipateModalVisible] = useState(false);
-  const onEventJoin = async () => {
+  const onEventJoin = async (event:unknown) => {
+		(event as Event).preventDefault()
     setParticipateModalVisible(true);
   };
   return (

@@ -320,7 +320,7 @@ export function Agenda() {
           </Select>
         </FullWidth>
         {filtersEvents.map((event) => (
-          <CalendarEvent key={event.id} event={event} />
+          <CalendarEvent key={event.id} event={event} showEventsPageLink={true}/>
         ))}
       </EventsContainer>
     </Section>

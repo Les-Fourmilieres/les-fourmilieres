@@ -101,7 +101,8 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
 };
 
 export interface ExtendedMenuItem extends MenuItem {
-  desc?: string;
+  shortLabel: string
+	desc?: string;
 }
 
 type EventExtraDataI = {
@@ -114,24 +115,28 @@ type EventExtraDataI = {
 const halleTropisme: ExtendedMenuItem = {
   to: "/30-septembre-halle-tropisme",
   label: "Voir toute la programmation du 30 septembre à la Halle Tropisme",
+	shortLabel:"Soirée Tropisme"
   // desc:"Le 30 septembre, les Fourmilières investissent la Halle Tropisme pour une après-midi de conférences et kermesses pour petits et grands suivie d'un concert puis DJ Set."
 };
 
 const lodeve: ExtendedMenuItem = {
   to: "/la-fourmiliere-de-lodeve",
-  label: "Consulter toute la programmation de La Fourmilière Lodève-Larzac",
-  desc: "Cet événement s'inscrit dans la programmation de la Fourmilière Lodève-Larzac qui programme 15 jours de festival sur toute la durée des Fourmilières.",
+  label: "Consulter toute la programmation de La Fourmilière Lodévois-Larzac",
+	shortLabel:"Fourmilière Lodévois-Larzac",
+  desc: "Cet événement s'inscrit dans la programmation de la Fourmilière Lodévois-Larzac qui programme 15 jours de festival sur toute la durée des Fourmilières.",
 };
 
 const lfp: ExtendedMenuItem = {
   to: "/festival-des-luttes-populaires",
   label: "Voir toute la programmation du Festival des Luttes Populaires",
+	shortLabel: "Festival des Luttes Populaires",
   desc: "Cet événement s'inscrit dans la 9ième édition du Festival des Luttes Populaires, un festival mêlant conférences et concerts les 26 et 27 septembre.",
 };
 
 const fds: ExtendedMenuItem = {
   to: "/faites-des-solidarites",
   label: "Voir toute la programmation de la Faites des Solidarités",
+	shortLabel: "Faites des Solidarités",
   desc: "Cet événement s'inscrit dans la Faites des Solidarités, 2 jours mêlant ateliers et cuisine populaire et partagée dans le quartier des Arènes au Vigan.",
 };
 

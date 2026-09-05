@@ -29,8 +29,9 @@ export function EventAddress({ event }: Props) {
 
   const [lng, lat] = event.physicalAddress.geom.split(";");
   return (
-    <StyledLink
-      to={`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=18/${lat}/${lng}`}
+    <StyledLink onClick={()=>{return false;}}
+      to={`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=18/${lat}/${lng}`} target={"_blank"}
+
     >
       {content}
     </StyledLink>
