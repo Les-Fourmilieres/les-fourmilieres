@@ -166,6 +166,7 @@ function eventDefaultCover(type: EventTypes) {
     case "Atelier cuisine":
     case "Atelier d'expression":
     case "Fresque":
+		case "Jeux":
 		case "Formation":
     case "Atelier sérigraphie":
       return "https://les-fourmilieres.org/events/fresque.png";

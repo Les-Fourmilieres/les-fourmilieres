@@ -144,6 +144,7 @@ export const EventType = styled.span`
   &[data-cat="Atelier d'expression"]::before,
   &[data-cat="Atelier militant"]::before,
   &[data-cat="Fresque"]::before,
+  &[data-cat="Jeux"]::before,
   &[data-cat="Formation"]::before,
   &[data-cat="Atelier sérigraphie"]::before,
   &[data-cat="Arpentage"]::before {

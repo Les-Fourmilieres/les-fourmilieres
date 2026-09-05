@@ -22,6 +22,7 @@ export type EventTypes =
   | "Atelier d'expression"
   | "Atelier militant"
   | "Fresque"
+	| "Jeux"
 	| "Formation"
   | "Atelier sérigraphie"
   | "Arpentage"
@@ -73,6 +74,7 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
     "Atelier cuisine",
     "Atelier d'expression",
     "Fresque",
+		"Jeux",
 		"Formation",
     "Atelier sérigraphie",
     "Arpentage",
@@ -610,5 +612,21 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"4cc9926d-684a-48c6-bcbf-0a9e647e9f14":{
 		eventTypes:["Lecture", "Rencontre Littéraire"]
+	},
+	"d0dc29b9-9f1c-405a-b65c-e52f2687412b":{
+		eventTypes:["Concert"],
+		programLinks: [lodeve],
+	},
+	"6a16ddcf-2046-4e11-a345-2a14e0d92242":{
+		eventTypes:["Jeux"],
+		programLinks: [lodeve],
+	},
+	"b31fac63-9628-4b6f-bdac-32d87aa8c059":{
+		eventTypes:["Spectacle vivant"],
+		programLinks: [lodeve],
+	},
+	"72fa8d0c-cf93-466b-8ab7-6e28cdd56518":{
+		eventTypes:["Rencontre Littéraire"],
+		programLinks: [lodeve],
 	}
 };
