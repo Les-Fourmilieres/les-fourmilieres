@@ -633,5 +633,24 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"72fa8d0c-cf93-466b-8ab7-6e28cdd56518":{
 		eventTypes:["Rencontre Littéraire"],
 		programLinks: [lodeve],
+	},
+	"f9492282-e987-4977-ac60-a9ee40a57a11":{
+		eventTypes:["Concert", "Parade"],
+		programLinks: [lodeve]
+	},
+	"354e1826-d17e-46ad-a7e6-a93e64d6cf82":{
+		eventTypes:["Rencontre Littéraire"]
+	},
+	"97b1aaa0-8fd8-4824-b176-e241ec723a3d":{
+		eventTypes:["Théâtre"]
+	},
+	"3aa9adcd-0072-47b4-9b4d-3c9e2febf7ed":{
+		eventTypes:["Jeux"]
+	},
+	"7fbd1b9f-4c77-4fd9-9b6a-590392020b45":{
+		eventTypes:["Arpentage"]
+	},
+	"23251ad2-7b38-49ca-908c-b8fe0a23a254":{
+		eventTypes:["Projection"]
 	}
 };
