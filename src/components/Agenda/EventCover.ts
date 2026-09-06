@@ -31,7 +31,8 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
     case "Conférence":
     case "Rencontre Littéraire":
     case "Table-Ronde":
-	case "Arpentage":
+		case "Arpentage":
+		case "Café philo":
       return conf_cover;
     case "Picnic":
     case "Apéro":
@@ -59,6 +60,9 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
       return manif_cover;
     case "Atelier cuisine":
     case "Atelier d'expression":
+		case "Sport pour tous.tes":
+		case "Atelier jardinage":
+		case "Atelier pour enfants":
     case "Fresque":
 		case "Jeux":
 		case "Formation":

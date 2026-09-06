@@ -165,6 +165,9 @@ function eventDefaultCover(type: EventTypes) {
       return "https://les-fourmilieres.org/events/manif.png";
     case "Atelier cuisine":
     case "Atelier d'expression":
+		case "Sport pour tous.tes":
+		case "Atelier jardinage":
+		case "Atelier pour enfant":
     case "Fresque":
 		case "Jeux":
 		case "Formation":

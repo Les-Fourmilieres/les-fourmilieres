@@ -182,11 +182,15 @@ export const EventType = styled.span`
 
   &[data-cat="Atelier cuisine"]::before,
   &[data-cat="Atelier d'expression"]::before,
+  &[data-cat="Sport pour tous.tes"]::before,
+	&[data-cat="Atelier jardinage"]::before,
   &[data-cat="Atelier militant"]::before,
   &[data-cat="Fresque"]::before,
+  &[data-cat="Atelier pour enfants"]::before,
   &[data-cat="Jeux"]::before,
   &[data-cat="Formation"]::before,
   &[data-cat="Atelier sérigraphie"]::before,
+  &[data-cat="Café philo"]::before,
   &[data-cat="Arpentage"]::before {
     background: url("${picto_fresque}") no-repeat 0 center;
   }
@@ -206,6 +210,7 @@ export const EventType = styled.span`
   &[data-cat="Picnic"]::before,
   &[data-cat="Apéro"]::before,
   &[data-cat="Cantine"]::before,
+	&[data-cat="Goûter"]::before,
   &[data-cat="Banquet populaire"]::before,
   &[data-cat="Repas partagé"]::before {
     background: url("${picto_picnic}") no-repeat 0 center;

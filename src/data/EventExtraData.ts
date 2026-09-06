@@ -20,12 +20,16 @@ export type EventTypes =
   | "Parade"
   | "Atelier cuisine"
   | "Atelier d'expression"
+	| "Sport pour tous.tes"
   | "Atelier militant"
+	| "Atelier jardinage"
+	| "Atelier pour enfants"
   | "Fresque"
 	| "Jeux"
 	| "Formation"
   | "Atelier sérigraphie"
   | "Arpentage"
+	| "Café philo"
   | "Théâtre"
   | "Spectacle vivant"
   | "Dragshow"
@@ -73,11 +77,15 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
   atelier: [
     "Atelier cuisine",
     "Atelier d'expression",
+		"Sport pour tous.tes",
+		"Atelier jardinage",
+		"Atelier pour enfants",
     "Fresque",
 		"Jeux",
 		"Formation",
     "Atelier sérigraphie",
     "Arpentage",
+		"Café philo",
     "Atelier militant",
   ],
   "spectacle-vivant": [
@@ -169,6 +177,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: [
       "Atelier cuisine",
       "Atelier d'expression",
+			"Sport pour tous.tes",
       "Concert",
       "Kermesse",
     ],
@@ -438,7 +447,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     programLinks: [fds],
   },
   "88e99442-3d96-42fe-a70b-6b03fc904d95": {
-    eventTypes: ["Atelier d'expression", "Atelier cuisine"],
+    eventTypes: ["Atelier d'expression", "Atelier cuisine", "Sport pour tous.tes"],
     physicalAddress: {
       description: "Foyer Albouy, Le Vigan",
       geom: "3.6145646494390755;43.99010945471654",
@@ -652,5 +661,137 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"23251ad2-7b38-49ca-908c-b8fe0a23a254":{
 		eventTypes:["Projection"]
+	},
+	"7dc5726f-47ae-4698-90f2-046fc4398e37":{
+		eventTypes:["Atelier cuisine", "Banquet populaire"],
+		programLinks:[fds]
+	},
+	"ba7da6f5-7ba7-4ea0-a46b-43ec1b1b5e5d":{
+		eventTypes:["Atelier d'expression"],
+		programLinks:[fds]
+	},
+	"e555c713-ba19-4036-a6bc-903e0c97e0da":{
+		eventTypes:["Conte"],
+		programLinks:[fds]
+	},
+	"afba029d-010a-4181-80a3-03614bf79fad":{
+		eventTypes:["Atelier jardinage"],
+		programLinks:[fds]
+	},
+	"902451d3-9fdd-45e7-863e-8c43032ca17e":{
+		eventTypes:["Sport pour tous.tes"],
+		programLinks:[fds]
+	},
+	"da1b1d63-05ac-48f4-9f56-b0e0c99c88b3":{
+		eventTypes:["Jeux"],
+		programLinks:[lodeve]
+	},
+	"6e8ec1be-abeb-46dd-bdb5-a6d331f110a8":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"98956a63-b56e-46bc-9eec-9e69e78f5a29":{
+		eventTypes:["DJ Set"],
+		programLinks:[lodeve]
+	},
+	"3766b6bf-cada-4501-ac96-8ead47638de3":{
+		eventTypes:["Table-Ronde"],
+		programLinks:[lodeve]
+	},
+	"373f9e19-80a6-4b6e-90ed-e07a78698d3b":{
+		eventTypes:["Conférence"],
+		programLinks:[lodeve]
+	},
+	"934dd4a9-1291-4963-a6cb-a9582dc6d245":{
+		eventTypes:["Théâtre"],
+		programLinks:[lodeve]
+	},
+	"a22e4e19-2b46-40c8-94ff-1a81af689f0c":{
+		eventTypes:["Bal populaire"],
+		programLinks:[lodeve]
+	},
+	"be365b79-c3c6-4f65-bded-38900db5db6d":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[lodeve]
+	},
+	"d28383b5-6575-438c-8bb6-e531a51e702c":{
+		eventTypes:["Loto"],
+		programLinks:[lodeve]
+	},
+	"c8cc6ad8-455c-49bf-811c-8e049c4ac949":{
+		eventTypes:["Théâtre"],
+		programLinks:[lodeve]
+	},
+	"6dd5f013-28ae-4aa9-b8e5-9ec2c027c431":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[lodeve]
+	},
+	"55355f13-2d2b-4dc9-905a-b830f67d8f03":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"a7c51f72-06b9-4928-975a-e3d2a0374089":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"799dcd37-cc18-411c-9b62-9662b22cdde3":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"cc8d931a-a314-4b68-af69-1c7e8875896a":{
+		eventTypes:["DJ Set"],
+		programLinks:[lodeve]
+	},
+	"359c805a-ca64-404c-a96e-d3bebc2f7aa9":{
+		eventTypes:["Café philo"],
+		programLinks:[lodeve]
+	},
+	"6bb7ec31-c75e-4430-94f5-8c361e58f955":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[lodeve]
+	},
+	"46bf2c0c-1ea6-4972-97a7-2d094135abc2":{
+		eventTypes:["Conférence"],
+		programLinks:[lodeve]
+	},
+	"fa720f39-7107-40d9-a54d-0e0e8c9b0bd9":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[lodeve]
+	},
+	"67c8f541-d84e-4369-843e-380a4ebe4553":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[lodeve]
+	},
+	"2499c0dc-520d-4d44-b1d5-970a4316cd2b":{
+		eventTypes:["Parade"],
+		programLinks:[lodeve]
+	},
+	"252f8677-16f0-4de6-a338-711d4263c338":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[lodeve]
+	},
+	"32ade4d8-1956-427c-af24-1a0b3563cc00":{
+		eventTypes:["Projection"],
+		programLinks:[lodeve]
+	},
+	"9f2e5703-b01a-4b71-b3d9-247d0d0cced6":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"4fcea752-450e-43a2-9768-8d658c23ecdd":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"760e574b-76f0-4d93-adf2-cba69aa5d5fc":{
+		eventTypes:["DJ Set"],
+		programLinks:[lodeve]
+	},
+	"387ae566-f77d-43d4-b2cb-eab4ecc5e1e0":{
+		eventTypes:["DJ Set"],
+		programLinks:[lodeve]
+	},
+	"9d897d36-c844-482c-ab57-8dd2a67dfeda":{
+		eventTypes:["Atelier pour enfants"],
+		programLinks:[halleTropisme]
 	}
 };

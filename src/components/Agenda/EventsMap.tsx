@@ -170,12 +170,16 @@ export function EventsMap({ events }: Props) {
 							break
 						case "Atelier cuisine":
 						case "Atelier d'expression":
+						case "Sport pour tous.tes":
+						case "Atelier jardinage":
+						case "Atelier pour enfants":
 						case "Fresque":
 						case "Jeux":
 						case "Formation":
 						case "Atelier militant":
 						case "Atelier sérigraphie":
 						case "Arpentage":
+						case "Café philo":
 							icon_url = pointer_fresque
 							break
 						case "Théâtre":
