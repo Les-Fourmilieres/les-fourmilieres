@@ -4,6 +4,7 @@ import { RestrictedAgenda } from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
 import { LinkButton } from "../components/Link/Link.js";
 import { searchParams } from "../components/Agenda/SearchParams.js";
+import cover from "../assets/tropisme/tropisme.jpg?url";
 
 export const Route = createFileRoute("/30-septembre-halle-tropisme")({
   component: RouteComponent,
@@ -31,6 +32,21 @@ const ButtonStyle = `
 
 const StyledLinkButton = styled(LinkButton)`
   ${ButtonStyle}
+`
+
+const Covers = styled.aside`
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 24px;
+  justify-content: center;
+`;
+
+const CovertPart = styled.img`
+  max-width: 500px;
+  @media (max-width: 550px) {
+    max-width: 90%;
+  }
 `;
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -47,6 +63,9 @@ function RouteComponent() {
         viens participer au festival Les Fourmilières à la Halle Tropisme pour
         une soirée pleine de surprises !
       </p>
+			<Covers>
+				<CovertPart src={cover} alt={"Affiche de la Faites des Solidarités."} />
+			</Covers>
 
       <Section>
         <p>Au programme :</p>
@@ -65,14 +84,10 @@ function RouteComponent() {
           <em>avec le collectif enfantiste 34</em>
           <br />- lecture d'album jeunesse engagé,{" "}
           <em>avec la librairie La Cavale</em>
+					<br />- Kermesse antifasciste, <em>par le Quartier Généreux</em>
+					<br />- Fiscal Fitness<em>, avec Attac</em>
         </p>
-        <p>
-          - Kermesse antifasciste, <em>par le Quartier Généreux</em>
-        </p>
-        <p>
-          <em>- </em>Fiscal Fitness<em>, avec Attac</em>
-        </p>
-        <p></p>
+
         <p>
           📚 <strong>16h30 - 19h30 | "DÉCOLONISER LE DANCEFLOOR"</strong>
         </p>
