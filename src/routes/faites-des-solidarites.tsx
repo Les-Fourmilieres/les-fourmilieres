@@ -3,6 +3,7 @@ import { Section } from "../components/Section";
 import { RestrictedAgenda } from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
 import cover from "../assets/fds/faites-des-solidarites.png?url";
+import program from "../assets/fds/programme.jpg?url";
 import { searchParams } from "../components/Agenda/SearchParams.js";
 
 export const Route = createFileRoute("/faites-des-solidarites")({
@@ -25,6 +26,18 @@ const CovertPart = styled.img`
   }
 `;
 
+const CovertDoublePart = styled.img`
+  max-width: 1000px;
+  @media (max-width: 1000px) {
+    max-width: 90%;
+  }
+`;
+
+const StyledP = styled.p`
+	margin: 16px 0 0 0;
+	width: 100%;
+`
+
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
   return (
@@ -35,12 +48,12 @@ function RouteComponent() {
       </Covers>
 
       <p>
-        Pendant deux jours, le collectif "faites des solidarités " (habitant•es
-        du quartier des Arennes et du Pays Viganais, assos, collectifs et
-        syndicats locaux), partagerons au quartier des Arennes des ateliers de
-        cuisine dans un four à pain itinérant, de création d’affiche et de
+				Pendant deux jours, le collectif "faites des solidarités", habitant⋅es
+				du quartier des Arennes et du Pays Viganais, assos, collectifs et
+        syndicats locaux, partagerons au quartier des Arennes des ateliers de
+        cuisine dans un four à pain itinérant, de création d’affiches et de
         visuels pour investir l'espace public, de discussions et d’échanges, de
-        jeux et de partage ... sur le thème des solidarités et de nos capacités
+        jeux et de partage... sur le thème des solidarités et de nos capacités
         collectives à résister à la haine, au racisme, aux discriminations et à
         l’isolement...
       </p>
@@ -53,37 +66,31 @@ function RouteComponent() {
         faitesdessolidarites@etik.com
       </p>
 
-      <p>
-        <strong>En accès libre pendant les deux jours :</strong>
-      </p>
-      <ul>
-        <li>
-          <p>Expos</p>
-        </li>
-        <li>
-          <p>
-            Infokiosque avec des affiches, des brochures des badges et des
-            livres ...
-          </p>
-        </li>
-        <li>
-          <p>
-            Caravane "petite fabrique à films" avec les courts métrages Sous les
-            étoiles 2022,23,24,25 ...
-          </p>
-        </li>
-        <li>
-          <p>Buvette sans alcool</p>
-        </li>
-        <li>
-          <p>La Raîma : bibliothèque-jeux de société</p>
-        </li>
-      </ul>
 
-      <RestrictedAgenda path={Route.to} />
+			<StyledP>En septembre, le collectif Faites des solidarités est aussi en itinérance dans Le Vigan :</StyledP>
+			<ul>
+				<li><p> Expo La mèche par Mordicus à la médiathèque du 18/09 au 17/10</p></li>
+				<li><p> Expo sape en Cévennes, par la société des ambiancereuses et personnes Élégantes en Cévennes, dans le hall de la mairie et au centre culturel du Bourilhou du 21/09 au 7/10</p></li>
+				<li><p> Expo La mèche par Mordicus à la médiathèque du 18/09 au 17/10</p></li>
+			</ul>
+
+			<Covers>
+				<CovertDoublePart src={program} alt={"Affiche de la Faites des Solidarités."} />
+			</Covers>
+
+			<Section>
+				<h2>Programmation détaillée</h2>
+				<RestrictedAgenda path={Route.to} />
+			</Section>
     </Section>
   );
 }
+
+/**
+ * <p><strong>AVEC</strong></p>
+ * 			<p>des habitants et habitantes du Pays Viganais tous et toutes décidé⋅es à s'unir et s'entraider ! Les amis de la terre, le Collectif Pays Viganais Terre d'Accueil, le planning familial Sud Cévènnes, le pain d'la bouche, la confédération paysanne locale, l'Union Locale CGT Le Vigan, l'Union Locale Solidaires, Bienvenue à Mandagout, le PAT, l'association Sous les étoiles, Cantine de l'étude en éxil, Vélo Vintage</p>
+ * 			<p>avec le soutien logistique de la mairie du VIgan et en partenariat avec la médiathèque du Pays Viganais</p>
+ */
 
 /**
  * <p><strong>Au programme :</strong></p>
