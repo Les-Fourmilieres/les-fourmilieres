@@ -25,6 +25,7 @@ export interface CollectifI {
   instagram?: string;
   facebook?: string;
   bluesky?: string;
+	mastodon?: string;
   departement: Departements;
 	type:Types[];
 }
@@ -73,6 +74,14 @@ export const collectifs: CollectifI[] = [
       lng: 3.077545,
     },
   },*/
+	{
+		slug:"antifanfare",
+		name:"Antifanfare",
+		description:"L'antifanfare ? Une fanfare de lutte montpelliéraine. Nous nous battons pour la protection de l'environnement, les luttes sociales et le soutien des minorités tout en faisant frétiller oreilles. Nous accueillons des musicien.nes de tout niveau et nous inscrivons dans un réseau international de fanfare de lutte.",
+		departement:"Hérault",
+		type:["Collectif artistique"],
+		position:{lat:43.61117890020044, lng:3.8715904645334636},
+	},
 	{
 		slug:"asso-solidaires-34",
 		name:"ASSO Solidaires 34",
@@ -286,6 +295,22 @@ export const collectifs: CollectifI[] = [
 		logo:"collectifs/brasserie-lodeva-logo.png",
 		description:"Brasserie artisanale, 🍲 Cuisine bistrot, 🎸 Événements culturels, concerts",
 		type:["Bar - Brasserie - Commerce"],
+	},
+	{
+		slug:"cafe-associatif-de-la-tendresse",
+		name:"Café Associatif de La Tendresse",
+		description:"Diffusion et organisation d'évènement au sein de La Tendresse, coopérative culturelle et d'expérimentation sociale",
+		departement:"Hérault",
+		type:["Café associatif", "Tiers-lieu"],
+		position:{lat:43.585877889183216, lng:3.852877289409865},
+		logo:"collectifs/la-tendresse.webp",
+		url:"https://www.latendresse.fr",
+		instagram:"https://www.instagram.com/latendressemontpellier",
+		facebook:"https://www.facebook.com/latendressemontpellier",
+		mastodon:"https://mastodon.social/@laTendresse@social.bim.land"
+
+
+
 	},
 	{
 		slug:"ccfd-herault",
@@ -1210,6 +1235,17 @@ export const collectifs: CollectifI[] = [
 		position:{lat:43.67640985146661, lng:4.62761377050663},
 		instagram:"https://www.instagram.com/queerteam_arles",
 		logo:"collectifs/queer-team-arles.png"
+	},
+	{
+		slug:"radio-vadrouille",
+		name:"Radio Vadrouille",
+		description:"Webradio nomade et populaire avec des gros bouts de vie dedans et un topping d’éduc.pop",
+		departement:"Hérault",
+		type:["Média"],
+		bdv:"34172",
+		logo:"collectifs/radio-vadrouille.png",
+		url:"https://www.radiovadrouille.com/",
+		instagram:"https://www.instagram.com/radio.vadrouille"
 	},
 	{
 		slug:"raices-flamencas",
