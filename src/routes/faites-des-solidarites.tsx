@@ -75,7 +75,7 @@ function RouteComponent() {
 			</ul>
 
 			<Covers>
-				<CovertDoublePart src={program} alt={"Affiche de la Faites des Solidarités."} />
+				<CovertDoublePart src={program} alt={"Flyer du programme. Retrouvez-les détails du programme cu-après."} />
 			</Covers>
 
 			<Section>
