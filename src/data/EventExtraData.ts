@@ -123,7 +123,7 @@ type EventExtraDataI = {
 const halleTropisme: ExtendedMenuItem = {
   to: "/30-septembre-halle-tropisme",
   label: "Voir toute la programmation du 30 septembre à la Halle Tropisme",
-	shortLabel:"Soirée Tropisme"
+	shortLabel:"Les fourmilières à la Halle Tropisme"
   // desc:"Le 30 septembre, les Fourmilières investissent la Halle Tropisme pour une après-midi de conférences et kermesses pour petits et grands suivie d'un concert puis DJ Set."
 };
 
@@ -589,7 +589,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Projection"]
 	},
 	"745a59a9-8677-4368-a616-3e128b21447d":{
-		eventTypes:["Lecture"]
+		eventTypes:["Lecture"],
+		programLinks:[lodeve]
 	},
 	"b2d1e79f-077a-4852-be67-958c58df4baa":{
 		eventTypes:["Expo"]
@@ -598,7 +599,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Formation"]
 	},
 	"6cf0c898-bc84-4f70-9400-6c6ed9548c7f":{
-		eventTypes:["Conte"]
+		eventTypes:["Conte"],
+		programLinks:[lodeve]
 	},
 	"72746618-80ea-4429-9533-3e31ea99051c":{
 		eventTypes:["Formation"]
@@ -712,15 +714,27 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"be365b79-c3c6-4f65-bded-38900db5db6d":{
 		eventTypes:["Spectacle vivant"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		physicalAddress: {
+			description: "Lodève (lieux à préciser)",
+			geom: "3.3163397569504283;43.733208459921066",
+		}
 	},
 	"d28383b5-6575-438c-8bb6-e531a51e702c":{
 		eventTypes:["Loto"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		physicalAddress: {
+			description: "Lodève (lieux à préciser)",
+			geom: "3.3163397569504283;43.733208459921066",
+		}
 	},
 	"c8cc6ad8-455c-49bf-811c-8e049c4ac949":{
 		eventTypes:["Théâtre"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		physicalAddress: {
+			description: "Lodève (lieux à préciser)",
+			geom: "3.3163397569504283;43.733208459921066",
+		}
 	},
 	"6dd5f013-28ae-4aa9-b8e5-9ec2c027c431":{
 		eventTypes:["Spectacle vivant"],
@@ -728,7 +742,11 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"55355f13-2d2b-4dc9-905a-b830f67d8f03":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		physicalAddress: {
+			description: "Lodève (lieux à préciser)",
+			geom: "3.3163397569504283;43.733208459921066",
+		}
 	},
 	"a7c51f72-06b9-4928-975a-e3d2a0374089":{
 		eventTypes:["Concert"],
@@ -780,7 +798,11 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"4fcea752-450e-43a2-9768-8d658c23ecdd":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		physicalAddress: {
+			description: "Lodève (lieux à préciser)",
+			geom: "3.3163397569504283;43.733208459921066",
+		},
 	},
 	"760e574b-76f0-4d93-adf2-cba69aa5d5fc":{
 		eventTypes:["DJ Set"],
