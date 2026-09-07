@@ -815,5 +815,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"9d897d36-c844-482c-ab57-8dd2a67dfeda":{
 		eventTypes:["Atelier pour enfants"],
 		programLinks:[halleTropisme]
+	},
+	"7c045675-d034-41f1-95f8-0326e5bec946":{
+		eventTypes:["Formation"],
+		overridePhysicalAddress:{
+			description: "Alès (lieu envoyé par email aux inscrites)",
+			geom: "4.077342110606977;44.12470811020639"
+		}
 	}
 };
