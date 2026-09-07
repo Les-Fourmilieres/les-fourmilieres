@@ -19,7 +19,7 @@ export function Teaser() {
           Les Fourmilières est un{" "}
           <strong>festival solidaire et antifasciste</strong>. Nous sommes des
           collectifs, associations, librairies, brasseries, syndicats, lieux
-          culturels, troupes de théâtre, tiers lieux,  cinémas. Nous sommes
+          culturels, troupes de théâtre, tiers lieux, cinémas. Nous sommes
 					actuellement plus d'une centaine de collectifs répartis de la vallée
 					de l'Aveyron jusqu'aux monts d'Ardèche, des  montagnes jusqu'au littoral.
         </p>

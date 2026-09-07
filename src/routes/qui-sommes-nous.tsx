@@ -181,8 +181,8 @@ function RouteComponent() {
       <p>
         Les Fourmilières est un festival solidaire et antifasciste. Le festival
         est décentralisé, c'est-à-dire que de nombreux évènements auront lieux
-        dans différents endroits de l'Aude, l'Hérault, le Gard, la Lozère, l'Ardèche
-				les Bouches-du-Rhone et l'Aveyron.{" "}
+        dans différents endroits de l'Aude, l'Hérault, le Gard, la Lozère, l'Ardèche,
+				les Bouches-du-Rhône et l'Aveyron.{" "}
       </p>
       <p>
         Les Fourmilières reposent sur une organisation horizontale : chaque
@@ -191,7 +191,10 @@ function RouteComponent() {
         collectifs afin de proposer des évènements de son choix.
       </p>
       <p>
-        Aujourd'hui, plus de 100 collectifs ont déjà rejoint Les Foumilières :
+				Nous sommes des collectifs, associations, librairies, brasseries,
+				syndicats, lieux culturels, troupes de théâtre, tiers lieux, cinémas.
+				Nous sommes actuellement plus d'une centaine de collectifs répartis de la vallée
+				de l'Aveyron jusqu'aux monts d'Ardèche, des  montagnes jusqu'au littoral.
       </p>
       <StyledToggleButtonGroup>
         {postalCodeFacets.map((postalCode) => (

@@ -50,7 +50,7 @@ function RouteComponent() {
       <ul>
         <li>
           vous êtes situé·e dans l'Aude, l'Aveyron, l'Ardèche, le Gard,
-          l'Hérault les Bouches-du-Rhones ou la Lozère.
+          l'Hérault, les Bouches-du-Rhône ou la Lozère.
         </li>
         <li>
           vous êtes en accord avec l'ensemble de{" "}
