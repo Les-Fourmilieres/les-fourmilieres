@@ -19,35 +19,33 @@ function RouteComponent() {
     <Container>
       <h1>Pourquoi le nom « Les Fourmilières »</h1>
 
-      <p>
-        Nous sommes des fourmilières car nous sommes{" "}
-        <strong>une multitude de structures collectives indépendantes</strong>{" "}
-        les unes des autres.
-      </p>
-      <p>
-        Contrairement à l'idée reçue du fait que la fourmi spécialisée dans la
-        reproduction soit appelée « la reine », il n'y a pas de hiérarchie au
-        sein d'une fourmilière. Une fourmilière est{" "}
-        <strong>une organisation autogérée horizontale</strong> où chaque fourmi
-        fait sa part de manière volontaire. Il y a d'ailleurs une part
-        significative de fourmis oisives au sein de chaque fourmilière.
-      </p>
-      <p>
-        Les fourmis peuvent être <strong>rouges ou noires</strong>&nbsp;:
-        couleurs de l'antifascisme.
-      </p>
-      <p>
-        Les fourmilières reposent sur le travail des « ouvrières » qui évoquent
-        un <strong>imaginaire féministe et ouvrier</strong>.
-      </p>
-      <p>
-        Parce que nos collectifs{" "}
-        <strong>fourmillent d'idées, de projets et d'énergie militante</strong>.
-      </p>
-      <p>
-        Beaucoup de fourmilières sont <strong>souterraines</strong>&nbsp;: nous
-        sommes des forces invisibles partout sur le territoire.
-      </p>
+			<p>
+				Parce que les fourmilières regroupent des <strong>structures indépendantes les unes des autres</strong>.
+			</p>
+			<p>
+				Parce que, en dépit du fait que la fourmi « préposée » à la reproduction soit appelée « la reine »,{" "}
+				<strong>il n'existe aucune hiérarchie établie au sein de cette communauté</strong>.
+			</p>
+			<p>
+				Parce qu’une fourmilière est donc une <strong>organisation autogérée, horizontale</strong>,{" "}
+				où chacune des individualités accomplit sa mission volontairement -{" "}
+				à telle enseigne qu'on y trouve aussi des cas d'oisiveté...
+			</p>
+			<p>
+				Parce que les fourmis peuvent être <strong>rouges ou noires, couleurs de l'antifascisme</strong>.
+			</p>
+			<p>
+				Parce que les fourmilières s'articulent autour du travail des « ouvrières »,{" "}
+				qui évoquent un <strong>imaginaire féministe, solidaire, laborieux et populaire</strong>.
+			</p>
+			<p>
+				Parce que les collectifs <strong>fourmillent d'idées</strong>, de projets et d'énergie militante.
+			</p>
+			<p>
+				Parce que beaucoup de fourmilières sont <strong>souterraines</strong>, incarnant de la sorte des forces
+				invisibles, et pourtant, débordantes d'activité, de courage, d'altruisme...{" "}
+				et <strong>présentes partout sur le territoire</strong>.
+			</p>
     </Container>
   );
 }
