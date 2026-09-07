@@ -1242,7 +1242,7 @@ export const collectifs: CollectifI[] = [
 		description:"Webradio nomade et populaire avec des gros bouts de vie dedans et un topping d’éduc.pop",
 		departement:"Hérault",
 		type:["Média"],
-		bdv:"34172",
+		position:{lat:43.60129,lng:3.86652},
 		logo:"collectifs/radio-vadrouille.png",
 		url:"https://www.radiovadrouille.com/",
 		instagram:"https://www.instagram.com/radio.vadrouille"
