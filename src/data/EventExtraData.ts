@@ -781,7 +781,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		programLinks:[lodeve]
 	},
 	"2499c0dc-520d-4d44-b1d5-970a4316cd2b":{
-		eventTypes:["Parade"],
+		eventTypes:["Théâtre"],
 		programLinks:[lodeve]
 	},
 	"252f8677-16f0-4de6-a338-711d4263c338":{
