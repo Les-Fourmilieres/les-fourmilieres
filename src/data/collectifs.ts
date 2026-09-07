@@ -354,7 +354,7 @@ export const collectifs: CollectifI[] = [
 		description:"collectif de lutte contre le fascisme et le racisme",
 		departement:"Gard",
 		type:["Collectif militant"],
-		position:{lat:44.160499, lng:4.623546},
+		position:{lat:44.15951984268168, lng:4.621582675150231},
 		instagram:"https://www.instagram.com/bagnolsantifa",
 		logo:"collectifs/collectif-bagnols-antifa.webp"
 	},
