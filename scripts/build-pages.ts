@@ -62,6 +62,12 @@ const titles: Record<string, string> = {
     "🐜 Les Fourmilières · Entretien avec Emmanuel Négrier",
   "/safia-dahani-les-extremes-droites-contemporaines":
     "🐜 Les Fourmilières · Entretien avec Safia Dahani",
+  "/festival-des-luttes-populaires": "Festival des luttes populaires",
+  "/30-septembre-halle-tropisme":
+    "Les Fourmilières à la Halle Tropisme - Planète Boum Boum et Habibitch le 30 septembre",
+  "/faites-des-solidarites":
+    "Faites des solidarités du 29 au 30 septembre au Vigan",
+  "/la-fourmiliere-de-lodeve": "La fourmilière Lodèvois-Larzac",
 };
 
 const descriptions: Record<string, string> = {
@@ -73,6 +79,12 @@ const descriptions: Record<string, string> = {
     "Entretien avec Emmanuel Négrier : les « quatre P » du renversement",
   "/safia-dahani-les-extremes-droites-contemporaines":
     "Entretien avec Safia Dahani : Processus de banalisation des extrêmes droites",
+  "/festival-des-luttes-populaires":
+    "Notre énergie collective face à leurs énergies polluantes ! ",
+  "/30-septembre-halle-tropisme":
+    "Le Quartier Généreux et la Halle Tropisme invitent Planète Boum Boum et Habibitch pour une soirée antifasciste et solidaire ✊ Le 30 septembre, viens participer au festival Les Fourmilières à la Halle Tropisme pour une soirée pleine de surprises !",
+  "/faites-des-solidarites":
+    "Pendant deux jours, le collectif 'faites des solidarités', habitant⋅es du quartier des Arennes et du Pays Viganais, assos, collectifs et syndicats locaux, partagerons au quartier des Arennes des ateliers de cuisine dans un four à pain itinérant, de création d’affiches et de visuels pour investir l'espace public, de discussions et d’échanges, de jeux et de partage... sur le thème des solidarités et de nos capacités collectives à résister à la haine, au racisme, aux discriminations et à l’isolement...",
 };
 
 const images: Record<string, string> = {
@@ -84,6 +96,14 @@ const images: Record<string, string> = {
     "https://les-fourmilieres.org/emmanuel-negrier-entretien.webp",
   "/safia-dahani-les-extremes-droites-contemporaines":
     "https://les-fourmilieres.org/entretien-sofia-dahani.webp",
+  "/festival-des-luttes-populaires":
+    "https://les-fourmilieres.org/festival-luttes-populaires-2026.webp",
+  "/30-septembre-halle-tropisme":
+    "https://les-fourmilieres.org/habibitch-planete-boum-boum.webp",
+  "/faites-des-solidarites":
+    "https://les-fourmilieres.org/faites-des-solidarites.webp",
+  "/la-fourmiliere-de-lodeve":
+    "https://les-fourmilieres.org/fourmilieres-lodeve.webp",
 };
 const types: Record<string, string> = {
   "/bataille-culturelle-des-luttes-paysannes": "article",
@@ -165,12 +185,12 @@ function eventDefaultCover(type: EventTypes) {
       return "https://les-fourmilieres.org/events/manif.png";
     case "Atelier cuisine":
     case "Atelier d'expression":
-		case "Sport pour tous.tes":
-		case "Atelier jardinage":
-		case "Atelier pour enfant":
+    case "Sport pour tous.tes":
+    case "Atelier jardinage":
+    case "Atelier pour enfant":
     case "Fresque":
-		case "Jeux":
-		case "Formation":
+    case "Jeux":
+    case "Formation":
     case "Atelier sérigraphie":
       return "https://les-fourmilieres.org/events/fresque.png";
     default:
@@ -186,8 +206,8 @@ events.forEach((event) => {
       ? `${description.substring(0, 150)}…`
       : description;
   const picture = event.picture
-      ? event.picture.url
-      : eventDefaultCover(eventType(event)[0])
+    ? event.picture.url
+    : eventDefaultCover(eventType(event)[0]);
   const eventShema = {
     "@context": "https://schema.org",
     "@type": "Event",
