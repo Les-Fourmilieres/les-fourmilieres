@@ -1,4 +1,4 @@
-export type Departements = "Ardèche" | "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère" | "Bouche-du-Rhone";
+export type Departements = "Ardèche" | "Aude" | "Aveyron" | "Gard" | "Hérault" | "Lozère" | "Bouches-du-Rhône";
 export type Types = "Café associatif" | "Tiers-lieu" | "Festival" | "Librairie" |
 	"Théâtre" | "Syndicat" | "Bar - Brasserie - Commerce" | "Média" | /*"Cinéma" |*/
 	"Collectif artistique" | "Collectif événementiel" | "Collectif militant" | "Collectif pour mieux habiter" |
@@ -10,7 +10,7 @@ export const departements: Departements[] = [
   "Gard",
   "Hérault",
   "Lozère",
-	"Bouche-du-Rhone"
+	"Bouches-du-Rhône"
 ];
 
 export interface CollectifI {
@@ -1229,7 +1229,7 @@ export const collectifs: CollectifI[] = [
 	{
 		slug:"queer-team-arles",
 		name:"Queer Team Arles",
-		departement:"Bouche-du-Rhone",
+		departement:"Bouches-du-Rhône",
 		description:"Asso LGBTQI+ arlésienne",
 		type:["Collectif militant"],
 		position:{lat:43.67640985146661, lng:4.62761377050663},

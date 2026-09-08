@@ -7,5 +7,5 @@ export const DepartementsByCode: Record<string, Departements> = {
   "30": "Gard",
   "34": "Hérault",
   "48": "Lozère",
-	"13": "Bouche-du-Rhone"
+	"13": "Bouches-du-Rhône"
 };
