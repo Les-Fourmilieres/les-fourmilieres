@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import { RestrictedAgenda } from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
-import { LinkButton } from "../components/Link/Link.js";
-import { searchParams } from "../components/Agenda/SearchParams.js";
+import { LinkButton } from "../components/Link/Link";
+import { searchParams } from "../components/Agenda/SearchParams";
 import cover from "../assets/tropisme/tropisme.jpg?url";
+import { Agenda } from "../components/Agenda/Agenda";
 
 export const Route = createFileRoute("/30-septembre-halle-tropisme")({
   component: RouteComponent,
@@ -32,7 +32,7 @@ const ButtonStyle = `
 
 const StyledLinkButton = styled(LinkButton)`
   ${ButtonStyle}
-`
+`;
 
 const Covers = styled.aside`
   display: flex;
@@ -63,9 +63,9 @@ function RouteComponent() {
         viens participer au festival Les Fourmilières à la Halle Tropisme pour
         une soirée pleine de surprises !
       </p>
-			<Covers>
-				<CovertPart src={cover} alt={"Affiche de la Faites des Solidarités."} />
-			</Covers>
+      <Covers>
+        <CovertPart src={cover} alt={"Affiche de la Faites des Solidarités."} />
+      </Covers>
 
       <Section>
         <p>Au programme :</p>
@@ -84,8 +84,8 @@ function RouteComponent() {
           <em>avec le collectif enfantiste 34</em>
           <br />- lecture d'album jeunesse engagé,{" "}
           <em>avec la librairie La Cavale</em>
-					<br />- Kermesse antifasciste, <em>par le Quartier Généreux</em>
-					<br />- Fiscal Fitness<em>, avec Attac</em>
+          <br />- Kermesse antifasciste, <em>par le Quartier Généreux</em>
+          <br />- Fiscal Fitness<em>, avec Attac</em>
         </p>
 
         <p>
@@ -106,7 +106,7 @@ function RouteComponent() {
           🎶 <strong>20h00 - 23h30 | CONCERTS</strong>
         </p>
         <p>- 20h : Planète Boum Boum</p>
-				<p>- 21h : La Battante</p>
+        <p>- 21h : La Battante</p>
         <p>- 21h 30 : DJSet Habibitch</p>
         <p>Et plein de surprises tout au long de la soirée !</p>
         <StyledLinkButton
@@ -117,7 +117,12 @@ function RouteComponent() {
         </StyledLinkButton>
       </Section>
       <Section>
-        <RestrictedAgenda path={Route.to} />
+        <Agenda
+          path={Route.to}
+          disableMap
+          disableDateFilder
+          disableTypeFilter
+        />
       </Section>
     </Section>
   );

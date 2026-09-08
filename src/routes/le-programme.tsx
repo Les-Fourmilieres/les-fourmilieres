@@ -10,6 +10,7 @@ export const Route = createFileRoute("/le-programme")({
 
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
+  const searchParams = Route.useSearch();
   return (
     <Section>
       <h1>Le Programme</h1>
@@ -21,7 +22,7 @@ function RouteComponent() {
         l'Hérault, le Gard, la Lozère, l'Ardèche, les Bouches-du-Rhône et
         l'Aveyron.
       </p>
-      <Agenda />
+      <Agenda searchParams={searchParams} />
     </Section>
   );
 }

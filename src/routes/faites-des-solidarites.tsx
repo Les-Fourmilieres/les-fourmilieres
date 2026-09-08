@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import { RestrictedAgenda } from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
 import cover from "../assets/fds/faites-des-solidarites.png?url";
 import program from "../assets/fds/programme.jpg?url";
-import { searchParams } from "../components/Agenda/SearchParams.js";
+import { searchParams } from "../components/Agenda/SearchParams";
+import { Agenda } from "../components/Agenda/Agenda";
 
 export const Route = createFileRoute("/faites-des-solidarites")({
   component: RouteComponent,
@@ -34,9 +34,9 @@ const CovertDoublePart = styled.img`
 `;
 
 const StyledP = styled.p`
-	margin: 16px 0 0 0;
-	width: 100%;
-`
+  margin: 16px 0 0 0;
+  width: 100%;
+`;
 
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
@@ -48,8 +48,8 @@ function RouteComponent() {
       </Covers>
 
       <p>
-				Pendant deux jours, le collectif "faites des solidarités", habitant⋅es
-				du quartier des Arennes et du Pays Viganais, assos, collectifs et
+        Pendant deux jours, le collectif "faites des solidarités", habitant⋅es
+        du quartier des Arennes et du Pays Viganais, assos, collectifs et
         syndicats locaux, partagerons au quartier des Arennes des ateliers de
         cuisine dans un four à pain itinérant, de création d’affiches et de
         visuels pour investir l'espace public, de discussions et d’échanges, de
@@ -66,22 +66,45 @@ function RouteComponent() {
         faitesdessolidarites@etik.com
       </p>
 
+      <StyledP>
+        En septembre, le collectif Faites des solidarités est aussi en
+        itinérance dans Le Vigan :
+      </StyledP>
+      <ul>
+        <li>
+          <p> Expo La mèche par Mordicus à la médiathèque du 18/09 au 17/10</p>
+        </li>
+        <li>
+          <p>
+            {" "}
+            Expo sape en Cévennes, par la société des ambiancereuses et
+            personnes Élégantes en Cévennes, dans le hall de la mairie et au
+            centre culturel du Bourilhou du 21/09 au 7/10
+          </p>
+        </li>
+        <li>
+          <p> Expo La mèche par Mordicus à la médiathèque du 18/09 au 17/10</p>
+        </li>
+      </ul>
 
-			<StyledP>En septembre, le collectif Faites des solidarités est aussi en itinérance dans Le Vigan :</StyledP>
-			<ul>
-				<li><p> Expo La mèche par Mordicus à la médiathèque du 18/09 au 17/10</p></li>
-				<li><p> Expo sape en Cévennes, par la société des ambiancereuses et personnes Élégantes en Cévennes, dans le hall de la mairie et au centre culturel du Bourilhou du 21/09 au 7/10</p></li>
-				<li><p> Expo La mèche par Mordicus à la médiathèque du 18/09 au 17/10</p></li>
-			</ul>
+      <Covers>
+        <CovertDoublePart
+          src={program}
+          alt={
+            "Flyer du programme. Retrouvez-les détails du programme cu-après."
+          }
+        />
+      </Covers>
 
-			<Covers>
-				<CovertDoublePart src={program} alt={"Flyer du programme. Retrouvez-les détails du programme cu-après."} />
-			</Covers>
-
-			<Section>
-				<h2>Programmation détaillée</h2>
-				<RestrictedAgenda path={Route.to} />
-			</Section>
+      <Section>
+        <h2>Programmation détaillée</h2>
+        <Agenda
+          path={Route.to}
+          disableDateFilder
+          disableMap
+          disableTypeFilter
+        />
+      </Section>
     </Section>
   );
 }

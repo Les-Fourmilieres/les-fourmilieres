@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import { RestrictedAgenda } from "../components/Agenda/RestrictedAgenda.js";
 import styled from "styled-components";
 import cover from "../assets/lfp/affiche-flp-2026.jpg?url";
 import lineup from "../assets/lfp/programme-lfp-2026.jpg";
-import { Link } from "../components/Link/Link.js";
-import { searchParams } from "../components/Agenda/SearchParams.js";
+import { Link } from "../components/Link/Link";
+import { searchParams } from "../components/Agenda/SearchParams";
+import { Agenda } from "../components/Agenda/Agenda";
 
 export const Route = createFileRoute("/festival-des-luttes-populaires")({
   component: RouteComponent,
@@ -67,7 +67,7 @@ function RouteComponent() {
         la programmation des fourmilières.
       </p>
 
-      <RestrictedAgenda path={Route.to} />
+      <Agenda path={Route.to} disableMap disableDateFilder disableTypeFilter />
     </Section>
   );
 }

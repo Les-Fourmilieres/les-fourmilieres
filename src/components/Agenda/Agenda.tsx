@@ -5,6 +5,7 @@ import { CalendarEvent } from "./CalendarEvent";
 import styled from "styled-components";
 import { fetchEvents } from "./api";
 import {
+  eventsForLink,
   eventType,
   type MobilizonEventI,
   type MobilizonEventWithLivingAreaI,
@@ -57,9 +58,23 @@ const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
 
 const params = { showUnConfirmed: false };
 
-export function Agenda() {
+interface Props {
+  path?: string;
+  searchParams?: ReturnType<typeof Route.useSearch>;
+  disableMap?: boolean;
+  disableTypeFilter?: boolean;
+  disableDateFilder?: boolean;
+}
+
+export function Agenda({
+  path,
+  searchParams = {},
+  disableMap = false,
+  disableDateFilder = false,
+  disableTypeFilter = false,
+}: Props) {
   const navigate = Route.useNavigate();
-  const searchParams = Route.useSearch();
+  //const searchParams = Route.useSearch();
 
   const dateRange = useMemo(() => {
     if (!searchParams.from || !searchParams.to) return null;
@@ -146,13 +161,22 @@ export function Agenda() {
 
   const allEvents = useMemo(() => {
     if (!data) return [] as MobilizonEventI[];
+
+    const uuids = path ? eventsForLink(path) : null;
+    if (uuids !== null && uuids.length == 0) return [];
+    console.log("path", path);
+    console.log("uuids", uuids);
+
     return pages
       .filter((page) => page.isSuccess)
       .reduce((acc, page) => {
         if (!page.data) return acc;
         return [...acc, ...page.data.data.searchEvents.elements];
-      }, data.data.searchEvents.elements);
-  }, [data, pages]);
+      }, data.data.searchEvents.elements)
+      .filter((event) => {
+        return uuids === null || uuids.includes(event.uuid);
+      });
+  }, [data, pages, path]);
 
   const events = useMemo(() => {
     if (!allEvents) return [];
@@ -274,55 +298,70 @@ export function Agenda() {
 
   return (
     <Section>
-      <LivingAreaFilter
-        value={
-          {
-            department: searchParams.department?.toString() ?? null,
-            livingArea: searchParams.bdv?.toString() ?? null,
-          } as LivingAreaSelectValue
-        }
-        onChange={setFilter}
-        postalCodeFacets={postalCodeFacets}
-        livingAreaFacets={sortedLivingAreasFacet}
-      />
-      <EventsMap events={filtersEvents} />
+      {!disableMap && (
+        <>
+          <LivingAreaFilter
+            value={
+              {
+                department: searchParams.department?.toString() ?? null,
+                livingArea: searchParams.bdv?.toString() ?? null,
+              } as LivingAreaSelectValue
+            }
+            onChange={setFilter}
+            postalCodeFacets={postalCodeFacets}
+            livingAreaFacets={sortedLivingAreasFacet}
+          />
+          <EventsMap events={filtersEvents} />
+        </>
+      )}
+
       <EventsContainer>
-        <FullWidth>
-          <I18nProvider locale="fr-FR-u-ca-gregory">
-            <DateRangePicker
-              value={dateRange}
-              onChange={setDateRange}
-              defaultValue={{
-                start: parseDate("2026-09-15"),
-                end: parseDate("2026-10-11"),
-              }}
-            />
-          </I18nProvider>
-          <Select
-            label="Type d'événement…"
-            value={searchParams.type}
-            style={{
-              flex: "1 1 300px",
-              display: "flex",
-              justifyContent: "stretch",
-            }}
-            onChange={(v) => {
-              if (v === "null") return setEventTypes(null);
-              setEventTypes(v as string);
-            }}
-          >
-            <SelectItem id={"null"}>Voir tous</SelectItem>
-            {Object.keys(SelectEventTypes)
-              .filter((key) => eventTypesFacets.includes(key))
-              .map((t) => (
-                <SelectItem key={t} id={t}>
-                  {eventTypesLabels[t as GroupedEventTypes]}
-                </SelectItem>
-              ))}
-          </Select>
-        </FullWidth>
+        {(!disableTypeFilter || !disableDateFilder) && (
+          <FullWidth>
+            {!disableDateFilder && (
+              <I18nProvider locale="fr-FR-u-ca-gregory">
+                <DateRangePicker
+                  value={dateRange}
+                  onChange={setDateRange}
+                  defaultValue={{
+                    start: parseDate("2026-09-15"),
+                    end: parseDate("2026-10-11"),
+                  }}
+                />
+              </I18nProvider>
+            )}
+            {!disableTypeFilter && (
+              <Select
+                label="Type d'événement…"
+                value={searchParams.type}
+                style={{
+                  flex: "1 1 300px",
+                  display: "flex",
+                  justifyContent: "stretch",
+                }}
+                onChange={(v) => {
+                  if (v === "null") return setEventTypes(null);
+                  setEventTypes(v as string);
+                }}
+              >
+                <SelectItem id={"null"}>Voir tous</SelectItem>
+                {Object.keys(SelectEventTypes)
+                  .filter((key) => eventTypesFacets.includes(key))
+                  .map((t) => (
+                    <SelectItem key={t} id={t}>
+                      {eventTypesLabels[t as GroupedEventTypes]}
+                    </SelectItem>
+                  ))}
+              </Select>
+            )}
+          </FullWidth>
+        )}
         {filtersEvents.map((event) => (
-          <CalendarEvent key={event.id} event={event} showEventsPageLink={true}/>
+          <CalendarEvent
+            key={event.id}
+            event={event}
+            showEventsPageLink={true}
+          />
         ))}
       </EventsContainer>
     </Section>

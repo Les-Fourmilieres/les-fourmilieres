@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import { RestrictedAgenda } from "../components/Agenda/RestrictedAgenda.js";
 import prog_we_2627 from "../assets/lodeve/prog2627.jpg?url";
 import styled from "styled-components";
-import { searchParams } from "../components/Agenda/SearchParams.js";
+import { searchParams } from "../components/Agenda/SearchParams";
+import { Agenda } from "../components/Agenda/Agenda";
 
 export const Route = createFileRoute("/la-fourmiliere-de-lodeve")({
   component: RouteComponent,
@@ -50,7 +50,7 @@ function RouteComponent() {
         </Covers>
       </Section>
       <Section>
-        <RestrictedAgenda path={Route.to} />
+        <Agenda path={Route.to} disableMap />
       </Section>
     </Section>
   );
