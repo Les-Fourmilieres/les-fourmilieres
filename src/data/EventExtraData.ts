@@ -498,7 +498,6 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "0e275a07-2610-4be6-b60b-ae88cda219f1": {
     eventTypes: ["Pride"],
-		overridePhysicalAddress:foyerAlbouy,
   },
   "9bebffdf-b392-421a-9340-e5e053be4918": {
     eventTypes: ["Ciné-débat"],
