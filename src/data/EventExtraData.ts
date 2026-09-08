@@ -822,5 +822,17 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 			description: "Alès (lieu envoyé par email aux inscrites)",
 			geom: "4.077342110606977;44.12470811020639"
 		}
+	},
+	"f84f64cb-7555-492a-acb6-f6cf5cbf84fd":{
+		eventTypes:["Picnic"]
+	},
+	"4d422666-63e7-4f5b-8b3a-c926c25336dc":{
+		eventTypes:["Spectacle vivant"]
+	},
+	"856d54ae-8f03-4497-8b2a-1bc3259c95a4":{
+		eventTypes:["Théâtre"]
+	},
+	"87f3859a-918c-4c88-8433-371f27ddc446":{
+		eventTypes:["Spectacle vivant"]
 	}
 };
