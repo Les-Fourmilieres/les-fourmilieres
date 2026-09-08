@@ -24,7 +24,7 @@ const StyledDateInput: typeof AriaDateInput = styled(AriaDateInput)`
   height: 24px;
   line-height: 24px;
   width: fit-content;
-  min-width: 150px;
+  min-width: 80px;
   white-space: nowrap;
   forced-color-adjust: none;
   cursor: text;
