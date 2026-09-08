@@ -148,9 +148,61 @@ const fds: ExtendedMenuItem = {
   desc: "Cet événement s'inscrit dans la Faites des Solidarités, 2 jours mêlant ateliers et cuisine populaire et partagée dans le quartier des Arènes au Vigan.",
 };
 
+const cafeDuSiecle:MobilizonPhysicalAddressI = {
+	description: "Société du Café du Siècle",
+	street: "1, rue Biron",
+	locality: "Ganges",
+	geom: "3.7077889465294476;43.934114272413765"
+}
+const autreCote:MobilizonPhysicalAddressI = {
+	description: "De l'Autre Côté",
+	street:"24 rue du Jeu de Ballon",
+	locality: "Ganges",
+	geom:"3.7078075842345037;43.93431129921118"
+}
+const freep:MobilizonPhysicalAddressI = {
+	description: "La Freep",
+	street:"22 rue Armand Sabatier",
+	locality: "Ganges",
+	geom:"3.7039525482435907;43.93375554254482"
+}
+const arbreSansFin:MobilizonPhysicalAddressI = {
+	description:"L'Arbre sans fin",
+	street:"7 rue Biron",
+	locality:"Ganges",
+	geom:"3.7073966494329094;43.93417741352798"
+}
+const masDesMoulins:MobilizonPhysicalAddressI = {
+	description:"Mas des Moulins",
+	street:"2452 Avenue du Père Soulas",
+	locality:"Montpellier",
+	geom:"3.8438363674688696;43.629858803968105"
+}
+const foyerAlbouy:MobilizonPhysicalAddressI = {
+	description:"Foyer Albouy",
+	street:"rue de la Pansière",
+	locality:"Le Vigan",
+	geom:"3.6150398202932483;43.9903403039744"
+}
+
+const tropisme:MobilizonPhysicalAddressI = {
+	description: "La Halle Tropisme",
+	street: "121 Rue Fontcouverte",
+	locality:"Montpellier",
+	geom:"3.858688767336156;43.60222918891905"
+}
+
+const carmagnole: MobilizonPhysicalAddressI = {
+	description: "La Carmagnole",
+	street: "10 rue de la Palissade",
+	locality: "Montpellier",
+	geom: "3.868039687392882;43.60736510894427"
+}
+
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "538f4ebe-8c97-43fe-b2c6-9040993b6bb0": {
     eventTypes: ["Conférence"],
+		overridePhysicalAddress:carmagnole
   },
   "d380683f-d451-45ee-8818-9bd9c2f414ff": {
     eventTypes: ["Conférence"],
@@ -172,6 +224,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "3c9bd105-3fb8-4dee-8ac5-c229300d1463": {
     eventTypes: ["Conférence"],
+		overridePhysicalAddress:carmagnole
   },
   "a28a1a79-9595-4cc7-a4f6-bce7ac6a84a3": {
     eventTypes: [
@@ -192,10 +245,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "ee734fc5-b151-45ab-94a7-6109aaf7cf78": {
     eventTypes: ["Concert"],
     programLinks: [halleTropisme],
+		overridePhysicalAddress:tropisme
   },
   "ffea1971-298d-4bda-bdf8-73c567b1069e": {
     eventTypes: ["DJ Set"],
     programLinks: [halleTropisme],
+		overridePhysicalAddress:tropisme
   },
   "c13b5c14-9a64-4746-98ce-cc570f3461f9": {
     eventTypes: ["DJ Set"],
@@ -224,13 +279,14 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "5e0dc165-747b-44dd-b2bc-b674f0aeb4c2": {
     eventTypes: ["Projection"],
-    physicalAddress: { geom: "3.858621;43.601846" },
+    overridePhysicalAddress:tropisme
   },
   "e24446de-b4da-4bbb-bcf3-efceb2a9ea7c": {
     eventTypes: ["Atelier d'expression"],
   },
   "bd975802-c6d3-410c-a857-f95591cf6efe": {
     eventTypes: ["Rencontre Littéraire"],
+		overridePhysicalAddress:arbreSansFin
   },
   "d75e045c-d447-47c5-b18f-7d438817a5fc": {
     eventTypes: ["Conférence"],
@@ -279,10 +335,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "8cd0fb3b-126d-436c-bd98-4d56b2fcbf17": {
     eventTypes: ["Fresque"],
-    physicalAddress: {
-      description: "Mas des Moulins",
-      geom: "3.8440761429693677;43.629717824973525",
-    },
+    overridePhysicalAddress:masDesMoulins
   },
   "59c4c5f9-f127-470c-a852-8e5d0ed79bef": {
     eventTypes: ["Table-Ronde"],
@@ -305,6 +358,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "205537bf-df3a-4bc4-ac99-5948aeb87a99": {
     eventTypes: ["Concert"],
+		overridePhysicalAddress:freep
   },
   "2781745b-4d3d-4b7d-a825-4a4169f3a85b": {
     eventTypes: ["Table-Ronde"],
@@ -399,6 +453,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "e1a5e198-4238-4020-8a20-fa986eff27fe": {
     eventTypes: ["Expo"],
+		overridePhysicalAddress:tropisme
   },
   "afdbd57d-0bd4-44f6-abfb-4b80a8286920": {
     eventTypes: ["Expo"],
@@ -408,66 +463,42 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "ab8971e9-9c2e-45cb-929f-993b7cbc574e": {
     eventTypes: ["Cantine"],
-    physicalAddress: {
-      description: "Foyer Albouy, Le Vigan",
-      geom: "3.6145646494390755;43.99010945471654",
-    },
+		overridePhysicalAddress:foyerAlbouy,
     programLinks: [fds],
   },
   "96636c06-14ec-46f4-b132-0d54ab0304c6": {
     eventTypes: ["Atelier militant"],
     programLinks: [fds],
-    physicalAddress: {
-      description: "Foyer Albouy, Le Vigan",
-      geom: "3.6145646494390755;43.99010945471654",
-    },
+    overridePhysicalAddress:foyerAlbouy
   },
   "8917b7c0-0311-40b5-997c-bcd5fd860503": {
     eventTypes: ["Atelier cuisine", "Atelier d'expression", "Atelier militant"],
     programLinks: [fds],
-    physicalAddress: {
-      description: "Foyer Albouy, Le Vigan",
-      geom: "3.6145646494390755;43.99010945471654",
-    },
+		overridePhysicalAddress:foyerAlbouy
   },
   "7c0afecb-e4b3-47cc-909b-2ce89e1e4fe2": {
     eventTypes: ["Atelier cuisine", "Pizza", "Concert"],
-    physicalAddress: {
-      description: "Foyer Albouy, Le Vigan",
-      geom: "3.6145646494390755;43.99010945471654",
-    },
+		overridePhysicalAddress:foyerAlbouy,
     programLinks: [fds],
   },
   "5bffbb5b-0e7d-4982-bc04-07aa28bc8d91": {
     eventTypes: ["Repas partagé", "Bal populaire"],
-    physicalAddress: {
-      description: "Foyer Albouy, Le Vigan",
-      geom: "3.6145646494390755;43.99010945471654",
-    },
+		overridePhysicalAddress:foyerAlbouy,
     programLinks: [fds],
   },
   "88e99442-3d96-42fe-a70b-6b03fc904d95": {
     eventTypes: ["Atelier d'expression", "Atelier cuisine", "Sport pour tous.tes"],
-    physicalAddress: {
-      description: "Foyer Albouy, Le Vigan",
-      geom: "3.6145646494390755;43.99010945471654",
-    },
+		overridePhysicalAddress:foyerAlbouy,
     programLinks: [fds],
   },
   "938d683f-5559-4324-b442-22cc0399e7f6": {
     eventTypes: ["Conte", "Goûter"],
-    physicalAddress: {
-      description: "Foyer Albouy, Le Vigan",
-      geom: "3.6145646494390755;43.99010945471654",
-    },
+		overridePhysicalAddress:foyerAlbouy,
     programLinks: [fds],
   },
   "0e275a07-2610-4be6-b60b-ae88cda219f1": {
     eventTypes: ["Pride"],
-    physicalAddress: {
-      description: "Centre-ville d'Arles",
-      geom: "4.62761377050663;43.67640985146661",
-    },
+		overridePhysicalAddress:foyerAlbouy,
   },
   "9bebffdf-b392-421a-9340-e5e053be4918": {
     eventTypes: ["Ciné-débat"],
@@ -480,12 +511,14 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "b0f03c3d-2588-43d1-8635-44fcc131f3fb": {
     eventTypes: ["Conférence"],
+		overridePhysicalAddress:carmagnole
   },
   "e015f26b-265e-4e5b-884d-87dbcb268d23": {
     eventTypes: ["Banquet populaire"],
   },
   "dd44f90a-8134-4a13-a73e-7747b677a5c1": {
     eventTypes: ["Spectacle vivant"],
+		overridePhysicalAddress:cafeDuSiecle
   },
   "ec3a24a6-f7e7-4fd6-9898-34ca3f213b60": {
     eventTypes: ["DJ Set"],
@@ -500,6 +533,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "aac53e1b-4760-4b4c-a552-07dc6b125f54": {
     eventTypes: ["Expo"],
+		overridePhysicalAddress:autreCote
   },
   "73733af0-98ed-49f4-8da5-997b5bcb2af3": {
     eventTypes: ["Conférence"],
@@ -561,6 +595,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "94418219-de82-419e-95d3-a5cb6213ea6e": {
     eventTypes: ["Concert", "Théâtre"],
+		overridePhysicalAddress:cafeDuSiecle
   },
   "c9684b06-08cb-4443-a6d0-9a3d90056d82": {
     eventTypes: ["Kermesse", "Table-Ronde"],
@@ -578,9 +613,11 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "2ec529d3-1d6e-4c8f-a0ca-7cdd242cb9a1": {
     eventTypes: ["Expo"],
+		overridePhysicalAddress:cafeDuSiecle
   },
   "7b11dab7-c001-4045-a1c0-3c6ba6f7986d": {
     eventTypes: ["Lecture"],
+		overridePhysicalAddress:cafeDuSiecle
   },
 	"0c645c5c-5435-467a-9fa8-a803427f0c07":{
 		eventTypes:["Projection"]
@@ -596,38 +633,46 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Expo"]
 	},
 	"2797ad37-0da5-4f5a-be09-64033f19e1f5":{
-		eventTypes:["Formation"]
+		eventTypes:["Formation"],
+		overridePhysicalAddress:carmagnole
 	},
 	"6cf0c898-bc84-4f70-9400-6c6ed9548c7f":{
 		eventTypes:["Conte"],
 		programLinks:[lodeve]
 	},
 	"72746618-80ea-4429-9533-3e31ea99051c":{
-		eventTypes:["Formation"]
+		eventTypes:["Formation"],
+		overridePhysicalAddress:carmagnole
 	},
 	"815414dd-1acd-46db-9ce2-72889cf49579":{
-		eventTypes:["Formation"]
+		eventTypes:["Formation"],
+		overridePhysicalAddress:carmagnole
 	},
 	"c701099b-2aad-43a5-a5c8-20f4a811fa52":{
 		eventTypes:["Concert"],
-		programLinks:[halleTropisme]
+		programLinks:[halleTropisme],
+		overridePhysicalAddress:tropisme
 	},
 	"11de6093-7a7e-4f07-95c1-8b6654ff5059":{
 		eventTypes:["Rencontre Littéraire", "Arpentage"],
-		programLinks:[halleTropisme]
+		programLinks:[halleTropisme],
+		overridePhysicalAddress:tropisme
 	},
 	"6f50e85c-ca06-4bca-919c-645b9dddc5c8":{
 		eventTypes:["Kermesse"],
-		programLinks:[halleTropisme]
+		programLinks:[halleTropisme],
+		overridePhysicalAddress:tropisme
 	},
 	"19e71f5e-223b-4354-8fcc-90ab0b009a23":{
 		eventTypes:["Conférence"]
 	},
 	"6fd1f509-724a-4f10-ac15-bf07729bc977":{
-		eventTypes:["Lecture", "Ciné-débat", "Rencontre Littéraire"]
+		eventTypes:["Lecture", "Ciné-débat", "Rencontre Littéraire"],
+		overridePhysicalAddress:autreCote
 	},
 	"4cc9926d-684a-48c6-bcbf-0a9e647e9f14":{
-		eventTypes:["Lecture", "Rencontre Littéraire"]
+		eventTypes:["Lecture", "Rencontre Littéraire"],
+		overridePhysicalAddress:cafeDuSiecle
 	},
 	"d0dc29b9-9f1c-405a-b65c-e52f2687412b":{
 		eventTypes:["Concert"],
@@ -666,22 +711,27 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"7dc5726f-47ae-4698-90f2-046fc4398e37":{
 		eventTypes:["Atelier cuisine", "Banquet populaire"],
+		overridePhysicalAddress:foyerAlbouy,
 		programLinks:[fds]
 	},
 	"ba7da6f5-7ba7-4ea0-a46b-43ec1b1b5e5d":{
 		eventTypes:["Atelier d'expression"],
+		overridePhysicalAddress:foyerAlbouy,
 		programLinks:[fds]
 	},
 	"e555c713-ba19-4036-a6bc-903e0c97e0da":{
 		eventTypes:["Conte"],
+		overridePhysicalAddress:foyerAlbouy,
 		programLinks:[fds]
 	},
 	"afba029d-010a-4181-80a3-03614bf79fad":{
 		eventTypes:["Atelier jardinage"],
+		overridePhysicalAddress:foyerAlbouy,
 		programLinks:[fds]
 	},
 	"902451d3-9fdd-45e7-863e-8c43032ca17e":{
 		eventTypes:["Sport pour tous.tes"],
+		overridePhysicalAddress:foyerAlbouy,
 		programLinks:[fds]
 	},
 	"da1b1d63-05ac-48f4-9f56-b0e0c99c88b3":{
@@ -814,7 +864,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"9d897d36-c844-482c-ab57-8dd2a67dfeda":{
 		eventTypes:["Atelier pour enfants"],
-		programLinks:[halleTropisme]
+		programLinks:[halleTropisme],
+		overridePhysicalAddress:tropisme
 	},
 	"7c045675-d034-41f1-95f8-0326e5bec946":{
 		eventTypes:["Formation"],
@@ -830,9 +881,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Spectacle vivant"]
 	},
 	"856d54ae-8f03-4497-8b2a-1bc3259c95a4":{
-		eventTypes:["Théâtre"]
+		eventTypes:["Théâtre"],
+		overridePhysicalAddress:autreCote
 	},
 	"87f3859a-918c-4c88-8433-371f27ddc446":{
-		eventTypes:["Spectacle vivant"]
-	}
+		eventTypes:["Spectacle vivant"],
+		overridePhysicalAddress:cafeDuSiecle
+	},
+
 };
