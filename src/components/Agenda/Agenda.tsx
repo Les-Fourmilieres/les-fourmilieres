@@ -44,6 +44,8 @@ const FullWidth = styled.div`
   gap: 16px;
   align-items: stretch;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 100%;
 `;
 
 const sortEventByDate = (e1: MobilizonEventI, e2: MobilizonEventI): number => {
