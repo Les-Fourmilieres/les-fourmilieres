@@ -1445,7 +1445,7 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo:"collectifs/streetpress.png",
 		departement:"Hérault",
 		bdv: "34172",
-		url:"https://soutenir.streetpress.com/",
+		url:"https://soutenir.streetpress.com/les-seminaires-et-webinaires-de-streetpress/",
 		instagram:"https://www.instagram.com/streetpress",
 		facebook:"https://www.facebook.com/StreetPress/"
 	},
