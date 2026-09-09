@@ -1300,6 +1300,16 @@ export const collectifs: CollectifI[] = [
 		type:["Syndicat"],
 	},
 	{
+		slug:"solidarite-antispeciste",
+		name:"Solidarité antispéciste",
+		description:"Collectif tantispéciste et antifaciste. En lutte pour la libération animale 🏴.",
+		departement:"Aude",
+		bdv:"11069",
+		type:["Collectif militant"],
+		logo:"collectifs/solidarite-antispeciste.png",
+		instagram:"https://www.instagram.com/solidarite_antispeciste/"
+	},
+	{
 		slug:"sud-education-34",
 		name:"Sud éducation Hérault",
 		position:{lat:43.616627127376795, lng:3.878247311848792},
@@ -1372,6 +1382,17 @@ export const collectifs: CollectifI[] = [
 		description:"🎭 Théâtre Associatif 🎭 - Programmation jeune public et adulte !",
 		type:["Théâtre"]
   },
+	{
+		slug:"transmissions",
+		name: "Transmissions",
+		description:"L'association a pour but l'élaboration, le financement et la mise en place de projets, sous forme d'échanges, d'activités et d'ateliers, destinés à répondre aux besoins de personnes et de groupes marginalisés, renforcer les capacités d'organisation et de solidarité",
+		departement:"Aude",
+		type:["Collectif militant"],
+		position:{"lat":42.935511071759784, lng:2.114441171340727},
+		logo:"collectifs/logo-transmissions.webp",
+		url:"https://www.helloasso.com/associations/transmissions",
+		instagram:"https://www.instagram.com/assotransmissions"
+	},
   /*{
     slug: "tisseur-d-espoir",
     name: "Tisseurs et tisseuses d'espoir",
