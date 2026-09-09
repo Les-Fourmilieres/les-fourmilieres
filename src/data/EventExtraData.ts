@@ -891,5 +891,9 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Spectacle vivant"],
 		overridePhysicalAddress:cafeDuSiecle
 	},
+	"d586ad4b-b78e-4b83-80ec-2a055fbe2c93":{
+		eventTypes:["Conférence"],
+		programLinks:[lodeve]
+	}
 
 };
