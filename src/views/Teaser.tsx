@@ -84,7 +84,7 @@ export function Teaser() {
 				</p>
 			</Section>
 			<Section>
-				<Map collectifs={collectifs} />
+				<Map collectifs={Object.values(collectifs)} />
 			</Section>
     </Container>
   );

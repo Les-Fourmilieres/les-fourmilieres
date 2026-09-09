@@ -1,5 +1,6 @@
 import type { MenuItem } from "../components/Header/Menu.js";
 import { type MobilizonPhysicalAddressI } from "../components/Agenda/Event.js";
+import {type Collectif} from "./collectifs.js";
 
 export type EventTypes =
   | "Concert"
@@ -118,6 +119,8 @@ type EventExtraDataI = {
   programLinks?: ExtendedMenuItem[];
   physicalAddress?: MobilizonPhysicalAddressI; //Default value, overridden by Mobilizon. Could include only a geom default value
   overridePhysicalAddress?: MobilizonPhysicalAddressI; //Override value
+	by?:Collectif[],
+	with?:Collectif[]
 };
 
 const halleTropisme: ExtendedMenuItem = {
@@ -202,7 +205,8 @@ const carmagnole: MobilizonPhysicalAddressI = {
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "538f4ebe-8c97-43fe-b2c6-9040993b6bb0": {
     eventTypes: ["Conférence"],
-		overridePhysicalAddress:carmagnole
+		overridePhysicalAddress:carmagnole,
+		by:["la-carmagnole"]
   },
   "d380683f-d451-45ee-8818-9bd9c2f414ff": {
     eventTypes: ["Conférence"],

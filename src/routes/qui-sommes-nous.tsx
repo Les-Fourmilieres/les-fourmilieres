@@ -91,7 +91,7 @@ function RouteComponent() {
 
   const collectifsWithLivingAreas = useMemo((): CollectifWithLivingArea[] => {
     const livingAreas = getLivingAreas();
-    return collectifs.filter(c=>c.position || c.bdv).map((collectif) => {
+    return Object.values(collectifs).filter(c=>c.position || c.bdv).map((collectif) => {
       const pt = collectif.position ? point([collectif.position!.lng, collectif.position!.lat]) : undefined;
 			const livingArea = livingAreas.find((livingArea) =>
         livingArea.pointIsWithing(pt, collectif.bdv),
