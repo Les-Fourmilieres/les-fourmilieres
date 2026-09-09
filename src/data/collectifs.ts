@@ -134,6 +134,7 @@ export type Collectif = "ajcm" |
 	"societe-du-cafe-du-siecle" |
 	"solidaires-etudiants-34" |
 	"solidarite-antispeciste" |
+	"streetpress" |
 	"sud-education-34" |
 	"theatre-beaux-arts-tabards" |
 	"theatre-dans-la-foret" |
@@ -1435,6 +1436,18 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		type: ["Collectif militant"],
 		logo: "collectifs/solidarite-antispeciste.png",
 		instagram: "https://www.instagram.com/solidarite_antispeciste/"
+	},
+	"streetpress":{
+		slug: "streetpress",
+		name:"Streetpress",
+		type:["Média"],
+		description:"🗨️ Des histoires, des enquêtes et de l’impact.",
+		logo:"collectifs/streetpress.png",
+		departement:"Hérault",
+		bdv: "34172",
+		url:"https://soutenir.streetpress.com/",
+		instagram:"https://www.instagram.com/streetpress",
+		facebook:"https://www.facebook.com/StreetPress/"
 	},
 	"sud-education-34": {
 		slug: "sud-education-34",
