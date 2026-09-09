@@ -483,6 +483,16 @@ export const collectifs: CollectifI[] = [
     facebook: "https://www.facebook.com/dcclm.rollerderby",
   },*/
 	{
+		slug:"cri-du-choeur",
+		name:"Cri du Choeur",
+		description:"Le Cri du Chœur, chorale militante, c'est une volonté commune : retrouver une voix confisquée par un système inhumain en partageant des chants de lutte. L'action collective et le ''faire ensemble'' sont non seulement souhaitables mais nécessaires : s'épanouir dans le plaisir de chanter ensemble.",
+		departement:"Hérault",
+		type:["Collectif artistique", "Collectif militant"],
+		position:{lat:43.60587262955087, lng:3.86281496797415},
+		logo:"collectifs/cri-du-choeur.png",
+		url:"https://criduchoeur.jimdofree.com/"
+	},
+	{
 		slug:"de-l-autre-cote",
 		name: "De l’Autre Côté",
 		position: {lat:43.934328020447076, lng:3.7078137288933743},
