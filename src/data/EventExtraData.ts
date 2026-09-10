@@ -514,7 +514,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Pride"],
 		physicalAddress:{
 			description: "Arles",
-			geom:"4.629936736133307;43.67592257109148"
+			geom:"4.62849225218021;43.67542158820788"
 		}
   },
   "9bebffdf-b392-421a-9340-e5e053be4918": {
@@ -939,5 +939,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Théâtre"],
 		programLinks:[lodeve],
 		overridePhysicalAddress:megisserie
+	},
+	"bdf88a4e-ae08-47bd-a1ef-d62e5d87ac18":{
+		eventTypes:["Concert", "DJ Set"],
+		physicalAddress:{
+			description: "L'angerie, Arles",
+			geom:"4.621109297207978;43.67515118573464"
+		}
 	}
 };
