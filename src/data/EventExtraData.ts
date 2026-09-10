@@ -696,6 +696,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"b31fac63-9628-4b6f-bdac-32d87aa8c059":{
 		eventTypes:["Spectacle vivant"],
 		programLinks: [lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"72fa8d0c-cf93-466b-8ab7-6e28cdd56518":{
 		eventTypes:["Rencontre Littéraire"],
@@ -762,7 +763,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"3766b6bf-cada-4501-ac96-8ead47638de3":{
 		eventTypes:["Table-Ronde"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"373f9e19-80a6-4b6e-90ed-e07a78698d3b":{
 		eventTypes:["Conférence"],
