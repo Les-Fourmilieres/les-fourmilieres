@@ -210,6 +210,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "d380683f-d451-45ee-8818-9bd9c2f414ff": {
     eventTypes: ["Conférence"],
+		by:["societe-du-cafe-du-siecle"]
   },
   "c3fd4ad3-8e73-40f3-861c-52427ea8352b": {
     eventTypes: ["Picnic"],
@@ -369,6 +370,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "f4bc64a2-c443-4e15-a9fe-72fc1663788c": {
     eventTypes: ["Ciné-débat"],
+		by:["attac-montpellier"]
   },
   "754cf40f-6ceb-44f4-8772-78dd75d42614": {
     eventTypes: ["Manifestation"],
@@ -898,6 +900,25 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"d586ad4b-b78e-4b83-80ec-2a055fbe2c93":{
 		eventTypes:["Conférence"],
 		programLinks:[lodeve]
+	},
+	"85044bc9-8633-48e7-8513-a8d03c99b4ec":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"8ca89968-236e-4efe-9afa-d6c3fcd903c1":{
+		eventTypes:["Parade"],
+		programLinks:[lodeve]
+	},
+	"c66d0c7a-2769-4ec2-abb3-5257935fb3a0":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"80a33c6b-6048-40d3-b5c3-2b2f41393942":{
+		eventTypes:["Rencontre Littéraire"],
+		programLinks:[lodeve]
+	},
+	"dd844926-d401-4f74-8205-b15e445a0e7c":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
 	}
-
 };
