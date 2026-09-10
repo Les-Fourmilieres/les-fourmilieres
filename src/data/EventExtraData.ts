@@ -202,6 +202,19 @@ const carmagnole: MobilizonPhysicalAddressI = {
 	geom: "3.868039687392882;43.60736510894427"
 }
 
+const lodeva:MobilizonPhysicalAddressI = {
+	description: "Brasserie Lodeva",
+	street: "9 avenue Denfert",
+	locality: "Lodève",
+	geom: "3.3240083528519686;43.730251944910336"
+}
+const megisserie:MobilizonPhysicalAddressI = {
+	description: "La Mégisserie",
+	street:"Quai de la Mégisserie",
+	locality: "Lodève",
+	geom: "3.3190519041322335;43.72987481459126"
+
+}
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "538f4ebe-8c97-43fe-b2c6-9040993b6bb0": {
     eventTypes: ["Conférence"],
@@ -311,10 +324,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "47fd12d7-b2ca-4be3-a981-fde01ec0422b": {
     eventTypes: ["Concert"],
     programLinks: [lodeve],
-    physicalAddress: {
-      description: "Lodève (lieux à préciser)",
-      geom: "3.3163397569504283;43.733208459921066",
-    },
+    overridePhysicalAddress:lodeva
   },
   "bc7705b0-2c3b-49d8-b415-6d182c6ecc69": {
     eventTypes: ["Concert", "Conférence", "Projection"],
@@ -331,9 +341,6 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "c0045865-03dc-4fb8-8ff1-60fc06a3ed64": {
     eventTypes: ["Parade", "Concert", "DJ Set"],
     programLinks: [lodeve],
-  },
-  "2c83fc3a-b436-43e3-b0f9-231f81264b94": {
-    eventTypes: ["Conférence"],
   },
   "2ad57bd6-2635-4096-845f-c2fd1e458ff8": {
     eventTypes: ["Braderie", "Atelier sérigraphie", "Arpentage", "Expo"],
@@ -378,6 +385,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "1b0bb799-bc15-440f-90cf-c51d0e2fa9be": {
     eventTypes: ["Concert"],
     programLinks: [lodeve],
+		overridePhysicalAddress:lodeva
   },
   "f03047d4-e8fa-4605-8086-dec565f70d12": {
     eventTypes: ["Autre"],
@@ -546,6 +554,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "73733af0-98ed-49f4-8da5-997b5bcb2af3": {
     eventTypes: ["Conférence"],
+		overridePhysicalAddress:lodeva,
     programLinks: [lodeve],
   },
   "0f4cf1a9-88c6-4028-8ac4-8a4ed4c86cf0": {
@@ -559,32 +568,22 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "4487620c-07ae-4836-8fc8-6db44193a83f": {
     eventTypes: ["Concert", "Théâtre"],
     programLinks: [lodeve],
-    physicalAddress: {
-      description: "Lodève (lieux à préciser)",
-      geom: "3.3163397569504283;43.733208459921066",
-    },
+    overridePhysicalAddress:lodeva
   },
   "36836714-c035-4e5f-a97f-47d6a05029b1": {
     eventTypes: ["Concert"],
     programLinks: [lodeve],
-    physicalAddress: {
-      geom: "3.324022465288582;43.73025580653958",
-    },
+    overridePhysicalAddress:lodeva
   },
   "88766b3e-2a6b-4b61-a281-ce6ec7dbf25c": {
     eventTypes: ["Projection"],
     programLinks: [lodeve],
-    physicalAddress: {
-      geom: "3.3163397569504283;43.733208459921066",
-    },
+    overridePhysicalAddress:lodeva
   },
   "83c5a2f6-bf9e-4c1c-8c05-05734dec26da": {
     eventTypes: ["Concert", "Théâtre"],
     programLinks: [lodeve],
-    overridePhysicalAddress: {
-      description: "Lodève (lieux à préciser)",
-      geom: "3.3163397569504283;43.733208459921066",
-    },
+    overridePhysicalAddress:lodeva
   },
   "762e42ec-3ab1-4422-87ac-9ad15abf39b1": {
     eventTypes: ["Table-Ronde"],
@@ -597,10 +596,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "f8230be7-7806-4b12-8357-0072a12ab3e3": {
     eventTypes: ["Théâtre"],
     programLinks: [lodeve],
-    physicalAddress: {
-      description: "Lodève (lieux à préciser)",
-      geom: "3.3163397569504283;43.733208459921066",
-    },
+    overridePhysicalAddress:megisserie
   },
   "94418219-de82-419e-95d3-a5cb6213ea6e": {
     eventTypes: ["Concert", "Théâtre"],
@@ -632,11 +628,14 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Projection"]
 	},
 	"44e4ec18-f604-4d74-b526-8064f0e58779":{
-		eventTypes:["Projection"]
+		eventTypes:["Projection"],
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"745a59a9-8677-4368-a616-3e128b21447d":{
 		eventTypes:["Lecture"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"b2d1e79f-077a-4852-be67-958c58df4baa":{
 		eventTypes:["Expo"]
@@ -647,7 +646,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"6cf0c898-bc84-4f70-9400-6c6ed9548c7f":{
 		eventTypes:["Conte"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"72746618-80ea-4429-9533-3e31ea99051c":{
 		eventTypes:["Formation"],
@@ -686,10 +686,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"d0dc29b9-9f1c-405a-b65c-e52f2687412b":{
 		eventTypes:["Concert"],
 		programLinks: [lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"6a16ddcf-2046-4e11-a345-2a14e0d92242":{
 		eventTypes:["Jeux"],
 		programLinks: [lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"b31fac63-9628-4b6f-bdac-32d87aa8c059":{
 		eventTypes:["Spectacle vivant"],
@@ -745,15 +747,18 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"da1b1d63-05ac-48f4-9f56-b0e0c99c88b3":{
 		eventTypes:["Jeux"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"6e8ec1be-abeb-46dd-bdb5-a6d331f110a8":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"98956a63-b56e-46bc-9eec-9e69e78f5a29":{
 		eventTypes:["DJ Set"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"3766b6bf-cada-4501-ac96-8ead47638de3":{
 		eventTypes:["Table-Ronde"],
@@ -761,31 +766,28 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"373f9e19-80a6-4b6e-90ed-e07a78698d3b":{
 		eventTypes:["Conférence"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"934dd4a9-1291-4963-a6cb-a9582dc6d245":{
 		eventTypes:["Théâtre"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"a22e4e19-2b46-40c8-94ff-1a81af689f0c":{
 		eventTypes:["Bal populaire"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"be365b79-c3c6-4f65-bded-38900db5db6d":{
 		eventTypes:["Spectacle vivant"],
 		programLinks:[lodeve],
-		physicalAddress: {
-			description: "Lodève (lieux à préciser)",
-			geom: "3.3163397569504283;43.733208459921066",
-		}
+		overridePhysicalAddress:megisserie
 	},
 	"d28383b5-6575-438c-8bb6-e531a51e702c":{
 		eventTypes:["Loto"],
 		programLinks:[lodeve],
-		physicalAddress: {
-			description: "Lodève (lieux à préciser)",
-			geom: "3.3163397569504283;43.733208459921066",
-		}
+		overridePhysicalAddress:megisserie
 	},
 	"c8cc6ad8-455c-49bf-811c-8e049c4ac949":{
 		eventTypes:["Théâtre"],
@@ -797,27 +799,28 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"6dd5f013-28ae-4aa9-b8e5-9ec2c027c431":{
 		eventTypes:["Spectacle vivant"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"55355f13-2d2b-4dc9-905a-b830f67d8f03":{
 		eventTypes:["Concert"],
 		programLinks:[lodeve],
-		physicalAddress: {
-			description: "Lodève (lieux à préciser)",
-			geom: "3.3163397569504283;43.733208459921066",
-		}
+		overridePhysicalAddress:lodeva
 	},
 	"a7c51f72-06b9-4928-975a-e3d2a0374089":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"799dcd37-cc18-411c-9b62-9662b22cdde3":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"cc8d931a-a314-4b68-af69-1c7e8875896a":{
 		eventTypes:["DJ Set"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"359c805a-ca64-404c-a96e-d3bebc2f7aa9":{
 		eventTypes:["Café philo"],
@@ -825,7 +828,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"6bb7ec31-c75e-4430-94f5-8c361e58f955":{
 		eventTypes:["Spectacle vivant"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"46bf2c0c-1ea6-4972-97a7-2d094135abc2":{
 		eventTypes:["Conférence"],
@@ -833,43 +837,43 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"fa720f39-7107-40d9-a54d-0e0e8c9b0bd9":{
 		eventTypes:["Spectacle vivant"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"67c8f541-d84e-4369-843e-380a4ebe4553":{
 		eventTypes:["Spectacle vivant"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"2499c0dc-520d-4d44-b1d5-970a4316cd2b":{
 		eventTypes:["Théâtre"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"252f8677-16f0-4de6-a338-711d4263c338":{
 		eventTypes:["Spectacle vivant"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"32ade4d8-1956-427c-af24-1a0b3563cc00":{
 		eventTypes:["Projection"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"9f2e5703-b01a-4b71-b3d9-247d0d0cced6":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"4fcea752-450e-43a2-9768-8d658c23ecdd":{
 		eventTypes:["Concert"],
 		programLinks:[lodeve],
-		physicalAddress: {
-			description: "Lodève (lieux à préciser)",
-			geom: "3.3163397569504283;43.733208459921066",
-		},
-	},
-	"760e574b-76f0-4d93-adf2-cba69aa5d5fc":{
-		eventTypes:["DJ Set"],
-		programLinks:[lodeve]
+		overridePhysicalAddress:lodeva
 	},
 	"387ae566-f77d-43d4-b2cb-eab4ecc5e1e0":{
 		eventTypes:["DJ Set"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"9d897d36-c844-482c-ab57-8dd2a67dfeda":{
 		eventTypes:["Atelier pour enfants"],
@@ -899,7 +903,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"d586ad4b-b78e-4b83-80ec-2a055fbe2c93":{
 		eventTypes:["Conférence"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"85044bc9-8633-48e7-8513-a8d03c99b4ec":{
 		eventTypes:["Concert"],
@@ -911,7 +916,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"c66d0c7a-2769-4ec2-abb3-5257935fb3a0":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	},
 	"80a33c6b-6048-40d3-b5c3-2b2f41393942":{
 		eventTypes:["Rencontre Littéraire"],
@@ -919,6 +925,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"dd844926-d401-4f74-8205-b15e445a0e7c":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	}
 };
