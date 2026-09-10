@@ -212,7 +212,7 @@ const megisserie:MobilizonPhysicalAddressI = {
 	description: "La Mégisserie",
 	street:"Quai de la Mégisserie",
 	locality: "Lodève",
-	geom: "3.3190519041322335;43.72987481459126"
+	geom: "3.318304;43.730068"
 
 }
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
@@ -929,5 +929,15 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Concert"],
 		programLinks:[lodeve],
 		overridePhysicalAddress:lodeva
+	},
+	"a254c36e-534a-4413-ad07-42b3f47be275":{
+		eventTypes:["Théâtre"],
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
+	},
+	"400229f6-e458-48bf-b45a-47410017da3a":{
+		eventTypes:["Théâtre"],
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	}
 };
