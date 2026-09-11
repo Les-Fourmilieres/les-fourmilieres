@@ -2,8 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
 import prog_we_2627 from "../assets/lodeve/prog2627.jpg?url";
 import styled from "styled-components";
-import { searchParams } from "../components/Agenda/SearchParams";
+import {
+  searchParams,
+  type SearchParams,
+} from "../components/Agenda/SearchParams";
 import { Agenda } from "../components/Agenda/Agenda";
+import { useCallback } from "react";
 
 export const Route = createFileRoute("/la-fourmiliere-de-lodeve")({
   component: RouteComponent,
@@ -27,6 +31,16 @@ const CovertPart = styled.img`
 
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
+  const searchParams = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const setSearchParams = useCallback(
+    (params: SearchParams) => {
+      navigate({
+        search: params,
+      });
+    },
+    [navigate],
+  );
   return (
     <Section>
       <h1>Programme de la fourmilière Lodèvois-Larzac</h1>
@@ -50,7 +64,12 @@ function RouteComponent() {
         </Covers>
       </Section>
       <Section>
-        <Agenda path={Route.to} disableMap />
+        <Agenda
+          path={Route.to}
+          searchParams={searchParams}
+          setSearchParams={setSearchParams}
+          disableMap
+        />
       </Section>
     </Section>
   );

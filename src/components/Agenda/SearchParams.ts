@@ -7,3 +7,4 @@ export const searchParams = z.object({
   from: z.string().optional(),
   to: z.string().optional(),
 });
+export type SearchParams = z.infer<typeof searchParams>;

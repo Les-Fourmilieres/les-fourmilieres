@@ -16,15 +16,15 @@ import type { LivingAreaSelectValue } from "../LivingAreaFilter/LivingAreaFilter
 import { LivingAreaFilter } from "../LivingAreaFilter/LivingAreaFilter";
 import { Section } from "../Section";
 import { EventsMap } from "./EventsMap";
-import { Select, SelectItem } from "../Select.js";
+import { Select, SelectItem } from "../Select";
 import {
   eventTypesLabels,
   SelectEventTypes,
   type GroupedEventTypes,
 } from "../../data/EventExtraData.js";
 import { I18nProvider, type RangeValue } from "react-aria-components";
-import { DateRangePicker } from "../DatePicker/RangeDatePicker.js";
-import { Route } from "../../routes/le-programme.js";
+import { DateRangePicker } from "../DatePicker/RangeDatePicker";
+import type { SearchParams } from "./SearchParams";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -60,7 +60,8 @@ const params = { showUnConfirmed: false };
 
 interface Props {
   path?: string;
-  searchParams?: ReturnType<typeof Route.useSearch>;
+  searchParams?: SearchParams;
+  setSearchParams?: (params: SearchParams) => void;
   disableMap?: boolean;
   disableTypeFilter?: boolean;
   disableDateFilder?: boolean;
@@ -69,13 +70,11 @@ interface Props {
 export function Agenda({
   path,
   searchParams = {},
+  setSearchParams,
   disableMap = false,
   disableDateFilder = false,
   disableTypeFilter = false,
 }: Props) {
-  const navigate = Route.useNavigate();
-  //const searchParams = Route.useSearch();
-
   const dateRange = useMemo(() => {
     if (!searchParams.from || !searchParams.to) return null;
     return {
@@ -85,61 +84,59 @@ export function Agenda({
   }, [searchParams.from, searchParams.to]);
 
   const setDateRange = (value: RangeValue<CalendarDate> | null) => {
+    if (!setSearchParams) return;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { from, to, ...previous } = searchParams;
     if (!value) {
-      navigate({ search: { ...previous } });
+      setSearchParams({ ...previous });
     } else {
-      navigate({
-        search: {
-          ...previous,
-          from: new Date(
-            value.start.year,
-            value.start.month - 1,
-            value.start.day + 1,
-          )
-            .toISOString()
-            .split("T")[0],
-          to: new Date(value.end.year, value.end.month - 1, value.end.day + 1)
-            .toISOString()
-            .split("T")[0],
-        },
+      setSearchParams({
+        ...previous,
+        from: new Date(
+          value.start.year,
+          value.start.month - 1,
+          value.start.day + 1,
+        )
+          .toISOString()
+          .split("T")[0],
+        to: new Date(value.end.year, value.end.month - 1, value.end.day + 1)
+          .toISOString()
+          .split("T")[0],
       });
     }
   };
 
   const setFilter = (value: LivingAreaSelectValue) => {
+    if (!setSearchParams) return;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { bdv, department, ...previous } = searchParams;
     if (value.livingArea) {
-      navigate({
-        search: {
-          ...previous,
-          department: parseInt(value.department),
-          bdv: parseInt(value.livingArea),
-        },
+      setSearchParams({
+        ...previous,
+        department: parseInt(value.department),
+        bdv: parseInt(value.livingArea),
       });
     } else if (value.department) {
-      navigate({
-        search: { ...previous, department: parseInt(value.department) },
+      setSearchParams({
+        ...previous,
+        department: parseInt(value.department),
       });
     } else {
-      navigate({ search: { ...previous } });
+      setSearchParams({ ...previous });
     }
   };
 
   const setEventTypes = (value: string | null) => {
+    if (!setSearchParams) return;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { type, ...previous } = searchParams;
     if (value) {
-      navigate({
-        search: {
-          ...previous,
-          type: value,
-        },
+      setSearchParams({
+        ...previous,
+        type: value,
       });
     } else {
-      navigate({ search: { ...previous } });
+      setSearchParams({ ...previous });
     }
   };
   const { data } = useQuery({

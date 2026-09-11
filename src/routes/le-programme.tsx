@@ -1,7 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
 import { Agenda } from "../components/Agenda/Agenda";
-import { searchParams } from "../components/Agenda/SearchParams";
+import {
+  searchParams,
+  type SearchParams,
+} from "../components/Agenda/SearchParams";
+import { useCallback } from "react";
 
 export const Route = createFileRoute("/le-programme")({
   component: RouteComponent,
@@ -11,6 +15,15 @@ export const Route = createFileRoute("/le-programme")({
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
   const searchParams = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const setSearchParams = useCallback(
+    (params: SearchParams) => {
+      navigate({
+        search: params,
+      });
+    },
+    [navigate],
+  );
   return (
     <Section>
       <h1>Le Programme</h1>
@@ -22,7 +35,7 @@ function RouteComponent() {
         l'Hérault, le Gard, la Lozère, l'Ardèche, les Bouches-du-Rhône et
         l'Aveyron.
       </p>
-      <Agenda searchParams={searchParams} />
+      <Agenda searchParams={searchParams} setSearchParams={setSearchParams} />
     </Section>
   );
 }
