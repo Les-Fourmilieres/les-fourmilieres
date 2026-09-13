@@ -1,6 +1,6 @@
-import type { MenuItem } from "../components/Header/Menu.js";
-import { type MobilizonPhysicalAddressI } from "../components/Agenda/Event.js";
-import {type Collectif} from "./collectifs.js";
+import type { MenuItem } from "../components/Header/Menu.ts";
+import { type MobilizonPhysicalAddressI } from "../components/Agenda/Event.ts";
+import {type Collectif} from "./collectifs.ts";
 
 export type EventTypes =
   | "Concert"
