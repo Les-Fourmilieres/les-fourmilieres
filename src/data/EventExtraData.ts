@@ -25,6 +25,7 @@ export type EventTypes =
   | "Atelier militant"
 	| "Atelier jardinage"
 	| "Atelier pour enfants"
+	| "Atelier d'écriture"
   | "Fresque"
 	| "Jeux"
 	| "Formation"
@@ -81,6 +82,7 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
 		"Sport pour tous.tes",
 		"Atelier jardinage",
 		"Atelier pour enfants",
+		"Atelier d'écriture",
     "Fresque",
 		"Jeux",
 		"Formation",
@@ -153,7 +155,7 @@ const fds: ExtendedMenuItem = {
 
 const cafeDuSiecle:MobilizonPhysicalAddressI = {
 	description: "Société du Café du Siècle",
-	street: "1, rue Biron",
+	street: "1 rue Biron",
 	locality: "Ganges",
 	geom: "3.7077889465294476;43.934114272413765"
 }
@@ -946,5 +948,53 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 			description: "L'angerie, Arles",
 			geom:"4.621109297207978;43.67515118573464"
 		}
+	},
+	"74e2b673-98be-4a5d-86d2-192e2acd80f0":{
+		eventTypes:["Atelier d'écriture"]
+	},
+	"4630c447-cb97-40f1-aa6e-b1b33d09b9f0":{
+		eventTypes:["Atelier d'écriture"]
+	},
+	"a8386a3a-99ad-4d67-9555-824688488b0d":{
+		eventTypes:["Atelier d'écriture"]
+	},
+	"14ae3709-301c-4ee2-93df-ccd14f601e54":{
+		eventTypes:["Atelier militant"],
+		overridePhysicalAddress:tropisme,
+		programLinks:[halleTropisme]
+	},
+	"a266fa02-400f-4fd8-bda7-a472016d3adb":{
+		eventTypes:["Concert"],
+		programLinks:[lodeve]
+	},
+	"cfd02e57-1616-4fb3-b475-ce6ee5e0b4bb":{
+		eventTypes:["Rencontre Littéraire"],
+		programLinks:[lodeve]
+	},
+	"daf82728-77ff-4c39-a4ad-b5d62eddf2b3":{
+		eventTypes:["Atelier militant", "Conférence", "Ciné-débat"]
+	},
+	"9fb82144-e9f8-4103-8920-4ab173ee73bb":{
+		eventTypes:["Atelier militant"]
+	},
+	"2fcff50a-4b00-4c78-8bca-5011a878fb59":{
+		eventTypes:["Atelier d'écriture"],
+		overridePhysicalAddress:cafeDuSiecle
+	},
+	"f4d42180-51cd-4e18-bf07-43ec9dae9a11":{
+		eventTypes:["Théâtre", "Repas partagé"]
+	},
+	"05ecb411-8af7-4aec-a6c1-a280ba5d17d7":{
+		eventTypes:["Parade"]
+	},
+	"ab54c525-72e4-49a6-8be4-2beb16c31475":{
+		eventTypes:["Concert"]
+	},
+	"760e574b-76f0-4d93-adf2-cba69aa5d5fc":{
+		eventTypes:["DJ Set"]
+	},
+	"953c9540-ff29-4399-bba0-d785170ba604":{
+		eventTypes:["Atelier d'écriture"],
+		overridePhysicalAddress:cafeDuSiecle
 	}
 };
