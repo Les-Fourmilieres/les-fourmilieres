@@ -912,7 +912,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"85044bc9-8633-48e7-8513-a8d03c99b4ec":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"8ca89968-236e-4efe-9afa-d6c3fcd903c1":{
 		eventTypes:["Parade"],
@@ -965,7 +966,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"a266fa02-400f-4fd8-bda7-a472016d3adb":{
 		eventTypes:["Concert"],
-		programLinks:[lodeve]
+		programLinks:[lodeve],
+		overridePhysicalAddress:lodeva
 	},
 	"cfd02e57-1616-4fb3-b475-ce6ee5e0b4bb":{
 		eventTypes:["Rencontre Littéraire"],
@@ -988,10 +990,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Parade"]
 	},
 	"ab54c525-72e4-49a6-8be4-2beb16c31475":{
-		eventTypes:["Concert"]
+		eventTypes:["Concert"],
+		overridePhysicalAddress:lodeva
 	},
 	"760e574b-76f0-4d93-adf2-cba69aa5d5fc":{
-		eventTypes:["DJ Set"]
+		eventTypes:["DJ Set"],
+		overridePhysicalAddress:lodeva
 	},
 	"953c9540-ff29-4399-bba0-d785170ba604":{
 		eventTypes:["Atelier d'écriture"],
