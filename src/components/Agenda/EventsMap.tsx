@@ -178,6 +178,7 @@ export function EventsMap({ events }: Props) {
 						case "Jeux":
 						case "Formation":
 						case "Atelier militant":
+						case "Atelier de danse":
 						case "Atelier sérigraphie":
 						case "Arpentage":
 						case "Café philo":

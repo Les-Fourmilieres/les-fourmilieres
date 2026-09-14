@@ -187,6 +187,7 @@ export const EventType = styled.span`
   &[data-cat="Sport pour tous.tes"]::before,
 	&[data-cat="Atelier jardinage"]::before,
   &[data-cat="Atelier militant"]::before,
+  &[data-cat="Atelier de danse"]::before,	
   &[data-cat="Fresque"]::before,
   &[data-cat="Atelier d'écriture"]::before,
   &[data-cat="Atelier pour enfants"]::before,

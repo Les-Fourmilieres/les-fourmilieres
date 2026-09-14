@@ -187,7 +187,9 @@ function eventDefaultCover(type: EventTypes) {
     case "Atelier d'expression":
     case "Sport pour tous.tes":
     case "Atelier jardinage":
-    case "Atelier pour enfant":
+		case "Atelier militant":
+		case "Atelier de danse":
+    case "Atelier pour enfants":
     case "Fresque":
     case "Jeux":
     case "Formation":
