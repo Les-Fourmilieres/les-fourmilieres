@@ -31,7 +31,9 @@ export const NavButton = styled(Button)`
   border: 0;
   background: transparent;
   font-size: 18px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: 8px 4px;
   color: var(--headerColor);
   text-decoration: none;

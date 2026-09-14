@@ -4,6 +4,7 @@ import { Popover } from "../Popover";
 import type { MenuItemGroup } from "./Menu";
 import styled from "styled-components";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const NavSubMenuList = styled.ul`
   background-color: var(--headerBg);
@@ -20,7 +21,10 @@ export function NavSubMenu({ item }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <MenuTrigger>
-      <NavButton onClick={() => setIsOpen(!isOpen)}>{item.label}</NavButton>
+      <NavButton onClick={() => setIsOpen(!isOpen)}>
+        <span>{item.label}</span>
+        <ChevronDown />
+      </NavButton>
       <Popover isOpen={isOpen} onOpenChange={setIsOpen}>
         <NavSubMenuList>
           {item.children.map((child) => (
