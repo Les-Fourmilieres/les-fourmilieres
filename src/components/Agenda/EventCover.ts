@@ -64,6 +64,7 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
 		case "Atelier jardinage":
 		case "Atelier pour enfants":
     case "Fresque":
+		case "Atelier d'écriture":
 		case "Jeux":
 		case "Formation":
     case "Atelier sérigraphie":

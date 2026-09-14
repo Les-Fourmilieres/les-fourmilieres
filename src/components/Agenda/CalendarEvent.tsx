@@ -21,6 +21,8 @@ import { datesAreSameDay } from "./datesAreSameDay";
 import {createLink} from "@tanstack/react-router";
 
 import { FaCalendarPlus } from "react-icons/fa";
+//import {eventExtraData} from "../../data/EventExtraData.ts";
+//import {collectifs} from "../../data/collectifs.ts";
 
 interface Props {
   event: MobilizonEventI;
@@ -186,6 +188,7 @@ export const EventType = styled.span`
 	&[data-cat="Atelier jardinage"]::before,
   &[data-cat="Atelier militant"]::before,
   &[data-cat="Fresque"]::before,
+  &[data-cat="Atelier d'écriture"]::before,
   &[data-cat="Atelier pour enfants"]::before,
   &[data-cat="Jeux"]::before,
   &[data-cat="Formation"]::before,
@@ -221,6 +224,27 @@ export const EventType = styled.span`
   }
 `;
 
+/*const ByContainer = styled.div`
+  display: flex;
+  gap: 5px;
+	padding-left: 10px;
+		margin-top: -14px ;
+	flex-wrap:wrap;
+	font-style: italic;
+	font-size: smaller;
+	white-space: nowrap;
+	row-gap: 0px
+`;
+
+const Collectif = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+`;
+
+*/
 const Actions = styled.div`
   padding: 16px;
   margin: -16px 0 0;
@@ -286,6 +310,14 @@ export function CalendarEvent({ event, showEventsPageLink }: Props) {
 					<Link to={`/programme/${event.uuid}`}>Plus d'infos</Link>
 					<ParticipateButton event={event} />
 				</Actions>
+				{/*
+					eventExtraData[event.uuid]?.by && <ByContainer><span>Par : </span>{eventExtraData[event.uuid]?.by?.map((col, i, by)=>{
+						const collectif = collectifs[col];
+						return <Collectif>
+							<span>{collectif.name}{i == by.length -1 ? "": ", "}</span>
+						</Collectif>
+					})}
+						</ByContainer>*/}
 			</Tile>
     </Container>
   );
