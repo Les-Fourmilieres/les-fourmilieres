@@ -125,6 +125,19 @@ const IconNavLink = styled(Link)`
   }
 `;
 
+const SubMenuSection = styled.div`
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+`;
+
+const SubMenuContainer = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 0 0 8px 16px;
+`;
+
 const stopPropagation = (e: MouseEvent) => e.stopPropagation();
 
 interface Props {
@@ -144,19 +157,40 @@ export function Sidebar({ open, close, menu }: Props) {
                 Accueil
               </NavLink>
             </NavMenuItem>
-            {menu.map((item) => (
-              <NavMenuItem key={item.to}>
-                {item.isIcon ? (
-                  <IconNavLink to={item.to} onClick={close}>
-                    {item.label}
-                  </IconNavLink>
-                ) : (
-                  <NavLink to={item.to} onClick={close}>
-                    {item.label}
-                  </NavLink>
-                )}
-              </NavMenuItem>
-            ))}
+            {menu.map((item) =>
+              !item.children ? (
+                <NavMenuItem key={item.to}>
+                  {item.isIcon ? (
+                    <IconNavLink to={item.to} onClick={close}>
+                      {item.label}
+                    </IconNavLink>
+                  ) : (
+                    <NavLink to={item.to} onClick={close}>
+                      {item.label}
+                    </NavLink>
+                  )}
+                </NavMenuItem>
+              ) : (
+                <NavMenuItem>
+                  <SubMenuSection>{item.label}</SubMenuSection>
+                  <SubMenuContainer>
+                    {item.children.map((child) => (
+                      <NavMenuItem key={child.to}>
+                        {child.isIcon ? (
+                          <IconNavLink to={child.to} onClick={close}>
+                            {child.label}
+                          </IconNavLink>
+                        ) : (
+                          <NavLink to={child.to} onClick={close}>
+                            {child.label}
+                          </NavLink>
+                        )}
+                      </NavMenuItem>
+                    ))}
+                  </SubMenuContainer>
+                </NavMenuItem>
+              ),
+            )}
           </NavMenu>
         </Navigation>
       </SidebarContainer>

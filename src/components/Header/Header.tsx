@@ -9,6 +9,7 @@ import { Sidebar } from "./Sidebar";
 import type { MenuItem } from "./Menu";
 import { CagnotteHeader } from "../Cagnotte/CagnotteHeader";
 import { useMediaQuery } from "react-responsive";
+import { NavSubMenu } from "./NavSubMenu";
 
 const HeaderContainer = styled(motion.header)`
   background-color: var(--headerBg);
@@ -95,29 +96,37 @@ const NavMenuItem = styled.li(() => ({}));
 
 const menu: MenuItem[] = [
   {
-    label: "Qui sommes-nous ?",
-    to: "/qui-sommes-nous",
+    label: "Le Festival",
+    children: [
+      {
+        label: "Qui sommes-nous ?",
+        to: "/qui-sommes-nous",
+      },
+      {
+        label: "Pourquoi ce nom ?",
+        to: "/les-fourmilieres",
+      },
+      {
+        label: "La charte",
+        to: "/la-charte",
+      },
+      {
+        label: "Participer",
+        to: "/participer-au-festival",
+      },
+    ],
   },
-  {
-    label: "Participer",
-    to: "/participer-au-festival",
-  },
+
   {
     label: "Le programme",
     to: "/le-programme",
   },
+
   {
-    label: "La charte",
-    to: "/la-charte",
+    label: "Presse",
+    to: "/presse",
   },
-	{
-		label: "Presse",
-		to :"/presse"
-	},
-  {
-    label: "Pourquoi ce nom ?",
-    to: "/les-fourmilieres",
-  },
+
   {
     label: <FaInstagram />,
     to: "https://www.instagram.com/lesfourmilieres/",
@@ -155,15 +164,21 @@ export function Header() {
             </motion.div>
             <Navigation>
               <NavMenu>
-                {menu.map((item) => (
-                  <NavMenuItem key={item.to}>
-                    {item.isIcon ? (
-                      <IconNavLink to={item.to}>{item.label}</IconNavLink>
-                    ) : (
-                      <NavLink to={item.to}>{item.label}</NavLink>
-                    )}
-                  </NavMenuItem>
-                ))}
+                {menu.map((item) =>
+                  !item.children ? (
+                    <NavMenuItem key={item.to}>
+                      {item.isIcon ? (
+                        <IconNavLink to={item.to}>{item.label}</IconNavLink>
+                      ) : (
+                        <NavLink to={item.to}>{item.label}</NavLink>
+                      )}
+                    </NavMenuItem>
+                  ) : (
+                    <NavMenuItem>
+                      <NavSubMenu item={item} />
+                    </NavMenuItem>
+                  ),
+                )}
               </NavMenu>
             </Navigation>
           </Container>

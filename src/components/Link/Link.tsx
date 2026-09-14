@@ -1,5 +1,5 @@
 import { createLink } from "@tanstack/react-router";
-import { Link as RACLink, MenuItem } from "react-aria-components";
+import { Link as RACLink, MenuItem, Button } from "react-aria-components";
 import styled from "styled-components";
 
 export const Link = styled(createLink(RACLink))`
@@ -27,6 +27,23 @@ export const LinkButton = styled(RACLink)`
   }
 `;
 
+export const NavButton = styled(Button)`
+  border: 0;
+  background: transparent;
+  font-size: 18px;
+  display: inline-block;
+  padding: 8px 4px;
+  color: var(--headerColor);
+  text-decoration: none;
+  font-weight: 500;
+  &:visited {
+    color: var(--headerColor);
+  }
+  &:hover {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+  }
+`;
+
 export const NavLink = styled(Link)`
   display: inline-block;
   padding: 8px 4px;
@@ -39,6 +56,10 @@ export const NavLink = styled(Link)`
   &:hover {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
   }
+`;
+
+export const NavSubLink = styled(NavLink)`
+  padding: 8px 16px;
 `;
 
 export const IconNavLink = styled(Link)`
