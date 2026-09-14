@@ -23,6 +23,7 @@ export type EventTypes =
   | "Atelier d'expression"
   | "Sport pour tous.tes"
   | "Atelier militant"
+	| "Atelier de danse"
   | "Atelier jardinage"
   | "Atelier pour enfants"
   | "Atelier d'écriture"
@@ -90,6 +91,7 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
     "Arpentage",
     "Café philo",
     "Atelier militant",
+		"Atelier de danse",
   ],
   "spectacle-vivant": [
     "Théâtre",
@@ -216,6 +218,11 @@ const megisserie: MobilizonPhysicalAddressI = {
   locality: "Lodève",
   geom: "3.318304;43.730068",
 };
+const boffres: MobilizonPhysicalAddressI = {
+	description: "Auberge de Boffres",
+	street: "21 rue des Fontaines",
+	geom: "4.701978424043206;44.92013964558652",
+}
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "538f4ebe-8c97-43fe-b2c6-9040993b6bb0": {
     eventTypes: ["Conférence"],
@@ -997,5 +1004,25 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
 	"5d332cee-b790-4bcb-b409-802574cd2513":{
 		eventTypes:["Rencontre Littéraire"]
+	},
+	"108d6b0e-9f6a-442b-b6f0-e325b7c73c79":{
+		eventTypes:["Concert", "DJ Set"]
+	},
+	"1c36eaaf-2524-494e-9416-56957db28885":{
+		eventTypes:["Concert"],
+		overridePhysicalAddress:boffres
+	},
+	"faf258c9-5437-4e37-aded-d84a6e50d729":{
+		eventTypes:["Spectacle vivant"],
+		overridePhysicalAddress:megisserie
+	},
+	"ce0431c5-9dca-498b-acbe-cad520789684":{
+		eventTypes:["Conférence"]
+	},
+	"9fef42d1-803b-4c13-b117-f068c42febbe":{
+		eventTypes:["Théâtre"]
+	},
+	"e5b6e705-7e2f-47e7-bfcd-d8b8b73a522f":{
+		eventTypes:["Atelier de danse", "Atelier d'expression","Atelier militant"]
 	}
 };
