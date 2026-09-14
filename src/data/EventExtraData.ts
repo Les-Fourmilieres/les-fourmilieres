@@ -283,18 +283,9 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "11d1a8f8-5c08-46b6-9e91-25f4ca01a7f9": {
     eventTypes: ["Conférence"],
   },
-  "b3ad3faf-22f3-4690-90a9-c7f2e7691ccb": {
-    eventTypes: ["DJ Set", "Open Air"],
-  },
-  "ebc70aab-95b0-4454-ba5a-cd93e783f3c7": {
-    eventTypes: ["DJ Set", "Open Air"],
-  },
   "ad529e6c-de28-499e-a505-7fa3c5732bb4": {
     eventTypes: ["Concert"],
     programLinks: [lodeve],
-  },
-  "e921cbdc-8b76-48c4-a485-5036e248c16d": {
-    eventTypes: ["DJ Set", "Open Air"],
   },
   "5e0dc165-747b-44dd-b2bc-b674f0aeb4c2": {
     eventTypes: ["Projection"],
@@ -1004,4 +995,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Atelier d'écriture"],
     overridePhysicalAddress: cafeDuSiecle,
   },
+	"5d332cee-b790-4bcb-b409-802574cd2513":{
+		eventTypes:["Rencontre Littéraire"]
+	}
 };
