@@ -46,6 +46,7 @@ export type Collectif = "ajcm" |
 	"auberge-de-boffres" |
 	"bar-du-midi" |
 	"barnabu" |
+	"berimbaus-de-guatambu" |
 	"beziers-anti-cra" |
 	"bienvenue-a-mandagout" |
 	"bouillon-cube" |
@@ -56,6 +57,7 @@ export type Collectif = "ajcm" |
 	"cevennes-terre-d-accueil" |
 	"collectif-antifa-millevoix" |
 	"collectif-antifacscite-antiraciste-bagnols" |
+	"collectif-capoeira-angola-clapas" |
 	"collectif-enfantiste-34" |
 	"collectif-faites-des-solidarite" |
 	"collectif-ganges-solidarite" |
@@ -364,6 +366,16 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo: "collectifs/barnabu-logo.jpg",
 		type: ["Café associatif"],
 	},
+	"berimbaus-de-guatambu":{
+		slug:"berimbaus-de-guatambu",
+		name:"Berimbaus de Guatambu",
+		description:"Association de Capoeira Angola",
+		departement:"Hérault",
+		type:["Collectif artistique"],
+		bdv:"34172",
+		facebook:"https://www.facebook.com/p/Capoeira-Angola-Berimbaus-de-Guatambu-Montpellier-100071385265148/",
+		logo:"collectifs/berim-de-gutam.png"
+	},
 	"beziers-anti-cra": {
 		slug: "beziers-anti-cra",
 		name: "Béziers ANTI-CRA",
@@ -418,7 +430,7 @@ export const collectifs: Record<Collectif, CollectifI> = {
 	"cafe-associatif-de-la-tendresse": {
 		slug: "cafe-associatif-de-la-tendresse",
 		name: "Café Associatif de La Tendresse",
-		description: "Diffusion et organisation d'évènement au sein de La Tendresse, coopérative culturelle et d'expérimentation sociale",
+		description: "Outil collectif de diffusion et de pratique sociale et culturelle au sein de La coopérative d'interet collectif La Tendresse. Émancipation, accueil et pratiques collectives sont les idées directrices.",
 		departement: "Hérault",
 		type: ["Café associatif", "Tiers-lieu"],
 		position: {lat: 43.585877889183216, lng: 3.852877289409865},
@@ -494,6 +506,15 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo: "collectifs/collectif-ganges-solidarite.png",
 		url: "https://collectifgangessolidarites.wordpress.com",
 		description: "L'association Collectif Ganges Solidarités a pour objet la solidarité avec les personnes migrantes et plus largement avec toutes les personnes confrontées à des difficultés portant atteinte à leur dignité, en leur apportant aide et accompagnement pour une vie décente.",
+	},
+	"collectif-capoeira-angola-clapas":{
+		slug:"collectif-capoeira-angola-clapas",
+		name:"Collectif de Capoeira Angola Clapas",
+		departement:"Hérault",
+		type:["Collectif artistique"],
+		bdv:"34172",
+		logo:"collectifs/collectif-capoei.png",
+		facebook:"https://www.facebook.com/Collectif.Capoeira.Angola.Montpellier/"
 	},
 	"collectif-enfantiste-34": {
 		slug: "collectif-enfantiste-34",
