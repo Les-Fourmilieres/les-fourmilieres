@@ -222,8 +222,7 @@ export function Agenda({
           if (searchParams.bdv)
             return event.livingArea?.code === searchParams.bdv.toString();
           return event.livingArea?.code.startsWith(
-            searchParams.department.toString(),
-          );
+						(searchParams.department < 10 ? "0" :"") + searchParams.department.toString());
         })
         .sort(sortEventByDate),
     [events, searchParams, dateRange],
