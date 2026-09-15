@@ -58,7 +58,7 @@ export type Collectif = "ajcm" |
 	"collectif-antifa-millevoix" |
 	"collectif-antifacscite-antiraciste-bagnols" |
 	"collectif-capoeira-angola-clapas" |
-	"collectif-enfantiste-34" |
+	//"collectif-enfantiste-34" |
 	"collectif-faites-des-solidarite" |
 	"collectif-ganges-solidarite" |
 	"collectif-gilets-jaunes-de-gignac-et-alentours" |
@@ -516,7 +516,7 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo:"collectifs/collectif-capoei.png",
 		facebook:"https://www.facebook.com/Collectif.Capoeira.Angola.Montpellier/"
 	},
-	"collectif-enfantiste-34": {
+	/*"collectif-enfantiste-34": {
 		slug: "collectif-enfantiste-34",
 		name: "Collectif Enfantiste 34",
 		bdv: "34172",
@@ -527,7 +527,7 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		url: "https://collectifenfantiste.fr/",
 		logo: "collectifs/collectif-enfantiste-logo.webp",
 		type: ["Collectif militant"]
-	},
+	},*/
 	"collectif-faites-des-solidarite": {
 		slug: "collectif-faites-des-solidarite",
 		name: "Collectif Faites des Solidarités",
