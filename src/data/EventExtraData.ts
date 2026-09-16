@@ -1131,5 +1131,13 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"4f792113-f9b2-4bfc-89be-c9f8950610a9":{
 		eventTypes:["Atelier militant"],
+	},
+	"7dd9c993-1af2-48f9-8878-ec59889e1403":{
+		eventTypes:["Théâtre"],
+		overridePhysicalAddress:{
+			description: "Festival 37° à l'ombre",
+			locality:"Blauzac",
+			geom:"4.394503509170784;43.98092235329631"
+		}
 	}
 };
