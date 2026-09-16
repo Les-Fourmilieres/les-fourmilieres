@@ -190,6 +190,7 @@ export function EventsMap({ events }: Props) {
 						case "Dragshow":
 						case "Conte":
 						case "Lecture":
+						case "Danse":
 							icon_url = pointer_theatre
 							break
 						case "Projection":

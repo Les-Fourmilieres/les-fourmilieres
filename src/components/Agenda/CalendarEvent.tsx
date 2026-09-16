@@ -204,6 +204,7 @@ export const EventType = styled.span`
   &[data-cat="Conte"]::before,
   &[data-cat="Spectacle vivant"]::before,
   &[data-cat="Lecture"]::before,
+	&[data-cat="Danse"]::before,
   &[data-cat="Dragshow"]::before {
     background: url("${picto_theatre}") no-repeat 0 center;
   }

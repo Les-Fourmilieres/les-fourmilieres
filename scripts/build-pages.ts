@@ -178,6 +178,7 @@ function eventDefaultCover(type: EventTypes) {
     case "Spectacle vivant":
     case "Conte":
     case "Lecture":
+		case "Danse":
       return "https://les-fourmilieres.org/events/theatre.png";
     case "Manifestation":
     case "Pride":

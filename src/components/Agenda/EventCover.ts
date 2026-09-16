@@ -53,6 +53,7 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
     case "Spectacle vivant":
     case "Conte":
     case "Lecture":
+		case "Danse":
       return theatre_cover;
     case "Manifestation":
     case "Pride":

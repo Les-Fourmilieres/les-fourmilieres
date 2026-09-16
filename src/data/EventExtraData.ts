@@ -38,6 +38,7 @@ export type EventTypes =
   | "Spectacle vivant"
   | "Dragshow"
   | "Lecture"
+	| "Danse"
   | "Conte"
   | "Projection"
   | "Ciné-débat"
@@ -100,6 +101,7 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
     "Spectacle vivant",
     "Dragshow",
     "Lecture",
+		"Danse",
     "Conte",
   ],
   projection: ["Projection", "Ciné-débat"],
@@ -1117,5 +1119,16 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"6a93fd56-4ad9-484b-8fe3-e96de7392a79":{
 		eventTypes:["DJ Set"],
 		programLinks:[gya]
+	},
+	"2c0be6dc-8833-4478-abda-debaf31198b7":{
+		eventTypes:["Danse"],
+		overridePhysicalAddress:{
+			description: "Local des cheminots CGT",
+			locality:"Nîmes",
+			geom:"4.35218794600445;43.83584714129023"
+		}
+	},
+	"4f792113-f9b2-4bfc-89be-c9f8950610a9":{
+		eventTypes:["Atelier militant"],
 	}
 };
