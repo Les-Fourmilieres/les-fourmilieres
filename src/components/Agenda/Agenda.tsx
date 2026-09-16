@@ -65,6 +65,7 @@ interface Props {
   disableMap?: boolean;
   disableTypeFilter?: boolean;
   disableDateFilder?: boolean;
+	enableCat?:boolean;
 }
 
 export function Agenda({
@@ -74,6 +75,7 @@ export function Agenda({
   disableMap = false,
   disableDateFilder = false,
   disableTypeFilter = false,
+	enableCat = false
 }: Props) {
   const dateRange = useMemo(() => {
     if (!searchParams.from || !searchParams.to) return null;
@@ -356,7 +358,7 @@ export function Agenda({
           <CalendarEvent
             key={event.id}
             event={event}
-            showEventsPageLink={true}
+            showEventsPageLink={enableCat}
           />
         ))}
       </EventsContainer>

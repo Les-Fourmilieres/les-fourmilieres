@@ -35,7 +35,7 @@ function RouteComponent() {
         l'Hérault, le Gard, la Lozère, l'Ardèche, les Bouches-du-Rhône et
         l'Aveyron.
       </p>
-      <Agenda searchParams={searchParams} setSearchParams={setSearchParams} />
+      <Agenda searchParams={searchParams} setSearchParams={setSearchParams} enableCat={true}/>
     </Section>
   );
 }
