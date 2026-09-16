@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
 import styled from "styled-components";
 import { Link } from "../components/Link/Link";
+import { Newsletter } from "../components/Newsletter/Newsletter";
 
 export const Route = createFileRoute("/infolettre")({
   component: RouteComponent,
@@ -36,6 +37,15 @@ function RouteComponent() {
     <Section>
       <h1>Infolettre</h1>
 
+      <p>
+        Dans cette rubrique, vous retrouverez le contenu antifasciste et
+        solidaire de nos infolettres, accessible à toustes.
+      </p>
+
+      <Newsletter />
+
+      <h2>Infolettre d'août 2026</h2>
+
       <Links>
         <FullSizeLink href="/la-fourmiliere-brule">
           <img
@@ -58,6 +68,10 @@ function RouteComponent() {
             title="Bataille Culturelle : des luttes paysannes"
           />
         </Link>
+      </Links>
+
+      <h2>Infolettre de juillet 2026</h2>
+      <Links>
         <FullSizeLink href="/des-lendemains-meilleurs">
           <img
             src="/edito-1-vers-des-lendemains-meilleurs.webp"

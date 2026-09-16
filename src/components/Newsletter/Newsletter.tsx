@@ -73,13 +73,13 @@ export function Newsletter({ disableTitle }: Props) {
     <Form method="POST" onSubmit={onSubmit}>
       {!disableTitle && (
         <h2>
-          Inscrivez-vous à notre newsletter pour recevoir le programme du
+          Inscrivez-vous à notre infolettre pour recevoir le programme du
           festival.
         </h2>
       )}
       {success && (
         <Text style={{ textAlign: "center" }}>
-          Merci pour votre inscripton à la newsletter ! <br />
+          Merci pour votre inscripton à l'infolettre ! <br />
           Vous pouvez vous désinscrire à tout moment en cliquant sur le lien
           présent dans nos emails.
         </Text>

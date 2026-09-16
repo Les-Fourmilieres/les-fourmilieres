@@ -80,7 +80,7 @@ export function LegalNotice() {
         Conformément aux dispositions de l’article&nbsp;34 de la loi
         n°&nbsp;48-87 du 6 janvier 1978, l’utilisateur dispose d’un droit de
         modification des données nominatives collectées le concernant. Les
-        seules données étant celles relatives à l'inscription à la newsletter,
+        seules données étant celles relatives à l'inscription à l'infolettre,
         un lien dans chaque courriel envoyé permet à l'utilisateur de modifier
         ou supprimer ses informations personnelles.
       </p>
