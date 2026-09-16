@@ -984,11 +984,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "a266fa02-400f-4fd8-bda7-a472016d3adb": {
     eventTypes: ["Concert"],
     programLinks: [lodeve],
-    overridePhysicalAddress: lodeva,
+    //overridePhysicalAddress: lodeva,
   },
   "cfd02e57-1616-4fb3-b475-ce6ee5e0b4bb": {
     eventTypes: ["Rencontre Littéraire"],
     programLinks: [lodeve],
+		overridePhysicalAddress:lodeva
   },
   "daf82728-77ff-4c39-a4ad-b5d62eddf2b3": {
     eventTypes: ["Atelier militant", "Conférence", "Ciné-débat"],
