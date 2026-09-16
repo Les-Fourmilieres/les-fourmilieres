@@ -1144,5 +1144,9 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Table-Ronde"],
 		programLinks:[lodeve],
 		overridePhysicalAddress:megisserie
+	},
+	"6890553f-08d4-4782-8310-7c0ff372e88c":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
 	}
 };
