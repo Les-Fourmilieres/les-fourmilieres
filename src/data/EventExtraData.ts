@@ -1139,5 +1139,10 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 			locality:"Blauzac",
 			geom:"4.394503509170784;43.98092235329631"
 		}
+	},
+	"2ed19313-bd41-47f1-9fc8-7611037507f0":{
+		eventTypes:["Table-Ronde"],
+		programLinks:[lodeve],
+		overridePhysicalAddress:megisserie
 	}
 };
