@@ -170,6 +170,7 @@ export function EventsMap({ events }: Props) {
 							break
 						case "Atelier cuisine":
 						case "Atelier d'expression":
+						case "Atelier DJing":
 						case "Sport pour tous.tes":
 						case "Atelier jardinage":
 						case "Atelier pour enfants":

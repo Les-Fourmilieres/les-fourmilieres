@@ -21,6 +21,7 @@ export type EventTypes =
   | "Parade"
   | "Atelier cuisine"
   | "Atelier d'expression"
+	| "Atelier DJing"
   | "Sport pour tous.tes"
   | "Atelier militant"
 	| "Atelier de danse"
@@ -80,6 +81,7 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
   atelier: [
     "Atelier cuisine",
     "Atelier d'expression",
+		"Atelier DJing",
     "Sport pour tous.tes",
     "Atelier jardinage",
     "Atelier pour enfants",
@@ -155,6 +157,12 @@ const fds: ExtendedMenuItem = {
   desc: "Cet événement s'inscrit dans la Faites des Solidarités, 2 jours mêlant ateliers et cuisine populaire et partagée dans le quartier des Arènes au Vigan.",
 };
 
+const gya:ExtendedMenuItem = {
+	to: "/groove-your-ass",
+	label: "Voir toute la programmation de Groove Yous Ass",
+	shortLabel: "Groove Your Ass"
+}
+
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
   street: "1 rue Biron",
@@ -222,6 +230,12 @@ const boffres: MobilizonPhysicalAddressI = {
 	description: "Auberge de Boffres",
 	street: "21 rue des Fontaines",
 	geom: "4.701978424043206;44.92013964558652",
+}
+const melomane:MobilizonPhysicalAddressI = {
+	description: "Mélomane Club",
+	street: "11 Rue du Lantissargues",
+	locality: "Montpellier",
+	geom: "3.886047751288808;43.58802314217724",
 }
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "538f4ebe-8c97-43fe-b2c6-9040993b6bb0": {
@@ -1024,5 +1038,84 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"e5b6e705-7e2f-47e7-bfcd-d8b8b73a522f":{
 		eventTypes:["Atelier de danse", "Atelier d'expression","Atelier militant"]
+	},
+	"ff1d4213-3c3a-40ce-b4fb-c4ba642dc355":{
+		eventTypes:["Atelier DJing"],
+		programLinks:[gya]
+	},
+	"771134c0-33ec-4094-afa8-6a82669960c6":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"3bfb2b9f-cf00-45b9-a531-90dc2aeefee4":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"25ccaf59-a49a-44ff-b7bc-274ca784cfdb":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"1f3bd03f-6453-4119-9c82-19ff3d93cf28":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"a6c70384-9daa-4a78-8cf9-b9f5950662c2":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"aef9ba82-cdfe-4481-90b7-e45439f9c557":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"ee1d6b73-78fe-4804-af2e-d675e8983869":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"323704e2-2a71-4fcb-a266-92f670426d63":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"133c4ac1-0f7a-4670-9f2b-d29d335a9a85":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"5580c45c-bcfd-4f13-9f53-27d1771c6713":{
+		eventTypes:["DJ Set", "Concert"],
+		programLinks:[gya]
+	},
+	"bffcc0b7-eaee-4c86-87fe-2a06254a5dcf":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya],
+		overridePhysicalAddress:melomane
+	},
+	"b3a7d562-9ed8-46b3-afa4-9700749017ce":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya],
+		overridePhysicalAddress:melomane
+	},
+	"e2139c0d-8ed5-45a4-9a00-c8844ec4fb68":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya],
+		overridePhysicalAddress:melomane
+	},
+	"c764ada1-6b37-494e-8d52-81a82e688e46":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"5573091a-5ecb-4dac-abee-a7c90e6c0ab5":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"75cde6cb-838d-4111-91ef-559d469c1e95":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"dcc79a95-81f4-4e53-a75d-915ec5b0e2b6":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
+	},
+	"6a93fd56-4ad9-484b-8fe3-e96de7392a79":{
+		eventTypes:["DJ Set"],
+		programLinks:[gya]
 	}
 };

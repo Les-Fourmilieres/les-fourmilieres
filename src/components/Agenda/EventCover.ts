@@ -60,6 +60,7 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
       return manif_cover;
     case "Atelier cuisine":
     case "Atelier d'expression":
+		case "Atelier DJing":
 		case "Sport pour tous.tes":
 		case "Atelier jardinage":
 		case "Atelier pour enfants":

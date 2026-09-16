@@ -21,6 +21,7 @@ import { Route as LaFourmiliereDeLodeveRouteImport } from './routes/la-fourmilie
 import { Route as LaFourmiliereBruleRouteImport } from './routes/la-fourmiliere-brule'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as InfolettreRouteImport } from './routes/infolettre'
+import { Route as GrooveYourAssRouteImport } from './routes/groove-your-ass'
 import { Route as FestivalDesLuttesPopulairesRouteImport } from './routes/festival-des-luttes-populaires'
 import { Route as FaitesDesSolidaritesRouteImport } from './routes/faites-des-solidarites'
 import { Route as EntretienEmmanuelNegrierRouteImport } from './routes/entretien-emmanuel-negrier'
@@ -94,6 +95,11 @@ const InfolettreRoute = InfolettreRouteImport.update({
   path: '/infolettre',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GrooveYourAssRoute = GrooveYourAssRouteImport.update({
+  id: '/groove-your-ass',
+  path: '/groove-your-ass',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FestivalDesLuttesPopulairesRoute =
   FestivalDesLuttesPopulairesRouteImport.update({
     id: '/festival-des-luttes-populaires',
@@ -159,6 +165,7 @@ export interface FileRoutesByFullPath {
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
+  '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
@@ -183,6 +190,7 @@ export interface FileRoutesByTo {
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
+  '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
@@ -208,6 +216,7 @@ export interface FileRoutesById {
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
+  '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
@@ -234,6 +243,7 @@ export interface FileRouteTypes {
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
+    | '/groove-your-ass'
     | '/infolettre'
     | '/la-charte'
     | '/la-fourmiliere-brule'
@@ -258,6 +268,7 @@ export interface FileRouteTypes {
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
+    | '/groove-your-ass'
     | '/infolettre'
     | '/la-charte'
     | '/la-fourmiliere-brule'
@@ -282,6 +293,7 @@ export interface FileRouteTypes {
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
+    | '/groove-your-ass'
     | '/infolettre'
     | '/la-charte'
     | '/la-fourmiliere-brule'
@@ -307,6 +319,7 @@ export interface RootRouteChildren {
   EntretienEmmanuelNegrierRoute: typeof EntretienEmmanuelNegrierRoute
   FaitesDesSolidaritesRoute: typeof FaitesDesSolidaritesRoute
   FestivalDesLuttesPopulairesRoute: typeof FestivalDesLuttesPopulairesRoute
+  GrooveYourAssRoute: typeof GrooveYourAssRoute
   InfolettreRoute: typeof InfolettreRoute
   LaCharteRoute: typeof LaCharteRoute
   LaFourmiliereBruleRoute: typeof LaFourmiliereBruleRoute
@@ -409,6 +422,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InfolettreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/groove-your-ass': {
+      id: '/groove-your-ass'
+      path: '/groove-your-ass'
+      fullPath: '/groove-your-ass'
+      preLoaderRoute: typeof GrooveYourAssRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/festival-des-luttes-populaires': {
       id: '/festival-des-luttes-populaires'
       path: '/festival-des-luttes-populaires'
@@ -493,6 +513,7 @@ const rootRouteChildren: RootRouteChildren = {
   EntretienEmmanuelNegrierRoute: EntretienEmmanuelNegrierRoute,
   FaitesDesSolidaritesRoute: FaitesDesSolidaritesRoute,
   FestivalDesLuttesPopulairesRoute: FestivalDesLuttesPopulairesRoute,
+  GrooveYourAssRoute: GrooveYourAssRoute,
   InfolettreRoute: InfolettreRoute,
   LaCharteRoute: LaCharteRoute,
   LaFourmiliereBruleRoute: LaFourmiliereBruleRoute,
