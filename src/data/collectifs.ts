@@ -62,6 +62,7 @@ export type Collectif = "ajcm" |
 	"collectif-faites-des-solidarite" |
 	"collectif-ganges-solidarite" |
 	"collectif-gilets-jaunes-de-gignac-et-alentours" |
+	"collectif-la-vermine" |
 	"collectif-montpellier-contre-l-extreme-droite" |
 	"collectif-nimois-antifasciste-queer" |
 	"collectif-sete-contre-l-extreme-droite" |
@@ -561,6 +562,16 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		instagram: "https://www.instagram.com/cnaq_nimes/",
 		facebook: "https://www.facebook.com/people/CNAQ-N%C3%AEmes/61577679513715/",
 		description: "Nous menons une lutte qui croise les combats trans et queer, antifascistes, antiracistes et anti-impérialistes dans le Sud de la France, en lien avec d’autres organisations et collectifs du territoire."
+	},
+	"collectif-la-vermine":{
+		slug:"collectif-la-vermine",
+		name : "Collectif la Vermine",
+		description:"Collectif de spectacle vivant montpelliérain à visée résolument politique. Théâtre, musique, conférences gesticulées et bals.",
+		departement:"Hérault",
+		bdv:"34172",
+		type:["Collectif artistique", "Collectif militant"],
+		instagram:"https://www.instagram.com/collectif_la_vermine/",
+		facebook:"https://www.facebook.com/profile.php?id=61579711391117"
 	},
 	"collectif-montpellier-contre-l-extreme-droite": {
 		slug: "collectif-montpellier-contre-l-extreme-droite",
@@ -1126,7 +1137,7 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		type: ["Tiers-lieu", "Collectif d'éducation populaire"],
 		logo: "collectifs/le-recif.webp",
 		instagram: "https://www.instagram.com/le_recif_collectif",
-		position: {lat: 43.60569217045826, lng: 3.871344504739471},
+		bdv:"34172",
 		facebook: "https://www.facebook.com/assolerecif",
 		url: "https://linktr.ee/Recif_association"
 	},
