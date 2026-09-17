@@ -6,9 +6,9 @@ import { EventTime } from "./EventTime";
 import { ParticipateButton } from "./ParticipateButton";
 import { EventAddress } from "./EventAddress";
 import { useMediaQuery } from "react-responsive";
-import { Link } from "../Link/Link.js";
-import { EventType } from "./CalendarEvent.js";
-import { eventDefaultCover } from "./EventCover.js";
+import { Link } from "../Link/Link.tsx";
+import { EventType } from "./CalendarEvent.tsx";
+import { eventDefaultCover } from "./EventCover.ts";
 
 const StyledSection = styled(Section)`
   padding-top: 24px;

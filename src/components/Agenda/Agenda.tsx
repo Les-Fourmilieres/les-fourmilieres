@@ -21,7 +21,7 @@ import {
   eventTypesLabels,
   SelectEventTypes,
   type GroupedEventTypes,
-} from "../../data/EventExtraData.js";
+} from "../../data/EventExtraData.ts";
 import { I18nProvider, type RangeValue } from "react-aria-components";
 import { DateRangePicker } from "../DatePicker/RangeDatePicker";
 import type { SearchParams } from "./SearchParams";

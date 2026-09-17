@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import { Link } from "../components/Link/Link.js";
+import { Link } from "../components/Link/Link.tsx";
 import dp from "../assets/presse/DP_Fourmilières.pdf?url";
 import styled from "styled-components";
 

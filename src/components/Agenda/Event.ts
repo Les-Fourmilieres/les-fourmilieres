@@ -4,7 +4,7 @@ import {
   eventExtraData,
   type EventTypes,
   type ExtendedMenuItem,
-} from "../../data/EventExtraData.js";
+} from "../../data/EventExtraData.ts";
 
 export const eventType: (event: MobilizonEventI) => EventTypes[] = (event) => {
   return eventExtraData[event.uuid]?.eventTypes || ["Autre"];

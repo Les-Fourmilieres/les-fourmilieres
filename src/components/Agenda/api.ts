@@ -4,7 +4,7 @@ import {
   MobilizonSingleEventSchema,
   type MobilizonEventParticipants,
 } from "./Event";
-import { eventExtraData } from "../../data/EventExtraData.js";
+import { eventExtraData } from "../../data/EventExtraData.ts";
 
 const BASE_URL = "https://agenda.les-fourmilieres.org/api";
 

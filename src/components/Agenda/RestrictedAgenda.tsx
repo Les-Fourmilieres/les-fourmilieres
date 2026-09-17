@@ -5,8 +5,8 @@ import { fetchEvents } from "./api";
 import { eventsForLink, eventType, type MobilizonEventI } from "./Event";
 import { useMemo, useState } from "react";
 import { Section } from "../Section";
-import { Select, SelectItem } from "../Select.js";
-import { SelectEventTypes, type GroupedEventTypes } from "../../data/EventExtraData.js";
+import { Select, SelectItem } from "../Select.tsx";
+import { SelectEventTypes, type GroupedEventTypes } from "../../data/EventExtraData.ts";
 
 const EventsContainer = styled.div`
   display: flex;

@@ -11,7 +11,7 @@ import kermesse_cover from "../../assets/events/kermesse.png?url";
 import theatre_cover from "../../assets/events/theatre.png?url";
 import manif_cover from "../../assets/events/manif.png?url";
 import atelier_cover from "../../assets/events/fresque.png?url";
-import { type EventTypes } from "../../data/EventExtraData.js";
+import { type EventTypes } from "../../data/EventExtraData.ts";
 
 export const eventDefaultCover: (type: EventTypes) => string = (type) => {
   switch (type) {

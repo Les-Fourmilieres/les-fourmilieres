@@ -6,8 +6,8 @@ import { useClockIcon } from "./useClockIcon";
 import { EventTime } from "./EventTime";
 import { Link } from "../Link/Link";
 import { ParticipateButton } from "./ParticipateButton";
-import { EventType } from "./CalendarEvent.js";
-import { datesAreSameDay } from "./datesAreSameDay.js";
+import { EventType } from "./CalendarEvent.tsx";
+import { datesAreSameDay } from "./datesAreSameDay.ts";
 
 const EventTypes = styled.div`
   display: flex;
