@@ -118,6 +118,7 @@ export type Collectif = "ajcm" |
 	"librairie-arbre-sans-fin" |
 	"librairie-la-cavale" |
 	"librairie-un-point-un-trait" |
+	"miam-collectif" |
 	"marche-climat-montpellier" |
 	"melando" |
 	"mets-ta-peau" |
@@ -1240,6 +1241,18 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		type: ["Librairie"],
 		description: "Alterlivres c’est un choix décalé de livres en tous genres, un mélange qui va de l’Histoire aux récits d’aventure, de la littérature dessinée aux beaux livres illustrés proposés à des prix surprenants, du roman noir à la littérature mal élevée. Et aussi des essais et des pamphlets pour y voir plus clair dans ce qui se passe dans le monde, sans oublier des livres pour enfants choisis avec soin.",
 		facebook: "https://www.facebook.com/alterlivres"
+	},
+	"miam-collectif":{
+		slug:"miam-collectif",
+		name:"Miam Collectif",
+		description:"Le Miam Collectif est une cantine solidaire et un café associatif situé en plein cœur de Perpignan, proposant des repas végétaux, anti-gaspi, à prix libre, ainsi qu'une programmation culturelle tout au long de l'année.",
+		departement:"Pyrénées-Orientales",
+		position:{lat:42.69724670480308, lng:2.8942344943632854},
+		type:["Café associatif"],
+		url:"https://miamcollectif.org/",
+		facebook:"https://fr-fr.facebook.com/miamcollectif/",
+		instagram:"https://www.instagram.com/miam.collectif/",
+		logo:"collectifs/miam.jpg"
 	},
 	"marche-climat-montpellier": {
 		slug: "marche-climat-montpellier",
