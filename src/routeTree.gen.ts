@@ -14,6 +14,8 @@ import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
 import { Route as PresseRouteImport } from './routes/presse'
 import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
 import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au-festival'
+import { Route as NuitsOccupeEsRouteImport } from './routes/nuits-occupe-es'
+import { Route as MobilisationContreCraBeziersRouteImport } from './routes/mobilisation-contre-cra-beziers'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
@@ -60,6 +62,17 @@ const ParticiperAuFestivalRoute = ParticiperAuFestivalRouteImport.update({
   path: '/participer-au-festival',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NuitsOccupeEsRoute = NuitsOccupeEsRouteImport.update({
+  id: '/nuits-occupe-es',
+  path: '/nuits-occupe-es',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MobilisationContreCraBeziersRoute =
+  MobilisationContreCraBeziersRouteImport.update({
+    id: '/mobilisation-contre-cra-beziers',
+    path: '/mobilisation-contre-cra-beziers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
   id: '/mentions-legales',
   path: '/mentions-legales',
@@ -173,6 +186,8 @@ export interface FileRoutesByFullPath {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
+  '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/presse': typeof PresseRoute
@@ -198,6 +213,8 @@ export interface FileRoutesByTo {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
+  '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/presse': typeof PresseRoute
@@ -224,6 +241,8 @@ export interface FileRoutesById {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
+  '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/presse': typeof PresseRoute
@@ -251,6 +270,8 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
+    | '/mobilisation-contre-cra-beziers'
+    | '/nuits-occupe-es'
     | '/participer-au-festival'
     | '/politique-de-confidentialite'
     | '/presse'
@@ -276,6 +297,8 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
+    | '/mobilisation-contre-cra-beziers'
+    | '/nuits-occupe-es'
     | '/participer-au-festival'
     | '/politique-de-confidentialite'
     | '/presse'
@@ -301,6 +324,8 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
+    | '/mobilisation-contre-cra-beziers'
+    | '/nuits-occupe-es'
     | '/participer-au-festival'
     | '/politique-de-confidentialite'
     | '/presse'
@@ -327,6 +352,8 @@ export interface RootRouteChildren {
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
+  MobilisationContreCraBeziersRoute: typeof MobilisationContreCraBeziersRoute
+  NuitsOccupeEsRoute: typeof NuitsOccupeEsRoute
   ParticiperAuFestivalRoute: typeof ParticiperAuFestivalRoute
   PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
   PresseRoute: typeof PresseRoute
@@ -371,6 +398,20 @@ declare module '@tanstack/react-router' {
       path: '/participer-au-festival'
       fullPath: '/participer-au-festival'
       preLoaderRoute: typeof ParticiperAuFestivalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nuits-occupe-es': {
+      id: '/nuits-occupe-es'
+      path: '/nuits-occupe-es'
+      fullPath: '/nuits-occupe-es'
+      preLoaderRoute: typeof NuitsOccupeEsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mobilisation-contre-cra-beziers': {
+      id: '/mobilisation-contre-cra-beziers'
+      path: '/mobilisation-contre-cra-beziers'
+      fullPath: '/mobilisation-contre-cra-beziers'
+      preLoaderRoute: typeof MobilisationContreCraBeziersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mentions-legales': {
@@ -521,6 +562,8 @@ const rootRouteChildren: RootRouteChildren = {
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
+  MobilisationContreCraBeziersRoute: MobilisationContreCraBeziersRoute,
+  NuitsOccupeEsRoute: NuitsOccupeEsRoute,
   ParticiperAuFestivalRoute: ParticiperAuFestivalRoute,
   PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
   PresseRoute: PresseRoute,
