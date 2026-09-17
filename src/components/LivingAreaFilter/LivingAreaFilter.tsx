@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { ToggleButton } from "../ToggleButton/ToggleButton";
 import type { LivingAreaSelectValue } from "./LivingAreaFilter.types";
-import { DepartementsByCode } from "../../core/Departements";
+import { DepartementsByCode } from "../../core/Departements.ts";
 import type { LivingAreaI } from "../../core/LivingArea";
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)`

@@ -21,6 +21,7 @@ export const eventDefaultCover: (type: EventTypes) => string = (type) => {
     case "DJ Set":
       return djset_cover;
     case "Open Air":
+		case "Karaoké":
       return openair_cover;
     case "Bal populaire":
       return balpop_cover;

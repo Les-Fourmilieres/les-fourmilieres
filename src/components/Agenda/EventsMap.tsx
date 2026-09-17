@@ -148,6 +148,7 @@ export function EventsMap({ events }: Props) {
 						case "Concert":
 						case "DJ Set":
 						case "Open Air":
+						case "Karaoké":
 						case "Bal populaire":
 							icon_url = pointer_concert
 							break

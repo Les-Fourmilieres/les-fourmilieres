@@ -7,6 +7,7 @@ export type EventTypes =
   | "DJ Set"
   | "Open Air"
   | "Bal populaire"
+	| "Karaoké"
   | "Conférence"
   | "Rencontre Littéraire"
   | "AG"
@@ -75,7 +76,7 @@ export const eventTypesLabels: Record<GroupedEventTypes, string> = {
 };
 
 export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
-  musique: ["Concert", "DJ Set", "Open Air", "Bal populaire"],
+  musique: ["Concert", "DJ Set", "Open Air", "Bal populaire", "Karaoké"],
   conf: ["Conférence", "Rencontre Littéraire", "AG", "Table-Ronde"],
   kermesse: ["Kermesse", "Village Associatif", "Braderie", "Expo", "Loto"],
   manif: ["Manifestation", "Pride", "Parade"],
@@ -163,6 +164,19 @@ const gya:ExtendedMenuItem = {
 	to: "/groove-your-ass",
 	label: "Voir toute la programmation de Groove Yous Ass",
 	shortLabel: "Groove Your Ass"
+}
+
+const no:ExtendedMenuItem = {
+	to: "/nuits-occupe-es",
+	label: "Voir toute la programmation des Nuits Occupé.es",
+	shortLabel: "Les Nuit Occupé.es",
+	desc: "Cet événement s'inscrit dans le festival des Nuits Occupé.es : 3 jours d'occupations artistiques dans l'espace public par des personnes sexisées, la nuit..",
+}
+
+const anticra:ExtendedMenuItem = {
+	to: "/mobilisation-contre-cra-beziers",
+	label: "Voir toute la mobilisation contre le CRA de Béziers",
+	shortLabel: "Mobilisation contre le CRA de Béziers"
 }
 
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
@@ -1148,5 +1162,66 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"6890553f-08d4-4782-8310-7c0ff372e88c":{
 		eventTypes:["DJ Set"],
 		programLinks:[gya]
+	},
+	"3eafc825-b3d1-4933-85ad-ff8a6361b7d0":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[no]
+	},
+	"5c42aeab-8b8b-4d61-b460-ad7c49510b92":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[no]
+	},
+	"a857406b-ca74-4b10-8031-4fbba28234d7":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[no]
+	},
+	"1edcbc1a-43eb-4f02-9b27-322a08981642":{
+		eventTypes:["Spectacle vivant"],
+		programLinks:[no]
+	},
+	"4d216368-cc8e-4e0b-97c6-d4027e081e91":{
+		eventTypes:["Concert"],
+		programLinks:[no]
+	},
+	"e70ceede-438e-4b05-bfe1-b085ef32435d":{
+		eventTypes:["Repas partagé"]
+	},
+	"185c2ea6-6c9c-49ec-83e4-174064ad6535":{
+		eventTypes:["Arpentage"]
+	},
+	"0f03faff-cf3e-4971-b6f1-e306d3efe839":{
+		eventTypes:["Atelier d'écriture"]
+	},
+	"bf4e5fac-02b8-465f-9bf6-1db6494d92bb":{
+		eventTypes:["Karaoké"]
+	},
+	"7e15c6c3-1bb9-4666-ace0-f62deb64ee00":{
+		eventTypes:["Atelier cuisine"]
+	},
+	"9346761c-e9ba-414b-ae65-12ad392fb2b0":{
+		eventTypes:["Lecture"]
+	},
+	"aad19078-8f8c-43ca-abe1-7e8f02976859":{
+		eventTypes:["Concert", "Atelier d'expression"]
+	},
+	"6a44d6c3-8fdd-4b2d-8095-d7683bd536ea":{
+		eventTypes:["Table-Ronde", "Théâtre", "Concert"],
+		programLinks:[anticra]
+	},
+	"767ad9e6-e29a-4dbb-aa60-fc4f132da727":{
+		eventTypes:["Projection"],
+		programLinks:[anticra]
+	},
+	"82ed1ef1-7046-4eea-a0d1-ffb4ad6a5f58":{
+		eventTypes:["Conférence"],
+		programLinks:[anticra]
+	},
+	"41f43642-f956-4966-8867-bcb8c736ffdb":{
+		eventTypes:["Manifestation"],
+		programLinks:[anticra]
+	},
+	"7b8040d9-f707-4ae3-ac7d-badfb90d34f0":{
+		eventTypes:["Projection"],
+		programLinks:[anticra]
 	}
 };
