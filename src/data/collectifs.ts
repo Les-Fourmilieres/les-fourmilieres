@@ -56,6 +56,7 @@ export type Collectif = "ajcm" |
 	"cafe-associatif-de-la-tendresse" |
 	"ccfd-herault" |
 	"cevennes-terre-d-accueil" |
+	"chorale-les-chips" |
 	"collectif-antifa-millevoix" |
 	"collectif-antifacscite-antiraciste-bagnols" |
 	"collectif-capoeira-angola-clapas" |
@@ -74,6 +75,7 @@ export type Collectif = "ajcm" |
 	"de-l-autre-cote" |
 	"echapppee-belle" |
 	"en-vie-a-beziers" |
+	"entraide-hospitalite" |
 	"extinction-rebellion-montpellier" |
 	"eyeland-festival" |
 	"faucheur-euses-d-ogm" |
@@ -97,6 +99,7 @@ export type Collectif = "ajcm" |
 	"la-cimade-beziers" |
 	"la-cimade-montpellier" |
 	"la-combine" |
+	"la-criee" |
 	"la-deter" |
 	"la-freep" |
 	"la-mauvaise-reputation" |
@@ -491,6 +494,14 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		instagram: "https://www.instagram.com/bagnolsantifa",
 		logo: "collectifs/collectif-bagnols-antifa.webp"
 	},
+	"chorale-les-chips":{
+		slug:"chorale-les-chips",
+		name:"Chorale Les Chips",
+		description:"Chorale autogérée, féministe et antifasciste, des Chips de Perpignan",
+		departement:"Pyrénées-Orientales",
+		type:["Collectif artistique", "Collectif militant"],
+		bdv:"66136"
+	},
 	"collectif-antifa-millevoix": {
 		slug: "collectif-antifa-millevoix",
 		name: "Collectif Antifa MillaVoix",
@@ -688,6 +699,13 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo: "collectifs/etoile-bio-logo.jpg",
 		type:["Bar - Brasserie - Commerce"]
 	},*/
+	"entraide-hospitalite":{
+		slug:"entraide-hostpitalit",
+		name:"Entraide et Hospitalité",
+		departement:"Aveyron",
+		type:["Collectif pour mieux habiter"],
+		position:{lat:44.47175,lng:2.07650}
+	},
 	"extinction-rebellion-montpellier": {
 		slug: "extinction-rebellion-montpellier",
 		name: "Extinction Rebellion Montpellier",
@@ -945,6 +963,15 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		description: "La Cimade est une association de solidarité qui défend la dignité et les droits des personnes réfugiées, migrantes et sans-papiers. Elle propose un accompagnement juridique, intervient dans les centres de rétention, les bidonvilles et mène des actions de plaidoyer pour faire évoluer les politiques d'immigration et d'asile.",
 		logo: "collectifs/cimade-logo.svg",
 		type: ["Collectif militant"],
+	},
+	"la-criee":{
+		slug:"la-criee",
+		name:"La Criée",
+		description:"Karaoké féministe et queer",
+		departement:"Pyrénées-Orientales",
+		type:["Collectif artistique"],
+		bdv:"66136",
+		logo:"collectifs/la-criee.jpg"
 	},
 	"la-combine": {
 		slug: "la-combine",
