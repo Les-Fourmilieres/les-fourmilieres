@@ -89,7 +89,7 @@ function RouteComponent() {
         </p>
 
         <p>
-          📚 <strong>16h30 - 19h30 | "DÉCOLONISER LE DANCEFLOOR"</strong>
+          📚 <strong>16h30 - 19h30 | "DÉCOLONISER LE DANCE-FLOOR"</strong>
         </p>
         <p>
           <em>- </em>arpentage du livre, d'Habibitch,{" "}
