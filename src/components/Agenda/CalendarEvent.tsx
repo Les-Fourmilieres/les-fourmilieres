@@ -159,7 +159,7 @@ export const EventType = styled.span`
   &[data-cat="DJ Set"]::before,
   &[data-cat="Atelier DJing"]::before,
   &[data-cat="Open Air"]::before, 
-	&[data-cat="Karaoké"]::before {
+	&[data-cat="Karaoké"]::before
   &[data-cat="Bal populaire"]::before {
     background: url("${picto_concert}") no-repeat 0 center;
   }
