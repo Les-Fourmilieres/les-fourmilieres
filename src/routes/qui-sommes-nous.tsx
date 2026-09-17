@@ -8,7 +8,7 @@ import { Map } from "../components/Map/Map";
 import { Collectif } from "../components/Collectif/Collectif";
 import { useMediaQuery } from "react-responsive";
 import { getLivingAreas, type LivingAreaI } from "../core/LivingArea";
-import { DepartementsByCode } from "../core/Departements";
+import { DepartementsByCode } from "../core/Departements.ts";
 import { ToggleButtonGroup } from "react-aria-components";
 import { ToggleButton } from "../components/ToggleButton/ToggleButton";
 import styled from "styled-components";
