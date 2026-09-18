@@ -1035,7 +1035,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
 	"5d332cee-b790-4bcb-b409-802574cd2513":{
 		eventTypes:["Rencontre Littéraire"],
-		overridePhysicalAddress:[lodeve]
+		programLinks:[lodeve]
 	},
 	"108d6b0e-9f6a-442b-b6f0-e325b7c73c79":{
 		eventTypes:["Concert", "DJ Set"]
