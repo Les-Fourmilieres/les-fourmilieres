@@ -690,11 +690,6 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Formation"],
     overridePhysicalAddress: carmagnole,
   },
-  "c701099b-2aad-43a5-a5c8-20f4a811fa52": {
-    eventTypes: ["Concert"],
-    programLinks: [halleTropisme],
-    overridePhysicalAddress: tropisme,
-  },
   "11de6093-7a7e-4f07-95c1-8b6654ff5059": {
     eventTypes: ["Rencontre Littéraire", "Arpentage"],
     programLinks: [halleTropisme],
