@@ -309,7 +309,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     overridePhysicalAddress: tropisme,
   },
   "c13b5c14-9a64-4746-98ce-cc570f3461f9": {
-    eventTypes: ["DJ Set"],
+    eventTypes: ["Atelier militant"],
   },
   "c8241147-0707-45f0-973c-ed7efc2ad533": {
     eventTypes: ["Ciné-débat"],
