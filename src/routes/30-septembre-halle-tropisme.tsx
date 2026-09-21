@@ -81,7 +81,6 @@ function RouteComponent() {
         <p>
           Des ateliers pour les enfants et adolescents seront proposés par
           différents collectifs :<br />- ateliers sur les droits des enfants,{" "}
-          <em>avec le collectif enfantiste 34</em>
           <br />- lecture d'album jeunesse engagé,{" "}
           <em>avec la librairie La Cavale</em>
           <br />- Kermesse antifasciste, <em>par le Quartier Généreux</em>
