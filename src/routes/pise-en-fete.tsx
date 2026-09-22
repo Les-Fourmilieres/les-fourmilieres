@@ -44,7 +44,7 @@ function RouteComponent() {
   return (
     <Section>
       <h1>La Pise en Fête</h1>
-     <p>Le 9 et 19 octobre, le quarter de la pise est en fête, portée par La Combine et la La Frénétik.</p>
+     <p>Le 9 et 10 octobre, le quartier de la Pise est en Fête, portée par La Combine et la La Frénétik.</p>
 			<Covers>
 				<CovertPart src={flyer} alt={"Flyer de la Pise en fête"}/>
 			</Covers>
