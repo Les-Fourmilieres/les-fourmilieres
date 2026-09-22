@@ -185,6 +185,13 @@ const qg:ExtendedMenuItem = {
 	shortLabel: "Les Fourmilières au Quartier Généreux"
 }
 
+const sds:ExtendedMenuItem = {
+	to: "/semaine-des-resistances-et-des-solidarites",
+	label: "Voir toute la programmation de la Semaine des Résistances et Solidarités",
+	desc: "Cet événement s'inscrit dans la semaine des résistances et des solidarités et est porté au programme des Fourmilières par Le Bouillon Cube, Mélando et la librairie La Bestiole",
+	shortLabel: "Semaine des résistances et Solidarités"
+}
+
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
   street: "1 rue Biron",
@@ -336,6 +343,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "e24446de-b4da-4bbb-bcf3-efceb2a9ea7c": {
     eventTypes: ["Atelier d'expression"],
+		programLinks:[sds]
   },
   "bd975802-c6d3-410c-a857-f95591cf6efe": {
     eventTypes: ["Rencontre Littéraire"],
@@ -389,6 +397,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "08c5d7b9-25b5-40ac-99d5-701ea3f4b511": {
     eventTypes: ["Théâtre"],
+		programLinks:[sds],
+		physicalAddress:{
+			description: "La Grange",
+			locality: "Causse-de-la-Selle",
+			geom: "3.6604965;43.8140222"
+		}
   },
   "be48d1bb-12b9-4ddc-8eef-ee6dc050bd18": {
     eventTypes: ["Pride"],
@@ -1265,22 +1279,26 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		programLinks:[gya]
 	},
 	"4ae7a675-05bb-4128-ab08-af6959ea7781":{
-		eventTypes:["Rencontre Littéraire", "Concert"]
+		eventTypes:["Rencontre Littéraire", "Concert"],
+		programLinks:[sds]
 	},
 	"780c1cc4-c160-4dc0-b229-28896649cb0d":{
-		eventTypes:["Rencontre Littéraire"]
+		eventTypes:["Rencontre Littéraire"],
+		programLinks:[sds]
 	},
 	"f0b37c6f-651f-4314-80fc-4f34ff80689f":{
 		eventTypes:["DJ Set", "Concert"]
 	},
 	"2fcb4d52-27e3-4273-a26e-539cb9fd7a63":{
-		eventTypes:["Rencontre Littéraire"]
+		eventTypes:["Rencontre Littéraire"],
+		programLinks:[sds]
 	},
 	"4f2bb0a9-99af-46d8-a7c5-7dbe09551ab3":{
 		eventTypes:["Projection", "Atelier militant", "Atelier d'expression", "Concert"]
 	},
 	"621401c3-2bc1-442b-92f5-4715d4129665":{
-		eventTypes:["Rencontre Littéraire"]
+		eventTypes:["Rencontre Littéraire"],
+		programLinks:[sds]
 	},
 	"909a3f5a-155a-41f5-a4d0-bc528b3e1331":{
 		eventTypes:["DJ Set", "Concert"]

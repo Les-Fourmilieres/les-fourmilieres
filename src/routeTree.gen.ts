@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SemaineDesResistancesEtDesSolidaritesRouteImport } from './routes/semaine-des-resistances-et-des-solidarites'
 import { Route as SafiaDahaniLesExtremesDroitesContemporainesRouteImport } from './routes/safia-dahani-les-extremes-droites-contemporaines'
 import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
 import { Route as PresseRouteImport } from './routes/presse'
@@ -36,6 +37,12 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgrammeIndexRouteImport } from './routes/programme/index'
 import { Route as ProgrammeUuidRouteImport } from './routes/programme/$uuid'
 
+const SemaineDesResistancesEtDesSolidaritesRoute =
+  SemaineDesResistancesEtDesSolidaritesRouteImport.update({
+    id: '/semaine-des-resistances-et-des-solidarites',
+    path: '/semaine-des-resistances-et-des-solidarites',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SafiaDahaniLesExtremesDroitesContemporainesRoute =
   SafiaDahaniLesExtremesDroitesContemporainesRouteImport.update({
     id: '/safia-dahani-les-extremes-droites-contemporaines',
@@ -201,6 +208,7 @@ export interface FileRoutesByFullPath {
   '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
+  '/semaine-des-resistances-et-des-solidarites': typeof SemaineDesResistancesEtDesSolidaritesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
@@ -229,6 +237,7 @@ export interface FileRoutesByTo {
   '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
+  '/semaine-des-resistances-et-des-solidarites': typeof SemaineDesResistancesEtDesSolidaritesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme': typeof ProgrammeIndexRoute
 }
@@ -258,6 +267,7 @@ export interface FileRoutesById {
   '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
   '/safia-dahani-les-extremes-droites-contemporaines': typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
+  '/semaine-des-resistances-et-des-solidarites': typeof SemaineDesResistancesEtDesSolidaritesRoute
   '/programme/$uuid': typeof ProgrammeUuidRoute
   '/programme/': typeof ProgrammeIndexRoute
 }
@@ -288,6 +298,7 @@ export interface FileRouteTypes {
     | '/presse'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
+    | '/semaine-des-resistances-et-des-solidarites'
     | '/programme/$uuid'
     | '/programme/'
   fileRoutesByTo: FileRoutesByTo
@@ -316,6 +327,7 @@ export interface FileRouteTypes {
     | '/presse'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
+    | '/semaine-des-resistances-et-des-solidarites'
     | '/programme/$uuid'
     | '/programme'
   id:
@@ -344,6 +356,7 @@ export interface FileRouteTypes {
     | '/presse'
     | '/qui-sommes-nous'
     | '/safia-dahani-les-extremes-droites-contemporaines'
+    | '/semaine-des-resistances-et-des-solidarites'
     | '/programme/$uuid'
     | '/programme/'
   fileRoutesById: FileRoutesById
@@ -373,12 +386,20 @@ export interface RootRouteChildren {
   PresseRoute: typeof PresseRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
   SafiaDahaniLesExtremesDroitesContemporainesRoute: typeof SafiaDahaniLesExtremesDroitesContemporainesRoute
+  SemaineDesResistancesEtDesSolidaritesRoute: typeof SemaineDesResistancesEtDesSolidaritesRoute
   ProgrammeUuidRoute: typeof ProgrammeUuidRoute
   ProgrammeIndexRoute: typeof ProgrammeIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/semaine-des-resistances-et-des-solidarites': {
+      id: '/semaine-des-resistances-et-des-solidarites'
+      path: '/semaine-des-resistances-et-des-solidarites'
+      fullPath: '/semaine-des-resistances-et-des-solidarites'
+      preLoaderRoute: typeof SemaineDesResistancesEtDesSolidaritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/safia-dahani-les-extremes-droites-contemporaines': {
       id: '/safia-dahani-les-extremes-droites-contemporaines'
       path: '/safia-dahani-les-extremes-droites-contemporaines'
@@ -592,6 +613,8 @@ const rootRouteChildren: RootRouteChildren = {
   QuiSommesNousRoute: QuiSommesNousRoute,
   SafiaDahaniLesExtremesDroitesContemporainesRoute:
     SafiaDahaniLesExtremesDroitesContemporainesRoute,
+  SemaineDesResistancesEtDesSolidaritesRoute:
+    SemaineDesResistancesEtDesSolidaritesRoute,
   ProgrammeUuidRoute: ProgrammeUuidRoute,
   ProgrammeIndexRoute: ProgrammeIndexRoute,
 }
