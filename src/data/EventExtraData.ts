@@ -1219,5 +1219,54 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"7b8040d9-f707-4ae3-ac7d-badfb90d34f0":{
 		eventTypes:["Projection"],
 		programLinks:[anticra]
+	},
+	"f967896c-5bd1-4167-8871-f95957ca0acc":{
+		eventTypes:["Ciné-débat"]
+	},
+	"381069ab-755e-4576-909a-a3332b1a1993":{
+		eventTypes:["Village Associatif"],
+		programLinks:[gya]
+	},
+	"149553be-3c38-48f0-98fa-2b9d481e619c":{
+		eventTypes:["Formation"],
+		programLinks:[gya]
+	},
+	"925bbaa0-0a40-4800-9f4e-4b674f335cb5":{
+		eventTypes:["Atelier militant"],
+		programLinks:[gya]
+	},
+	"bc9762c1-11a0-4751-a05a-70f5a3a47aeb":{
+		eventTypes:["Concert"],
+		overridePhysicalAddress:lodeva,
+		programLinks:[lodeve]
+	},
+	"cb663087-732d-49ce-a9aa-f6f67126a623":{
+		eventTypes:["Bal populaire"],
+		programLinks:[lodeve]
+	},
+	"cfb89fd0-f909-45e5-b077-261aa6d1dca7":{
+		eventTypes:["Formation"],
+		programLinks:[gya]
+	},
+	"4ae7a675-05bb-4128-ab08-af6959ea7781":{
+		eventTypes:["Rencontre Littéraire", "Concert"]
+	},
+	"780c1cc4-c160-4dc0-b229-28896649cb0d":{
+		eventTypes:["Rencontre Littéraire"]
+	},
+	"f0b37c6f-651f-4314-80fc-4f34ff80689f":{
+		eventTypes:["DJ Set", "Concert"]
+	},
+	"2fcb4d52-27e3-4273-a26e-539cb9fd7a63":{
+		eventTypes:["Rencontre Littéraire"]
+	},
+	"4f2bb0a9-99af-46d8-a7c5-7dbe09551ab3":{
+		eventTypes:["Projection", "Atelier militant", "Atelier d'expression", "Concert"]
+	},
+	"621401c3-2bc1-442b-92f5-4715d4129665":{
+		eventTypes:["Rencontre Littéraire"]
+	},
+	"909a3f5a-155a-41f5-a4d0-bc528b3e1331":{
+		eventTypes:["DJ Set", "Concert"]
 	}
 };
