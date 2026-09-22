@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import type { MobilizonEventI } from "./Event";
 import { LinkButton } from "../Link/Link";
-import { Button } from "react-aria-components";
-import { useState } from "react";
-import { JoinEventModal } from "./JoinEventModal";
 
 const ButtonStyle = `
   border: none;
@@ -24,9 +21,6 @@ const ButtonStyle = `
     background-color: var(--accent-dark);
   }`;
 
-const StyledButton = styled(Button)`
-  ${ButtonStyle}
-`;
 const StyledLinkButton = styled(LinkButton)`
   ${ButtonStyle}
 `;
@@ -36,25 +30,12 @@ interface Props {
 }
 
 export function ParticipateButton({ event }: Props) {
-  const [participateModalVisible, setParticipateModalVisible] = useState(false);
-  const onEventJoin = async (event:unknown) => {
-		(event as Event).preventDefault()
-    setParticipateModalVisible(true);
-  };
+  if (!event.externalParticipationUrl) return null;
   return (
     <>
-      <JoinEventModal
-        isOpen={participateModalVisible}
-        close={() => setParticipateModalVisible(false)}
-        eventId={event.id}
-      />
-      {event.externalParticipationUrl ? (
-        <StyledLinkButton href={event.externalParticipationUrl} target="_blank">
-          Billetterie
-        </StyledLinkButton>
-      ) : (
-        <StyledButton onClick={onEventJoin}>Je participe</StyledButton>
-      )}
+      <StyledLinkButton href={event.externalParticipationUrl} target="_blank">
+        Billetterie
+      </StyledLinkButton>
     </>
   );
 }
