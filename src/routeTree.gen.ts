@@ -24,6 +24,7 @@ import { Route as LaFourmiliereBruleRouteImport } from './routes/la-fourmiliere-
 import { Route as LaCharteRouteImport } from './routes/la-charte'
 import { Route as InfolettreRouteImport } from './routes/infolettre'
 import { Route as GrooveYourAssRouteImport } from './routes/groove-your-ass'
+import { Route as FourmilieresAuQuartierGenereuxRouteImport } from './routes/fourmilieres-au-quartier-genereux'
 import { Route as FestivalDesLuttesPopulairesRouteImport } from './routes/festival-des-luttes-populaires'
 import { Route as FaitesDesSolidaritesRouteImport } from './routes/faites-des-solidarites'
 import { Route as EntretienEmmanuelNegrierRouteImport } from './routes/entretien-emmanuel-negrier'
@@ -113,6 +114,12 @@ const GrooveYourAssRoute = GrooveYourAssRouteImport.update({
   path: '/groove-your-ass',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FourmilieresAuQuartierGenereuxRoute =
+  FourmilieresAuQuartierGenereuxRouteImport.update({
+    id: '/fourmilieres-au-quartier-genereux',
+    path: '/fourmilieres-au-quartier-genereux',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const FestivalDesLuttesPopulairesRoute =
   FestivalDesLuttesPopulairesRouteImport.update({
     id: '/festival-des-luttes-populaires',
@@ -178,6 +185,7 @@ export interface FileRoutesByFullPath {
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
+  '/fourmilieres-au-quartier-genereux': typeof FourmilieresAuQuartierGenereuxRoute
   '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
   '/la-charte': typeof LaCharteRoute
@@ -205,6 +213,7 @@ export interface FileRoutesByTo {
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
+  '/fourmilieres-au-quartier-genereux': typeof FourmilieresAuQuartierGenereuxRoute
   '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
   '/la-charte': typeof LaCharteRoute
@@ -233,6 +242,7 @@ export interface FileRoutesById {
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
   '/festival-des-luttes-populaires': typeof FestivalDesLuttesPopulairesRoute
+  '/fourmilieres-au-quartier-genereux': typeof FourmilieresAuQuartierGenereuxRoute
   '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
   '/la-charte': typeof LaCharteRoute
@@ -262,6 +272,7 @@ export interface FileRouteTypes {
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
+    | '/fourmilieres-au-quartier-genereux'
     | '/groove-your-ass'
     | '/infolettre'
     | '/la-charte'
@@ -289,6 +300,7 @@ export interface FileRouteTypes {
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
+    | '/fourmilieres-au-quartier-genereux'
     | '/groove-your-ass'
     | '/infolettre'
     | '/la-charte'
@@ -316,6 +328,7 @@ export interface FileRouteTypes {
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
     | '/festival-des-luttes-populaires'
+    | '/fourmilieres-au-quartier-genereux'
     | '/groove-your-ass'
     | '/infolettre'
     | '/la-charte'
@@ -344,6 +357,7 @@ export interface RootRouteChildren {
   EntretienEmmanuelNegrierRoute: typeof EntretienEmmanuelNegrierRoute
   FaitesDesSolidaritesRoute: typeof FaitesDesSolidaritesRoute
   FestivalDesLuttesPopulairesRoute: typeof FestivalDesLuttesPopulairesRoute
+  FourmilieresAuQuartierGenereuxRoute: typeof FourmilieresAuQuartierGenereuxRoute
   GrooveYourAssRoute: typeof GrooveYourAssRoute
   InfolettreRoute: typeof InfolettreRoute
   LaCharteRoute: typeof LaCharteRoute
@@ -470,6 +484,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GrooveYourAssRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fourmilieres-au-quartier-genereux': {
+      id: '/fourmilieres-au-quartier-genereux'
+      path: '/fourmilieres-au-quartier-genereux'
+      fullPath: '/fourmilieres-au-quartier-genereux'
+      preLoaderRoute: typeof FourmilieresAuQuartierGenereuxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/festival-des-luttes-populaires': {
       id: '/festival-des-luttes-populaires'
       path: '/festival-des-luttes-populaires'
@@ -554,6 +575,7 @@ const rootRouteChildren: RootRouteChildren = {
   EntretienEmmanuelNegrierRoute: EntretienEmmanuelNegrierRoute,
   FaitesDesSolidaritesRoute: FaitesDesSolidaritesRoute,
   FestivalDesLuttesPopulairesRoute: FestivalDesLuttesPopulairesRoute,
+  FourmilieresAuQuartierGenereuxRoute: FourmilieresAuQuartierGenereuxRoute,
   GrooveYourAssRoute: GrooveYourAssRoute,
   InfolettreRoute: InfolettreRoute,
   LaCharteRoute: LaCharteRoute,
