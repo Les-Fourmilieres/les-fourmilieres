@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
 import styled from "styled-components";
-import { LinkButton } from "../components/Link/Link";
+import {LinkButton} from "../components/Link/Link";
 import { searchParams } from "../components/Agenda/SearchParams";
 import cover from "../assets/tropisme/tropisme.jpg?url";
 import { Agenda } from "../components/Agenda/Agenda";
@@ -53,75 +53,86 @@ const CovertPart = styled.img`
 function RouteComponent() {
   return (
     <Section>
-      <h1>
-        Les Fourmilières à la Halle Tropisme - Planète Boum Boum et Habibitch le
-        30 septembre
-      </h1>
-      <p>
-        Le Quartier Généreux et la Halle Tropisme invitent Planète Boum Boum et
-        Habibitch pour une soirée antifasciste et solidaire ✊ Le 30 septembre,
-        viens participer au festival Les Fourmilières à la Halle Tropisme pour
-        une soirée pleine de surprises !
-      </p>
-      <Covers>
-        <CovertPart src={cover} alt={"Affiche de la Faites des Solidarités."} />
-      </Covers>
+			<main>
+				<h1>
+					Les Fourmilières à la Halle Tropisme - Planète Boum Boum et Habibitch le
+					30 septembre
+				</h1>
 
-      <Section>
-        <p>Au programme :</p>
-        <p>
-          <u>
-            <strong>Après-midi (entrée libre) :</strong>
-          </u>
-        </p>
-        <p>
-          🌱 <strong>15h - 18h | PAS SI GRAND.ES, DÉJÀ MILITANT.ES</strong>{" "}
-          (après-midi pour petits et grands)
-        </p>
-        <p>
-          Des ateliers pour les enfants et adolescents seront proposés par
-          différents collectifs :<br />- ateliers sur les droits des enfants,{" "}
-          <br />- lecture d'album jeunesse engagé,{" "}
-          <em>avec la librairie La Cavale</em>
-          <br />- Kermesse antifasciste, <em>par le Quartier Généreux</em>
-          <br />- Fiscal Fitness<em>, avec Attac</em>
-        </p>
+				<p>
+					Le Quartier Généreux et la Halle Tropisme invitent Planète Boum Boum et
+					Habibitch pour une soirée antifasciste et solidaire ✊ Le 30 septembre,
+					viens participer au festival Les Fourmilières à la Halle Tropisme pour
+					une soirée pleine de surprises !
+				</p>
+				<Covers>
+					<CovertPart src={cover} alt={"Affiche de la Faites des Solidarités."} />
+				</Covers>
 
-        <p>
-          📚 <strong>16h30 - 19h30 | "DÉCOLONISER LE DANCEFLOOR"</strong>
-        </p>
-        <p>
-          <em>- </em>arpentage du livre, d'Habibitch,{" "}
-          <em>par le Quartier Généreux</em>
-        </p>
-        <p>- rencontre avec l'autrice (18h à 19h30)</p>
-        <p></p>
-        <p>
-          <u>
-            <strong>Soirée (entrée avec billets obligatoire)</strong>
-          </u>
-        </p>
-        <p>
-          🎶 <strong>20h00 - 23h30 | CONCERTS</strong>
-        </p>
-        <p>- 20h : Planète Boum Boum</p>
-        <p>- 21h 30 : DJSet Habibitch</p>
-        <p>Et plein de surprises tout au long de la soirée !</p>
-        <StyledLinkButton
-          href="https://www.helloasso.com/associations/le-quartier-genereux/evenements/festival-les-fourmilieres-a-la-halle-tropisme"
-          target="_blank"
-        >
-          Réserve vite ta place !
-        </StyledLinkButton>
-      </Section>
-      <Section>
-        <Agenda
-          path={Route.to}
-          disableMap
-          disableDateFilder
-          disableTypeFilter
-        />
-      </Section>
+					<p>Au programme :</p>
+					<p>
+						<u>
+							<strong>Après-midi (entrée libre) :</strong>
+						</u>
+					</p>
+					<p>
+						🌱 <strong>15h - 20h | PAS SI GRAND.ES, DÉJÀ MILITANT.ES</strong>{" "}
+						(après-midi pour petits et grands)
+					</p>
+					<p>
+						Des ateliers pour les enfants et adolescents seront proposés par différents collectifs :
+					</p>
+						<ul>
+							<li>Ateliers sur les droits des enfants, <em>avec Le Récif</em></li>
+							<li>Stand pour lutter contre l'adultisme, <em>avec la librairie La Cavale et le Quartier Généreux</em></li>
+							<li>Lecture d'albums jeunesse engagés, <em>avec la librairie La Cavale</em></li>
+							<li>Kermesse antifasciste, <em>par le Quartier Généreux et les travailleur.euses de l'art 34</em></li>
+							<li>Fiscal Fitness, <em>avec Attac et Clown.e.s artivistes</em></li>
+							<li>Stand sérigraphie "Viens pimper ton vieux tee shirt aux couleurs de l'antifascisme"</li>
+							<li>Stand maquillage pour petit.es et grand.es, <em>avec @l_anomalie</em></li>
+							<li>Stand de générateur de refus de subvention pour cause de gauchisme idéologique, <em>par Asso Solidaires 34</em></li>
+							<li>Stand "Inscris-toi sur les listes électorales", <em>par le Quartier généreux</em></li>
+						</ul>
+
+					<p>
+						📚 <strong>16h30 - 19h15 | "DÉCOLONISER LE DANCEFLOOR"</strong>
+					</p>
+				<ul>
+					<li>Arpentage du livre, d'Habibitch, par le Quartier Généreux</li>
+					<li>rencontre avec l'autrice (18h à 19h15)</li>
+				</ul>
+					<p>
+						<u>
+							<strong>Soirée (entrée avec billets obligatoire)</strong>
+						</u>
+					</p>
+					<p>
+						🎶 <strong>18h30 - 23h30 | CONCERTS</strong>
+					</p>
+				<ul>
+					<li>19h : Chorale Le cri du choeur</li>
+					<li>20h : Planète Boum Boum</li>
+					<li>21h 30 : Habibitch</li>
+				</ul>
+				<p>Et plein de surprises tout au long de la soirée !</p>
+				<Section>
+					<StyledLinkButton
+						href="https://www.helloasso.com/associations/le-quartier-genereux/evenements/festival-les-fourmilieres-a-la-halle-tropisme"
+						target="_blank"
+					>
+						Réserve vite ta place !
+					</StyledLinkButton>
+
+				</Section>
+			</main>
+				<Section>
+					<Agenda
+						path={Route.to}
+						disableMap
+						disableDateFilder
+						disableTypeFilter
+					/>
+				</Section>
     </Section>
   );
 }
