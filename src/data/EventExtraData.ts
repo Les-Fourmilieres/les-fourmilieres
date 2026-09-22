@@ -1069,10 +1069,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "ab54c525-72e4-49a6-8be4-2beb16c31475": {
     eventTypes: ["Concert"],
     overridePhysicalAddress: lodeva,
+		programLinks:[lodeve]
   },
   "760e574b-76f0-4d93-adf2-cba69aa5d5fc": {
     eventTypes: ["DJ Set"],
     overridePhysicalAddress: lodeva,
+		programLinks:[lodeve]
   },
   "953c9540-ff29-4399-bba0-d785170ba604": {
     eventTypes: ["Atelier d'écriture"],
@@ -1092,7 +1094,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"faf258c9-5437-4e37-aded-d84a6e50d729":{
 		eventTypes:["Spectacle vivant"],
-		overridePhysicalAddress:megisserie
+		overridePhysicalAddress:megisserie,
+		programLinks:[lodeve]
 	},
 	"ce0431c5-9dca-498b-acbe-cad520789684":{
 		eventTypes:["Conférence"]
