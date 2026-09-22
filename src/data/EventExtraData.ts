@@ -198,6 +198,12 @@ const pef:ExtendedMenuItem = {
 	shortLabel: "La Piste en Fête"
 }
 
+const ganges:ExtendedMenuItem = {
+	to: "/fourmilieres-a-ganges",
+	label: "Voir toute la programmation des Fourmilières à Ganges",
+	shortLabel: "Les Fourmilières à Ganges"
+}
+
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
   street: "1 rue Biron",
@@ -354,6 +360,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "bd975802-c6d3-410c-a857-f95591cf6efe": {
     eventTypes: ["Rencontre Littéraire"],
     overridePhysicalAddress: arbreSansFin,
+		programLinks:[ganges]
   },
   "d75e045c-d447-47c5-b18f-7d438817a5fc": {
     eventTypes: ["Conférence"],
@@ -426,6 +433,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "205537bf-df3a-4bc4-ac99-5948aeb87a99": {
     eventTypes: ["Concert"],
     overridePhysicalAddress: freep,
+		programLinks:[ganges]
   },
   "2781745b-4d3d-4b7d-a825-4a4169f3a85b": {
     eventTypes: ["Table-Ronde"],
@@ -592,10 +600,16 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "e015f26b-265e-4e5b-884d-87dbcb268d23": {
     eventTypes: ["Banquet populaire"],
+		overridePhysicalAddress:{
+			description:"Jardin public Ganges",
+			geom: "3.7096712;43.9344955"
+		},
+		programLinks:[ganges]
   },
   "dd44f90a-8134-4a13-a73e-7747b677a5c1": {
     eventTypes: ["Spectacle vivant"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
   "ec3a24a6-f7e7-4fd6-9898-34ca3f213b60": {
     eventTypes: ["DJ Set"],
@@ -611,6 +625,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "aac53e1b-4760-4b4c-a552-07dc6b125f54": {
     eventTypes: ["Expo"],
     overridePhysicalAddress: autreCote,
+		programLinks:[ganges]
   },
   "73733af0-98ed-49f4-8da5-997b5bcb2af3": {
     eventTypes: ["Conférence"],
@@ -661,6 +676,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "94418219-de82-419e-95d3-a5cb6213ea6e": {
     eventTypes: ["Concert", "Théâtre"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
   "c9684b06-08cb-4443-a6d0-9a3d90056d82": {
     eventTypes: ["Kermesse", "Table-Ronde"],
@@ -679,10 +695,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "2ec529d3-1d6e-4c8f-a0ca-7cdd242cb9a1": {
     eventTypes: ["Expo"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
   "7b11dab7-c001-4045-a1c0-3c6ba6f7986d": {
     eventTypes: ["Lecture"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
   "0c645c5c-5435-467a-9fa8-a803427f0c07": {
     eventTypes: ["Projection"],
@@ -735,10 +753,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "6fd1f509-724a-4f10-ac15-bf07729bc977": {
     eventTypes: ["Lecture", "Ciné-débat", "Rencontre Littéraire"],
     overridePhysicalAddress: autreCote,
+		programLinks:[ganges]
   },
   "4cc9926d-684a-48c6-bcbf-0a9e647e9f14": {
     eventTypes: ["Lecture", "Rencontre Littéraire"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
   "d0dc29b9-9f1c-405a-b65c-e52f2687412b": {
     eventTypes: ["Concert"],
@@ -955,14 +975,17 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "4d422666-63e7-4f5b-8b3a-c926c25336dc": {
     eventTypes: ["Spectacle vivant"],
+		programLinks:[ganges]
   },
   "856d54ae-8f03-4497-8b2a-1bc3259c95a4": {
     eventTypes: ["Théâtre"],
     overridePhysicalAddress: autreCote,
+		programLinks:[ganges]
   },
   "87f3859a-918c-4c88-8433-371f27ddc446": {
     eventTypes: ["Spectacle vivant"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
   "d586ad4b-b78e-4b83-80ec-2a055fbe2c93": {
     eventTypes: ["Conférence"],
@@ -1043,12 +1066,14 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "2fcff50a-4b00-4c78-8bca-5011a878fb59": {
     eventTypes: ["Atelier d'écriture"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
   "f4d42180-51cd-4e18-bf07-43ec9dae9a11": {
     eventTypes: ["Théâtre", "Repas partagé"],
   },
   "05ecb411-8af7-4aec-a6c1-a280ba5d17d7": {
     eventTypes: ["Parade"],
+		programLinks:[ganges]
   },
   "ab54c525-72e4-49a6-8be4-2beb16c31475": {
     eventTypes: ["Concert"],
@@ -1061,6 +1086,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "953c9540-ff29-4399-bba0-d785170ba604": {
     eventTypes: ["Atelier d'écriture"],
     overridePhysicalAddress: cafeDuSiecle,
+		programLinks:[ganges]
   },
 	"5d332cee-b790-4bcb-b409-802574cd2513":{
 		eventTypes:["Rencontre Littéraire"],
