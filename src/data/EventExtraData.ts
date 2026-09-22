@@ -179,6 +179,12 @@ const anticra:ExtendedMenuItem = {
 	shortLabel: "Mobilisation contre le CRA de Béziers"
 }
 
+const qg:ExtendedMenuItem = {
+	to: "/fourmilieres-au-quartier-genereux",
+	label: "Voir toute la programmation des Fourmilières au QG",
+	shortLabel: "Les Fourmilières au Quartier Généreux"
+}
+
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
   street: "1 rue Biron",
@@ -500,6 +506,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "afdbd57d-0bd4-44f6-abfb-4b80a8286920": {
     eventTypes: ["Expo"],
+		programLinks:[qg]
   },
   "633c0e74-6cca-4bb2-974a-67a156e3ea84": {
     eventTypes: ["Conférence"],
@@ -672,6 +679,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "b2d1e79f-077a-4852-be67-958c58df4baa": {
     eventTypes: ["Expo"],
+		programLinks:[qg]
   },
   "2797ad37-0da5-4f5a-be09-64033f19e1f5": {
     eventTypes: ["Formation"],
@@ -702,6 +710,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "19e71f5e-223b-4354-8fcc-90ab0b009a23": {
     eventTypes: ["Conférence"],
+		programLinks:[qg]
   },
   "6fd1f509-724a-4f10-ac15-bf07729bc977": {
     eventTypes: ["Lecture", "Ciné-débat", "Rencontre Littéraire"],
@@ -739,15 +748,19 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "97b1aaa0-8fd8-4824-b176-e241ec723a3d": {
     eventTypes: ["Théâtre"],
+		programLinks:[qg]
   },
   "3aa9adcd-0072-47b4-9b4d-3c9e2febf7ed": {
     eventTypes: ["Jeux"],
+		programLinks:[qg]
   },
   "7fbd1b9f-4c77-4fd9-9b6a-590392020b45": {
     eventTypes: ["Arpentage"],
+		programLinks:[qg]
   },
   "23251ad2-7b38-49ca-908c-b8fe0a23a254": {
     eventTypes: ["Projection"],
+		programLinks:[qg]
   },
   "7dc5726f-47ae-4698-90f2-046fc4398e37": {
     eventTypes: ["Atelier cuisine", "Banquet populaire"],
@@ -1005,6 +1018,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "9fb82144-e9f8-4103-8920-4ab173ee73bb": {
     eventTypes: ["Atelier militant"],
+		programLinks:[qg]
   },
   "2fcff50a-4b00-4c78-8bca-5011a878fb59": {
     eventTypes: ["Atelier d'écriture"],
@@ -1141,6 +1155,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"4f792113-f9b2-4bfc-89be-c9f8950610a9":{
 		eventTypes:["Atelier militant"],
+		programLinks:[qg]
 	},
 	"7dd9c993-1af2-48f9-8878-ec59889e1403":{
 		eventTypes:["Théâtre"],
@@ -1221,7 +1236,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		programLinks:[anticra]
 	},
 	"f967896c-5bd1-4167-8871-f95957ca0acc":{
-		eventTypes:["Ciné-débat"]
+		eventTypes:["Ciné-débat"],
+		programLinks:[qg]
 	},
 	"381069ab-755e-4576-909a-a3332b1a1993":{
 		eventTypes:["Village Associatif"],
