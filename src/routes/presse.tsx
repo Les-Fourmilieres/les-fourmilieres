@@ -42,6 +42,15 @@ function RouteComponent() {
             </CpLink>
             .
           </p>
+          <p>
+            Télécharger les{" "}
+            <CpLink
+              href="https://www.swisstransfer.com/dl/01a0c88b-1bbb-73fc-a45b-be009c0a924a"
+              target="_blank"
+            >
+              photos de presse
+            </CpLink>
+          </p>
           <p style={{ textAlign: "center" }}>
             Pour obtenir le mot de passe vous permettant de télécharger les
             photos de presse, merci d'envoyer un email à{" "}
@@ -60,7 +69,7 @@ function RouteComponent() {
           </p>
         </Section>
       </Row>
-      <h2>Extraits de presse</h2>
+      <h2>Articles de presse</h2>
       <h3>18 septembre 2026 · La Marseillaise</h3>
       <CpLink href="/presse/260918_LaMarseillaise.pdf" target="_blank">
         Un festival fait fourmiller les initiatives contre l'extrême droite
@@ -71,13 +80,14 @@ function RouteComponent() {
       </CpLink>
       <h3>11 septembre 2026 · Libération</h3>
       <CpLink href="/presse/260911_Liberation.pdf" target="_blank">
-        Festival « Les Fourmilières » creuse le sillon explicite d'un festival antifasciste et solidaire
+        Festival « Les Fourmilières » creuse le sillon explicite d'un festival
+        antifasciste et solidaire
       </CpLink>
       <h3>11 septembre 2026 · Médiapart</h3>
       <CpLink href="/presse/260911_Mediapart_InExtremis.pdf" target="_blank">
         In Extremis : la newsletter sur les extrêmes droites
       </CpLink>
-      
+
       <h3>04 septembre 2026 · Midi Libre Lodève</h3>
       <CpLink href="/presse/260904_Midi_Libre_Lodeve.jpg" target="_blank">
         Les Fourmilières ont travaillé tout l'été pour préparer le festival
