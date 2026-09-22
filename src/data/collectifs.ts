@@ -130,6 +130,7 @@ export type Collectif = "ajcm" |
 	"oai-e-libertat" |
 	"oned" |
 	"oustalite" |
+	"parents-feministes-montpellier" |
 	"pays-viganais-terre-d-accueil" |
 	"planning-familial-sud-cevennes" |
 	"poles-en-pomme" |
@@ -137,6 +138,7 @@ export type Collectif = "ajcm" |
 	"radio-vadrouille" |
 	"raices-flamencas" |
 	"resf-34" |
+	"resistances-joyeuses" |
 	"reso-resistances-solidaires" |
 	"rusf-34" |
 	"societe-du-cafe-du-siecle" |
@@ -149,6 +151,7 @@ export type Collectif = "ajcm" |
 	"theatre-de-la-plume" |
 	"theatre-la-bicyclette" |
 	"transmissions" |
+	"travelsound-x-reggae-sound-box" |
 	"ul-solidaires-sud-cevennes" |
 	"ultra-violette" |
 	"union-communiste-libertaire" |
@@ -913,10 +916,12 @@ export const collectifs: Record<Collectif, CollectifI> = {
 	},
 	"la-bestiole": {
 		slug: "la-bestiole",
-		name: "Librairie la BestiOle",
+		name: "la Bestiole",
+		description:"Librairie indépendante- Atelier de typographie et sérigraphie- Galerie- Animations: concerts, conférences, dédicaces...",
 		departement: "Hérault",
 		position: {lat: 43.743493, lng: 3.704322},
-		logo: "collectifs/logo-la-bestiole.jpg",
+		logo: "collectifs/la-bestiole.png",
+		instagram:"https://www.instagram.com/librairielabestiole/",
 		facebook: "https://www.facebook.com/violslefort34/?locale=fr_FR",
 		type: ["Librairie"]
 	},
@@ -1398,6 +1403,17 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo: "collectifs/oai-e-libertat.png",
 		bdv: "30189"
 	},
+	"parents-feministes-montpellier":{
+		slug:"parents-feministes-montpellier",
+		name:"Parents Féministes Montpellier",
+		departement:"Hérault",
+		type:["Collectif militant"],
+		bdv:"34172",
+		url:"https://parentsfeministesmontpellier.fr/",
+		instagram:"https://www.instagram.com/parents.feministes.mtp/",
+		facebook:"https://www.facebook.com/people/Parents-f%C3%A9minites-Mtp/61580433448251/",
+		logo:"collectifs/parents-feministes.webp"
+	},
 	"planning-familial-sud-cevennes": {
 		slug: "planning-familial-sud-cevennes",
 		name: "Planning familial Sud Cévennes",
@@ -1475,6 +1491,17 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		url: "https://resf34.org/",
 		logo: "collectifs/resf-logo.png",
 		type: ["Collectif militant"],
+	},
+	"resistances-joyeuses":{
+		slug:"resistances-joyeuses",
+		name:"Résistances Joyeuses",
+		description:"Collectif qui aspire à faire barrage à l'extrême droite, en remettant la joie, la culture et la convivialité au coeur de notre avenir commun.",
+		departement:"Lozère",
+		type:["Collectif militant"],
+		position:{lat:44.517244366360586, lng:3.4978820782663873},
+		instagram:"https://www.instagram.com/resistancesjoyeuses_48",
+		facebook:"https://www.facebook.com/profile.php?id=61590503057066&rdid=zkPUIwtqOqKWSykZ",
+		logo:"collectifs/resistances-joyeuses.png"
 	},
 	"rusf-34": {
 		slug: "rusf-34",
@@ -1604,7 +1631,19 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		position: {"lat": 42.935511071759784, lng: 2.114441171340727},
 		logo: "collectifs/logo-transmissions.webp",
 		url: "https://www.helloasso.com/associations/transmissions",
-		instagram: "https://www.instagram.com/assotransmissions"
+		instagram: "https://www.instagram.com/assotransmissions",
+	},
+	"travelsound-x-reggae-sound-box":{
+		slug: "travelsound-x-reggae-sound-box",
+		name: "TravelSounds x Reggae-Sound-Box",
+		description:"Depuis 15 ans d'activisme sur la scène Reggae-dub Montpellieraine, 2 collectifs s'unissent pour faire résonner le message reggae-dub dans les vallées cévenoles... TravelSounds et ReggaeSoundBox transmettent des messages et des valeurs humanistes au travers du Reggae, et combattent les discriminations en tout genre avec des invités militants, une certaine autogestion, et la création d'espaces temporaires de libertés...",
+		departement:"Gard",
+		type:["Festival", "Collectif militant", "Collectif artistique"],
+		position:{lat:44.0015009, lng:3.77736419},
+		logo:"collectifs/cevennes-dub-club.jpg",
+		url:"https://travelsounds.fr/",
+		instagram:"https://www.instagram.com/asso_travelsounds",
+		facebook:"https://www.facebook.com/associationtravelsounds"
 	},
 	/* "tisseur-d-espoir":{
 		slug: "tisseur-d-espoir",
@@ -1631,7 +1670,7 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		slug: "union-locale-cgt",
 		name: "Union locale de la CGT",
 		departement: "Gard",
-		bdv: "30150",
+		bdv: "30350",
 		type: ["Syndicat"]
 	},
 	"union-syndicale-solidaire-34": {

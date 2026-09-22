@@ -148,6 +148,7 @@ function eventDefaultCover(type: EventTypes) {
     case "DJ Set":
       return "https://les-fourmilieres.org/events/djset.png";
     case "Open Air":
+		case "Karaoké":
       return "https://les-fourmilieres.org/events/openair.png";
     case "Bal populaire":
       return "https://les-fourmilieres.org/events/balpop.png";

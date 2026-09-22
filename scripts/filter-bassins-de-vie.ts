@@ -29,7 +29,8 @@ const filtered = {
       String(feature.properties.bv2022).startsWith("30") ||
       String(feature.properties.bv2022).startsWith("34") ||
 			String(feature.properties.bv2022).startsWith("13") ||
-			String(feature.properties.bv2022).startsWith("66")
+			String(feature.properties.bv2022).startsWith("66") ||
+			String(feature.properties.bv2022).startsWith("48")
   ),
 };
 
