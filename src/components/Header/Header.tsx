@@ -128,6 +128,11 @@ const menu: MenuItem[] = [
   },
 
   {
+    label: "Infolettre",
+    to: "/infolettre",
+  },
+
+  {
     label: <FaInstagram />,
     to: "https://www.instagram.com/lesfourmilieres/",
     isIcon: true,
