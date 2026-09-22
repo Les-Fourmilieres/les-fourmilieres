@@ -192,6 +192,12 @@ const sds:ExtendedMenuItem = {
 	shortLabel: "Semaine des résistances et Solidarités"
 }
 
+const pef:ExtendedMenuItem = {
+	to: "/pise-en-fete",
+	label: "Voir toute la programmation de la Pise en Fête",
+	shortLabel: "La Piste en Fête"
+}
+
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
   street: "1 rue Biron",
@@ -1287,14 +1293,16 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		programLinks:[sds]
 	},
 	"f0b37c6f-651f-4314-80fc-4f34ff80689f":{
-		eventTypes:["DJ Set", "Concert"]
+		eventTypes:["DJ Set", "Concert"],
+		programLinks:[pef]
 	},
 	"2fcb4d52-27e3-4273-a26e-539cb9fd7a63":{
 		eventTypes:["Rencontre Littéraire"],
 		programLinks:[sds]
 	},
 	"4f2bb0a9-99af-46d8-a7c5-7dbe09551ab3":{
-		eventTypes:["Projection", "Atelier militant", "Atelier d'expression", "Concert"]
+		eventTypes:["Projection", "Atelier militant", "Atelier d'expression", "Concert"],
+		programLinks:[pef]
 	},
 	"621401c3-2bc1-442b-92f5-4715d4129665":{
 		eventTypes:["Rencontre Littéraire"],

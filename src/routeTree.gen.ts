@@ -14,6 +14,7 @@ import { Route as SafiaDahaniLesExtremesDroitesContemporainesRouteImport } from 
 import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
 import { Route as PresseRouteImport } from './routes/presse'
 import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
+import { Route as PiseEnFeteRouteImport } from './routes/pise-en-fete'
 import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au-festival'
 import { Route as NuitsOccupeEsRouteImport } from './routes/nuits-occupe-es'
 import { Route as MobilisationContreCraBeziersRouteImport } from './routes/mobilisation-contre-cra-beziers'
@@ -65,6 +66,11 @@ const PolitiqueDeConfidentialiteRoute =
     path: '/politique-de-confidentialite',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PiseEnFeteRoute = PiseEnFeteRouteImport.update({
+  id: '/pise-en-fete',
+  path: '/pise-en-fete',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParticiperAuFestivalRoute = ParticiperAuFestivalRouteImport.update({
   id: '/participer-au-festival',
   path: '/participer-au-festival',
@@ -204,6 +210,7 @@ export interface FileRoutesByFullPath {
   '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
   '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
+  '/pise-en-fete': typeof PiseEnFeteRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
@@ -233,6 +240,7 @@ export interface FileRoutesByTo {
   '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
   '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
+  '/pise-en-fete': typeof PiseEnFeteRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
@@ -263,6 +271,7 @@ export interface FileRoutesById {
   '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
   '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
+  '/pise-en-fete': typeof PiseEnFeteRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/presse': typeof PresseRoute
   '/qui-sommes-nous': typeof QuiSommesNousRoute
@@ -294,6 +303,7 @@ export interface FileRouteTypes {
     | '/mobilisation-contre-cra-beziers'
     | '/nuits-occupe-es'
     | '/participer-au-festival'
+    | '/pise-en-fete'
     | '/politique-de-confidentialite'
     | '/presse'
     | '/qui-sommes-nous'
@@ -323,6 +333,7 @@ export interface FileRouteTypes {
     | '/mobilisation-contre-cra-beziers'
     | '/nuits-occupe-es'
     | '/participer-au-festival'
+    | '/pise-en-fete'
     | '/politique-de-confidentialite'
     | '/presse'
     | '/qui-sommes-nous'
@@ -352,6 +363,7 @@ export interface FileRouteTypes {
     | '/mobilisation-contre-cra-beziers'
     | '/nuits-occupe-es'
     | '/participer-au-festival'
+    | '/pise-en-fete'
     | '/politique-de-confidentialite'
     | '/presse'
     | '/qui-sommes-nous'
@@ -382,6 +394,7 @@ export interface RootRouteChildren {
   MobilisationContreCraBeziersRoute: typeof MobilisationContreCraBeziersRoute
   NuitsOccupeEsRoute: typeof NuitsOccupeEsRoute
   ParticiperAuFestivalRoute: typeof ParticiperAuFestivalRoute
+  PiseEnFeteRoute: typeof PiseEnFeteRoute
   PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
   PresseRoute: typeof PresseRoute
   QuiSommesNousRoute: typeof QuiSommesNousRoute
@@ -426,6 +439,13 @@ declare module '@tanstack/react-router' {
       path: '/politique-de-confidentialite'
       fullPath: '/politique-de-confidentialite'
       preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pise-en-fete': {
+      id: '/pise-en-fete'
+      path: '/pise-en-fete'
+      fullPath: '/pise-en-fete'
+      preLoaderRoute: typeof PiseEnFeteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/participer-au-festival': {
@@ -608,6 +628,7 @@ const rootRouteChildren: RootRouteChildren = {
   MobilisationContreCraBeziersRoute: MobilisationContreCraBeziersRoute,
   NuitsOccupeEsRoute: NuitsOccupeEsRoute,
   ParticiperAuFestivalRoute: ParticiperAuFestivalRoute,
+  PiseEnFeteRoute: PiseEnFeteRoute,
   PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
   PresseRoute: PresseRoute,
   QuiSommesNousRoute: QuiSommesNousRoute,
