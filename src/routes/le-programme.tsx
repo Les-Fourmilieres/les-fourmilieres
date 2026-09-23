@@ -65,11 +65,18 @@ const eventPreview: (Pick<MobilizonEventI, "beginsOn" | "endsOn" | "title"> & {
     beginsOn: new Date(2026, 8, 23, 12, 30, 0),
     endsOn: new Date(2026, 8, 26, 16, 0, 0),
   },
+	{
+		url:"/la-fourmiliere-de-lodeve",
+		title:"La Fourmilière Lodèvois-Larzac",
+		subTitle: "Une fourmilière en effervescence pour 15 jours de festival à Lodève",
+		beginsOn: new Date(2026, 8, 26, 11, 0, 0),
+		endsOn: new Date(2026, 9, 10, 0, 0, 0),
+	},
   {
     url: "/fourmilieres-au-quartier-genereux",
     title: "Les Fourmilières au Quartier Généreux",
     subTitle: "15 jours pour fourmiller généreusement contre le fascisme",
-    beginsOn: new Date(2026, 8, 25, 12, 30, 0),
+    beginsOn: new Date(2026, 8, 25, 11, 0, 0),
     endsOn: new Date(2026, 9, 11, 16, 0, 0),
   },
   {
@@ -89,7 +96,7 @@ const eventPreview: (Pick<MobilizonEventI, "beginsOn" | "endsOn" | "title"> & {
   {
     url: "/30-septembre-halle-tropisme",
     title: "Les Fourmilières à la Halle Tropisme",
-    subTitle: "Planète Boum Boum et Habibitch le 30 septembre",
+    subTitle: "Une après-midi militante pour petit.es et grand.es suivi d'un concert de Planète Boum Boum et Habibitch",
     beginsOn: new Date(2026, 8, 30, 15, 0, 0),
     endsOn: new Date(2026, 8, 30, 23, 30, 0),
   },
