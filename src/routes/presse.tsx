@@ -45,7 +45,7 @@ function RouteComponent() {
           <p>
             Télécharger les{" "}
             <CpLink
-              href="https://www.swisstransfer.com/dl/01a0c88b-1bbb-73fc-a45b-be009c0a924a"
+              href="https://www.swisstransfer.com/dl/01a0ce9f-15c8-71b4-97e9-769ff96363f0"
               target="_blank"
             >
               photos de presse
