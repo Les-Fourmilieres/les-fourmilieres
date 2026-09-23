@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { datesAreSameDay } from "./datesAreSameDay";
 
 interface Props {
-  event: MobilizonEventI;
+  event: Pick<MobilizonEventI, "beginsOn"> & Pick<MobilizonEventI, "endsOn">;
 }
 
 const MultiDayContainer = styled.div`

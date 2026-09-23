@@ -201,7 +201,7 @@ export function Agenda({
       events
         .filter((event) => {
           if (!dateRange) return true;
-          if (!event.beginsOn || !event.endsOn) return false;
+          if (!event.beginsOn || !event.endsOn) return true;
 
           return (
             event.beginsOn!.getTime() <
@@ -221,6 +221,7 @@ export function Agenda({
               .flat()
               .some((t) => curEventType.includes(t));
           }
+          return true;
         })
         .filter((event) => {
           if (!searchParams.department) return true;

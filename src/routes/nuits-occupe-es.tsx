@@ -45,7 +45,7 @@ function RouteComponent() {
 				Les Nuits Occupé.es
 			</h1>
 			<Covers>
-				<CovertPart src={cover} alt={"Affiche. Nuits Occupé.es"} />
+				<CovertPart src={cover} alt={"Affiche. Nuits Occupé·es"} />
 			</Covers>
 			<p>Depuis 2022, Nuits Occupé·es transforme Nîmes en un espace d’expression et de réappropriation pour et par les personnes sexisées*. Plus qu’un festival, c’est un acte de résistance artistique et citoyen, qui questionne la place de chacun.e dans la ville et lutte contre les discriminations de genre. Chaque année, une programmation engagée mêle spectacles, performances ainsi que des ateliers de médiation auprès des populations nimoises. Toute la programmation à découvrir sur notre site :
 				<a target="_blank" rel="noopener noreferrer ugc" href="https://labassecour.com/evenements/">https://labassecour.com/evenements/</a></p>
