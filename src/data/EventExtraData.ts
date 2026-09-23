@@ -1385,5 +1385,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"4eaea015-2818-4264-bbcb-0ccc2a2f547e":{
 		eventTypes:["Lecture", "Repas partagé", "Concert", "Expo"]
+	},
+	"97298d3e-a2fd-4909-8aa6-1f1f732d60aa":{
+		eventTypes:["Manifestation"]
 	}
 };
