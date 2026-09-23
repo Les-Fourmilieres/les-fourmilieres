@@ -17,6 +17,7 @@ import { Route as PiseEnFeteRouteImport } from './routes/pise-en-fete'
 import { Route as ParticiperAuFestivalRouteImport } from './routes/participer-au-festival'
 import { Route as NuitsOccupeEsRouteImport } from './routes/nuits-occupe-es'
 import { Route as MobilisationContreCraBeziersRouteImport } from './routes/mobilisation-contre-cra-beziers'
+import { Route as MiMerveilleusesMiMeresVeneresRouteImport } from './routes/mi-merveilleuses-mi-meres-veneres'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as LesFourmilieresRouteImport } from './routes/les-fourmilieres'
 import { Route as LeProgrammeRouteImport } from './routes/le-programme'
@@ -79,6 +80,12 @@ const MobilisationContreCraBeziersRoute =
   MobilisationContreCraBeziersRouteImport.update({
     id: '/mobilisation-contre-cra-beziers',
     path: '/mobilisation-contre-cra-beziers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MiMerveilleusesMiMeresVeneresRoute =
+  MiMerveilleusesMiMeresVeneresRouteImport.update({
+    id: '/mi-merveilleuses-mi-meres-veneres',
+    path: '/mi-merveilleuses-mi-meres-veneres',
     getParentRoute: () => rootRouteImport,
   } as any)
 const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
@@ -207,6 +214,7 @@ export interface FileRoutesByFullPath {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/mi-merveilleuses-mi-meres-veneres': typeof MiMerveilleusesMiMeresVeneresRoute
   '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
   '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
@@ -237,6 +245,7 @@ export interface FileRoutesByTo {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/mi-merveilleuses-mi-meres-veneres': typeof MiMerveilleusesMiMeresVeneresRoute
   '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
   '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
@@ -268,6 +277,7 @@ export interface FileRoutesById {
   '/le-programme': typeof LeProgrammeRoute
   '/les-fourmilieres': typeof LesFourmilieresRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/mi-merveilleuses-mi-meres-veneres': typeof MiMerveilleusesMiMeresVeneresRoute
   '/mobilisation-contre-cra-beziers': typeof MobilisationContreCraBeziersRoute
   '/nuits-occupe-es': typeof NuitsOccupeEsRoute
   '/participer-au-festival': typeof ParticiperAuFestivalRoute
@@ -300,6 +310,7 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
+    | '/mi-merveilleuses-mi-meres-veneres'
     | '/mobilisation-contre-cra-beziers'
     | '/nuits-occupe-es'
     | '/participer-au-festival'
@@ -330,6 +341,7 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
+    | '/mi-merveilleuses-mi-meres-veneres'
     | '/mobilisation-contre-cra-beziers'
     | '/nuits-occupe-es'
     | '/participer-au-festival'
@@ -360,6 +372,7 @@ export interface FileRouteTypes {
     | '/le-programme'
     | '/les-fourmilieres'
     | '/mentions-legales'
+    | '/mi-merveilleuses-mi-meres-veneres'
     | '/mobilisation-contre-cra-beziers'
     | '/nuits-occupe-es'
     | '/participer-au-festival'
@@ -391,6 +404,7 @@ export interface RootRouteChildren {
   LeProgrammeRoute: typeof LeProgrammeRoute
   LesFourmilieresRoute: typeof LesFourmilieresRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
+  MiMerveilleusesMiMeresVeneresRoute: typeof MiMerveilleusesMiMeresVeneresRoute
   MobilisationContreCraBeziersRoute: typeof MobilisationContreCraBeziersRoute
   NuitsOccupeEsRoute: typeof NuitsOccupeEsRoute
   ParticiperAuFestivalRoute: typeof ParticiperAuFestivalRoute
@@ -459,6 +473,13 @@ declare module '@tanstack/react-router' {
       path: '/mobilisation-contre-cra-beziers'
       fullPath: '/mobilisation-contre-cra-beziers'
       preLoaderRoute: typeof MobilisationContreCraBeziersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mi-merveilleuses-mi-meres-veneres': {
+      id: '/mi-merveilleuses-mi-meres-veneres'
+      path: '/mi-merveilleuses-mi-meres-veneres'
+      fullPath: '/mi-merveilleuses-mi-meres-veneres'
+      preLoaderRoute: typeof MiMerveilleusesMiMeresVeneresRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mentions-legales': {
@@ -625,6 +646,7 @@ const rootRouteChildren: RootRouteChildren = {
   LeProgrammeRoute: LeProgrammeRoute,
   LesFourmilieresRoute: LesFourmilieresRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
+  MiMerveilleusesMiMeresVeneresRoute: MiMerveilleusesMiMeresVeneresRoute,
   MobilisationContreCraBeziersRoute: MobilisationContreCraBeziersRoute,
   NuitsOccupeEsRoute: NuitsOccupeEsRoute,
   ParticiperAuFestivalRoute: ParticiperAuFestivalRoute,

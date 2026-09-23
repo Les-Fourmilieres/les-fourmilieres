@@ -197,6 +197,12 @@ const ganges:ExtendedMenuItem = {
 	shortLabel: "Les Fourmilières à Ganges"
 }
 
+const mimere:ExtendedMenuItem = {
+	to: "/mi-merveilleuses-mi-meres-veneres",
+	label: "Voir toute la programmation du festival Mi-Merveilleuses, Mi Mères Vénères",
+	shortLabel: "Mi-Merveilleuses, Mi Mères Vénères"
+}
+
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
   street: "1 rue Biron",
@@ -270,6 +276,11 @@ const melomane:MobilizonPhysicalAddressI = {
 	street: "11 Rue du Lantissargues",
 	locality: "Montpellier",
 	geom: "3.886047751288808;43.58802314217724",
+}
+const carrousel:MobilizonPhysicalAddressI = {
+	description: "Le Carrousel",
+	locality: "Montpellier",
+	geom: "3.873706056422263;43.60525957053501"
 }
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "538f4ebe-8c97-43fe-b2c6-9040993b6bb0": {
@@ -1326,5 +1337,53 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"909a3f5a-155a-41f5-a4d0-bc528b3e1331":{
 		eventTypes:["DJ Set", "Concert"]
+	},
+	"7ac24fbe-1be4-41ad-a4e7-b86f75d3563c":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"50369999-47e0-4d84-be86-fb2c1f7cdc31":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"1fb8ddc4-f106-425b-8f00-f6870a011492":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"99df1810-df85-4c60-99ac-d737d547380e":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"5d87073c-1aa8-4662-b52a-0bb0983a7000":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"c2b5a680-320c-4d84-ab54-1a2209118d6e":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"f62dc0d5-95fb-46fd-a8a7-4a48a8c8537e":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"ad9f4e3f-4c16-4857-95c6-3ae065da3e6a":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"d222372d-b23f-4177-936f-6cb8c1fa7151":{
+		eventTypes:["Atelier militant"],
+		programLinks:[mimere],
+		overridePhysicalAddress:carrousel
+	},
+	"4eaea015-2818-4264-bbcb-0ccc2a2f547e":{
+		eventTypes:["Lecture", "Repas partagé", "Concert", "Expo"]
 	}
 };
