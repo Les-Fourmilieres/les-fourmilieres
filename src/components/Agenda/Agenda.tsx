@@ -25,6 +25,7 @@ import {
 import { I18nProvider, type RangeValue } from "react-aria-components";
 import { DateRangePicker } from "../DatePicker/RangeDatePicker";
 import type { SearchParams } from "./SearchParams";
+import { getFilterFromCategory } from "../ProgramHelper/getFilterFromCategory.ts";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -65,7 +66,7 @@ interface Props {
   disableMap?: boolean;
   disableTypeFilter?: boolean;
   disableDateFilder?: boolean;
-	enableCat?:boolean;
+  enableCat?: boolean;
 }
 
 export function Agenda({
@@ -75,7 +76,7 @@ export function Agenda({
   disableMap = false,
   disableDateFilder = false,
   disableTypeFilter = false,
-	enableCat = false
+  enableCat = false,
 }: Props) {
   const dateRange = useMemo(() => {
     if (!searchParams.from || !searchParams.to) return null;
@@ -163,8 +164,6 @@ export function Agenda({
 
     const uuids = path ? eventsForLink(path) : null;
     if (uuids !== null && uuids.length == 0) return [];
-    console.log("path", path);
-    console.log("uuids", uuids);
 
     return pages
       .filter((page) => page.isSuccess)
@@ -213,19 +212,26 @@ export function Agenda({
         })
         .filter((event) => {
           if (searchParams.type) {
+            const eventTypes = searchParams.type.split(
+              ",",
+            ) as GroupedEventTypes[];
             const curEventType = eventType(event);
-            let found = false;
-            SelectEventTypes[searchParams.type as GroupedEventTypes].forEach(
-              (type) => (found = found || curEventType.includes(type)),
-            );
-            if (!found) return false;
+            return eventTypes
+              .map((t) => SelectEventTypes[t])
+              .flat()
+              .some((t) => curEventType.includes(t));
           }
+        })
+        .filter((event) => {
           if (!searchParams.department) return true;
           if (searchParams.bdv)
             return event.livingArea?.code === searchParams.bdv.toString();
           return event.livingArea?.code.startsWith(
-						(searchParams.department < 10 ? "0" :"") + searchParams.department.toString());
+            (searchParams.department < 10 ? "0" : "") +
+              searchParams.department.toString(),
+          );
         })
+        .filter(getFilterFromCategory(searchParams.category ?? null))
         .sort(sortEventByDate),
     [events, searchParams, dateRange],
   );
@@ -330,19 +336,25 @@ export function Agenda({
             )}
             {!disableTypeFilter && (
               <Select
+                selectionMode="multiple"
                 label="Type d'événement…"
-                value={searchParams.type}
+                value={searchParams.type?.split(",")}
                 style={{
                   flex: "1 1 300px",
                   display: "flex",
                   justifyContent: "stretch",
                 }}
                 onChange={(v) => {
-                  if (v === "null") return setEventTypes(null);
-                  setEventTypes(v as string);
+                  if (v.length === 0 || v.includes("null")) {
+                    setEventTypes(null);
+                  } else {
+                    setEventTypes(v.join(","));
+                  }
                 }}
               >
-                <SelectItem id={"null"}>Voir tous</SelectItem>
+                <SelectItem id={"null"} value={"null" as unknown as object}>
+                  Voir tous
+                </SelectItem>
                 {Object.keys(SelectEventTypes)
                   .filter((key) => eventTypesFacets.includes(key))
                   .map((t) => (

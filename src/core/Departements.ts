@@ -10,3 +10,15 @@ export const DepartementsByCode: Record<string, Departements> = {
 	"13": "Bouches-du-Rhône",
 	"66": "Pyrénées-Orientales"
 };
+
+
+export const DepartementsByCodeWithArticle: Record<string, string> = {
+  "07": "l'Ardèche",
+	"11": "l'Aude",
+  "12": "l'Aveyron",
+  "30": "le Gard",
+  "34": "l'Hérault",
+  "48": "la Lozère",
+	"13": "les Bouches-du-Rhône",
+	"66": "les Pyrénées-Orientales"
+};

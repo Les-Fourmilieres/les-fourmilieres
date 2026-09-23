@@ -1,41 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import { Agenda } from "../components/Agenda/Agenda";
-import {
-  searchParams,
-  type SearchParams,
-} from "../components/Agenda/SearchParams";
-import { useCallback } from "react";
+import { ProgramHelper } from "../components/ProgramHelper/ProgramHelper";
 
 export const Route = createFileRoute("/le-programme")({
   component: RouteComponent,
-  validateSearch: searchParams,
 });
 
 // eslint-disable-next-line react-refresh/only-export-components
 function RouteComponent() {
-  const searchParams = Route.useSearch();
-  const navigate = Route.useNavigate();
-  const setSearchParams = useCallback(
-    (params: SearchParams) => {
-      navigate({
-        search: params,
-      });
-    },
-    [navigate],
-  );
   return (
     <Section>
       <h1>Le Programme</h1>
       <p>
-        Le programme est en cours de construction. Il sera complété ici au fur
-        et à mesure que les événements seront mis en ligne par les collectifs
-        organisateurs. Au total, nous prévoyons plus de 200 événements organisés
-        par plus de 100 collectifs répartis dans les départements de l'Aude,
-        l'Hérault, le Gard, la Lozère, l'Ardèche, les Bouches-du-Rhône et
-        l'Aveyron.
+        Les fourmilières, c'est plus d'une centaine de collectifs répartis sur
+        plusieurs départements qui organisent{" "}
+        <strong>plus de 220 événements</strong> pour Comprendre, Faire du lien
+        entre nous, Agir et Faire la fête.
       </p>
-      <Agenda searchParams={searchParams} setSearchParams={setSearchParams} enableCat={true}/>
+      <ProgramHelper />
     </Section>
   );
 }

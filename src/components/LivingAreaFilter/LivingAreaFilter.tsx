@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 import { ToggleButton } from "../ToggleButton/ToggleButton";
 import type { LivingAreaSelectValue } from "./LivingAreaFilter.types";
-import { DepartementsByCode } from "../../core/Departements.ts";
+import {
+  DepartementsByCode,
+  DepartementsByCodeWithArticle,
+} from "../../core/Departements.ts";
 import type { LivingAreaI } from "../../core/LivingArea";
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)`
@@ -19,6 +22,8 @@ interface Props {
   onChange: (value: LivingAreaSelectValue) => void;
   postalCodeFacets: string[];
   livingAreaFacets: LivingAreaI[];
+  withArticle?: boolean;
+  disableLivingArea?: boolean
 }
 
 export function LivingAreaFilter({
@@ -26,6 +31,8 @@ export function LivingAreaFilter({
   onChange,
   postalCodeFacets,
   livingAreaFacets,
+  withArticle,
+  disableLivingArea,
 }: Props) {
   return (
     <>
@@ -41,11 +48,13 @@ export function LivingAreaFilter({
               });
             }}
           >
-            {DepartementsByCode[postalCode]}
+            {withArticle
+              ? DepartementsByCodeWithArticle[postalCode]
+              : DepartementsByCode[postalCode]}
           </ToggleButton>
         ))}
       </StyledToggleButtonGroup>
-      {value.department && (
+      {value.department && !disableLivingArea && (
         <StyledToggleButtonGroup>
           {livingAreaFacets
             .filter((livingArea) =>

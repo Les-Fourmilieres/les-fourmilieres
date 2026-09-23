@@ -56,6 +56,9 @@ importers:
       simplex-noise:
         specifier: ^4.0.3
         version: 4.0.3
+      slugify:
+        specifier: ^1.6.9
+        version: 1.6.9
       styled-components:
         specifier: ^6.4.1
         version: 6.4.1(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -2558,6 +2561,10 @@ packages:
 
   slice-source@0.4.1:
     resolution: {integrity: sha512-YiuPbxpCj4hD9Qs06hGAz/OZhQ0eDuALN0lRWJez0eD/RevzKqGdUx1IOMUnXgpr+sXZLq3g8ERwbAH0bCb8vg==}
+
+  slugify@1.6.9:
+    resolution: {integrity: sha512-vZ7rfeehZui7wQs438JXBckYLkIIdfHOXsaVEUMyS5fHo1483l1bMdo0EDSWYclY0yZKFOipDy4KHuKs6ssvdg==}
+    engines: {node: '>=8.0.0'}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -6151,6 +6158,8 @@ snapshots:
   skmeans@0.9.7: {}
 
   slice-source@0.4.1: {}
+
+  slugify@1.6.9: {}
 
   source-map-js@1.2.1: {}
 
