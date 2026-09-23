@@ -15,23 +15,46 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  gap: 16px;
+  gap: 24px;
   flex-wrap: wrap;
 `;
 
 const EventTile = styled(Link)`
   flex: 1 1 45%;
   min-width: 300px;
-  padding: 24px 16px;
+  max-width: 512px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
   color: var(--text);
   cursor: pointer;
+  background-color: var(--surface);
   &:visited {
     color: var(--text);
   }
+  &:hover {
+    background-color: var(--bgTransparent);
+  }
   text-decoration: none;
+`;
+
+const TileContent = styled.div`
+  flex: 1 1 auto;
+  min-width: 300px;
+  padding: 16px 24px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+`;
+
+const Figure = styled.figure`
+  flex: 0 0 200px;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 `;
 
 const Infos = styled.div`
@@ -56,7 +79,7 @@ export const Route = createFileRoute("/le-programme")({
 
 const eventPreview: (Pick<
   MobilizonEventI,
-  "beginsOn" | "endsOn" | "title" | "physicalAddress"
+  "beginsOn" | "endsOn" | "title" | "physicalAddress" | "picture"
 > & {
   url: string;
   subTitle: string;
@@ -72,6 +95,9 @@ const eventPreview: (Pick<
       description: "Nîmes",
       geom: "4.3601997;43.840846",
     },
+    picture: {
+      url: "/events/les-nuits-occupe-es.webp",
+    },
   },
   {
     url: "/la-fourmiliere-de-lodeve",
@@ -84,6 +110,9 @@ const eventPreview: (Pick<
       description: "Lodève",
       geom: "3.31892;43.73106",
     },
+    picture: {
+      url: "/events/la-fourmiliere-lodeve.webp",
+    },
   },
   {
     url: "/fourmilieres-au-quartier-genereux",
@@ -94,6 +123,9 @@ const eventPreview: (Pick<
     physicalAddress: {
       description: "Le Quartier Généreux · Montpellier",
       geom: "43.6159316;3.8748747",
+    },
+    picture: {
+      url: "/events/fourmiliere-quartier-genereux.webp",
     },
   },
   {
@@ -107,6 +139,9 @@ const eventPreview: (Pick<
       locality: "Narbonne",
       geom: "43.1859503;3.0648003",
     },
+    picture: {
+      url: "/events/festival-luttes-populaires.webp",
+    },
   },
   {
     url: "/faites-des-solidarites",
@@ -117,6 +152,9 @@ const eventPreview: (Pick<
     physicalAddress: {
       description: "Foyer Albouy · Le Vigan",
       geom: "43.9903403039744;3.6150398202932483",
+    },
+    picture: {
+      url: "/events/faites-des-solidarites.webp",
     },
   },
   {
@@ -130,6 +168,9 @@ const eventPreview: (Pick<
       description: "La Halle Tropisme · Montpellier",
       geom: "43.60222918891905;3.858688767336156",
     },
+    picture: {
+      url: "/events/fourmilieres-tropisme.webp",
+    },
   },
   {
     url: "/groove-your-ass",
@@ -140,6 +181,9 @@ const eventPreview: (Pick<
     physicalAddress: {
       description: "Parc Montcalm · Montpellier",
       geom: "43.5970745;3.859078",
+    },
+    picture: {
+      url: "/events/gya.webp",
     },
   },
   {
@@ -152,6 +196,9 @@ const eventPreview: (Pick<
       description: "Le Carrousel · Montpellier",
       geom: "43.60525957053501;3.873706056422263",
     },
+    picture: {
+      url: "/events/fourmilieres-mi-mereveilleuses-mi-meres-veneres.webp",
+    },
   },
   {
     url: "/mobilisation-contre-cra-beziers",
@@ -162,6 +209,9 @@ const eventPreview: (Pick<
     physicalAddress: {
       description: "Montpellier",
       geom: "43.5859072;3.8529982",
+    },
+    picture: {
+      url: "/events/anticra.webp",
     },
   },
   {
@@ -175,6 +225,9 @@ const eventPreview: (Pick<
       description: "Ganges",
       geom: "43.934114272413765;3.7077889465294476",
     },
+    picture: {
+      url: "/events/fourmiliere-ganges.webp",
+    },
   },
   {
     url: "/pise-en-fete",
@@ -185,6 +238,9 @@ const eventPreview: (Pick<
     physicalAddress: {
       description: "La Grand-Combe",
       geom: "44.2112876;4.0334133",
+    },
+    picture: {
+      url: "/events/fourmilieres-pise-en-fete.webp",
     },
   },
 ];
@@ -206,12 +262,21 @@ function RouteComponent() {
       <Container>
         {eventPreview.map((event) => (
           <EventTile href={event.url}>
-            <EventDate event={event} />
-            <Infos>
-              <Title>{event.title}</Title>
-              <SubTitle>{event.subTitle}</SubTitle>
-              {event.physicalAddress && <EventAddress event={event} />}
-            </Infos>
+            {event.picture?.url && (
+              <Figure
+                style={{
+                  backgroundImage: `url(${event.picture?.url})`,
+                }}
+              />
+            )}
+            <TileContent>
+              <EventDate event={event} />
+              <Infos>
+                <Title>{event.title}</Title>
+                <SubTitle>{event.subTitle}</SubTitle>
+                {event.physicalAddress && <EventAddress event={event} />}
+              </Infos>
+            </TileContent>
           </EventTile>
         ))}
       </Container>
