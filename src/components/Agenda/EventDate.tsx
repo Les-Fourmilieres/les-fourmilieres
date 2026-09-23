@@ -12,7 +12,7 @@ const MultiDayContainer = styled.div`
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  padding: 0px 16px;
+  padding: 0px 0;
 `;
 
 const Container = styled.div`

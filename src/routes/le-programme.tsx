@@ -6,6 +6,10 @@ import styled from "styled-components";
 import { Link } from "../components/Link/Link";
 import type { MobilizonEventI } from "../components/Agenda/Event";
 
+const SecondaryTitle = styled.h2`
+  margin-top: 80px;
+`;
+
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -19,6 +23,7 @@ const EventTile = styled(Link)`
   min-width: 300px;
   padding: 24px 16px;
   display: flex;
+  justify-content: space-between;
   gap: 16px;
   color: var(--text);
   cursor: pointer;
@@ -61,6 +66,13 @@ const eventPreview: (Pick<MobilizonEventI, "beginsOn" | "endsOn" | "title"> & {
     endsOn: new Date(2026, 8, 26, 16, 0, 0),
   },
   {
+    url: "/fourmilieres-au-quartier-genereux",
+    title: "Les Fourmilières au Quartier Généreux",
+    subTitle: "15 jours pour fourmiller généreusement contre le fascisme",
+    beginsOn: new Date(2026, 8, 25, 12, 30, 0),
+    endsOn: new Date(2026, 9, 11, 16, 0, 0),
+  },
+  {
     url: "/festival-des-luttes-populaires",
     title: "Festival des luttes populaires",
     subTitle: "Notre énergie collective face à leurs énergies polluantes !",
@@ -87,6 +99,13 @@ const eventPreview: (Pick<MobilizonEventI, "beginsOn" | "endsOn" | "title"> & {
     subTitle: "Un festival anticapitaliste, écologiste et culturel",
     beginsOn: new Date(2026, 9, 2, 16, 0, 0),
     endsOn: new Date(2026, 9, 4, 22, 0, 0),
+  },
+  {
+    url: "mi-merveilleuses-mi-meres-veneres",
+    title: "Mi-Merveilleuses, Mi Mères Vénères",
+    subTitle: "Festival féministe des parentalités",
+    beginsOn: new Date(2026, 9, 3, 12, 0, 0),
+    endsOn: new Date(2026, 9, 3, 23, 30, 0),
   },
   {
     url: "/mobilisation-contre-cra-beziers",
@@ -125,6 +144,7 @@ function RouteComponent() {
       </p>
       <ProgramHelper />
 
+      <SecondaryTitle>Quelques temps forts du festival</SecondaryTitle>
       <Container>
         {eventPreview.map((event) => (
           <EventTile href={event.url}>
