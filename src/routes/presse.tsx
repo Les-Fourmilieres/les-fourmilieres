@@ -70,6 +70,10 @@ function RouteComponent() {
         </Section>
       </Row>
       <h2>Articles de presse</h2>
+      <h3>23 septembre 2026 · Midi Libre</h3>
+      <CpLink href="/press/260923_MidiLibre-Montpellier.pdf" target="_blank">
+        « Les Fourmilières » déploient 220 évènements contre l'extrême droite
+      </CpLink>
       <h3>18 septembre 2026 · La Marseillaise</h3>
       <CpLink href="/presse/260918_LaMarseillaise.pdf" target="_blank">
         Un festival fait fourmiller les initiatives contre l'extrême droite
