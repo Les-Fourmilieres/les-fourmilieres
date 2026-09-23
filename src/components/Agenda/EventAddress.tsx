@@ -4,7 +4,7 @@ import type { MobilizonEventI } from "./Event";
 import styled from "styled-components";
 
 interface Props {
-  event: MobilizonEventI;
+  event: Pick<MobilizonEventI, "physicalAddress">;
 }
 
 const StyledLink = styled(Link)`
@@ -29,9 +29,12 @@ export function EventAddress({ event }: Props) {
 
   const [lng, lat] = event.physicalAddress.geom.split(";");
   return (
-    <StyledLink onClick={()=>{return false;}}
-      to={`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=18/${lat}/${lng}`} target={"_blank"}
-
+    <StyledLink
+      onClick={() => {
+        return false;
+      }}
+      to={`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=18/${lat}/${lng}`}
+      target={"_blank"}
     >
       {content}
     </StyledLink>

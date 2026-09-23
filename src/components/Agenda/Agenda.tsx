@@ -163,7 +163,7 @@ export function Agenda({
     if (!data) return [] as MobilizonEventI[];
 
     const uuids = path ? eventsForLink(path) : null;
-    if (uuids !== null && uuids.length == 0) return [];
+    if (uuids !== null && uuids.length === 0) return [];
 
     return pages
       .filter((page) => page.isSuccess)
