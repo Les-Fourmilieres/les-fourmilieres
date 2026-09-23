@@ -6,6 +6,7 @@ import {
   searchParams,
   type SearchParams,
 } from "../../components/Agenda/SearchParams";
+import { ProgramHelper } from "../../components/ProgramHelper/ProgramHelper";
 
 export const Route = createFileRoute("/programme/")({
   component: RouteComponent,
@@ -27,12 +28,7 @@ function RouteComponent() {
   return (
     <Section>
       <h1>Le Programme</h1>
-      <p>
-        Les fourmilières, c'est plus d'une centaine de collectifs répartis sur
-        plusieurs départements qui organisent{" "}
-        <strong>plus de 200 événements</strong> pour Comprendre, Faire du lien
-        entre nous, Agir et Faire la fête.
-      </p>
+      <ProgramHelper searchParams={searchParams} />
       <Agenda
         searchParams={searchParams}
         setSearchParams={setSearchParams}

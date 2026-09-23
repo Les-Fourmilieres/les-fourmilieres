@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useAllEvents } from "../Agenda/useAllEvents";
 import { eventType, type MobilizonEventWithLivingAreaI } from "../Agenda/Event";
 import {
@@ -19,6 +19,7 @@ import {
   understandCatgerories,
 } from "./UnderstandCategory";
 import { getFilterFromCategory } from "./getFilterFromCategory";
+import type { SearchParams } from "../Agenda/SearchParams";
 
 const Container = styled.div`
   display: flex;
@@ -151,7 +152,11 @@ const getFilterFromExpectation = (
   return ["musique", "spectacle-vivant"];
 };
 
-export function ProgramHelper() {
+interface Props {
+  searchParams?: SearchParams;
+}
+
+export function ProgramHelper({ searchParams: urlSearchParams }: Props) {
   const allEvents = useAllEvents();
   const [expectation, setExpectation] = useState<Expectation | null>(null);
   const [category, setCategory] = useState<UnderstandCategory | null>(null);
@@ -159,6 +164,45 @@ export function ProgramHelper() {
     department?: number | undefined;
     bdv?: number | undefined;
   }>({});
+
+  useEffect(() => {
+    if (urlSearchParams?.type) {
+      const types = new Set(urlSearchParams.type.split(","));
+      if (
+        getFilterFromExpectation(Expectation.UNDERSTAND).every((filter) =>
+          types.has(filter),
+        )
+      ) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setExpectation(Expectation.UNDERSTAND);
+        if (urlSearchParams.category) {
+          setCategory(urlSearchParams.category);
+        }
+      } else if (
+        getFilterFromExpectation(Expectation.ACT).every((filter) =>
+          types.has(filter),
+        )
+      ) {
+        setExpectation(Expectation.ACT);
+      } else if (
+        getFilterFromExpectation(Expectation.CONNECT).every((filter) =>
+          types.has(filter),
+        )
+      ) {
+        setExpectation(Expectation.CONNECT);
+      } else if (
+        getFilterFromExpectation(Expectation.PARTY).every((filter) =>
+          types.has(filter),
+        )
+      ) {
+        setExpectation(Expectation.PARTY);
+      }
+
+      if (urlSearchParams.department) {
+        setSearchParams({ department: urlSearchParams.department });
+      }
+    }
+  }, [urlSearchParams, setExpectation]);
 
   const reset = () => {
     setSearchParams({});
