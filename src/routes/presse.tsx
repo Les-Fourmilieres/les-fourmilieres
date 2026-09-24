@@ -70,8 +70,17 @@ function RouteComponent() {
         </Section>
       </Row>
       <h2>Articles de presse</h2>
+
+      <h3>23 septembre 2026 · Le Poing</h3>
+      <CpLink
+        href=" https://lepoing.net/festival-des-fourmilieres-deux-semaines-pour-apprendre-a-demonter-lextreme-droite-en-occitanie/"
+        target="_blank"
+      >
+        Festival des Fourmilières : deux semaines pour apprendre à démonter
+        l’extrême droite
+      </CpLink>
       <h3>23 septembre 2026 · Midi Libre</h3>
-      <CpLink href="/press/260923_MidiLibre-Montpellier.pdf" target="_blank">
+      <CpLink href="/presse/260923_MidiLibre-Montpellier.pdf" target="_blank">
         « Les Fourmilières » déploient 220 évènements contre l'extrême droite
       </CpLink>
       <h3>18 septembre 2026 · La Marseillaise</h3>
