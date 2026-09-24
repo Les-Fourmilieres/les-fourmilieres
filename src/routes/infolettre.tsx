@@ -13,13 +13,14 @@ const FullSizeLink = styled(Link)``;
 const Links = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
 
   a {
     flex: 1 1 40%;
     min-width: 300px;
+    max-width: 512px;
     cursor: pointer;
     img {
       aspect-ratio: 1.91 / 1;
@@ -28,6 +29,7 @@ const Links = styled.div`
   }
   ${FullSizeLink} {
     flex: 1 1 100%;
+    max-width: none;
   }
 `;
 
@@ -43,6 +45,26 @@ function RouteComponent() {
       </p>
 
       <Newsletter />
+
+      <h2>Infolettre de septembre 2026</h2>
+
+      <Links>
+        <FullSizeLink href="/edito-3-pas-de-justice-pas-de-paix">
+          <img
+            src="/edito-3-pas-de-justice-pas-de-paix.webp"
+            alt="Édito 3 : Pas de Justice, pas de Paix"
+            title="Pas de Justice, pas de Paix"
+          />
+        </FullSizeLink>
+
+        <Link href="/entretien-christine-coord-eau">
+          <img
+            src="/entretien-coord-eau.webp"
+            alt="Entretien avec Christine : La Coord'eau"
+            title="Entretien avec Christine : La Coord'eau"
+          />
+        </Link>
+      </Links>
 
       <h2>Infolettre d'août 2026</h2>
 
