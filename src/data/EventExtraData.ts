@@ -203,6 +203,12 @@ const mimere:ExtendedMenuItem = {
 	shortLabel: "Mi-Merveilleuses, Mi Mères Vénères"
 }
 
+const rsa:ExtendedMenuItem = {
+	to:"/journee-radio-saint-affrique",
+	label: "Voir toute la programmation de la journée de soutien à Radio Saint Affrique",
+	shortLabel: "Journée Radio St Affrque"
+}
+
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
   street: "1 rue Biron",
@@ -234,7 +240,7 @@ const masDesMoulins: MobilizonPhysicalAddressI = {
   geom: "3.8438363674688696;43.629858803968105",
 };
 const foyerAlbouy: MobilizonPhysicalAddressI = {
-  description: "Foyer Albouy",
+  description: "Foyer Albouy, rue de la Pansière",
   street: "rue de la Pansière",
   locality: "Le Vigan",
   geom: "3.6150398202932483;43.9903403039744",
@@ -1388,5 +1394,58 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"97298d3e-a2fd-4909-8aa6-1f1f732d60aa":{
 		eventTypes:["Manifestation"]
+	},
+	"e2448eb2-c7f1-4814-8088-014112d63542":{
+		eventTypes:["Conférence"]
+	},
+	"325335b0-47d0-4aae-98b8-41ca19324477":{
+		eventTypes:["Expo"],
+		programLinks:[fds]
+	},
+	"40e29699-fe92-43d0-97b8-1ebbdc37f460":{
+		eventTypes:["Braderie"],
+		programLinks:[rsa]
+	},
+	"79cfd096-f0e1-4cf3-a92a-47e65c5356eb":{
+		eventTypes:["Jeux", "Conte"],
+		programLinks:[rsa]
+	},
+	"20eae32a-c26d-49d5-bf1b-a88db1fac90d":{
+		eventTypes:["Table-Ronde"],
+		programLinks:[rsa]
+	},
+	"9bca65a9-52d1-4811-b942-b567c5e79f32":{
+		eventTypes:["Table-Ronde"],
+		programLinks:[rsa]
+	},
+	"f02a43cf-f07e-44cc-937e-448690bb7712":{
+		eventTypes:["Repas partagé"],
+		programLinks:[rsa]
+	},
+	"60d44764-f68b-4565-b4d1-03375ad4d066":{
+		eventTypes:["Concert"],
+		programLinks:[rsa]
+	},
+	"a50cf586-b8f9-48d1-b9d2-1c97046fc867":{
+		eventTypes:["Concert", "Atelier militant", "Jeux", "Repas partagé"]
+	},
+	"c43730a1-0bdb-43a1-9f45-2937d7194ea6":{
+		eventTypes:["Manifestation", "Spectacle vivant"],
+		physicalAddress:{
+			description :"Lignes de tram 1 et 3 Montpellier",
+			geom:"3.8876856268992865;43.61400872395112"
+		}
+	},
+	"e221455f-4071-4b75-8056-554538219e8f":{
+		eventTypes:["Ciné-débat"]
+	},
+	"82da4fa0-5a74-4910-984f-39495d2b592f":{
+		eventTypes:["Autre"]
+	},
+	"355565af-6c60-4dae-8308-a94e997d1812":{
+		eventTypes:["Kermesse"]
+	},
+	"11c4a4ec-d567-4717-8293-422773d74f78":{
+		eventTypes:["Concert"]
 	}
 };

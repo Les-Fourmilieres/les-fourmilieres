@@ -24,6 +24,7 @@ import { Route as LeProgrammeRouteImport } from './routes/le-programme'
 import { Route as LaFourmiliereDeLodeveRouteImport } from './routes/la-fourmiliere-de-lodeve'
 import { Route as LaFourmiliereBruleRouteImport } from './routes/la-fourmiliere-brule'
 import { Route as LaCharteRouteImport } from './routes/la-charte'
+import { Route as JourneeRadioSaintAffriqueRouteImport } from './routes/journee-radio-saint-affrique'
 import { Route as InfolettreRouteImport } from './routes/infolettre'
 import { Route as GrooveYourAssRouteImport } from './routes/groove-your-ass'
 import { Route as FourmilieresAuQuartierGenereuxRouteImport } from './routes/fourmilieres-au-quartier-genereux'
@@ -120,6 +121,12 @@ const LaCharteRoute = LaCharteRouteImport.update({
   path: '/la-charte',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JourneeRadioSaintAffriqueRoute =
+  JourneeRadioSaintAffriqueRouteImport.update({
+    id: '/journee-radio-saint-affrique',
+    path: '/journee-radio-saint-affrique',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const InfolettreRoute = InfolettreRouteImport.update({
   id: '/infolettre',
   path: '/infolettre',
@@ -224,6 +231,7 @@ export interface FileRoutesByFullPath {
   '/fourmilieres-au-quartier-genereux': typeof FourmilieresAuQuartierGenereuxRoute
   '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
+  '/journee-radio-saint-affrique': typeof JourneeRadioSaintAffriqueRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
@@ -257,6 +265,7 @@ export interface FileRoutesByTo {
   '/fourmilieres-au-quartier-genereux': typeof FourmilieresAuQuartierGenereuxRoute
   '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
+  '/journee-radio-saint-affrique': typeof JourneeRadioSaintAffriqueRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
@@ -291,6 +300,7 @@ export interface FileRoutesById {
   '/fourmilieres-au-quartier-genereux': typeof FourmilieresAuQuartierGenereuxRoute
   '/groove-your-ass': typeof GrooveYourAssRoute
   '/infolettre': typeof InfolettreRoute
+  '/journee-radio-saint-affrique': typeof JourneeRadioSaintAffriqueRoute
   '/la-charte': typeof LaCharteRoute
   '/la-fourmiliere-brule': typeof LaFourmiliereBruleRoute
   '/la-fourmiliere-de-lodeve': typeof LaFourmiliereDeLodeveRoute
@@ -326,6 +336,7 @@ export interface FileRouteTypes {
     | '/fourmilieres-au-quartier-genereux'
     | '/groove-your-ass'
     | '/infolettre'
+    | '/journee-radio-saint-affrique'
     | '/la-charte'
     | '/la-fourmiliere-brule'
     | '/la-fourmiliere-de-lodeve'
@@ -359,6 +370,7 @@ export interface FileRouteTypes {
     | '/fourmilieres-au-quartier-genereux'
     | '/groove-your-ass'
     | '/infolettre'
+    | '/journee-radio-saint-affrique'
     | '/la-charte'
     | '/la-fourmiliere-brule'
     | '/la-fourmiliere-de-lodeve'
@@ -392,6 +404,7 @@ export interface FileRouteTypes {
     | '/fourmilieres-au-quartier-genereux'
     | '/groove-your-ass'
     | '/infolettre'
+    | '/journee-radio-saint-affrique'
     | '/la-charte'
     | '/la-fourmiliere-brule'
     | '/la-fourmiliere-de-lodeve'
@@ -426,6 +439,7 @@ export interface RootRouteChildren {
   FourmilieresAuQuartierGenereuxRoute: typeof FourmilieresAuQuartierGenereuxRoute
   GrooveYourAssRoute: typeof GrooveYourAssRoute
   InfolettreRoute: typeof InfolettreRoute
+  JourneeRadioSaintAffriqueRoute: typeof JourneeRadioSaintAffriqueRoute
   LaCharteRoute: typeof LaCharteRoute
   LaFourmiliereBruleRoute: typeof LaFourmiliereBruleRoute
   LaFourmiliereDeLodeveRoute: typeof LaFourmiliereDeLodeveRoute
@@ -550,6 +564,13 @@ declare module '@tanstack/react-router' {
       path: '/la-charte'
       fullPath: '/la-charte'
       preLoaderRoute: typeof LaCharteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journee-radio-saint-affrique': {
+      id: '/journee-radio-saint-affrique'
+      path: '/journee-radio-saint-affrique'
+      fullPath: '/journee-radio-saint-affrique'
+      preLoaderRoute: typeof JourneeRadioSaintAffriqueRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/infolettre': {
@@ -684,6 +705,7 @@ const rootRouteChildren: RootRouteChildren = {
   FourmilieresAuQuartierGenereuxRoute: FourmilieresAuQuartierGenereuxRoute,
   GrooveYourAssRoute: GrooveYourAssRoute,
   InfolettreRoute: InfolettreRoute,
+  JourneeRadioSaintAffriqueRoute: JourneeRadioSaintAffriqueRoute,
   LaCharteRoute: LaCharteRoute,
   LaFourmiliereBruleRoute: LaFourmiliereBruleRoute,
   LaFourmiliereDeLodeveRoute: LaFourmiliereDeLodeveRoute,

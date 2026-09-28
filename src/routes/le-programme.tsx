@@ -150,7 +150,7 @@ const eventPreview: (Pick<
     beginsOn: new Date(2026, 8, 29, 12, 30, 0),
     endsOn: new Date(2026, 8, 30, 18, 0, 0),
     physicalAddress: {
-      description: "Foyer Albouy · Le Vigan",
+      description: "Foyer Albouy, rue de la Pansière · Le Vigan",
       geom: "43.9903403039744;3.6150398202932483",
     },
     picture: {
@@ -200,6 +200,20 @@ const eventPreview: (Pick<
       url: "/events/fourmilieres-mi-mereveilleuses-mi-meres-veneres.webp",
     },
   },
+	{
+		url: "journee-radio-saint-affrique",
+		title: "Journée de soutien à la Radio St Affrique",
+		subTitle: "Tables-rondes, jeux, concert",
+		beginsOn: new Date(2026, 9, 3, 12, 0, 0),
+		endsOn: new Date(2026, 9, 3, 23, 30, 0),
+		physicalAddress: {
+			description: "Le Carrousel · Montpellier",
+			geom: "43.9562619;2.8820437",
+		},
+		picture: {
+			url: "/events/Radio-Saint-Affrique.jpg",
+		},
+	},
   {
     url: "/mobilisation-contre-cra-beziers",
     title: "Mobilisation contre le CRA de Béziers",
