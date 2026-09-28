@@ -42,6 +42,7 @@ export type Collectif = "ajcm" |
 	"association-home-cinema" |
 	"association-lafi-bala" |
 	"association-sous-les-etoiles" |
+	"asso-velo-vintage" |
 	"attac-aveyron" |
 	"attac-montpellier" |
 	"auberge-de-boffres" |
@@ -68,6 +69,7 @@ export type Collectif = "ajcm" |
 	"collectif-montpellier-contre-l-extreme-droite" |
 	"collectif-nimois-antifasciste-queer" |
 	"collectif-sete-contre-l-extreme-droite" |
+	"collectif-soutien-eva-mustapha" |
 	"combas-rojas" |
 	"compagnie-le-plus-petit-espace-possible" |
 	"coord-eau-34" |
@@ -113,6 +115,7 @@ export type Collectif = "ajcm" |
 	"le-poing" |
 	"le-quartier-genereux" |
 	"le-recif" |
+	"le-salon-des-indep" |
 	"les-amis-de-la-terre-le-vigan" |
 	"les-ateliers-de-l-espoir" |
 	"les-siestes-mutines" |
@@ -156,6 +159,7 @@ export type Collectif = "ajcm" |
 	"ultra-violette" |
 	"union-communiste-libertaire" |
 	"union-locale-cgt" |
+	"union-locale-confpaysanne-gard" |
 	"union-syndicale-solidaire-34" |
 	"vivons-celles" |
 	"volkane";
@@ -281,6 +285,16 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo: "collectifs/logo-sous-les-etoiles.png",
 		description: "L'asso Sous les étoiles réalise des films amateurs avec habitantes et habitants du Pays Viganais, de 2 à 101 ans, pour créer des liens et construire ensemble.",
 		type: ["Collectif artistique"],
+	},
+	"asso-velo-vintage":{
+		slug:"asso-velo-vintage",
+		name:"Asso Vélo Vintage",
+		description:"Association qui organise des repar'vélo et des sorties collectives à vélo",
+		departement:"Gard",
+		type:["Collectif militant"],
+		position:{lat:43.976850, lng:3.675923},
+		facebook:"https://www.facebook.com/velo.vintage.cvn/",
+		logo:"collectifs/velo-vintage.png"
 	},
 	"attac-aveyron": {
 		slug: "attac-aveyron",
@@ -598,6 +612,14 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		instagram: "https://www.instagram.com/mtpcontrelexd/",
 		description: "Collectif d’individu-e-s, assos, orgas, syndicats. Contre les idées d’extrême droite, organise-toi 💥",
 		type: ["Collectif militant"],
+	},
+	"collectif-soutien-eva-mustapha":{
+		slug:"collectif-soutien-eva-mustapha",
+		name:"Collectif de soutien à Éva et Mustapha",
+		description:"Collectif de soutien à Éva et Mustapha que Robert Ménard, maire de Béziers n'a pas voulu marier parce que Mustapha avait une OQTF.",
+		departement:"Hérault",
+		type:["Collectif militant"],
+		position:{lat:43.342776026163435, lng:3.2131978635228347}
 	},
 	"collectif-sete-contre-l-extreme-droite": {
 		slug: "collectif-sete-contre-l-extreme-droite",
@@ -1185,6 +1207,17 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		logo: "collectifs/atelier-espoir-logo.png",
 		type: ["Collectif militant", "Collectif d'éducation populaire"],
 	},
+	"le-salon-des-indep": {
+		slug: "le-salon-des-indep",
+		name: "Le Salon des Indépendants",
+		description: "Salle de concert atypique et indépendante ✊",
+		departement: "Hérault",
+		type: ["Bar - Brasserie - Commerce"],
+		position:{lat:43.6159865, lng:3.8792947},
+		instagram:"https://www.instagram.com/lesalonmtp",
+		facebook:"https://www.facebook.com/100063732952416",
+		logo:"collectifs/salon.webp"
+	},
 	"les-amis-de-la-terre-le-vigan": {
 		slug: "les-amis-de-la-terre-le-vigan",
 		name: "Les amis de la terre Le Vigan",
@@ -1670,8 +1703,16 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		slug: "union-locale-cgt",
 		name: "Union locale de la CGT",
 		departement: "Gard",
-		bdv: "30350",
+		position: {lat:43.991255128395856, lng:3.60805607512063},
 		type: ["Syndicat"]
+	},
+	"union-locale-confpaysanne-gard":{
+		slug:"union-locale-confpaysanne-gard",
+		name:"Union locale de la confédération Paysanne du Gard",
+		description:"Petite antenne locale de la confédération Paysanne du Gard",
+		departement:"Gard",
+		type:["Syndicat"],
+		position:{lat:43.992862150602605, lng:3.5866861205044236}
 	},
 	"union-syndicale-solidaire-34": {
 		slug: "union-syndicale-solidaire-34",
