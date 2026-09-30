@@ -9,6 +9,7 @@ import { useMediaQuery } from "react-responsive";
 import { Link } from "../Link/Link.tsx";
 import { EventType } from "./CalendarEvent.tsx";
 import { eventDefaultCover } from "./EventCover.ts";
+import { EventCancelled } from "./EventCancelled.tsx";
 
 const StyledSection = styled(Section)`
   padding-top: 24px;
@@ -57,6 +58,8 @@ const EventCover = styled.aside`
   box-sizing: border-box;
   align-items: flex-end;
   justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
 
   @media (max-width: 800px) {
     height: 250px;
@@ -100,7 +103,9 @@ export function EventPage({ event }: Props) {
                 backgroundImage: `url(${eventDefaultCover(eventType(event)[0])})`,
               }
         }
-      ></EventCover>
+      >
+        <EventCancelled event={event} />
+      </EventCover>
       <StyledSection>
         <EventTypes>
           {eventType(event).map((type) => (

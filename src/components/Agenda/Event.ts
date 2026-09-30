@@ -9,14 +9,14 @@ import {
 export const eventType: (event: MobilizonEventI) => EventTypes[] = (event) => {
   return eventExtraData[event.uuid]?.eventTypes || ["Autre"];
 };
-export const isEventCancelled: (event: MobilizonEventI) => boolean = (
-  event,
-) => {
+export const isEventCancelled: (
+  event: Pick<MobilizonEventI, "uuid">,
+) => boolean = (event) => {
   return eventExtraData[event.uuid]?.cancelled === true;
 };
 export const getDeferredDate = (
-  event: MobilizonEventI,
-): "TBD" | Date | null => {
+  event: Pick<MobilizonEventI, "uuid">,
+): "TBD" | "visio" | Date | null => {
   return eventExtraData[event.uuid]?.deferedDate ?? null;
 };
 export const eventLinks: (

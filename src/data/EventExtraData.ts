@@ -131,7 +131,7 @@ type EventExtraDataI = {
   by?: Collectif[];
   with?: Collectif[];
   cancelled?: boolean;
-  deferedDate?: "TBD" | Date;
+  deferedDate?: "TBD" | "visio" | Date;
 };
 
 const halleTropisme: ExtendedMenuItem = {
@@ -333,6 +333,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "76f7c610-663c-4792-b0c2-41cfd3df2fd7": {
     eventTypes: ["Fresque"],
+    cancelled: true,
+    deferedDate: "visio",
   },
   "5e505d63-e827-4cd5-83a3-699d85554caa": {
     eventTypes: ["Projection"],

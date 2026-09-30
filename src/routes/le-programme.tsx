@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Link } from "../components/Link/Link";
 import type { MobilizonEventI } from "../components/Agenda/Event";
 import { EventAddress } from "../components/Agenda/EventAddress";
+import { EventCancelled } from "../components/Agenda/EventCancelled";
 
 const SecondaryTitle = styled.h2`
   margin-top: 80px;
@@ -55,6 +56,8 @@ const Figure = styled.figure`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 `;
 
 const Infos = styled.div`
@@ -83,6 +86,7 @@ const eventPreview: (Pick<
 > & {
   url: string;
   subTitle: string;
+  uuid?: string;
 })[] = [
   {
     url: "/nuits-occupe-es",
@@ -127,6 +131,7 @@ const eventPreview: (Pick<
     picture: {
       url: "/events/fourmiliere-quartier-genereux.webp",
     },
+    uuid: "ee734fc5-b151-45ab-94a7-6109aaf7cf78", // Used for the cancelled banner
   },
   {
     url: "/festival-des-luttes-populaires",
@@ -200,20 +205,20 @@ const eventPreview: (Pick<
       url: "/events/fourmilieres-mi-mereveilleuses-mi-meres-veneres.webp",
     },
   },
-	{
-		url: "journee-radio-saint-affrique",
-		title: "Journée de soutien à la Radio St Affrique",
-		subTitle: "Tables-rondes, jeux, concert",
-		beginsOn: new Date(2026, 9, 3, 12, 0, 0),
-		endsOn: new Date(2026, 9, 3, 23, 30, 0),
-		physicalAddress: {
-			description: "Le Carrousel · Montpellier",
-			geom: "43.9562619;2.8820437",
-		},
-		picture: {
-			url: "/events/Radio-Saint-Affrique.jpg",
-		},
-	},
+  {
+    url: "journee-radio-saint-affrique",
+    title: "Journée de soutien à la Radio St Affrique",
+    subTitle: "Tables-rondes, jeux, concert",
+    beginsOn: new Date(2026, 9, 3, 12, 0, 0),
+    endsOn: new Date(2026, 9, 3, 23, 30, 0),
+    physicalAddress: {
+      description: "Le Carrousel · Montpellier",
+      geom: "43.9562619;2.8820437",
+    },
+    picture: {
+      url: "/events/Radio-Saint-Affrique.jpg",
+    },
+  },
   {
     url: "/mobilisation-contre-cra-beziers",
     title: "Mobilisation contre le CRA de Béziers",
@@ -281,7 +286,11 @@ function RouteComponent() {
                 style={{
                   backgroundImage: `url(${event.picture?.url})`,
                 }}
-              />
+              >
+                {event.uuid && (
+                  <EventCancelled event={event as { uuid: string }} />
+                )}
+              </Figure>
             )}
             <TileContent>
               <EventDate event={event} />

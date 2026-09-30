@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  eventLinks,
-  eventType,
-  getDeferredDate,
-  isEventCancelled,
-  type MobilizonEventI,
-} from "./Event.ts";
+import { eventLinks, eventType, type MobilizonEventI } from "./Event.ts";
 import { EventDate } from "./EventDate";
 import { useClockIcon } from "./useClockIcon";
 import { Link } from "../Link/Link";
@@ -27,6 +21,7 @@ import { datesAreSameDay } from "./datesAreSameDay";
 import { createLink } from "@tanstack/react-router";
 
 import { FaCalendarPlus } from "react-icons/fa";
+import { EventCancelled } from "./EventCancelled.tsx";
 //import {eventExtraData} from "../../data/EventExtraData.ts";
 //import {collectifs} from "../../data/collectifs.ts";
 
@@ -264,53 +259,8 @@ const Actions = styled.div`
   justify-content: space-between;
 `;
 
-const CancelledContainer = styled.aside`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  z-index: 100;
-  backdrop-filter: blur(0px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-`;
-
-const CancelledText = styled.div`
-  font-size: 52px;
-  text-transform: uppercase;
-  font-weight: bold;
-  transform: rotate(-30deg);
-  color: var(--accent-contrast);
-  padding: 4px 8px;
-  line-height: 1em;
-  box-sizing: border-box;
-  width: 200%;
-  margin: 0 -50%;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  background-color: var(--accent);
-  opacity: 0.9;
-
-  & > div:first-child {
-    padding-top: 8px;
-    margin-bottom: -16px;
-  }
-  & > div:first-child:last-child {
-    padding-top: 0;
-    margin-bottom: 0;
-  }
-`;
-
-const CancelledNewDate = styled.div`
-  font-size: 20px;
-`;
-
 export function CalendarEvent({ event, showEventsPageLink }: Props) {
   const ClockIcon = useClockIcon(event.beginsOn, 20);
-  const deferredDate = getDeferredDate(event);
 
   return (
     <Container>
@@ -335,21 +285,7 @@ export function CalendarEvent({ event, showEventsPageLink }: Props) {
               <EventType data-cat={type}>{type}</EventType>
             ))}
           </LabelsContainer>
-          {isEventCancelled(event) && (
-            <CancelledContainer>
-              <CancelledText>
-                <div>Annulé</div>
-                {deferredDate === "TBD" && (
-                  <CancelledNewDate>Date de report à venir</CancelledNewDate>
-                )}
-                {deferredDate instanceof Date && (
-                  <CancelledNewDate>
-                    Reporté au {deferredDate.toLocaleDateString("fr-FR")}
-                  </CancelledNewDate>
-                )}
-              </CancelledText>
-            </CancelledContainer>
-          )}
+          <EventCancelled event={event} />
         </Figure>
         <LabelsContainer>
           {showEventsPageLink
