@@ -131,6 +131,7 @@ type EventExtraDataI = {
   by?: Collectif[];
   with?: Collectif[];
   cancelled?: boolean;
+  deferedDate?: "TBD" | Date;
 };
 
 const halleTropisme: ExtendedMenuItem = {
@@ -341,12 +342,14 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
     cancelled: true,
+    deferedDate: "TBD",
   },
   "ffea1971-298d-4bda-bdf8-73c567b1069e": {
     eventTypes: ["DJ Set"],
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
     cancelled: true,
+    deferedDate: "TBD",
   },
   "c13b5c14-9a64-4746-98ce-cc570f3461f9": {
     eventTypes: ["Atelier militant"],
@@ -754,12 +757,14 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
     cancelled: true,
+    deferedDate: "TBD",
   },
   "6f50e85c-ca06-4bca-919c-645b9dddc5c8": {
     eventTypes: ["Kermesse"],
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
     cancelled: true,
+    deferedDate: "TBD",
   },
   "19e71f5e-223b-4354-8fcc-90ab0b009a23": {
     eventTypes: ["Conférence"],
@@ -856,6 +861,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["DJ Set"],
     programLinks: [lodeve],
     overridePhysicalAddress: lodeva,
+    cancelled: true,
   },
   "3766b6bf-cada-4501-ac96-8ead47638de3": {
     eventTypes: ["Table-Ronde"],
@@ -978,6 +984,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
     cancelled: true,
+    deferedDate: "TBD",
   },
   "7c045675-d034-41f1-95f8-0326e5bec946": {
     eventTypes: ["Formation"],
@@ -1063,6 +1070,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     overridePhysicalAddress: tropisme,
     programLinks: [halleTropisme],
     cancelled: true,
+    deferedDate: "TBD",
   },
   "a266fa02-400f-4fd8-bda7-a472016d3adb": {
     eventTypes: ["Concert"],
