@@ -9,6 +9,9 @@ import {
 export const eventType: (event: MobilizonEventI) => EventTypes[] = (event) => {
   return eventExtraData[event.uuid]?.eventTypes || ["Autre"];
 };
+export const isEventCancelled: (event: MobilizonEventI) => boolean = (event) => {
+  return eventExtraData[event.uuid]?.cancelled === true;
+};
 export const eventLinks: (
   event: MobilizonEventI,
 ) => ExtendedMenuItem[] | undefined = (event) => {

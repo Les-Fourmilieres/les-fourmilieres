@@ -7,7 +7,7 @@ export type EventTypes =
   | "DJ Set"
   | "Open Air"
   | "Bal populaire"
-	| "Karaoké"
+  | "Karaoké"
   | "Conférence"
   | "Rencontre Littéraire"
   | "AG"
@@ -22,10 +22,10 @@ export type EventTypes =
   | "Parade"
   | "Atelier cuisine"
   | "Atelier d'expression"
-	| "Atelier DJing"
+  | "Atelier DJing"
   | "Sport pour tous.tes"
   | "Atelier militant"
-	| "Atelier de danse"
+  | "Atelier de danse"
   | "Atelier jardinage"
   | "Atelier pour enfants"
   | "Atelier d'écriture"
@@ -39,7 +39,7 @@ export type EventTypes =
   | "Spectacle vivant"
   | "Dragshow"
   | "Lecture"
-	| "Danse"
+  | "Danse"
   | "Conte"
   | "Projection"
   | "Ciné-débat"
@@ -83,7 +83,7 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
   atelier: [
     "Atelier cuisine",
     "Atelier d'expression",
-		"Atelier DJing",
+    "Atelier DJing",
     "Sport pour tous.tes",
     "Atelier jardinage",
     "Atelier pour enfants",
@@ -95,14 +95,14 @@ export const SelectEventTypes: Record<GroupedEventTypes, EventTypes[]> = {
     "Arpentage",
     "Café philo",
     "Atelier militant",
-		"Atelier de danse",
+    "Atelier de danse",
   ],
   "spectacle-vivant": [
     "Théâtre",
     "Spectacle vivant",
     "Dragshow",
     "Lecture",
-		"Danse",
+    "Danse",
     "Conte",
   ],
   projection: ["Projection", "Ciné-débat"],
@@ -130,6 +130,7 @@ type EventExtraDataI = {
   overridePhysicalAddress?: MobilizonPhysicalAddressI; //Override value
   by?: Collectif[];
   with?: Collectif[];
+  cancelled?: boolean;
 };
 
 const halleTropisme: ExtendedMenuItem = {
@@ -160,54 +161,56 @@ const fds: ExtendedMenuItem = {
   desc: "Cet événement s'inscrit dans la Faites des Solidarités, 2 jours mêlant ateliers et cuisine populaire et partagée dans le quartier des Arènes au Vigan.",
 };
 
-const gya:ExtendedMenuItem = {
-	to: "/groove-your-ass",
-	label: "Voir toute la programmation de Groove Yous Ass",
-	shortLabel: "Groove Your Ass"
-}
+const gya: ExtendedMenuItem = {
+  to: "/groove-your-ass",
+  label: "Voir toute la programmation de Groove Yous Ass",
+  shortLabel: "Groove Your Ass",
+};
 
-const no:ExtendedMenuItem = {
-	to: "/nuits-occupe-es",
-	label: "Voir toute la programmation des Nuits Occupé.es",
-	shortLabel: "Les Nuit Occupé.es",
-	desc: "Cet événement s'inscrit dans le festival des Nuits Occupé.es : 3 jours d'occupations artistiques dans l'espace public par des personnes sexisées, la nuit..",
-}
+const no: ExtendedMenuItem = {
+  to: "/nuits-occupe-es",
+  label: "Voir toute la programmation des Nuits Occupé.es",
+  shortLabel: "Les Nuit Occupé.es",
+  desc: "Cet événement s'inscrit dans le festival des Nuits Occupé.es : 3 jours d'occupations artistiques dans l'espace public par des personnes sexisées, la nuit..",
+};
 
-const anticra:ExtendedMenuItem = {
-	to: "/mobilisation-contre-cra-beziers",
-	label: "Voir toute la mobilisation contre le CRA de Béziers",
-	shortLabel: "Mobilisation contre le CRA de Béziers"
-}
+const anticra: ExtendedMenuItem = {
+  to: "/mobilisation-contre-cra-beziers",
+  label: "Voir toute la mobilisation contre le CRA de Béziers",
+  shortLabel: "Mobilisation contre le CRA de Béziers",
+};
 
-const qg:ExtendedMenuItem = {
-	to: "/fourmilieres-au-quartier-genereux",
-	label: "Voir toute la programmation des Fourmilières au QG",
-	shortLabel: "Les Fourmilières au Quartier Généreux"
-}
+const qg: ExtendedMenuItem = {
+  to: "/fourmilieres-au-quartier-genereux",
+  label: "Voir toute la programmation des Fourmilières au QG",
+  shortLabel: "Les Fourmilières au Quartier Généreux",
+};
 
-const pef:ExtendedMenuItem = {
-	to: "/pise-en-fete",
-	label: "Voir toute la programmation de la Pise en Fête",
-	shortLabel: "La Piste en Fête"
-}
+const pef: ExtendedMenuItem = {
+  to: "/pise-en-fete",
+  label: "Voir toute la programmation de la Pise en Fête",
+  shortLabel: "La Piste en Fête",
+};
 
-const ganges:ExtendedMenuItem = {
-	to: "/fourmilieres-a-ganges",
-	label: "Voir toute la programmation des Fourmilières à Ganges",
-	shortLabel: "Les Fourmilières à Ganges"
-}
+const ganges: ExtendedMenuItem = {
+  to: "/fourmilieres-a-ganges",
+  label: "Voir toute la programmation des Fourmilières à Ganges",
+  shortLabel: "Les Fourmilières à Ganges",
+};
 
-const mimere:ExtendedMenuItem = {
-	to: "/mi-merveilleuses-mi-meres-veneres",
-	label: "Voir toute la programmation du festival Mi-Merveilleuses, Mi Mères Vénères",
-	shortLabel: "Mi-Merveilleuses, Mi Mères Vénères"
-}
+const mimere: ExtendedMenuItem = {
+  to: "/mi-merveilleuses-mi-meres-veneres",
+  label:
+    "Voir toute la programmation du festival Mi-Merveilleuses, Mi Mères Vénères",
+  shortLabel: "Mi-Merveilleuses, Mi Mères Vénères",
+};
 
-const rsa:ExtendedMenuItem = {
-	to:"/journee-radio-saint-affrique",
-	label: "Voir toute la programmation de la journée de soutien à Radio Saint Affrique",
-	shortLabel: "Journée Radio St Affrque"
-}
+const rsa: ExtendedMenuItem = {
+  to: "/journee-radio-saint-affrique",
+  label:
+    "Voir toute la programmation de la journée de soutien à Radio Saint Affrique",
+  shortLabel: "Journée Radio St Affrque",
+};
 
 const cafeDuSiecle: MobilizonPhysicalAddressI = {
   description: "Société du Café du Siècle",
@@ -273,21 +276,21 @@ const megisserie: MobilizonPhysicalAddressI = {
   geom: "3.318304;43.730068",
 };
 const boffres: MobilizonPhysicalAddressI = {
-	description: "Auberge de Boffres",
-	street: "21 rue des Fontaines",
-	geom: "4.701978424043206;44.92013964558652",
-}
-const melomane:MobilizonPhysicalAddressI = {
-	description: "Mélomane Club",
-	street: "11 Rue du Lantissargues",
-	locality: "Montpellier",
-	geom: "3.886047751288808;43.58802314217724",
-}
-const carrousel:MobilizonPhysicalAddressI = {
-	description: "Le Carrousel",
-	locality: "Montpellier",
-	geom: "3.873706056422263;43.60525957053501"
-}
+  description: "Auberge de Boffres",
+  street: "21 rue des Fontaines",
+  geom: "4.701978424043206;44.92013964558652",
+};
+const melomane: MobilizonPhysicalAddressI = {
+  description: "Mélomane Club",
+  street: "11 Rue du Lantissargues",
+  locality: "Montpellier",
+  geom: "3.886047751288808;43.58802314217724",
+};
+const carrousel: MobilizonPhysicalAddressI = {
+  description: "Le Carrousel",
+  locality: "Montpellier",
+  geom: "3.873706056422263;43.60525957053501",
+};
 export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "538f4ebe-8c97-43fe-b2c6-9040993b6bb0": {
     eventTypes: ["Conférence"],
@@ -337,11 +340,13 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Concert"],
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
+    cancelled: true,
   },
   "ffea1971-298d-4bda-bdf8-73c567b1069e": {
     eventTypes: ["DJ Set"],
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
+    cancelled: true,
   },
   "c13b5c14-9a64-4746-98ce-cc570f3461f9": {
     eventTypes: ["Atelier militant"],
@@ -369,7 +374,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "bd975802-c6d3-410c-a857-f95591cf6efe": {
     eventTypes: ["Rencontre Littéraire"],
     overridePhysicalAddress: arbreSansFin,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "d75e045c-d447-47c5-b18f-7d438817a5fc": {
     eventTypes: ["Conférence"],
@@ -419,11 +424,11 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "08c5d7b9-25b5-40ac-99d5-701ea3f4b511": {
     eventTypes: ["Théâtre"],
-		physicalAddress:{
-			description: "La Grange",
-			locality: "Causse-de-la-Selle",
-			geom: "3.6604965;43.8140222"
-		}
+    physicalAddress: {
+      description: "La Grange",
+      locality: "Causse-de-la-Selle",
+      geom: "3.6604965;43.8140222",
+    },
   },
   "be48d1bb-12b9-4ddc-8eef-ee6dc050bd18": {
     eventTypes: ["Pride"],
@@ -441,7 +446,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "205537bf-df3a-4bc4-ac99-5948aeb87a99": {
     eventTypes: ["Concert"],
     overridePhysicalAddress: freep,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "2781745b-4d3d-4b7d-a825-4a4169f3a85b": {
     eventTypes: ["Table-Ronde"],
@@ -542,7 +547,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "afdbd57d-0bd4-44f6-abfb-4b80a8286920": {
     eventTypes: ["Expo"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "633c0e74-6cca-4bb2-974a-67a156e3ea84": {
     eventTypes: ["Conférence"],
@@ -608,16 +613,16 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "e015f26b-265e-4e5b-884d-87dbcb268d23": {
     eventTypes: ["Banquet populaire"],
-		overridePhysicalAddress:{
-			description:"Jardin public Ganges",
-			geom: "3.7096712;43.9344955"
-		},
-		programLinks:[ganges]
+    overridePhysicalAddress: {
+      description: "Jardin public Ganges",
+      geom: "3.7096712;43.9344955",
+    },
+    programLinks: [ganges],
   },
   "dd44f90a-8134-4a13-a73e-7747b677a5c1": {
     eventTypes: ["Spectacle vivant"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "ec3a24a6-f7e7-4fd6-9898-34ca3f213b60": {
     eventTypes: ["DJ Set"],
@@ -633,7 +638,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "aac53e1b-4760-4b4c-a552-07dc6b125f54": {
     eventTypes: ["Expo"],
     overridePhysicalAddress: autreCote,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "73733af0-98ed-49f4-8da5-997b5bcb2af3": {
     eventTypes: ["Conférence"],
@@ -684,7 +689,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "94418219-de82-419e-95d3-a5cb6213ea6e": {
     eventTypes: ["Concert", "Théâtre"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "c9684b06-08cb-4443-a6d0-9a3d90056d82": {
     eventTypes: ["Kermesse", "Table-Ronde"],
@@ -703,12 +708,12 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "2ec529d3-1d6e-4c8f-a0ca-7cdd242cb9a1": {
     eventTypes: ["Expo"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "7b11dab7-c001-4045-a1c0-3c6ba6f7986d": {
     eventTypes: ["Lecture"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "0c645c5c-5435-467a-9fa8-a803427f0c07": {
     eventTypes: ["Projection"],
@@ -725,7 +730,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "b2d1e79f-077a-4852-be67-958c58df4baa": {
     eventTypes: ["Expo"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "2797ad37-0da5-4f5a-be09-64033f19e1f5": {
     eventTypes: ["Formation"],
@@ -748,25 +753,27 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Rencontre Littéraire", "Arpentage"],
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
+    cancelled: true,
   },
   "6f50e85c-ca06-4bca-919c-645b9dddc5c8": {
     eventTypes: ["Kermesse"],
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
+    cancelled: true,
   },
   "19e71f5e-223b-4354-8fcc-90ab0b009a23": {
     eventTypes: ["Conférence"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "6fd1f509-724a-4f10-ac15-bf07729bc977": {
     eventTypes: ["Lecture", "Ciné-débat", "Rencontre Littéraire"],
     overridePhysicalAddress: autreCote,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "4cc9926d-684a-48c6-bcbf-0a9e647e9f14": {
     eventTypes: ["Lecture", "Rencontre Littéraire"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "d0dc29b9-9f1c-405a-b65c-e52f2687412b": {
     eventTypes: ["Concert"],
@@ -796,19 +803,19 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "97b1aaa0-8fd8-4824-b176-e241ec723a3d": {
     eventTypes: ["Théâtre"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "3aa9adcd-0072-47b4-9b4d-3c9e2febf7ed": {
     eventTypes: ["Jeux"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "7fbd1b9f-4c77-4fd9-9b6a-590392020b45": {
     eventTypes: ["Arpentage"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "23251ad2-7b38-49ca-908c-b8fe0a23a254": {
     eventTypes: ["Projection"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "7dc5726f-47ae-4698-90f2-046fc4398e37": {
     eventTypes: ["Atelier cuisine", "Banquet populaire"],
@@ -970,6 +977,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Atelier pour enfants"],
     programLinks: [halleTropisme],
     overridePhysicalAddress: tropisme,
+    cancelled: true,
   },
   "7c045675-d034-41f1-95f8-0326e5bec946": {
     eventTypes: ["Formation"],
@@ -983,17 +991,17 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   },
   "4d422666-63e7-4f5b-8b3a-c926c25336dc": {
     eventTypes: ["Spectacle vivant"],
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "856d54ae-8f03-4497-8b2a-1bc3259c95a4": {
     eventTypes: ["Théâtre"],
     overridePhysicalAddress: autreCote,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "87f3859a-918c-4c88-8433-371f27ddc446": {
     eventTypes: ["Spectacle vivant"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "d586ad4b-b78e-4b83-80ec-2a055fbe2c93": {
     eventTypes: ["Conférence"],
@@ -1008,6 +1016,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "8ca89968-236e-4efe-9afa-d6c3fcd903c1": {
     eventTypes: ["Parade"],
     programLinks: [lodeve],
+    cancelled: true,
   },
   "c66d0c7a-2769-4ec2-abb3-5257935fb3a0": {
     eventTypes: ["Concert"],
@@ -1053,6 +1062,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Atelier militant"],
     overridePhysicalAddress: tropisme,
     programLinks: [halleTropisme],
+    cancelled: true,
   },
   "a266fa02-400f-4fd8-bda7-a472016d3adb": {
     eventTypes: ["Concert"],
@@ -1062,390 +1072,399 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "cfd02e57-1616-4fb3-b475-ce6ee5e0b4bb": {
     eventTypes: ["Rencontre Littéraire"],
     programLinks: [lodeve],
-		overridePhysicalAddress:lodeva
+    overridePhysicalAddress: lodeva,
   },
   "daf82728-77ff-4c39-a4ad-b5d62eddf2b3": {
     eventTypes: ["Atelier militant", "Conférence", "Ciné-débat"],
   },
   "9fb82144-e9f8-4103-8920-4ab173ee73bb": {
     eventTypes: ["Atelier militant"],
-		programLinks:[qg]
+    programLinks: [qg],
   },
   "2fcff50a-4b00-4c78-8bca-5011a878fb59": {
     eventTypes: ["Atelier d'écriture"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "f4d42180-51cd-4e18-bf07-43ec9dae9a11": {
     eventTypes: ["Théâtre", "Repas partagé"],
   },
   "05ecb411-8af7-4aec-a6c1-a280ba5d17d7": {
     eventTypes: ["Parade"],
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
   "ab54c525-72e4-49a6-8be4-2beb16c31475": {
     eventTypes: ["Concert"],
     overridePhysicalAddress: lodeva,
-		programLinks:[lodeve]
+    programLinks: [lodeve],
   },
   "760e574b-76f0-4d93-adf2-cba69aa5d5fc": {
     eventTypes: ["DJ Set"],
     overridePhysicalAddress: lodeva,
-		programLinks:[lodeve]
+    programLinks: [lodeve],
   },
   "953c9540-ff29-4399-bba0-d785170ba604": {
     eventTypes: ["Atelier d'écriture"],
     overridePhysicalAddress: cafeDuSiecle,
-		programLinks:[ganges]
+    programLinks: [ganges],
   },
-	"5d332cee-b790-4bcb-b409-802574cd2513":{
-		eventTypes:["Rencontre Littéraire"],
-		programLinks:[lodeve]
-	},
-	"108d6b0e-9f6a-442b-b6f0-e325b7c73c79":{
-		eventTypes:["Concert", "DJ Set"]
-	},
-	"1c36eaaf-2524-494e-9416-56957db28885":{
-		eventTypes:["Concert"],
-		overridePhysicalAddress:boffres
-	},
-	"faf258c9-5437-4e37-aded-d84a6e50d729":{
-		eventTypes:["Spectacle vivant"],
-		overridePhysicalAddress:megisserie,
-		programLinks:[lodeve]
-	},
-	"ce0431c5-9dca-498b-acbe-cad520789684":{
-		eventTypes:["Conférence"]
-	},
-	"9fef42d1-803b-4c13-b117-f068c42febbe":{
-		eventTypes:["Théâtre"]
-	},
-	"e5b6e705-7e2f-47e7-bfcd-d8b8b73a522f":{
-		eventTypes:["Atelier de danse", "Atelier d'expression","Atelier militant"]
-	},
-	"ff1d4213-3c3a-40ce-b4fb-c4ba642dc355":{
-		eventTypes:["Atelier DJing"],
-		programLinks:[gya]
-	},
-	"771134c0-33ec-4094-afa8-6a82669960c6":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"3bfb2b9f-cf00-45b9-a531-90dc2aeefee4":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"25ccaf59-a49a-44ff-b7bc-274ca784cfdb":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"1f3bd03f-6453-4119-9c82-19ff3d93cf28":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"a6c70384-9daa-4a78-8cf9-b9f5950662c2":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"aef9ba82-cdfe-4481-90b7-e45439f9c557":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"ee1d6b73-78fe-4804-af2e-d675e8983869":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"323704e2-2a71-4fcb-a266-92f670426d63":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"133c4ac1-0f7a-4670-9f2b-d29d335a9a85":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"5580c45c-bcfd-4f13-9f53-27d1771c6713":{
-		eventTypes:["DJ Set", "Concert"],
-		programLinks:[gya]
-	},
-	"bffcc0b7-eaee-4c86-87fe-2a06254a5dcf":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya],
-		overridePhysicalAddress:melomane
-	},
-	"b3a7d562-9ed8-46b3-afa4-9700749017ce":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya],
-		overridePhysicalAddress:melomane
-	},
-	"e2139c0d-8ed5-45a4-9a00-c8844ec4fb68":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya],
-		overridePhysicalAddress:melomane
-	},
-	"c764ada1-6b37-494e-8d52-81a82e688e46":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"5573091a-5ecb-4dac-abee-a7c90e6c0ab5":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"75cde6cb-838d-4111-91ef-559d469c1e95":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"dcc79a95-81f4-4e53-a75d-915ec5b0e2b6":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"6a93fd56-4ad9-484b-8fe3-e96de7392a79":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"2c0be6dc-8833-4478-abda-debaf31198b7":{
-		eventTypes:["Danse"],
-		overridePhysicalAddress:{
-			description: "Local des cheminots CGT",
-			locality:"Nîmes",
-			geom:"4.35218794600445;43.83584714129023"
-		}
-	},
-	"4f792113-f9b2-4bfc-89be-c9f8950610a9":{
-		eventTypes:["Atelier militant"],
-		programLinks:[qg]
-	},
-	"7dd9c993-1af2-48f9-8878-ec59889e1403":{
-		eventTypes:["Théâtre"],
-		overridePhysicalAddress:{
-			description: "Festival 37° à l'ombre",
-			locality:"Blauzac",
-			geom:"4.394503509170784;43.98092235329631"
-		}
-	},
-	"2ed19313-bd41-47f1-9fc8-7611037507f0":{
-		eventTypes:["Table-Ronde"],
-		programLinks:[lodeve],
-		overridePhysicalAddress:megisserie
-	},
-	"6890553f-08d4-4782-8310-7c0ff372e88c":{
-		eventTypes:["DJ Set"],
-		programLinks:[gya]
-	},
-	"3eafc825-b3d1-4933-85ad-ff8a6361b7d0":{
-		eventTypes:["Spectacle vivant"],
-		programLinks:[no]
-	},
-	"5c42aeab-8b8b-4d61-b460-ad7c49510b92":{
-		eventTypes:["Spectacle vivant"],
-		programLinks:[no]
-	},
-	"a857406b-ca74-4b10-8031-4fbba28234d7":{
-		eventTypes:["Spectacle vivant"],
-		programLinks:[no]
-	},
-	"1edcbc1a-43eb-4f02-9b27-322a08981642":{
-		eventTypes:["Spectacle vivant"],
-		programLinks:[no]
-	},
-	"4d216368-cc8e-4e0b-97c6-d4027e081e91":{
-		eventTypes:["Concert"],
-		programLinks:[no]
-	},
-	"e70ceede-438e-4b05-bfe1-b085ef32435d":{
-		eventTypes:["Repas partagé"]
-	},
-	"185c2ea6-6c9c-49ec-83e4-174064ad6535":{
-		eventTypes:["Arpentage"]
-	},
-	"0f03faff-cf3e-4971-b6f1-e306d3efe839":{
-		eventTypes:["Atelier d'écriture"]
-	},
-	"bf4e5fac-02b8-465f-9bf6-1db6494d92bb":{
-		eventTypes:["Karaoké"]
-	},
-	"7e15c6c3-1bb9-4666-ace0-f62deb64ee00":{
-		eventTypes:["Atelier cuisine"]
-	},
-	"9346761c-e9ba-414b-ae65-12ad392fb2b0":{
-		eventTypes:["Lecture"]
-	},
-	"aad19078-8f8c-43ca-abe1-7e8f02976859":{
-		eventTypes:["Concert", "Atelier d'expression"]
-	},
-	"6a44d6c3-8fdd-4b2d-8095-d7683bd536ea":{
-		eventTypes:["Table-Ronde", "Théâtre", "Concert"],
-		programLinks:[anticra]
-	},
-	"767ad9e6-e29a-4dbb-aa60-fc4f132da727":{
-		eventTypes:["Projection"],
-		programLinks:[anticra]
-	},
-	"82ed1ef1-7046-4eea-a0d1-ffb4ad6a5f58":{
-		eventTypes:["Conférence"],
-		programLinks:[anticra]
-	},
-	"41f43642-f956-4966-8867-bcb8c736ffdb":{
-		eventTypes:["Manifestation"],
-		programLinks:[anticra]
-	},
-	"7b8040d9-f707-4ae3-ac7d-badfb90d34f0":{
-		eventTypes:["Projection"],
-		programLinks:[anticra]
-	},
-	"f967896c-5bd1-4167-8871-f95957ca0acc":{
-		eventTypes:["Ciné-débat"],
-		programLinks:[qg]
-	},
-	"381069ab-755e-4576-909a-a3332b1a1993":{
-		eventTypes:["Village Associatif"],
-		programLinks:[gya]
-	},
-	"149553be-3c38-48f0-98fa-2b9d481e619c":{
-		eventTypes:["Formation"],
-		programLinks:[gya]
-	},
-	"925bbaa0-0a40-4800-9f4e-4b674f335cb5":{
-		eventTypes:["Atelier militant"],
-		programLinks:[gya]
-	},
-	"bc9762c1-11a0-4751-a05a-70f5a3a47aeb":{
-		eventTypes:["Concert"],
-		overridePhysicalAddress:lodeva,
-		programLinks:[lodeve]
-	},
-	"cb663087-732d-49ce-a9aa-f6f67126a623":{
-		eventTypes:["Bal populaire"],
-		programLinks:[lodeve]
-	},
-	"cfb89fd0-f909-45e5-b077-261aa6d1dca7":{
-		eventTypes:["Formation"],
-		programLinks:[gya]
-	},
-	"4ae7a675-05bb-4128-ab08-af6959ea7781":{
-		eventTypes:["Rencontre Littéraire", "Concert"],
-	},
-	"780c1cc4-c160-4dc0-b229-28896649cb0d":{
-		eventTypes:["Rencontre Littéraire"],
-	},
-	"f0b37c6f-651f-4314-80fc-4f34ff80689f":{
-		eventTypes:["DJ Set", "Concert"],
-		programLinks:[pef]
-	},
-	"2fcb4d52-27e3-4273-a26e-539cb9fd7a63":{
-		eventTypes:["Rencontre Littéraire"],
-	},
-	"4f2bb0a9-99af-46d8-a7c5-7dbe09551ab3":{
-		eventTypes:["Projection", "Atelier militant", "Atelier d'expression", "Concert"],
-		programLinks:[pef]
-	},
-	"621401c3-2bc1-442b-92f5-4715d4129665":{
-		eventTypes:["Rencontre Littéraire"],
-	},
-	"909a3f5a-155a-41f5-a4d0-bc528b3e1331":{
-		eventTypes:["DJ Set", "Concert"]
-	},
-	"7ac24fbe-1be4-41ad-a4e7-b86f75d3563c":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"50369999-47e0-4d84-be86-fb2c1f7cdc31":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"1fb8ddc4-f106-425b-8f00-f6870a011492":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"99df1810-df85-4c60-99ac-d737d547380e":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"5d87073c-1aa8-4662-b52a-0bb0983a7000":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"c2b5a680-320c-4d84-ab54-1a2209118d6e":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"f62dc0d5-95fb-46fd-a8a7-4a48a8c8537e":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"ad9f4e3f-4c16-4857-95c6-3ae065da3e6a":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"d222372d-b23f-4177-936f-6cb8c1fa7151":{
-		eventTypes:["Atelier militant"],
-		programLinks:[mimere],
-		overridePhysicalAddress:carrousel
-	},
-	"4eaea015-2818-4264-bbcb-0ccc2a2f547e":{
-		eventTypes:["Lecture", "Repas partagé", "Concert", "Expo"]
-	},
-	"97298d3e-a2fd-4909-8aa6-1f1f732d60aa":{
-		eventTypes:["Manifestation"]
-	},
-	"e2448eb2-c7f1-4814-8088-014112d63542":{
-		eventTypes:["Conférence"]
-	},
-	"325335b0-47d0-4aae-98b8-41ca19324477":{
-		eventTypes:["Expo"],
-		programLinks:[fds]
-	},
-	"40e29699-fe92-43d0-97b8-1ebbdc37f460":{
-		eventTypes:["Braderie"],
-		programLinks:[rsa]
-	},
-	"79cfd096-f0e1-4cf3-a92a-47e65c5356eb":{
-		eventTypes:["Jeux", "Conte"],
-		programLinks:[rsa]
-	},
-	"20eae32a-c26d-49d5-bf1b-a88db1fac90d":{
-		eventTypes:["Table-Ronde"],
-		programLinks:[rsa]
-	},
-	"9bca65a9-52d1-4811-b942-b567c5e79f32":{
-		eventTypes:["Table-Ronde"],
-		programLinks:[rsa]
-	},
-	"f02a43cf-f07e-44cc-937e-448690bb7712":{
-		eventTypes:["Repas partagé"],
-		programLinks:[rsa]
-	},
-	"60d44764-f68b-4565-b4d1-03375ad4d066":{
-		eventTypes:["Concert"],
-		programLinks:[rsa]
-	},
-	"a50cf586-b8f9-48d1-b9d2-1c97046fc867":{
-		eventTypes:["Concert", "Atelier militant", "Jeux", "Repas partagé"]
-	},
-	"c43730a1-0bdb-43a1-9f45-2937d7194ea6":{
-		eventTypes:["Manifestation", "Spectacle vivant"],
-		physicalAddress:{
-			description :"Lignes de tram 1 et 3 Montpellier",
-			geom:"3.8876856268992865;43.61400872395112"
-		}
-	},
-	"e221455f-4071-4b75-8056-554538219e8f":{
-		eventTypes:["Ciné-débat"]
-	},
-	"82da4fa0-5a74-4910-984f-39495d2b592f":{
-		eventTypes:["Autre"]
-	},
-	"355565af-6c60-4dae-8308-a94e997d1812":{
-		eventTypes:["Kermesse"]
-	},
-	"11c4a4ec-d567-4717-8293-422773d74f78":{
-		eventTypes:["Concert"]
-	}
+  "5d332cee-b790-4bcb-b409-802574cd2513": {
+    eventTypes: ["Rencontre Littéraire"],
+    programLinks: [lodeve],
+  },
+  "108d6b0e-9f6a-442b-b6f0-e325b7c73c79": {
+    eventTypes: ["Concert", "DJ Set"],
+  },
+  "1c36eaaf-2524-494e-9416-56957db28885": {
+    eventTypes: ["Concert"],
+    overridePhysicalAddress: boffres,
+  },
+  "faf258c9-5437-4e37-aded-d84a6e50d729": {
+    eventTypes: ["Spectacle vivant"],
+    overridePhysicalAddress: megisserie,
+    programLinks: [lodeve],
+  },
+  "ce0431c5-9dca-498b-acbe-cad520789684": {
+    eventTypes: ["Conférence"],
+  },
+  "9fef42d1-803b-4c13-b117-f068c42febbe": {
+    eventTypes: ["Théâtre"],
+  },
+  "e5b6e705-7e2f-47e7-bfcd-d8b8b73a522f": {
+    eventTypes: [
+      "Atelier de danse",
+      "Atelier d'expression",
+      "Atelier militant",
+    ],
+  },
+  "ff1d4213-3c3a-40ce-b4fb-c4ba642dc355": {
+    eventTypes: ["Atelier DJing"],
+    programLinks: [gya],
+  },
+  "771134c0-33ec-4094-afa8-6a82669960c6": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "3bfb2b9f-cf00-45b9-a531-90dc2aeefee4": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "25ccaf59-a49a-44ff-b7bc-274ca784cfdb": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "1f3bd03f-6453-4119-9c82-19ff3d93cf28": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "a6c70384-9daa-4a78-8cf9-b9f5950662c2": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "aef9ba82-cdfe-4481-90b7-e45439f9c557": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "ee1d6b73-78fe-4804-af2e-d675e8983869": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "323704e2-2a71-4fcb-a266-92f670426d63": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "133c4ac1-0f7a-4670-9f2b-d29d335a9a85": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "5580c45c-bcfd-4f13-9f53-27d1771c6713": {
+    eventTypes: ["DJ Set", "Concert"],
+    programLinks: [gya],
+  },
+  "bffcc0b7-eaee-4c86-87fe-2a06254a5dcf": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+    overridePhysicalAddress: melomane,
+  },
+  "b3a7d562-9ed8-46b3-afa4-9700749017ce": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+    overridePhysicalAddress: melomane,
+  },
+  "e2139c0d-8ed5-45a4-9a00-c8844ec4fb68": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+    overridePhysicalAddress: melomane,
+  },
+  "c764ada1-6b37-494e-8d52-81a82e688e46": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "5573091a-5ecb-4dac-abee-a7c90e6c0ab5": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "75cde6cb-838d-4111-91ef-559d469c1e95": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "dcc79a95-81f4-4e53-a75d-915ec5b0e2b6": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "6a93fd56-4ad9-484b-8fe3-e96de7392a79": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "2c0be6dc-8833-4478-abda-debaf31198b7": {
+    eventTypes: ["Danse"],
+    overridePhysicalAddress: {
+      description: "Local des cheminots CGT",
+      locality: "Nîmes",
+      geom: "4.35218794600445;43.83584714129023",
+    },
+  },
+  "4f792113-f9b2-4bfc-89be-c9f8950610a9": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [qg],
+  },
+  "7dd9c993-1af2-48f9-8878-ec59889e1403": {
+    eventTypes: ["Théâtre"],
+    overridePhysicalAddress: {
+      description: "Festival 37° à l'ombre",
+      locality: "Blauzac",
+      geom: "4.394503509170784;43.98092235329631",
+    },
+  },
+  "2ed19313-bd41-47f1-9fc8-7611037507f0": {
+    eventTypes: ["Table-Ronde"],
+    programLinks: [lodeve],
+    overridePhysicalAddress: megisserie,
+  },
+  "6890553f-08d4-4782-8310-7c0ff372e88c": {
+    eventTypes: ["DJ Set"],
+    programLinks: [gya],
+  },
+  "3eafc825-b3d1-4933-85ad-ff8a6361b7d0": {
+    eventTypes: ["Spectacle vivant"],
+    programLinks: [no],
+  },
+  "5c42aeab-8b8b-4d61-b460-ad7c49510b92": {
+    eventTypes: ["Spectacle vivant"],
+    programLinks: [no],
+  },
+  "a857406b-ca74-4b10-8031-4fbba28234d7": {
+    eventTypes: ["Spectacle vivant"],
+    programLinks: [no],
+  },
+  "1edcbc1a-43eb-4f02-9b27-322a08981642": {
+    eventTypes: ["Spectacle vivant"],
+    programLinks: [no],
+  },
+  "4d216368-cc8e-4e0b-97c6-d4027e081e91": {
+    eventTypes: ["Concert"],
+    programLinks: [no],
+  },
+  "e70ceede-438e-4b05-bfe1-b085ef32435d": {
+    eventTypes: ["Repas partagé"],
+  },
+  "185c2ea6-6c9c-49ec-83e4-174064ad6535": {
+    eventTypes: ["Arpentage"],
+  },
+  "0f03faff-cf3e-4971-b6f1-e306d3efe839": {
+    eventTypes: ["Atelier d'écriture"],
+  },
+  "bf4e5fac-02b8-465f-9bf6-1db6494d92bb": {
+    eventTypes: ["Karaoké"],
+  },
+  "7e15c6c3-1bb9-4666-ace0-f62deb64ee00": {
+    eventTypes: ["Atelier cuisine"],
+  },
+  "9346761c-e9ba-414b-ae65-12ad392fb2b0": {
+    eventTypes: ["Lecture"],
+  },
+  "aad19078-8f8c-43ca-abe1-7e8f02976859": {
+    eventTypes: ["Concert", "Atelier d'expression"],
+  },
+  "6a44d6c3-8fdd-4b2d-8095-d7683bd536ea": {
+    eventTypes: ["Table-Ronde", "Théâtre", "Concert"],
+    programLinks: [anticra],
+  },
+  "767ad9e6-e29a-4dbb-aa60-fc4f132da727": {
+    eventTypes: ["Projection"],
+    programLinks: [anticra],
+  },
+  "82ed1ef1-7046-4eea-a0d1-ffb4ad6a5f58": {
+    eventTypes: ["Conférence"],
+    programLinks: [anticra],
+  },
+  "41f43642-f956-4966-8867-bcb8c736ffdb": {
+    eventTypes: ["Manifestation"],
+    programLinks: [anticra],
+  },
+  "7b8040d9-f707-4ae3-ac7d-badfb90d34f0": {
+    eventTypes: ["Projection"],
+    programLinks: [anticra],
+  },
+  "f967896c-5bd1-4167-8871-f95957ca0acc": {
+    eventTypes: ["Ciné-débat"],
+    programLinks: [qg],
+  },
+  "381069ab-755e-4576-909a-a3332b1a1993": {
+    eventTypes: ["Village Associatif"],
+    programLinks: [gya],
+  },
+  "149553be-3c38-48f0-98fa-2b9d481e619c": {
+    eventTypes: ["Formation"],
+    programLinks: [gya],
+  },
+  "925bbaa0-0a40-4800-9f4e-4b674f335cb5": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [gya],
+  },
+  "bc9762c1-11a0-4751-a05a-70f5a3a47aeb": {
+    eventTypes: ["Concert"],
+    overridePhysicalAddress: lodeva,
+    programLinks: [lodeve],
+  },
+  "cb663087-732d-49ce-a9aa-f6f67126a623": {
+    eventTypes: ["Bal populaire"],
+    programLinks: [lodeve],
+  },
+  "cfb89fd0-f909-45e5-b077-261aa6d1dca7": {
+    eventTypes: ["Formation"],
+    programLinks: [gya],
+  },
+  "4ae7a675-05bb-4128-ab08-af6959ea7781": {
+    eventTypes: ["Rencontre Littéraire", "Concert"],
+  },
+  "780c1cc4-c160-4dc0-b229-28896649cb0d": {
+    eventTypes: ["Rencontre Littéraire"],
+  },
+  "f0b37c6f-651f-4314-80fc-4f34ff80689f": {
+    eventTypes: ["DJ Set", "Concert"],
+    programLinks: [pef],
+  },
+  "2fcb4d52-27e3-4273-a26e-539cb9fd7a63": {
+    eventTypes: ["Rencontre Littéraire"],
+  },
+  "4f2bb0a9-99af-46d8-a7c5-7dbe09551ab3": {
+    eventTypes: [
+      "Projection",
+      "Atelier militant",
+      "Atelier d'expression",
+      "Concert",
+    ],
+    programLinks: [pef],
+  },
+  "621401c3-2bc1-442b-92f5-4715d4129665": {
+    eventTypes: ["Rencontre Littéraire"],
+  },
+  "909a3f5a-155a-41f5-a4d0-bc528b3e1331": {
+    eventTypes: ["DJ Set", "Concert"],
+  },
+  "7ac24fbe-1be4-41ad-a4e7-b86f75d3563c": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "50369999-47e0-4d84-be86-fb2c1f7cdc31": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "1fb8ddc4-f106-425b-8f00-f6870a011492": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "99df1810-df85-4c60-99ac-d737d547380e": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "5d87073c-1aa8-4662-b52a-0bb0983a7000": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "c2b5a680-320c-4d84-ab54-1a2209118d6e": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "f62dc0d5-95fb-46fd-a8a7-4a48a8c8537e": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "ad9f4e3f-4c16-4857-95c6-3ae065da3e6a": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "d222372d-b23f-4177-936f-6cb8c1fa7151": {
+    eventTypes: ["Atelier militant"],
+    programLinks: [mimere],
+    overridePhysicalAddress: carrousel,
+  },
+  "4eaea015-2818-4264-bbcb-0ccc2a2f547e": {
+    eventTypes: ["Lecture", "Repas partagé", "Concert", "Expo"],
+  },
+  "97298d3e-a2fd-4909-8aa6-1f1f732d60aa": {
+    eventTypes: ["Manifestation"],
+  },
+  "e2448eb2-c7f1-4814-8088-014112d63542": {
+    eventTypes: ["Conférence"],
+  },
+  "325335b0-47d0-4aae-98b8-41ca19324477": {
+    eventTypes: ["Expo"],
+    programLinks: [fds],
+  },
+  "40e29699-fe92-43d0-97b8-1ebbdc37f460": {
+    eventTypes: ["Braderie"],
+    programLinks: [rsa],
+  },
+  "79cfd096-f0e1-4cf3-a92a-47e65c5356eb": {
+    eventTypes: ["Jeux", "Conte"],
+    programLinks: [rsa],
+  },
+  "20eae32a-c26d-49d5-bf1b-a88db1fac90d": {
+    eventTypes: ["Table-Ronde"],
+    programLinks: [rsa],
+  },
+  "9bca65a9-52d1-4811-b942-b567c5e79f32": {
+    eventTypes: ["Table-Ronde"],
+    programLinks: [rsa],
+  },
+  "f02a43cf-f07e-44cc-937e-448690bb7712": {
+    eventTypes: ["Repas partagé"],
+    programLinks: [rsa],
+  },
+  "60d44764-f68b-4565-b4d1-03375ad4d066": {
+    eventTypes: ["Concert"],
+    programLinks: [rsa],
+  },
+  "a50cf586-b8f9-48d1-b9d2-1c97046fc867": {
+    eventTypes: ["Concert", "Atelier militant", "Jeux", "Repas partagé"],
+  },
+  "c43730a1-0bdb-43a1-9f45-2937d7194ea6": {
+    eventTypes: ["Manifestation", "Spectacle vivant"],
+    physicalAddress: {
+      description: "Lignes de tram 1 et 3 Montpellier",
+      geom: "3.8876856268992865;43.61400872395112",
+    },
+  },
+  "e221455f-4071-4b75-8056-554538219e8f": {
+    eventTypes: ["Ciné-débat"],
+  },
+  "82da4fa0-5a74-4910-984f-39495d2b592f": {
+    eventTypes: ["Autre"],
+  },
+  "355565af-6c60-4dae-8308-a94e997d1812": {
+    eventTypes: ["Kermesse"],
+  },
+  "11c4a4ec-d567-4717-8293-422773d74f78": {
+    eventTypes: ["Concert"],
+  },
 };
