@@ -26,6 +26,11 @@ import { I18nProvider, type RangeValue } from "react-aria-components";
 import { DateRangePicker } from "../DatePicker/RangeDatePicker";
 import type { SearchParams } from "./SearchParams";
 import { getFilterFromCategory } from "../ProgramHelper/getFilterFromCategory.ts";
+import {
+  Disclosure,
+  DisclosureHeader,
+  DisclosurePanel,
+} from "../Disclosure.tsx";
 
 const EventsContainer = styled.div`
   display: flex;
@@ -67,6 +72,7 @@ interface Props {
   disableTypeFilter?: boolean;
   disableDateFilder?: boolean;
   enableCat?: boolean;
+  hidePassedEvents?: boolean;
 }
 
 export function Agenda({
@@ -77,6 +83,7 @@ export function Agenda({
   disableDateFilder = false,
   disableTypeFilter = false,
   enableCat = false,
+  hidePassedEvents = false,
 }: Props) {
   const dateRange = useMemo(() => {
     if (!searchParams.from || !searchParams.to) return null;
@@ -237,6 +244,19 @@ export function Agenda({
     [events, searchParams, dateRange],
   );
 
+  const passedEvents = useMemo(() => {
+    const now = new Date();
+    return filtersEvents.filter((event) => {
+      return event.endsOn && event.endsOn < now;
+    });
+  }, [filtersEvents]);
+  const futureEvents = useMemo(() => {
+    const now = new Date();
+    return filtersEvents.filter((event) => {
+      return !event.endsOn || event.endsOn >= now;
+    });
+  }, [filtersEvents]);
+
   const livingAreasFacets = useMemo(() => {
     return events.reduce(
       (acc: Record<string, MobilizonEventWithLivingAreaI[]>, event) => {
@@ -316,7 +336,7 @@ export function Agenda({
             postalCodeFacets={postalCodeFacets}
             livingAreaFacets={sortedLivingAreasFacet}
           />
-          <EventsMap events={filtersEvents} />
+          <EventsMap events={hidePassedEvents ? futureEvents : filtersEvents} />
         </>
       )}
 
@@ -367,7 +387,25 @@ export function Agenda({
             )}
           </FullWidth>
         )}
-        {filtersEvents.map((event) => (
+        {hidePassedEvents && (
+          <Disclosure>
+            <DisclosureHeader hideLabel={`Masquer les évènements passés`}>
+              Afficher les {passedEvents.length} évènements terminés
+            </DisclosureHeader>
+            <DisclosurePanel>
+              <EventsContainer>
+                {passedEvents.map((event) => (
+                  <CalendarEvent
+                    key={event.id}
+                    event={event}
+                    showEventsPageLink={enableCat}
+                  />
+                ))}
+              </EventsContainer>
+            </DisclosurePanel>
+          </Disclosure>
+        )}
+        {(hidePassedEvents ? futureEvents : filtersEvents).map((event) => (
           <CalendarEvent
             key={event.id}
             event={event}

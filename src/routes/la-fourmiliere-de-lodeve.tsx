@@ -33,6 +33,7 @@ function RouteComponent() {
           searchParams={searchParams}
           setSearchParams={setSearchParams}
           disableMap
+          hidePassedEvents
         />
       </Section>
     </Section>
