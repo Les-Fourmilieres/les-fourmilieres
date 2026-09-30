@@ -862,14 +862,18 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "98956a63-b56e-46bc-9eec-9e69e78f5a29": {
     eventTypes: ["DJ Set"],
     programLinks: [lodeve],
-    overridePhysicalAddress: lodeva,
-    cancelled: true,
+    overridePhysicalAddress: lodeva
   },
   "3766b6bf-cada-4501-ac96-8ead47638de3": {
     eventTypes: ["Table-Ronde"],
     programLinks: [lodeve],
     overridePhysicalAddress: megisserie,
   },
+	"41d4df8b-dbfe-4786-b640-779d5b8e19ee":{
+		eventTypes: ["DJ Set"],
+		programLinks: [lodeve],
+		overridePhysicalAddress: lodeva
+	},
   "373f9e19-80a6-4b6e-90ed-e07a78698d3b": {
     eventTypes: ["Conférence"],
     programLinks: [lodeve],
@@ -1077,6 +1081,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "a266fa02-400f-4fd8-bda7-a472016d3adb": {
     eventTypes: ["Concert"],
     programLinks: [lodeve],
+		cancelled:true
     //overridePhysicalAddress: lodeva,
   },
   "cfd02e57-1616-4fb3-b475-ce6ee5e0b4bb": {
