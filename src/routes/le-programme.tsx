@@ -131,7 +131,6 @@ const eventPreview: (Pick<
     picture: {
       url: "/events/fourmiliere-quartier-genereux.webp",
     },
-    uuid: "ee734fc5-b151-45ab-94a7-6109aaf7cf78", // Used for the cancelled banner
   },
   {
     url: "/festival-des-luttes-populaires",
@@ -176,6 +175,7 @@ const eventPreview: (Pick<
     picture: {
       url: "/events/fourmilieres-tropisme.webp",
     },
+    uuid: "ee734fc5-b151-45ab-94a7-6109aaf7cf78", // Used for the cancelled banner
   },
   {
     url: "/groove-your-ass",
