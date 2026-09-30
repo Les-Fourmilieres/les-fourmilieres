@@ -1482,4 +1482,35 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "11c4a4ec-d567-4717-8293-422773d74f78": {
     eventTypes: ["Concert"],
   },
+	"59d5d971-09f9-44a8-a06f-0e493439d2cc":{
+		eventTypes:["Ciné-débat"]
+	},
+	"58735b87-8993-4275-a7a1-4a59bda2bdd8":{
+		eventTypes:["Formation"]
+	},
+	"55fcef17-5048-4cc2-9f37-b32410999314":{
+		eventTypes:["Conférence"]
+	},
+	"d7717d11-3f90-4dc5-9fa9-55fa6c785eb5":{
+		eventTypes:["Ciné-débat", "Conférence"]
+	},
+	"a9050263-61f1-4bd7-bb99-d18c55a0d124":{
+		eventTypes:["Conférence", "Atelier militant", "Concert", "Kermesse"]
+	},
+	"460497da-bb4d-441f-87b8-a3eaa2b32a85":{
+		eventTypes:["Autre"],
+		programLinks:[pef]
+	},
+	"f4be50cb-ab5d-4b89-a271-571d9d6ededb":{
+		eventTypes:["Projection"],
+		programLinks:[pef]
+	},
+	"1be919c1-4cd0-4ca3-8e2c-bcd5fb1fb32f":{
+		eventTypes:["Conférence"],
+		programLinks:[pef]
+	},
+	"33f82261-22b2-4c0b-b878-cb1e1b1a5e68":{
+		eventTypes:["Concert"],
+		programLinks:[pef]
+	}
 };
