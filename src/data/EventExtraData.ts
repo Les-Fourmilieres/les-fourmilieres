@@ -740,6 +740,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "2797ad37-0da5-4f5a-be09-64033f19e1f5": {
     eventTypes: ["Formation"],
     overridePhysicalAddress: carmagnole,
+    cancelled: true,
+    deferedDate: "TBD",
   },
   "6cf0c898-bc84-4f70-9400-6c6ed9548c7f": {
     eventTypes: ["Conte"],
@@ -862,18 +864,18 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "98956a63-b56e-46bc-9eec-9e69e78f5a29": {
     eventTypes: ["DJ Set"],
     programLinks: [lodeve],
-    overridePhysicalAddress: lodeva
+    overridePhysicalAddress: lodeva,
   },
   "3766b6bf-cada-4501-ac96-8ead47638de3": {
     eventTypes: ["Table-Ronde"],
     programLinks: [lodeve],
     overridePhysicalAddress: megisserie,
   },
-	"41d4df8b-dbfe-4786-b640-779d5b8e19ee":{
-		eventTypes: ["DJ Set"],
-		programLinks: [lodeve],
-		overridePhysicalAddress: lodeva
-	},
+  "41d4df8b-dbfe-4786-b640-779d5b8e19ee": {
+    eventTypes: ["DJ Set"],
+    programLinks: [lodeve],
+    overridePhysicalAddress: lodeva,
+  },
   "373f9e19-80a6-4b6e-90ed-e07a78698d3b": {
     eventTypes: ["Conférence"],
     programLinks: [lodeve],
@@ -1081,7 +1083,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "a266fa02-400f-4fd8-bda7-a472016d3adb": {
     eventTypes: ["Concert"],
     programLinks: [lodeve],
-		cancelled:true
+    cancelled: true,
     //overridePhysicalAddress: lodeva,
   },
   "cfd02e57-1616-4fb3-b475-ce6ee5e0b4bb": {
@@ -1482,35 +1484,35 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "11c4a4ec-d567-4717-8293-422773d74f78": {
     eventTypes: ["Concert"],
   },
-	"59d5d971-09f9-44a8-a06f-0e493439d2cc":{
-		eventTypes:["Ciné-débat"]
-	},
-	"58735b87-8993-4275-a7a1-4a59bda2bdd8":{
-		eventTypes:["Formation"]
-	},
-	"55fcef17-5048-4cc2-9f37-b32410999314":{
-		eventTypes:["Conférence"]
-	},
-	"d7717d11-3f90-4dc5-9fa9-55fa6c785eb5":{
-		eventTypes:["Ciné-débat", "Conférence"]
-	},
-	"a9050263-61f1-4bd7-bb99-d18c55a0d124":{
-		eventTypes:["Conférence", "Atelier militant", "Concert", "Kermesse"]
-	},
-	"460497da-bb4d-441f-87b8-a3eaa2b32a85":{
-		eventTypes:["Autre"],
-		programLinks:[pef]
-	},
-	"f4be50cb-ab5d-4b89-a271-571d9d6ededb":{
-		eventTypes:["Projection"],
-		programLinks:[pef]
-	},
-	"1be919c1-4cd0-4ca3-8e2c-bcd5fb1fb32f":{
-		eventTypes:["Conférence"],
-		programLinks:[pef]
-	},
-	"33f82261-22b2-4c0b-b878-cb1e1b1a5e68":{
-		eventTypes:["Concert"],
-		programLinks:[pef]
-	}
+  "59d5d971-09f9-44a8-a06f-0e493439d2cc": {
+    eventTypes: ["Ciné-débat"],
+  },
+  "58735b87-8993-4275-a7a1-4a59bda2bdd8": {
+    eventTypes: ["Formation"],
+  },
+  "55fcef17-5048-4cc2-9f37-b32410999314": {
+    eventTypes: ["Conférence"],
+  },
+  "d7717d11-3f90-4dc5-9fa9-55fa6c785eb5": {
+    eventTypes: ["Ciné-débat", "Conférence"],
+  },
+  "a9050263-61f1-4bd7-bb99-d18c55a0d124": {
+    eventTypes: ["Conférence", "Atelier militant", "Concert", "Kermesse"],
+  },
+  "460497da-bb4d-441f-87b8-a3eaa2b32a85": {
+    eventTypes: ["Autre"],
+    programLinks: [pef],
+  },
+  "f4be50cb-ab5d-4b89-a271-571d9d6ededb": {
+    eventTypes: ["Projection"],
+    programLinks: [pef],
+  },
+  "1be919c1-4cd0-4ca3-8e2c-bcd5fb1fb32f": {
+    eventTypes: ["Conférence"],
+    programLinks: [pef],
+  },
+  "33f82261-22b2-4c0b-b878-cb1e1b1a5e68": {
+    eventTypes: ["Concert"],
+    programLinks: [pef],
+  },
 };
