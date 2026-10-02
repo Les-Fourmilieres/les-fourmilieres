@@ -1530,12 +1530,15 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 		eventTypes:["Concert", "Projection", "Arpentage", "Spectacle vivant", "DJ Set"]
 	},
 	"428e83b0-f18f-41d5-9759-0ea17a6d3b27":{
-		eventTypes:["Atelier militant"]
+		eventTypes:["Atelier militant"],
+		programLinks:[qg]
 	},
 	"a34fb84f-bae9-4866-8fc2-975a0e629886":{
-		eventTypes:["Conférence"]
+		eventTypes:["Conférence"],
+		programLinks:[qg]
 	},
 	"2da4b56d-2897-4a7d-8e80-a821df3ad533":{
-		eventTypes:["Atelier militant"]
+		eventTypes:["Atelier militant"],
+		programLinks:[qg]
 	}
 };
