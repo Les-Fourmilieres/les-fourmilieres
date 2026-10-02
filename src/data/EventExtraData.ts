@@ -1515,4 +1515,27 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
     eventTypes: ["Concert"],
     programLinks: [pef],
   },
+	"0086ac71-b05f-4d5c-86af-1e6f386f3905":{
+		eventTypes:["Table-Ronde"],
+		programLinks:[gya]
+	},
+	"bf82de51-11c5-4de9-af6c-8097338d262f":{
+		eventTypes:["Manifestation"],
+		programLinks:[anticra]
+	},
+	"e4b80426-39bf-4652-864b-14a3fb7f1b46":{
+		eventTypes:["Conférence", "Concert"]
+	},
+	"c172cac2-21ba-44ec-b8a6-e25f01e7d559":{
+		eventTypes:["Concert", "Projection", "Arpentage", "Spectacle vivant", "DJ Set"]
+	},
+	"428e83b0-f18f-41d5-9759-0ea17a6d3b27":{
+		eventTypes:["Atelier militant"]
+	},
+	"a34fb84f-bae9-4866-8fc2-975a0e629886":{
+		eventTypes:["Conférence"]
+	},
+	"2da4b56d-2897-4a7d-8e80-a821df3ad533":{
+		eventTypes:["Atelier militant"]
+	}
 };
