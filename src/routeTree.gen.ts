@@ -33,6 +33,7 @@ import { Route as FestivalDesLuttesPopulairesRouteImport } from './routes/festiv
 import { Route as FaitesDesSolidaritesRouteImport } from './routes/faites-des-solidarites'
 import { Route as EntretienEmmanuelNegrierRouteImport } from './routes/entretien-emmanuel-negrier'
 import { Route as EntretienChristineCoordEauRouteImport } from './routes/entretien-christine-coord-eau'
+import { Route as Edito4LeFestivalContinueLaLutteAussiRouteImport } from './routes/edito-4-le-festival-continue-la-lutte-aussi'
 import { Route as Edito3PasDeJusticePasDePaixRouteImport } from './routes/edito-3-pas-de-justice-pas-de-paix'
 import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendemains-meilleurs'
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
@@ -171,6 +172,12 @@ const EntretienChristineCoordEauRoute =
     path: '/entretien-christine-coord-eau',
     getParentRoute: () => rootRouteImport,
   } as any)
+const Edito4LeFestivalContinueLaLutteAussiRoute =
+  Edito4LeFestivalContinueLaLutteAussiRouteImport.update({
+    id: '/edito-4-le-festival-continue-la-lutte-aussi',
+    path: '/edito-4-le-festival-continue-la-lutte-aussi',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const Edito3PasDeJusticePasDePaixRoute =
   Edito3PasDeJusticePasDePaixRouteImport.update({
     id: '/edito-3-pas-de-justice-pas-de-paix',
@@ -223,6 +230,7 @@ export interface FileRoutesByFullPath {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/edito-3-pas-de-justice-pas-de-paix': typeof Edito3PasDeJusticePasDePaixRoute
+  '/edito-4-le-festival-continue-la-lutte-aussi': typeof Edito4LeFestivalContinueLaLutteAussiRoute
   '/entretien-christine-coord-eau': typeof EntretienChristineCoordEauRoute
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
@@ -257,6 +265,7 @@ export interface FileRoutesByTo {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/edito-3-pas-de-justice-pas-de-paix': typeof Edito3PasDeJusticePasDePaixRoute
+  '/edito-4-le-festival-continue-la-lutte-aussi': typeof Edito4LeFestivalContinueLaLutteAussiRoute
   '/entretien-christine-coord-eau': typeof EntretienChristineCoordEauRoute
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
@@ -292,6 +301,7 @@ export interface FileRoutesById {
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
   '/des-lendemains-meilleurs': typeof DesLendemainsMeilleursRoute
   '/edito-3-pas-de-justice-pas-de-paix': typeof Edito3PasDeJusticePasDePaixRoute
+  '/edito-4-le-festival-continue-la-lutte-aussi': typeof Edito4LeFestivalContinueLaLutteAussiRoute
   '/entretien-christine-coord-eau': typeof EntretienChristineCoordEauRoute
   '/entretien-emmanuel-negrier': typeof EntretienEmmanuelNegrierRoute
   '/faites-des-solidarites': typeof FaitesDesSolidaritesRoute
@@ -328,6 +338,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/edito-3-pas-de-justice-pas-de-paix'
+    | '/edito-4-le-festival-continue-la-lutte-aussi'
     | '/entretien-christine-coord-eau'
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
@@ -362,6 +373,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/edito-3-pas-de-justice-pas-de-paix'
+    | '/edito-4-le-festival-continue-la-lutte-aussi'
     | '/entretien-christine-coord-eau'
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
@@ -396,6 +408,7 @@ export interface FileRouteTypes {
     | '/bataille-culturelle-histoire-du-14-juillet'
     | '/des-lendemains-meilleurs'
     | '/edito-3-pas-de-justice-pas-de-paix'
+    | '/edito-4-le-festival-continue-la-lutte-aussi'
     | '/entretien-christine-coord-eau'
     | '/entretien-emmanuel-negrier'
     | '/faites-des-solidarites'
@@ -431,6 +444,7 @@ export interface RootRouteChildren {
   BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
   DesLendemainsMeilleursRoute: typeof DesLendemainsMeilleursRoute
   Edito3PasDeJusticePasDePaixRoute: typeof Edito3PasDeJusticePasDePaixRoute
+  Edito4LeFestivalContinueLaLutteAussiRoute: typeof Edito4LeFestivalContinueLaLutteAussiRoute
   EntretienChristineCoordEauRoute: typeof EntretienChristineCoordEauRoute
   EntretienEmmanuelNegrierRoute: typeof EntretienEmmanuelNegrierRoute
   FaitesDesSolidaritesRoute: typeof FaitesDesSolidaritesRoute
@@ -629,6 +643,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EntretienChristineCoordEauRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/edito-4-le-festival-continue-la-lutte-aussi': {
+      id: '/edito-4-le-festival-continue-la-lutte-aussi'
+      path: '/edito-4-le-festival-continue-la-lutte-aussi'
+      fullPath: '/edito-4-le-festival-continue-la-lutte-aussi'
+      preLoaderRoute: typeof Edito4LeFestivalContinueLaLutteAussiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/edito-3-pas-de-justice-pas-de-paix': {
       id: '/edito-3-pas-de-justice-pas-de-paix'
       path: '/edito-3-pas-de-justice-pas-de-paix'
@@ -697,6 +718,8 @@ const rootRouteChildren: RootRouteChildren = {
     BatailleCulturelleHistoireDu14JuilletRoute,
   DesLendemainsMeilleursRoute: DesLendemainsMeilleursRoute,
   Edito3PasDeJusticePasDePaixRoute: Edito3PasDeJusticePasDePaixRoute,
+  Edito4LeFestivalContinueLaLutteAussiRoute:
+    Edito4LeFestivalContinueLaLutteAussiRoute,
   EntretienChristineCoordEauRoute: EntretienChristineCoordEauRoute,
   EntretienEmmanuelNegrierRoute: EntretienEmmanuelNegrierRoute,
   FaitesDesSolidaritesRoute: FaitesDesSolidaritesRoute,

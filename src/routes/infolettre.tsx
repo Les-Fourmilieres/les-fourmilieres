@@ -46,6 +46,17 @@ function RouteComponent() {
 
       <Newsletter />
 
+      <h2>Infolettre d'octobre 2026</h2>
+      <Links>
+        <FullSizeLink href="/edito-4-le-festival-continue-la-lutte-aussi">
+          <img
+            src="/edito-4-le-festival-continue-la-lutte-aussi.webp"
+            alt="Édito 4 : Le festival continue, la lutte aussi !"
+            title="Le festival continue, la lutte aussi !"
+          />
+        </FullSizeLink>
+      </Links>
+      
       <h2>Infolettre de septembre 2026</h2>
 
       <Links>
