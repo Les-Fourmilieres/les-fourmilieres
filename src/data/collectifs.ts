@@ -55,6 +55,7 @@ export type Collectif = "ajcm" |
 	"brasserie-la-frenetik" |
 	"brasserie-lodeva" |
 	"cafe-associatif-de-la-tendresse" |
+	"casa" |
 	"ccfd-herault" |
 	"cevennes-terre-d-accueil" |
 	"chorale-les-chips" |
@@ -81,6 +82,7 @@ export type Collectif = "ajcm" |
 	"extinction-rebellion-montpellier" |
 	"eyeland-festival" |
 	"faucheur-euses-d-ogm" |
+	"felix-et-cie" |
 	"festival-des-luttes-populaires" |
 	"fourmiliere-lodevois-larzac" |
 	"fsu-34" |
@@ -462,8 +464,14 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		instagram: "https://www.instagram.com/latendressemontpellier",
 		facebook: "https://www.facebook.com/latendressemontpellier",
 		mastodon: "https://mastodon.social/@laTendresse@social.bim.land"
-
-
+	},
+	"casa":{
+		slug:"casa",
+		name:"CASA",
+		description:"Collectif Antifasciste du Sud Ardèche",
+		departement:"Ardèche",
+		type:["Collectif militant", "Groupement de collectifs"],
+		bdv:"07110"
 	},
 	"ccfd-herault": {
 		slug: "ccfd-herault",
@@ -824,6 +832,17 @@ export const collectifs: Record<Collectif, CollectifI> = {
 		facebook: "https://www.facebook.com/groups/faucheursvolontaires/?locale=fr_FR",
 		url: "https://www.faucheurs-volontaires.fr/",
 		logo: "collectifs/faucheureuses-ogm.png",
+	},
+	"felix-et-cie":{
+		slug:"felix-et-cie",
+		name:"FÉLIX & Cie",
+		description:"Collectif de citoyen.nes engagés autour de l'animation sociale, culturelle et festive d’un café associatif en milieu rural.",
+		departement:"Gard",
+		type:["Café associatif", "Tiers-lieu", "Bar - Brasserie - Commerce"],
+		position:{lat:44.02336262604404, lng:3.932111620612011},
+		url:"https://felixetcie.fr/",
+		facebook:"https://www.facebook.com/p/Feliz-Caf%C3%A9-61551954785829/",
+		logo:"collectifs/feliz-cafe.webp"
 	},
 	"fsu-34": {
 		slug: "fsu-34",
