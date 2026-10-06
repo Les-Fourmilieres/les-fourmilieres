@@ -1540,5 +1540,11 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	"2da4b56d-2897-4a7d-8e80-a821df3ad533":{
 		eventTypes:["Atelier militant"],
 		programLinks:[qg]
+	},
+	"02058f46-ccd4-4841-8f0c-e94475fccd6e":{
+		eventTypes:["Atelier militant"]
+	},
+	"3181b84b-bf98-4ba3-bb77-3a380125f742":{
+		eventTypes:["Jeux"]
 	}
 };
