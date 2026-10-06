@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "../components/Section";
-import flyer from "../assets/ganges/ganges.jpg?url";
+import cover from "../assets/ganges/ganges.jpg?url";
+import flyer from "../assets/ganges/flyer.jpeg?url";
 import styled from "styled-components";
 import {
   searchParams,
@@ -46,7 +47,8 @@ function RouteComponent() {
       <h1>Les Fourmilières à Ganges</h1>
      <p>Du 6 au 11 octobre, les Fourmilières investissent Ganges !</p>
 			<Covers>
-				<CovertPart src={flyer} alt={"Affiche, Les Fourmilières à Ganges"}/>
+				<CovertPart src={cover} alt={"Affiche, Les Fourmilières à Ganges"}/>
+				<CovertPart src={flyer} alt={"Flyer programme, Les Fourmilières à Ganges"}/>
 			</Covers>
       <Section>
         <Agenda
