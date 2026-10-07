@@ -71,9 +71,30 @@ function RouteComponent() {
       </Row>
       <h2>Articles de presse</h2>
 
+      <h3>6 octobre 2026 · Libération</h3>
+      <CpLink href="/presse/261006_Liberation_Frontal.pdf" target="_blank">
+        En Occitanie, un travail de fourmi contre l'extrême droite
+      </CpLink>
+
+      <h3>2 octobre 2026 · Radio Clapas</h3>
+      <CpLink
+        href="https://www.radioclapas.fr/portfolio/place-1901/"
+        target="_blank"
+      >
+        Les Fourmilières sur Radio Clapas
+      </CpLink>
+
+      <h3>24 septembre 2026 · Radio Escapade</h3>
+      <CpLink
+        href="https://www.radioescapades.org/podcasts/escapades_et_vous-2026_09_24-les_fourmilieres_au_viganges.mp3"
+        target="_blank"
+      >
+        Les Fourmilières au ViGanges
+      </CpLink>
+
       <h3>23 septembre 2026 · Le Poing</h3>
       <CpLink
-        href=" https://lepoing.net/festival-des-fourmilieres-deux-semaines-pour-apprendre-a-demonter-lextreme-droite-en-occitanie/"
+        href="https://lepoing.net/festival-des-fourmilieres-deux-semaines-pour-apprendre-a-demonter-lextreme-droite-en-occitanie/"
         target="_blank"
       >
         Festival des Fourmilières : deux semaines pour apprendre à démonter
@@ -90,11 +111,6 @@ function RouteComponent() {
       <h3>16 septembre 2026 · Renverser la table</h3>
       <CpLink href="/presse/260916_RenverserLaTable.pdf" target="_blank">
         Newsletter · Renverser la table par Victoire Tuaillon
-      </CpLink>
-      <h3>11 septembre 2026 · Libération</h3>
-      <CpLink href="/presse/260911_Liberation.pdf" target="_blank">
-        Festival « Les Fourmilières » creuse le sillon explicite d'un festival
-        antifasciste et solidaire
       </CpLink>
       <h3>11 septembre 2026 · Médiapart</h3>
       <CpLink href="/presse/260911_Mediapart_InExtremis.pdf" target="_blank">
