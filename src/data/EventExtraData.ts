@@ -955,7 +955,7 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
   "67c8f541-d84e-4369-843e-380a4ebe4553": {
     eventTypes: ["Spectacle vivant"],
     programLinks: [lodeve],
-    overridePhysicalAddress: lodeva,
+    overridePhysicalAddress: megisserie,
   },
   "2499c0dc-520d-4d44-b1d5-970a4316cd2b": {
     eventTypes: ["Théâtre"],
@@ -1546,5 +1546,8 @@ export const eventExtraData: { [key: string]: EventExtraDataI } = {
 	},
 	"3181b84b-bf98-4ba3-bb77-3a380125f742":{
 		eventTypes:["Jeux"]
+	},
+	"8b8e961f-fa99-4f15-a79d-c8ff081c6cb6":{
+		eventTypes:["Concert", "Théâtre"]
 	}
 };
