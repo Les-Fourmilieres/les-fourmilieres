@@ -39,6 +39,7 @@ import { Route as DesLendemainsMeilleursRouteImport } from './routes/des-lendema
 import { Route as BatailleCulturelleHistoireDu14JuilletRouteImport } from './routes/bataille-culturelle-histoire-du-14-juillet'
 import { Route as BatailleCulturelleDesLuttesPaysannesRouteImport } from './routes/bataille-culturelle-des-luttes-paysannes'
 import { Route as R30SeptembreHalleTropismeRouteImport } from './routes/30-septembre-halle-tropisme'
+import { Route as R11NovembreHalleTropismeRouteImport } from './routes/11-novembre-halle-tropisme'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgrammeIndexRouteImport } from './routes/programme/index'
 import { Route as ProgrammeUuidRouteImport } from './routes/programme/$uuid'
@@ -207,6 +208,12 @@ const R30SeptembreHalleTropismeRoute =
     path: '/30-septembre-halle-tropisme',
     getParentRoute: () => rootRouteImport,
   } as any)
+const R11NovembreHalleTropismeRoute =
+  R11NovembreHalleTropismeRouteImport.update({
+    id: '/11-novembre-halle-tropisme',
+    path: '/11-novembre-halle-tropisme',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -225,6 +232,7 @@ const ProgrammeUuidRoute = ProgrammeUuidRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/11-novembre-halle-tropisme': typeof R11NovembreHalleTropismeRoute
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
   '/bataille-culturelle-des-luttes-paysannes': typeof BatailleCulturelleDesLuttesPaysannesRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
@@ -260,6 +268,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/11-novembre-halle-tropisme': typeof R11NovembreHalleTropismeRoute
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
   '/bataille-culturelle-des-luttes-paysannes': typeof BatailleCulturelleDesLuttesPaysannesRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
@@ -296,6 +305,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/11-novembre-halle-tropisme': typeof R11NovembreHalleTropismeRoute
   '/30-septembre-halle-tropisme': typeof R30SeptembreHalleTropismeRoute
   '/bataille-culturelle-des-luttes-paysannes': typeof BatailleCulturelleDesLuttesPaysannesRoute
   '/bataille-culturelle-histoire-du-14-juillet': typeof BatailleCulturelleHistoireDu14JuilletRoute
@@ -333,6 +343,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/11-novembre-halle-tropisme'
     | '/30-septembre-halle-tropisme'
     | '/bataille-culturelle-des-luttes-paysannes'
     | '/bataille-culturelle-histoire-du-14-juillet'
@@ -368,6 +379,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/11-novembre-halle-tropisme'
     | '/30-septembre-halle-tropisme'
     | '/bataille-culturelle-des-luttes-paysannes'
     | '/bataille-culturelle-histoire-du-14-juillet'
@@ -403,6 +415,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/11-novembre-halle-tropisme'
     | '/30-septembre-halle-tropisme'
     | '/bataille-culturelle-des-luttes-paysannes'
     | '/bataille-culturelle-histoire-du-14-juillet'
@@ -439,6 +452,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R11NovembreHalleTropismeRoute: typeof R11NovembreHalleTropismeRoute
   R30SeptembreHalleTropismeRoute: typeof R30SeptembreHalleTropismeRoute
   BatailleCulturelleDesLuttesPaysannesRoute: typeof BatailleCulturelleDesLuttesPaysannesRoute
   BatailleCulturelleHistoireDu14JuilletRoute: typeof BatailleCulturelleHistoireDu14JuilletRoute
@@ -685,6 +699,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof R30SeptembreHalleTropismeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/11-novembre-halle-tropisme': {
+      id: '/11-novembre-halle-tropisme'
+      path: '/11-novembre-halle-tropisme'
+      fullPath: '/11-novembre-halle-tropisme'
+      preLoaderRoute: typeof R11NovembreHalleTropismeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -711,6 +732,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R11NovembreHalleTropismeRoute: R11NovembreHalleTropismeRoute,
   R30SeptembreHalleTropismeRoute: R30SeptembreHalleTropismeRoute,
   BatailleCulturelleDesLuttesPaysannesRoute:
     BatailleCulturelleDesLuttesPaysannesRoute,

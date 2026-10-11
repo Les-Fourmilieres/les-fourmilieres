@@ -45,7 +45,7 @@ function RouteComponent() {
           <p>
             Télécharger les{" "}
             <CpLink
-              href="https://www.swisstransfer.com/dl/01a0ce9f-15c8-71b4-97e9-769ff96363f0"
+              href="https://www.swisstransfer.com/dl/01a12b84-9fb3-728b-8f54-0a1cc576d427"
               target="_blank"
             >
               photos de presse
@@ -70,6 +70,12 @@ function RouteComponent() {
         </Section>
       </Row>
       <h2>Articles de presse</h2>
+
+      <h3>8 octobre 2026 · l'Humanité</h3>
+
+      <CpLink href="/presse/261008_LHumanite.pdf" target="_blank">
+        Les Fourmilières, un festival antifasciste pour ne plus être seul·es
+      </CpLink>
 
       <h3>6 octobre 2026 · Libération</h3>
       <CpLink href="/presse/261006_Liberation_Frontal.pdf" target="_blank">
