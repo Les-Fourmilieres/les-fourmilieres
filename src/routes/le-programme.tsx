@@ -165,15 +165,15 @@ const eventPreview: (Pick<
     url: "/11-novembre-halle-tropisme",
     title: "Les Fourmilières à la Halle Tropisme",
     subTitle:
-      "Une après-midi militante pour petit.es et grand.es suivi d'un concert de Planète Boum Boum et Habibitch",
-    beginsOn: new Date(2026, 8, 30, 15, 0, 0),
-    endsOn: new Date(2026, 8, 30, 23, 30, 0),
+      "Une après-midi militante pour petit·es et grand·es suivi d'un concert de Planète Boum Boum et Habibitch",
+    beginsOn: new Date(2026, 10, 11, 15, 0, 0),
+    endsOn: new Date(2026, 10, 11, 23, 30, 0),
     physicalAddress: {
       description: "La Halle Tropisme · Montpellier",
       geom: "43.60222918891905;3.858688767336156",
     },
     picture: {
-      url: "/events/fourmilieres-tropisme.webp",
+      url: "/events/11-novembre-halle-tropisme.webp",
     },
   },
   {
