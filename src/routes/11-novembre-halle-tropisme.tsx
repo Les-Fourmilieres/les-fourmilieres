@@ -109,7 +109,6 @@ function RouteComponent() {
             <i>les Travailleurs·euses de l’art 34</i>
           </li>
         </ul>
-        📚 16h30 - 19h30 | LE QG DES LUTTES
         <p>
           📚 <strong>16h30 - 19h30 | LE QG DES LUTTES</strong>
         </p>
