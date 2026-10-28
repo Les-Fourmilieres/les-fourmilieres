@@ -65,6 +65,8 @@ const titles: Record<string, string> = {
   "/festival-des-luttes-populaires": "Festival des luttes populaires",
   "/30-septembre-halle-tropisme":
     "Les Fourmilières à la Halle Tropisme - Planète Boum Boum et Habibitch le 30 septembre",
+  "/11-novembre-halle-tropisme":
+    "Les Fourmilières à la Halle Tropisme - Planète Boum Boum et Habibitch le 11 novembre",
   "/faites-des-solidarites":
     "Faites des solidarités du 29 au 30 septembre au Vigan",
   "/la-fourmiliere-de-lodeve": "La fourmilière Lodèvois-Larzac",
@@ -83,6 +85,8 @@ const descriptions: Record<string, string> = {
     "Notre énergie collective face à leurs énergies polluantes ! ",
   "/30-septembre-halle-tropisme":
     "Le Quartier Généreux et la Halle Tropisme invitent Planète Boum Boum et Habibitch pour une soirée antifasciste et solidaire ✊ Le 30 septembre, viens participer au festival Les Fourmilières à la Halle Tropisme pour une soirée pleine de surprises !",
+  "/11-novembre-halle-tropisme":
+    "Le Quartier Généreux et la Halle Tropisme invitent Planète Boum Boum et Habibitch pour une soirée antifasciste et solidaire ✊ Le 11 novembre, viens participer au festival Les Fourmilières à la Halle Tropisme pour une soirée pleine de surprises !",
   "/faites-des-solidarites":
     "Pendant deux jours, le collectif 'faites des solidarités', habitant⋅es du quartier des Arennes et du Pays Viganais, assos, collectifs et syndicats locaux, partagerons au quartier des Arennes des ateliers de cuisine dans un four à pain itinérant, de création d’affiches et de visuels pour investir l'espace public, de discussions et d’échanges, de jeux et de partage... sur le thème des solidarités et de nos capacités collectives à résister à la haine, au racisme, aux discriminations et à l’isolement...",
 };
@@ -100,6 +104,8 @@ const images: Record<string, string> = {
     "https://les-fourmilieres.org/festival-luttes-populaires-2026.webp",
   "/30-septembre-halle-tropisme":
     "https://les-fourmilieres.org/habibitch-planete-boum-boum.webp",
+  "/11-novembre-halle-tropisme":
+    "https://les-fourmilieres.org/events/11-novembre-halle-tropisme.webp",
   "/faites-des-solidarites":
     "https://les-fourmilieres.org/faites-des-solidarites.webp",
   "/la-fourmiliere-de-lodeve":
@@ -148,7 +154,7 @@ function eventDefaultCover(type: EventTypes) {
     case "DJ Set":
       return "https://les-fourmilieres.org/events/djset.png";
     case "Open Air":
-		case "Karaoké":
+    case "Karaoké":
       return "https://les-fourmilieres.org/events/openair.png";
     case "Bal populaire":
       return "https://les-fourmilieres.org/events/balpop.png";
@@ -179,7 +185,7 @@ function eventDefaultCover(type: EventTypes) {
     case "Spectacle vivant":
     case "Conte":
     case "Lecture":
-		case "Danse":
+    case "Danse":
       return "https://les-fourmilieres.org/events/theatre.png";
     case "Manifestation":
     case "Pride":
@@ -187,11 +193,11 @@ function eventDefaultCover(type: EventTypes) {
       return "https://les-fourmilieres.org/events/manif.png";
     case "Atelier cuisine":
     case "Atelier d'expression":
-		case "Atelier DJing":
+    case "Atelier DJing":
     case "Sport pour tous.tes":
     case "Atelier jardinage":
-		case "Atelier militant":
-		case "Atelier de danse":
+    case "Atelier militant":
+    case "Atelier de danse":
     case "Atelier pour enfants":
     case "Fresque":
     case "Jeux":
