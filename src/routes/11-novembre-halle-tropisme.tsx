@@ -3,7 +3,6 @@ import { Section } from "../components/Section";
 import styled from "styled-components";
 import { LinkButton } from "../components/Link/Link";
 import { searchParams } from "../components/Agenda/SearchParams";
-import cover from "../assets/tropisme/tropisme.jpg?url";
 import { Agenda } from "../components/Agenda/Agenda";
 
 export const Route = createFileRoute("/11-novembre-halle-tropisme")({
@@ -58,7 +57,6 @@ function RouteComponent() {
           Les Fourmilières à la Halle Tropisme - Planète Boum Boum et Habibitch
           le 11 novembre
         </h1>
-
         <p>
           Le Quartier Généreux et la Halle Tropisme invitent Planète Boum Boum
           et Habibitch pour une soirée antifasciste et solidaire ✊ Le 11
@@ -67,11 +65,10 @@ function RouteComponent() {
         </p>
         <Covers>
           <CovertPart
-            src={cover}
+            src={"/events/halle-tropisme-fourmilieres-11-novembre.webp"}
             alt={"Affiche de la Faites des Solidarités."}
           />
         </Covers>
-
         <p>Au programme :</p>
         <p>
           <u>
@@ -79,58 +76,85 @@ function RouteComponent() {
           </u>
         </p>
         <p>
-          🌱 <strong>15h - 20h | PAS SI GRAND.ES, DÉJÀ MILITANT.ES</strong>{" "}
-          (après-midi pour petits et grands)
+          <strong>✊ 13h12 | Ouverture</strong>
         </p>
         <p>
-          Des ateliers pour les enfants et adolescents seront proposés par
-          différents collectifs :
+          <strong>
+            🌱 13h30 - 16h30 | PAS SI GRAND·ES, DÉJÀ MILITANT·ES (après-midi
+            pour petit-es et grand-es)
+          </strong>
+        </p>
+        <p>Kermesse antifa et ateliers pour les enfants :</p>
+        <ul>
+          <li>
+            Kermesse antifa, par{" "}
+            <i>les Travailleur·euses de l’art 34 et le Quartier Généreux</i>
+          </li>
+          <li>
+            Stand maquillage, avec <i>L’anomalie</i>
+          </li>
+          <li>
+            Toi aussi t’as des droits, ateliers pour enfants, avec{" "}
+            <i>Le Récif</i>
+          </li>
+          <li>
+            Lecture d'albums engagés, avec <i>La Cavale</i>
+          </li>
+          <li>
+            Stand de sensibilisation sur l’adultisme, avec{" "}
+            <i>la librairie La Cavale et le Quartier Généreux</i>
+          </li>
+          <li>
+            Vente d’affiches, badges, tee shirts, par{" "}
+            <i>les Travailleurs·euses de l’art 34</i>
+          </li>
+        </ul>
+        📚 16h30 - 19h30 | LE QG DES LUTTES
+        <p>
+          📚 <strong>16h30 - 19h30 | LE QG DES LUTTES</strong>
+        </p>
+        <p>
+          <strong>"DÉCOLONISER LE DANCEFLOOR"</strong>
         </p>
         <ul>
           <li>
-            Ateliers sur les droits des enfants, <em>avec Le Récif</em>
+            16h30 : arpentage du livre d'Habibitch, par{" "}
+            <i>le Quartier Généreux</i>
           </li>
           <li>
-            Stand pour lutter contre l'adultisme,{" "}
-            <em>avec la librairie La Cavale et le Quartier Généreux</em>
+            18h : rencontre avec Habibitch et dédicace, par{" "}
+            <i>le Quartier Généreux</i>
           </li>
           <li>
-            Lecture d'albums jeunesse engagés,{" "}
-            <em>avec la librairie La Cavale</em>
+            19h : vente du livre, par la librairie <i>La Cavale</i>
+          </li>
+        </ul>
+        <p>
+          <strong>ATELIERS ET STANDS MILITANTS</strong>
+        </p>
+        <ul>
+          <li>
+            Stand sérigraphie : viens pimper ton vieux tee shirt aux couleurs de
+            l'antifascisme.
           </li>
           <li>
-            Kermesse antifasciste,{" "}
-            <em>
-              par le Quartier Généreux et les travailleur.euses de l'art 34
-            </em>
+            Fiscal fitness, avec <i>Attac et les Clown·e·s artivistes</i>
           </li>
           <li>
-            Fiscal Fitness, <em>avec Attac et Clown.e.s artivistes</em>
-          </li>
-          <li>
-            Stand sérigraphie "Viens pimper ton vieux tee shirt aux couleurs de
-            l'antifascisme"
-          </li>
-          <li>
-            Stand maquillage pour petit.es et grand.es,{" "}
-            <em>avec @l_anomalie</em>
+            Stand de sensibilisation sur l’adultisme, avec la librairie{" "}
+            <i>La Cavale et le Quartier Généreux</i>
           </li>
           <li>
             Stand de générateur de refus de subvention pour cause de gauchisme
-            idéologique, <em>par Asso Solidaires 34</em>
+            idéologique, par <i>Asso Solidaires 34</i>
           </li>
           <li>
-            Stand "Inscris-toi sur les listes électorales",{" "}
-            <em>par le Quartier généreux</em>
+            Stand À vote service, par <i>le Quartier Généreux</i>
           </li>
-        </ul>
-
-        <p>
-          📚 <strong>16h30 - 19h15 | "DÉCOLONISER LE DANCEFLOOR"</strong>
-        </p>
-        <ul>
-          <li>Arpentage du livre, d'Habibitch, par le Quartier Généreux</li>
-          <li>rencontre avec l'autrice (18h à 19h15)</li>
+          <li>
+            Vente d’affiches, badges, tee shirts par{" "}
+            <i>les Travailleurs·euses de l’art 34</i>
+          </li>
         </ul>
         <p>
           <u>
@@ -138,12 +162,22 @@ function RouteComponent() {
           </u>
         </p>
         <p>
-          🎶 <strong>18h30 - 23h30 | CONCERTS</strong>
+          🎶 <strong>19h30 - 23h30 | CONCERTS</strong>
         </p>
         <ul>
-          <li>19h : Chorale Le cri du choeur</li>
-          <li>20h : Planète Boum Boum</li>
-          <li>21h 30 : Habibitch</li>
+          <li>
+            19h30 : Chorale <strong>Le Cri du Choeur</strong>
+          </li>
+          <li>
+            20h00 : concert de <strong>Planète Boum Boum</strong>
+          </li>
+          <li>
+            21h00 : blind test et piñACAB avec la compagnie{" "}
+            <strong>Passer par les hauteurs</strong>
+          </li>
+          <li>
+            21h30 : <strong>Djset d'Habibitch</strong>
+          </li>
         </ul>
         <p>Et plein de surprises tout au long de la soirée !</p>
         <Section>
@@ -157,7 +191,7 @@ function RouteComponent() {
       </main>
       <Section>
         <Agenda
-          path={Route.to}
+          path={Route.path}
           disableMap
           disableDateFilder
           disableTypeFilter

@@ -162,7 +162,7 @@ const eventPreview: (Pick<
     },
   },
   {
-    url: "/30-septembre-halle-tropisme",
+    url: "/11-novembre-halle-tropisme",
     title: "Les Fourmilières à la Halle Tropisme",
     subTitle:
       "Une après-midi militante pour petit.es et grand.es suivi d'un concert de Planète Boum Boum et Habibitch",
@@ -175,7 +175,6 @@ const eventPreview: (Pick<
     picture: {
       url: "/events/fourmilieres-tropisme.webp",
     },
-    uuid: "ee734fc5-b151-45ab-94a7-6109aaf7cf78", // Used for the cancelled banner
   },
   {
     url: "/groove-your-ass",
