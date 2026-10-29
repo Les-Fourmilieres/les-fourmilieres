@@ -71,6 +71,13 @@ function RouteComponent() {
       </Row>
       <h2>Articles de presse</h2>
 
+      <h3>15 octobre 2026 · Médiapart</h3>
+
+      <CpLink href="/presse/261015_Mediapart.pdf" target="_blank">
+        À Lodève, face à l'extrême droite et à la division des gauches, le
+        fourmillement de la joie militante
+      </CpLink>
+
       <h3>8 octobre 2026 · l'Humanité</h3>
 
       <CpLink href="/presse/261008_LHumanite.pdf" target="_blank">
